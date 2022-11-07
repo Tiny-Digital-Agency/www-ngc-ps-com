@@ -10,6 +10,7 @@
     "slicemachine": "start-slicemachine"
   },
   "dependencies": {
+    "@chakra-ui/icons": "^2.0.11",
     "@chakra-ui/react": "^2.3.7",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
@@ -23,10 +24,13 @@
     "framer-motion": "^6.5.1",
     "next": "13.0.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-icons": "^4.6.0",
+    "react-node": "^1.0.2"
   },
   "devDependencies": {
     "@prismicio/types": "^0.2.3",
-    "slice-machine-ui": "^0.5.2"
+    "slice-machine-ui": "^0.5.2",
+    "typescript": "^4.8.4"
   }
 }
