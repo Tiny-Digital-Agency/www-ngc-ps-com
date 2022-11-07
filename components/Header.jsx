@@ -1,22 +1,14 @@
 import {
   Box,
   Flex,
-  Text,
   HStack,
   Link,
   IconButton,
-  Button,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
   useDisclosure,
   useColorModeValue,
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
-  BreadcrumbSeparator,
   Image,
   Stack,
 } from '@chakra-ui/react';
@@ -43,7 +35,7 @@ export default function Simple() {
 
   return (
     <>
-      <Box bg={'#2c2e35'} px={4}>
+      <Box bg={'#2c2e35'} px={6}>
         <Flex h={{base: '20', md:'40', sm:'20'}} alignItems={'center'} justifyContent={'space-between'}>
             <IconButton
                 size={'md'}
@@ -64,7 +56,7 @@ export default function Simple() {
               fontSize={'16px'}   
               color={'#fff'}  
               as={'nav'}
-              spacing={4} 
+              spacing={6} 
               >
               {Links.map((link) => (
                 <BreadcrumbItem>
@@ -85,8 +77,6 @@ export default function Simple() {
           </Box>
         ) : null}
       </Box>
-
-      <Box p={4}>Main Content Here</Box>
     </>
   );
 }
