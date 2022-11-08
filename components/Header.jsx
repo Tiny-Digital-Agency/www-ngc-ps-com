@@ -77,7 +77,7 @@ export default function Simple() {
             >
               {Links.map((link) => (
                 <BreadcrumbItem>
-                  <BreadcrumbLink key={link}>{link}</BreadcrumbLink>
+                  <BreadcrumbLink key={link.id}>{link.title}</BreadcrumbLink>
                 </BreadcrumbItem>
               ))}
             </Breadcrumb>
