@@ -13,7 +13,36 @@ import {
 
 } from '@chakra-ui/react';
 
-const Links = ['HOME', 'PRODUCTS', 'INDUSTRIES', 'RESOURCES', 'PRIVACY', 'CONTACT', 'UPTIME'];
+const Links = [
+    {
+        title: 'HOME',
+        id: 1
+    },
+    {
+        title: 'PRODUCTS',
+        id: 2
+    },
+    {
+        title: 'INDUSTRIES',
+        id: 3
+    },
+    {
+        title: 'RESOURCES',
+        id: 4
+    },
+    {
+        title: 'PRIVACY',
+        id: 5
+    },
+    {
+        title: 'CONTACT',
+        id: 6
+    },
+    {
+        title: 'UPTIME',
+        id: 7
+    }
+];
 const NavLink = ({ children }) => (
     <Link
         px={2}
@@ -71,7 +100,7 @@ export default function SmallWithLogoLeft() {
                 <Box color={'#48823b'}>
                     {Links.map((link) => (
                         <Stack display={'block'} listStyleType={"none"} >
-                            <NavLink key={link} color={"#48823b"}>{link}</NavLink>
+                            <NavLink key={link.id} color={"#48823b"}>{link.title}</NavLink>
                         </Stack>
                     ))}
                 </Box>
