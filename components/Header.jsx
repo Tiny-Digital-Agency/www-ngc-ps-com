@@ -76,8 +76,8 @@ export default function Simple() {
               spacing={6}
             >
               {Links.map((link) => (
-                <BreadcrumbItem>
-                  <BreadcrumbLink key={link.id}>{link.title}</BreadcrumbLink>
+                <BreadcrumbItem  key={link.id}>
+                  <BreadcrumbLink>{link.title}</BreadcrumbLink>
                 </BreadcrumbItem>
               ))}
             </Breadcrumb>

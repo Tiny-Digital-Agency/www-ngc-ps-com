@@ -99,8 +99,8 @@ export default function SmallWithLogoLeft() {
                 </Box>
                 <Box color={'#48823b'}>
                     {Links.map((link) => (
-                        <Stack display={'block'} listStyleType={"none"} >
-                            <NavLink key={link.id} color={"#48823b"}>{link.title}</NavLink>
+                        <Stack display={'block'} listStyleType={"none"} key={link.id}>
+                            <NavLink color={"#48823b"}>{link.title}</NavLink>
                         </Stack>
                     ))}
                 </Box>
