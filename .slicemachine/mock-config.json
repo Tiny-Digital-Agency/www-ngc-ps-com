@@ -7,9 +7,69 @@
           "blocks": 1
         }
       }
-    }
+    },
+    "homepage": {}
   },
   "slices": {
-    "CallToAction": {}
+    "CallToAction": {},
+    "Header": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Footer": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "HeroSection": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    },
+    "About": {
+      "default": {
+        "primary": {
+          "paragraph_1": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        },
+        "items": {}
+      }
+    },
+    "Certification": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    },
+    "TeamProfile": {
+      "default": {
+        "primary": {
+          "team_content": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        },
+        "items": {}
+      }
+    },
+    "TeamDropdown": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "TopNav": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    }
   }
 }

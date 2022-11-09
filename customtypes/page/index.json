@@ -20,6 +20,17 @@
           "allowTargetBlank": true,
           "single": "heading1"
         }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "call_to_action": {
+              "type": "SharedSlice"
+            }
+          }
+        }
       }
     }
   }
