@@ -9,10 +9,10 @@ import CardsSection from "../components/CardsSection";
 export default function Home() {
   return (
     <>
-      <GridSection />
-      <CardsSection />
       <Herosection />
       <About />
+      <GridSection />
+      <CardsSection />
     </>
   )
 }
