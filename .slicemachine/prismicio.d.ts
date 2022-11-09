@@ -649,7 +649,7 @@ export type TeamProfileSlice = prismicT.SharedSlice<"team_profile", TeamProfileS
  */
 interface TopNavSliceDefaultPrimary {
     /**
-     * button field in *TopNav → Primary*
+     * button link field in *TopNav → Primary*
      *
      * - **Field Type**: Content Relationship
      * - **Placeholder**: *None*
@@ -658,6 +658,16 @@ interface TopNavSliceDefaultPrimary {
      *
      */
     button: prismicT.RelationField<"homepage">;
+    /**
+     * Button Text field in *TopNav → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: top_nav.primary.button_text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    button_text: prismicT.RichTextField;
 }
 /**
  * Item in TopNav → Items
