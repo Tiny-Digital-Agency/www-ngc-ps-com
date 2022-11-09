@@ -1,58 +1,65 @@
-import { Flex, VStack, Box, useBreakpointValue, Link } from "@chakra-ui/react";
+import {
+  Flex,
+  VStack,
+  Box,
+  useBreakpointValue,
+  Link,
+  Image,
+  Text,
+} from "@chakra-ui/react";
 
-const Cards = [
+const Grid = [
   {
     imageUrl: "https://bit.ly/2Z4KKcF",
     imageAlt: "Rear view of modern home with pool",
-    title: "Product Solutions",
     url: "asd",
+    linkList: ["First", "Second", "Third"],
     id: 1,
   },
   {
     imageUrl: "https://bit.ly/2Z4KKcF",
     imageAlt: "Rear view of modern home with pool",
-    title: "Product Solutions",
     url: "asdf",
+    linkList: ["First", "Second", "Third"],
     id: 2,
   },
   {
     imageUrl: "https://bit.ly/2Z4KKcF",
     imageAlt: "Rear view of modern home with pool",
-    title: "Product Solutions",
     url: "asdfg",
+    linkList: ["First", "Second", "Third"],
     id: 3,
   },
   {
     imageUrl: "https://bit.ly/2Z4KKcF",
     imageAlt: "Rear view of modern home with pool",
-    title: "Product Solutions",
     url: "asdfgh",
+    linkList: ["First", "Second", "Third"],
     id: 4,
   },
   {
     imageUrl: "https://bit.ly/2Z4KKcF",
     imageAlt: "Rear view of modern home with pool",
-    title: "Product Solutions",
     url: "asdfghj",
+    linkList: ["First", "Second", "Third"],
     id: 5,
   },
   {
     imageUrl: "https://bit.ly/2Z4KKcF",
     imageAlt: "Rear view of modern home with pool",
-    title: "Product Solutions",
+    linkList: ["First", "Second", "Third"],
     url: "asdfghjk",
     id: 6,
   },
   {
-    imageUrl: "https://bit.ly/2Z4KKcF",
     imageAlt: "Rear view of modern home with pool",
-    title: "Product Solutions",
+    linkList: ["First", "Second", "Third"],
     url: "asdfghjkl",
     id: 7,
   },
 ];
 
-export default function CardsSection() {
+export default function GridSection() {
   return (
     <Flex w={"full"}>
       <VStack
@@ -66,39 +73,51 @@ export default function CardsSection() {
           w={{ xl: "80em", base: "full" }}
           flexWrap="wrap"
           direction="row"
-          justify={"space-evenly"}
+          justify={"center"}
           my="50px"
         >
-          {Cards.map((card) => (
+          {Grid.map((grid) => (
             <Link
-              key={card.id}
-              href={`/${card.url}`}
+              key={grid.id}
+              href={`${grid.imageUrl}`}
               display="flex"
               alignItems="center"
               justifyContent={"center"}
-              w={{ sm: "320px", base: "250px" }}
-              h={{ sm: "320px", base: "250px" }}
+              flexDirection={"column"}
+              w={{ sm: "45%", md: "50%", lg: "32%", base: "250px" }}
+              h="auto"
+              pt={{ base: "0", sm: "25px" }}
+              px={{ base: "0", sm: "40px" }}
+              pb={{ base: "35px", sm: "10px" }}
               my="25px"
-              mx={{ base: "5px" }}
-              backgroundImage={card.imageUrl}
-              backgroundSize={"cover"}
-              backgroundPosition={"center center"}
+              borderLeft={{ base: "none", sm: "solid 1px gray" }}
+              borderBottom={{ base: "solid 1px gray", sm: "none" }}
               _hover={{
                 textDecoration: "none",
               }}
             >
+              {grid.imageUrl ? <Image src={`${grid.imageUrl}`} /> : ""}
+
               <Box
-                mt="1"
-                color="#fff"
-                fontSize={32}
+                mt="10px"
+                color="#626669"
+                fontSize={18}
                 fontWeight="bold"
                 textAlign={"center"}
-                borderBottom={"4px solid transparent"}
-                _hover={{
-                  borderBottom: "4px solid #ef483e",
-                }}
               >
-                {card.title}
+                <Flex flexDirection={"column"}>
+                  {/* {grid.linkList.map((type, index) => (
+                    <Link
+                      href={`/${type}`}
+                      key={index}
+                      _hover={{
+                        color: "#ef483e",
+                      }}
+                    >
+                      {type}
+                    </Link>
+                  ))} */}
+                </Flex>
               </Box>
             </Link>
           ))}

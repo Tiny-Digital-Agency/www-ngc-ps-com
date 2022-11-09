@@ -3,25 +3,18 @@
 // import Herosection from "../components/Herosection";
 // import About from "../components/About";
 
-// import CardsSection from "../components/CardsSection";
-// export default function Home() {
-//   return (
-//     <>
-//       <CardsSection />
-//       <Herosection />
-//       <About />
-//     </>
-//   )
-// }
+import GridSection from "../components/GridSection";
+import CardsSection from "../components/CardsSection";
 
-
-import { SliceZone } from '@prismicio/react'
-
-import { createClient } from '../prismicio'
-import { components } from '../slices'
-
-const Page = ({ page, navigation, settings }) => {
-  return <SliceZone slices={page.data.slices} components={components} />
+export default function Home() {
+  return (
+    <>
+      <GridSection />
+      <CardsSection />
+      <Herosection />
+      <About />
+    </>
+  )
 }
 
 export default Page
