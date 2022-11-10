@@ -3,16 +3,18 @@
 // import Herosection from "../components/Herosection";
 // import About from "../components/About";
 
-import GridSection from "../components/GridSection";
-import CardsSection from "../components/CardsSection";
+// import GridSection from "../components/GridSection";
+// import CardsSection from "../components/CardsSection";
+import BannerSectionSideContent from "../components/BannerSectionSideContent";
 
 export default function Home() {
   return (
     <>
-      <Herosection />
+      <BannerSectionSideContent />
+      {/* <Herosection /> */}
       <About />
-      <GridSection />
-      <CardsSection />
+      {/* <GridSection />
+      <CardsSection /> */}
     </>
   )
 }

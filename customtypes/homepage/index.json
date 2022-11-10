@@ -41,7 +41,7 @@
             "footer": {
               "type": "SharedSlice"
             },
-            "news": {
+            "grid_section": {
               "type": "SharedSlice"
             }
           }

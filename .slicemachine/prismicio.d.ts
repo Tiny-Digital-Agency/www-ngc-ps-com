@@ -35,9 +35,6 @@ interface HomepageDocumentData {
  * Slice for *homepage → Slice Zone*
  *
  */
-<<<<<<< HEAD
-type HomepageDocumentDataSlicesSlice = TopNavSlice | HeaderSlice | HeroSectionSlice | AboutSlice | CertificationSlice | TeamProfileSlice | TeamDropdownSlice | FooterSlice | NewsSlice;
-=======
 type HomepageDocumentDataSlicesSlice =
   | TopNavSlice
   | HeaderSlice
@@ -46,8 +43,8 @@ type HomepageDocumentDataSlicesSlice =
   | CertificationSlice
   | TeamProfileSlice
   | TeamDropdownSlice
-  | FooterSlice;
->>>>>>> 966ce9a (cards section resposive done, grid section WIP)
+  | FooterSlice
+  | NewsSlice;
 /**
  * homepage document from Prismic
  *
@@ -275,28 +272,6 @@ export type CallToActionSlice = prismicT.SharedSlice<
  *
  */
 export interface CertificationSliceDefaultItem {
-<<<<<<< HEAD
-    /**
-     * Image field in *Certification → Items*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: certification.items[].image
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    image: prismicT.ImageField<never>;
-    /**
-     * Image link field in *Certification → Items*
-     *
-     * - **Field Type**: Link
-     * - **Placeholder**: *None*
-     * - **API ID Path**: certification.items[].image_link
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
-     *
-     */
-    image_link: prismicT.LinkField;
-=======
   /**
    * Image field in *Certification → Items*
    *
@@ -310,14 +285,13 @@ export interface CertificationSliceDefaultItem {
   /**
    * Image link field in *Certification → Items*
    *
-   * - **Field Type**: Rich Text
+   * - **Field Type**: Link
    * - **Placeholder**: *None*
    * - **API ID Path**: certification.items[].image_link
-   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
    *
    */
-  image_link: prismicT.RichTextField;
->>>>>>> 966ce9a (cards section resposive done, grid section WIP)
+  image_link: prismicT.LinkField;
 }
 /**
  * Default variation for Certification Slice
@@ -604,26 +578,26 @@ export type HeroSectionSlice = prismicT.SharedSlice<
  *
  */
 interface NewsSliceDefaultPrimary {
-    /**
-     * Background Image field in *News → Primary*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: news.primary.background_image
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    background_image: prismicT.ImageField<never>;
-    /**
-     * News content field in *News → Primary*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: news.primary.news_content
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    news_content: prismicT.RichTextField;
+  /**
+   * Background Image field in *News → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news.primary.background_image
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  background_image: prismicT.ImageField<never>;
+  /**
+   * News content field in *News → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news.primary.news_content
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  news_content: prismicT.RichTextField;
 }
 /**
  * Default variation for News Slice
@@ -633,7 +607,11 @@ interface NewsSliceDefaultPrimary {
  * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
  *
  */
-export type NewsSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<NewsSliceDefaultPrimary>, never>;
+export type NewsSliceDefault = prismicT.SharedSliceVariation<
+  "default",
+  Simplify<NewsSliceDefaultPrimary>,
+  never
+>;
 /**
  * Slice variation for *News*
  *
@@ -812,15 +790,15 @@ interface TopNavSliceDefaultPrimary {
  */
 export interface TopNavSliceDefaultItem {
   /**
-   * contact details field in *TopNav → Items*
+   * Contact details field in *TopNav → Items*
    *
-   * - **Field Type**: Rich Text
+   * - **Field Type**: Text
    * - **Placeholder**: *None*
    * - **API ID Path**: top_nav.items[].contact_details
-   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
    *
    */
-  contact_details: prismicT.RichTextField;
+  contact_details: prismicT.KeyTextField;
   /**
    * link field in *TopNav → Items*
    *
@@ -860,14 +838,6 @@ type TopNavSliceVariation = TopNavSliceDefault;
  */
 export type TopNavSlice = prismicT.SharedSlice<"top_nav", TopNavSliceVariation>;
 declare module "@prismicio/client" {
-<<<<<<< HEAD
-    interface CreateClient {
-        (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
-    }
-    namespace Content {
-        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, AboutSliceDefaultPrimary, AboutSliceDefaultItem, AboutSliceDefault, AboutSliceVariation, AboutSlice, CallToActionSliceDefaultPrimary, CallToActionSliceDefault, CallToActionSliceVariation, CallToActionSlice, CertificationSliceDefaultItem, CertificationSliceDefault, CertificationSliceVariation, CertificationSlice, FooterSliceDefaultPrimary, FooterSliceDefaultItem, FooterSliceDefault, FooterSliceVariation, FooterSlice, HeaderSliceDefaultPrimary, HeaderSliceDefaultItem, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, HeroSectionSliceDefaultPrimary, HeroSectionSliceDefaultItem, HeroSectionSliceDefault, HeroSectionSliceVariation, HeroSectionSlice, NewsSliceDefaultPrimary, NewsSliceDefault, NewsSliceVariation, NewsSlice, TeamDropdownSliceDefaultItem, TeamDropdownSliceDefault, TeamDropdownSliceVariation, TeamDropdownSlice, TeamProfileSliceDefaultPrimary, TeamProfileSliceDefault, TeamProfileSliceVariation, TeamProfileSlice, TopNavSliceDefaultPrimary, TopNavSliceDefaultItem, TopNavSliceDefault, TopNavSliceVariation, TopNavSlice };
-    }
-=======
   interface CreateClient {
     (
       repositoryNameOrEndpoint: string,
@@ -911,6 +881,10 @@ declare module "@prismicio/client" {
       HeroSectionSliceDefault,
       HeroSectionSliceVariation,
       HeroSectionSlice,
+      NewsSliceDefaultPrimary,
+      NewsSliceDefault,
+      NewsSliceVariation,
+      NewsSlice,
       TeamDropdownSliceDefaultItem,
       TeamDropdownSliceDefault,
       TeamDropdownSliceVariation,
@@ -926,5 +900,4 @@ declare module "@prismicio/client" {
       TopNavSlice,
     };
   }
->>>>>>> 966ce9a (cards section resposive done, grid section WIP)
 }
