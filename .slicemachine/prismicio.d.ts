@@ -35,7 +35,7 @@ interface HomepageDocumentData {
  * Slice for *homepage → Slice Zone*
  *
  */
-type HomepageDocumentDataSlicesSlice = TopNavSlice | HeaderSlice | HeroSectionSlice | AboutSlice | CertificationSlice | TeamProfileSlice | TeamDropdownSlice | FooterSlice;
+type HomepageDocumentDataSlicesSlice = TopNavSlice | HeaderSlice | HeroSectionSlice | AboutSlice | CertificationSlice | TeamProfileSlice | TeamDropdownSlice | FooterSlice | NewsSlice;
 /**
  * homepage document from Prismic
  *
@@ -259,13 +259,13 @@ export interface CertificationSliceDefaultItem {
     /**
      * Image link field in *Certification → Items*
      *
-     * - **Field Type**: Rich Text
+     * - **Field Type**: Link
      * - **Placeholder**: *None*
      * - **API ID Path**: certification.items[].image_link
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
      *
      */
-    image_link: prismicT.RichTextField;
+    image_link: prismicT.LinkField;
 }
 /**
  * Default variation for Certification Slice
@@ -526,6 +526,55 @@ type HeroSectionSliceVariation = HeroSectionSliceDefault;
  */
 export type HeroSectionSlice = prismicT.SharedSlice<"hero_section", HeroSectionSliceVariation>;
 /**
+ * Primary content in News → Primary
+ *
+ */
+interface NewsSliceDefaultPrimary {
+    /**
+     * Background Image field in *News → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: news.primary.background_image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    background_image: prismicT.ImageField<never>;
+    /**
+     * News content field in *News → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: news.primary.news_content
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    news_content: prismicT.RichTextField;
+}
+/**
+ * Default variation for News Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `News`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type NewsSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<NewsSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *News*
+ *
+ */
+type NewsSliceVariation = NewsSliceDefault;
+/**
+ * News Shared Slice
+ *
+ * - **API ID**: `news`
+ * - **Description**: `News`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type NewsSlice = prismicT.SharedSlice<"news", NewsSliceVariation>;
+/**
  * Item in TeamDropdown → Items
  *
  */
@@ -723,6 +772,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, AboutSliceDefaultPrimary, AboutSliceDefaultItem, AboutSliceDefault, AboutSliceVariation, AboutSlice, CallToActionSliceDefaultPrimary, CallToActionSliceDefault, CallToActionSliceVariation, CallToActionSlice, CertificationSliceDefaultItem, CertificationSliceDefault, CertificationSliceVariation, CertificationSlice, FooterSliceDefaultPrimary, FooterSliceDefaultItem, FooterSliceDefault, FooterSliceVariation, FooterSlice, HeaderSliceDefaultPrimary, HeaderSliceDefaultItem, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, HeroSectionSliceDefaultPrimary, HeroSectionSliceDefaultItem, HeroSectionSliceDefault, HeroSectionSliceVariation, HeroSectionSlice, TeamDropdownSliceDefaultItem, TeamDropdownSliceDefault, TeamDropdownSliceVariation, TeamDropdownSlice, TeamProfileSliceDefaultPrimary, TeamProfileSliceDefault, TeamProfileSliceVariation, TeamProfileSlice, TopNavSliceDefaultPrimary, TopNavSliceDefaultItem, TopNavSliceDefault, TopNavSliceVariation, TopNavSlice };
+        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, AboutSliceDefaultPrimary, AboutSliceDefaultItem, AboutSliceDefault, AboutSliceVariation, AboutSlice, CallToActionSliceDefaultPrimary, CallToActionSliceDefault, CallToActionSliceVariation, CallToActionSlice, CertificationSliceDefaultItem, CertificationSliceDefault, CertificationSliceVariation, CertificationSlice, FooterSliceDefaultPrimary, FooterSliceDefaultItem, FooterSliceDefault, FooterSliceVariation, FooterSlice, HeaderSliceDefaultPrimary, HeaderSliceDefaultItem, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, HeroSectionSliceDefaultPrimary, HeroSectionSliceDefaultItem, HeroSectionSliceDefault, HeroSectionSliceVariation, HeroSectionSlice, NewsSliceDefaultPrimary, NewsSliceDefault, NewsSliceVariation, NewsSlice, TeamDropdownSliceDefaultItem, TeamDropdownSliceDefault, TeamDropdownSliceVariation, TeamDropdownSlice, TeamProfileSliceDefaultPrimary, TeamProfileSliceDefault, TeamProfileSliceVariation, TeamProfileSlice, TopNavSliceDefaultPrimary, TopNavSliceDefaultItem, TopNavSliceDefault, TopNavSliceVariation, TopNavSlice };
     }
 }

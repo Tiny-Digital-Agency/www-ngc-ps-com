@@ -34,61 +34,9 @@ export default function GridListWithHeading() {
       <Container maxW={'100vh'} mt={10}>
         <Heading fontSize={'3xl'}>NGC Advantage:</Heading>
         <UnorderedList mt={5} ml={10}>
-          <ListItem>ABSA certified manufacturer</ListItem>
-          <ListItem>Reduce downtime</ListItem>
-          <ListItem>Increase system life cycle</ListItem>
-          <ListItem>Increase speed of delivery</ListItem>
-          <ListItem>Maximize safety and protection</ListItem>
-          <ListItem>Minimize the environmental footprint</ListItem>
-          <ListItem>Our service continues long after the sales cycle ends</ListItem>
         </UnorderedList>
         <Box display={'block'}>
           <Flex justifyContent={'space-between'} textAlign={"center"} mt={10} spacing={6}>
-            <figure>
-              <Image
-                src="/responsive.png"
-                alt=""
-                width={150}
-                height={150}
-              />
-              <figcaption>Responsive</figcaption>
-            </figure>
-            <figure>
-              <Image
-                src="/best-document.png"
-                alt=""
-                width={150}
-                height={150}
-              />
-              <figcaption>Best Documentation</figcaption>
-            </figure>
-            <figure>
-              <Image
-                src="/deliver.png"
-                alt=""
-                width={150}
-                height={150}
-              />
-              <figcaption>Empowered to Deliver</figcaption>
-            </figure>
-            <figure>
-              <Image
-                src="/success.png"
-                alt=""
-                width={150}
-                height={150}
-              />
-              <figcaption>Sets You Up for Success</figcaption>
-            </figure>
-            <figure>
-              <Image
-                src="/service.png"
-                alt=""
-                width={150}
-                height={150}
-              />
-              <figcaption>Service Oriented</figcaption>
-            </figure>
           </Flex>
         </Box>
       </Container>

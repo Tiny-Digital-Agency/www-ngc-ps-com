@@ -73,7 +73,7 @@
                   "config": {
                     "label": "Title",
                     "placeholder": "",
-                    "allowTargetBlank": true,
+                    "allowTargetBlank": false,
                     "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
                   }
                 }
@@ -95,12 +95,27 @@
                   },
                   "alt": null,
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43"
+                  "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764"
                 },
                 "title": [
                   {
+                    "type": "heading1",
+                    "text": "Wealth",
+                    "spans": []
+                  },
+                  {
+                    "type": "image",
+                    "url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04",
+                    "alt": null,
+                    "copyright": null,
+                    "dimensions": {
+                      "width": 900,
+                      "height": 500
+                    }
+                  },
+                  {
                     "type": "paragraph",
-                    "text": "Sit cupidatat et aute eiusmod non velit nisi. Anim tempor esse non fugiat ullamco.",
+                    "text": "Dolor duis labore dolor tempor excepteur do veniam proident sit sit duis cillum ad minim tempor. Cupidatat exercitation nulla enim ea laboris nostrud adipisicing voluptate qui eu non.",
                     "spans": []
                   }
                 ]
@@ -110,28 +125,28 @@
               "heading": [
                 {
                   "type": "paragraph",
-                  "text": "Duis eu tempor est laboris sint excepteur incididunt. Laborum culpa ea ea sunt culpa esse nisi ipsum nostrud aute consequat.",
+                  "text": "Occaecat ipsum duis fugiat et sit incididunt minim anim consequat labore Lorem. Et consectetur nostrud aliqua et nisi voluptate irure quis do voluptate eu magna laborum ullamco.",
                   "spans": []
                 }
               ],
               "paragraph_1": [
                 {
                   "type": "paragraph",
-                  "text": "Cupidatat nostrud ipsum ad occaecat dolore magna pariatur mollit sint. Officia aliqua amet labore eiusmod occaecat consectetur nostrud et do sit.",
+                  "text": "Commodo ea elit sint.",
                   "spans": []
                 }
               ],
               "list_title": [
                 {
                   "type": "paragraph",
-                  "text": "Magna mollit ex velit commodo elit tempor incididunt. Sunt occaecat velit qui mollit. Incididunt elit sunt ea ad laboris veniam proident esse eu.",
+                  "text": "Proident culpa ad veniam adipisicing mollit incididunt pariatur deserunt.",
                   "spans": []
                 }
               ],
               "list": [
                 {
                   "type": "paragraph",
-                  "text": "Consequat sit et non ipsum ipsum consequat amet esse consequat. Qui amet veniam anim anim exercitation duis aute occaecat irure non consectetur laboris esse. Enim commodo exercitation exercitation ex non deserunt mollit exercitation Lorem minim nisi culpa aliqua qui.",
+                  "text": "Est elit elit nulla tempor quis fugiat sit sit minim enim. Qui aute est commodo est aliqua voluptate mollit quis.",
                   "spans": []
                 }
               ]
@@ -257,20 +272,16 @@
                   "type": "Image",
                   "config": {
                     "label": "Image",
-                    "constraint": {
-                      "width": 187,
-                      "height": 100
-                    },
+                    "constraint": {},
                     "thumbnails": []
                   }
                 },
                 "image_link": {
-                  "type": "StructuredText",
+                  "type": "Link",
                   "config": {
                     "label": "Image link",
                     "placeholder": "",
-                    "allowTargetBlank": true,
-                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                    "select": null
                   }
                 }
               },
@@ -286,20 +297,17 @@
               {
                 "image": {
                   "dimensions": {
-                    "width": 187,
-                    "height": 100
+                    "width": 900,
+                    "height": 500
                   },
                   "alt": null,
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2"
+                  "url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a"
                 },
-                "image_link": [
-                  {
-                    "type": "paragraph",
-                    "text": "Ipsum do cupidatat tempor velit sint adipisicing eu culpa occaecat pariatur et ipsum. Proident ad deserunt cupidatat tempor in laboris voluptate ex labore aute deserunt. Aliquip eu anim id officia labore voluptate eu anim cupidatat.",
-                    "spans": []
-                  }
-                ]
+                "image_link": {
+                  "link_type": "Web",
+                  "url": "https://prismic.io"
+                }
               }
             ],
             "primary": {},
@@ -636,6 +644,81 @@
               ]
             },
             "slice_type": "hero_section"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
+      "news": {
+        "library": "slices",
+        "id": "news",
+        "name": "News",
+        "description": "News",
+        "model": {
+          "id": "news",
+          "type": "SharedSlice",
+          "name": "News",
+          "description": "News",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "News",
+              "primary": {
+                "background_image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Background Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "news_content": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "News content",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "background_image": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f"
+              },
+              "news_content": [
+                {
+                  "type": "paragraph",
+                  "text": "Ad incididunt qui veniam labore. Officia occaecat eiusmod exercitation veniam reprehenderit voluptate nisi anim non culpa in eiusmod qui pariatur quis. Laborum do pariatur sint excepteur elit id qui elit id sunt magna.",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "news"
           }
         },
         "meta": {

@@ -5,5 +5,5 @@ export default {
 }
 
 
-export const _Default = () => <MyComponent slice={{"variation":"default","version":"sktwi1xtmkfgx8626","items":[{"image":{"dimensions":{"width":187,"height":100},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2"},"image_link":[{"type":"paragraph","text":"Ipsum do cupidatat tempor velit sint adipisicing eu culpa occaecat pariatur et ipsum. Proident ad deserunt cupidatat tempor in laboris voluptate ex labore aute deserunt. Aliquip eu anim id officia labore voluptate eu anim cupidatat.","spans":[]}]}],"primary":{},"slice_type":"certification","id":"_Default"}} />
+export const _Default = () => <MyComponent slice={{"variation":"default","version":"sktwi1xtmkfgx8626","items":[{"image":{"dimensions":{"width":900,"height":500},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1587653915936-5623ea0b949a"},"image_link":{"link_type":"Web","url":"https://prismic.io"}}],"primary":{},"slice_type":"certification","id":"_Default"}} />
 _Default.storyName = ''

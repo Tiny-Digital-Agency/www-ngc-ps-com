@@ -38,7 +38,14 @@
             }
           }
         },
-        "items": {}
+        "items": {
+          "title": {
+            "config": {
+              "patternType": "STORY",
+              "blocks": 1
+            }
+          }
+        }
       }
     },
     "Certification": {
@@ -69,6 +76,11 @@
       "default": {
         "primary": {},
         "items": {}
+      }
+    },
+    "News": {
+      "default": {
+        "primary": {}
       }
     }
   }

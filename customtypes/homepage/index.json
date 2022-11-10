@@ -40,6 +40,9 @@
             },
             "footer": {
               "type": "SharedSlice"
+            },
+            "news": {
+              "type": "SharedSlice"
             }
           }
         }
