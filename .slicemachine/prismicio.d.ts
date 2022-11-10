@@ -724,15 +724,15 @@ interface TopNavSliceDefaultPrimary {
  */
 export interface TopNavSliceDefaultItem {
     /**
-     * contact details field in *TopNav → Items*
+     * Contact details field in *TopNav → Items*
      *
-     * - **Field Type**: Rich Text
+     * - **Field Type**: Text
      * - **Placeholder**: *None*
      * - **API ID Path**: top_nav.items[].contact_details
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
-    contact_details: prismicT.RichTextField;
+    contact_details: prismicT.KeyTextField;
     /**
      * link field in *TopNav → Items*
      *

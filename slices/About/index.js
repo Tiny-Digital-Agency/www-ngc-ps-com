@@ -45,14 +45,18 @@ const About = ({ slice }) => (
         <Flex justifyContent={'space-between'} textAlign={"center"} spacing={6} paddingTop={"10"}>
           {
             slice.items.map((item, i) =>
-              <img src={item.image.url} alt={item.image.alt} key={i} />
+              <Box key={i}>
+              <img src={item.image.url} alt={item.image.alt} />
+              </Box>
             )
           }
         </Flex>
         <Flex justifyContent={'space-between'} textAlign={"center"}>
           {
             slice.items.map((item, i) =>
-              <Box maxW={160} width={150}><PrismicRichText field={item.title} key={i} /></Box>
+              <Box maxW={160} width={150}  key={i}>
+              <PrismicRichText field={item.title} />
+              </Box>
             )
           }
         </Flex>

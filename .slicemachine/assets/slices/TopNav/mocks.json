@@ -4,16 +4,10 @@
     "version": "sktwi1xtmkfgx8626",
     "items": [
       {
-        "contact_details": [
-          {
-            "type": "paragraph",
-            "text": "Dolore do non eiusmod velit cillum esse occaecat duis incididunt. Anim nulla ullamco minim proident est velit est adipisicing tempor eu adipisicing.",
-            "spans": []
-          }
-        ],
+        "contact_details": "fifth",
         "link": {
           "link_type": "Web",
-          "url": "http://twitter.com"
+          "url": "http://google.com"
         }
       }
     ],
@@ -31,7 +25,7 @@
       "button_text": [
         {
           "type": "paragraph",
-          "text": "Fugiat consectetur deserunt amet exercitation excepteur tempor irure non tempor et nostrud.",
+          "text": "Adipisicing sint mollit est cupidatat.",
           "spans": []
         }
       ]

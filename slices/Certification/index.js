@@ -30,9 +30,7 @@ const Certification = ({ slice }) => (
 
           slice.items?.map((item, i) =>
             <PrismicLink field={item.image_link} key={i}>
-
               <Box maxW={"190px"} margin={"20px"}>
-              
                 <Image  src={item.image.url} alt={item.image.alt} />
               </Box>
 
