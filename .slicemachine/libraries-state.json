@@ -160,6 +160,136 @@
         },
         "screenshotPaths": {}
       },
+      "banner_with_middle_content": {
+        "library": "slices",
+        "id": "banner_with_middle_content",
+        "name": "BannerSectionMiddleContent",
+        "description": "BannerWithMiddleContent",
+        "model": {
+          "id": "banner_with_middle_content",
+          "type": "SharedSlice",
+          "name": "BannerSectionMiddleContent",
+          "description": "BannerWithMiddleContent",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "BannerWithMiddleContent",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": true,
+                    "single": "heading1"
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Brush",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "banner_with_middle_content"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
+      "banner_section_side_content": {
+        "library": "slices",
+        "id": "banner_section_side_content",
+        "name": "BannerSectionSideContent",
+        "description": "BannerSectionSideContent",
+        "model": {
+          "id": "banner_section_side_content",
+          "type": "SharedSlice",
+          "name": "BannerSectionSideContent",
+          "description": "BannerSectionSideContent",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "BannerSectionSideContent",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "paragraph",
+                    "label": "Description",
+                    "placeholder": "A nice description of your feature"
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format",
+              "items": {}
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Train",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Veniam nisi mollit laborum nisi ut et. Fugiat sint deserunt duis amet nisi aute proident elit laborum eu Lorem labore laboris labore laboris.",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "banner_section_side_content"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
       "call_to_action": {
         "library": "slices",
         "id": "call_to_action",
@@ -241,6 +371,125 @@
               }
             },
             "slice_type": "call_to_action"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
+      "cards_section": {
+        "library": "slices",
+        "id": "cards_section",
+        "name": "CardsSection",
+        "description": "CardsSection",
+        "model": {
+          "id": "cards_section",
+          "type": "SharedSlice",
+          "name": "CardsSection",
+          "description": "CardsSection",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "CardsSection",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "paragraph",
+                    "label": "Description",
+                    "placeholder": "A nice description of your feature"
+                  }
+                }
+              },
+              "items": {
+                "backgroundimage": {
+                  "type": "Image",
+                  "config": {
+                    "label": "backgroundimage",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "cardtitle": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "cardtitle",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "cardlink": {
+                  "type": "Link",
+                  "config": {
+                    "label": "cardlink",
+                    "placeholder": "",
+                    "select": null
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "backgroundimage": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb"
+                },
+                "cardtitle": [
+                  {
+                    "type": "paragraph",
+                    "text": "Pariatur commodo sunt cillum ex exercitation. Ad sit dolor labore Lorem tempor duis qui deserunt.",
+                    "spans": []
+                  }
+                ],
+                "cardlink": {
+                  "link_type": "Web",
+                  "url": "https://prismic.io"
+                }
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Family",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Cillum aliquip magna aute pariatur tempor culpa ex adipisicing pariatur. Qui deserunt cupidatat cupidatat voluptate nostrud eiusmod elit enim ea id. Non fugiat pariatur occaecat mollit.",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "cards_section"
           }
         },
         "meta": {
@@ -401,6 +650,125 @@
               }
             },
             "slice_type": "footer"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
+      "grid_section": {
+        "library": "slices",
+        "id": "grid_section",
+        "name": "GridSection",
+        "description": "GridSection",
+        "model": {
+          "id": "grid_section",
+          "type": "SharedSlice",
+          "name": "GridSection",
+          "description": "GridSection",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "GridSection",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "paragraph",
+                    "label": "Description",
+                    "placeholder": "A nice description of your feature"
+                  }
+                }
+              },
+              "items": {
+                "logoimage": {
+                  "type": "Image",
+                  "config": {
+                    "label": "LogoImage",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "gridcontent": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "GridContent",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "gridlink": {
+                  "type": "Link",
+                  "config": {
+                    "label": "GridLink",
+                    "placeholder": "",
+                    "select": null
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "logoimage": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72"
+                },
+                "gridcontent": [
+                  {
+                    "type": "paragraph",
+                    "text": "Exercitation sint mollit veniam elit magna laboris. Qui laborum ullamco mollit amet officia officia et enim tempor Lorem anim amet consequat.",
+                    "spans": []
+                  }
+                ],
+                "gridlink": {
+                  "link_type": "Web",
+                  "url": "https://slicemachine.dev"
+                }
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Property",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Pariatur officia ipsum labore.",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "grid_section"
           }
         },
         "meta": {

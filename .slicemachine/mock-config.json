@@ -79,15 +79,31 @@
         "items": {}
       }
     },
-    "News": {
+    "GridSection": {
       "default": {
-        "primary": {}
+        "items": {
+          "gridcontent": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
       }
     },
-    "Main": {
+    "CardsSection": {},
+    "BannerWithMiddleContent": {
       "default": {
-        "primary": {}
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
       }
-    }
+    },
+    "BannerSectionSideContent": {}
   }
 }
