@@ -43,6 +43,9 @@
             },
             "news": {
               "type": "SharedSlice"
+            },
+            "main": {
+              "type": "SharedSlice"
             }
           }
         }

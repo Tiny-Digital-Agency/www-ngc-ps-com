@@ -2,11 +2,11 @@ import React from 'react'
 import { PrismicRichText } from '@prismicio/react'
 
 /**
- * @typedef {import("@prismicio/client").Content.HeaderSlice} HeaderSlice
- * @typedef {import("@prismicio/react").SliceComponentProps<HeaderSlice>} HeaderProps
- * @param { HeaderProps }
+ * @typedef {import("@prismicio/client").Content.MainSlice} MainSlice
+ * @typedef {import("@prismicio/react").SliceComponentProps<MainSlice>} MainProps
+ * @param { MainProps }
  */
-const Header = ({ slice }) => (
+const Main = ({ slice }) => (
   <section>
     <span className="title">
       {
@@ -16,10 +16,10 @@ const Header = ({ slice }) => (
       }
     </span>
     {
-  slice?.items?.map((item, i) =>
-    <span >{ item.nav_dropdown }</span>
-  )
-}
+      slice.primary.description ?
+      <PrismicRichText field={slice.primary.description}/>
+      : <p>start by editing this slice from inside Slice Machine!</p>
+    }
     <style jsx>{`
         section {
           max-width: 600px;
@@ -33,4 +33,4 @@ const Header = ({ slice }) => (
   </section>
 )
 
-export default Header
+export default Main

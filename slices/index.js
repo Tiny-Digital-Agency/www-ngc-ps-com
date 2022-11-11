@@ -6,6 +6,7 @@ import Certification from './Certification';
 import Footer from './Footer';
 import Header from './Header';
 import HeroSection from './HeroSection';
+import Main from './Main';
 import News from './News';
 import TeamDropdown from './TeamDropdown';
 import TeamProfile from './TeamProfile';
@@ -18,6 +19,7 @@ export {
 	Footer,
 	Header,
 	HeroSection,
+	Main,
 	News,
 	TeamDropdown,
 	TeamProfile,
@@ -31,6 +33,7 @@ export const components = {
 	footer: Footer,
 	header: Header,
 	hero_section: HeroSection,
+	main: Main,
 	news: News,
 	team_dropdown: TeamDropdown,
 	team_profile: TeamProfile,

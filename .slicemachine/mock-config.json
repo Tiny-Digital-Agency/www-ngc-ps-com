@@ -14,7 +14,8 @@
     "CallToAction": {},
     "Header": {
       "default": {
-        "primary": {}
+        "primary": {},
+        "items": {}
       }
     },
     "Footer": {
@@ -79,6 +80,11 @@
       }
     },
     "News": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Main": {
       "default": {
         "primary": {}
       }
