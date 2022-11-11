@@ -186,6 +186,14 @@
                     "allowTargetBlank": true,
                     "single": "heading1"
                   }
+                },
+                "backgroundimage": {
+                  "type": "Image",
+                  "config": {
+                    "label": "backgroundimage",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
                 }
               },
               "items": {},
@@ -204,10 +212,19 @@
               "title": [
                 {
                   "type": "heading1",
-                  "text": "Brush",
+                  "text": "Important",
                   "spans": []
                 }
-              ]
+              ],
+              "backgroundimage": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b"
+              }
             },
             "slice_type": "banner_with_middle_content"
           }
@@ -251,10 +268,18 @@
                     "label": "Description",
                     "placeholder": "A nice description of your feature"
                   }
+                },
+                "backgroundimage": {
+                  "type": "Image",
+                  "config": {
+                    "label": "backgroundimage",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
                 }
               },
-              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format",
-              "items": {}
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -269,17 +294,26 @@
               "title": [
                 {
                   "type": "heading1",
-                  "text": "Train",
+                  "text": "Goose",
                   "spans": []
                 }
               ],
               "description": [
                 {
                   "type": "paragraph",
-                  "text": "Veniam nisi mollit laborum nisi ut et. Fugiat sint deserunt duis amet nisi aute proident elit laborum eu Lorem labore laboris labore laboris.",
+                  "text": "Cillum irure id excepteur amet mollit cillum. Sit officia officia dolore qui sit consectetur dolor magna culpa ex tempor laborum.",
                   "spans": []
                 }
-              ]
+              ],
+              "backgroundimage": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e"
+              }
             },
             "slice_type": "banner_section_side_content"
           }
@@ -404,14 +438,6 @@
                     "label": "Title",
                     "placeholder": "This is where it all begins..."
                   }
-                },
-                "description": {
-                  "type": "StructuredText",
-                  "config": {
-                    "single": "paragraph",
-                    "label": "Description",
-                    "placeholder": "A nice description of your feature"
-                  }
                 }
               },
               "items": {
@@ -458,18 +484,18 @@
                   },
                   "alt": null,
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb"
+                  "url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b"
                 },
                 "cardtitle": [
                   {
                     "type": "paragraph",
-                    "text": "Pariatur commodo sunt cillum ex exercitation. Ad sit dolor labore Lorem tempor duis qui deserunt.",
+                    "text": "Do nostrud ex ipsum labore voluptate culpa tempor magna labore eiusmod mollit duis voluptate aliqua elit. Qui voluptate tempor sit et amet enim consequat. Aliquip officia cupidatat proident ut.",
                     "spans": []
                   }
                 ],
                 "cardlink": {
                   "link_type": "Web",
-                  "url": "https://prismic.io"
+                  "url": "https://slicemachine.dev"
                 }
               }
             ],
@@ -477,14 +503,7 @@
               "title": [
                 {
                   "type": "heading1",
-                  "text": "Family",
-                  "spans": []
-                }
-              ],
-              "description": [
-                {
-                  "type": "paragraph",
-                  "text": "Cillum aliquip magna aute pariatur tempor culpa ex adipisicing pariatur. Qui deserunt cupidatat cupidatat voluptate nostrud eiusmod elit enim ea id. Non fugiat pariatur occaecat mollit.",
+                  "text": "Merely",
                   "spans": []
                 }
               ]
@@ -683,14 +702,6 @@
                     "label": "Title",
                     "placeholder": "This is where it all begins..."
                   }
-                },
-                "description": {
-                  "type": "StructuredText",
-                  "config": {
-                    "single": "paragraph",
-                    "label": "Description",
-                    "placeholder": "A nice description of your feature"
-                  }
                 }
               },
               "items": {
@@ -737,18 +748,18 @@
                   },
                   "alt": null,
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72"
+                  "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e"
                 },
                 "gridcontent": [
                   {
                     "type": "paragraph",
-                    "text": "Exercitation sint mollit veniam elit magna laboris. Qui laborum ullamco mollit amet officia officia et enim tempor Lorem anim amet consequat.",
+                    "text": "Deserunt aliquip proident ad eu anim ut pariatur occaecat quis et.",
                     "spans": []
                   }
                 ],
                 "gridlink": {
                   "link_type": "Web",
-                  "url": "https://slicemachine.dev"
+                  "url": "http://twitter.com"
                 }
               }
             ],
@@ -756,14 +767,7 @@
               "title": [
                 {
                   "type": "heading1",
-                  "text": "Property",
-                  "spans": []
-                }
-              ],
-              "description": [
-                {
-                  "type": "paragraph",
-                  "text": "Pariatur officia ipsum labore.",
+                  "text": "Everywhere",
                   "spans": []
                 }
               ]
@@ -899,7 +903,7 @@
                 "banner": {
                   "type": "Image",
                   "config": {
-                    "label": "banner",
+                    "label": "Banner Background Image",
                     "constraint": {},
                     "thumbnails": []
                   }
@@ -913,19 +917,19 @@
                     "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
                   }
                 },
-                "news": {
+                "ButtonTitle": {
                   "type": "StructuredText",
                   "config": {
-                    "label": "news",
+                    "label": "Button Title",
                     "placeholder": "",
                     "allowTargetBlank": true,
                     "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
                   }
                 },
-                "new_content": {
+                "ButtonContent": {
                   "type": "StructuredText",
                   "config": {
-                    "label": "new content",
+                    "label": "Button Content",
                     "placeholder": "",
                     "allowTargetBlank": true,
                     "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
@@ -968,12 +972,12 @@
                   },
                   "alt": null,
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6"
+                  "url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b"
                 },
                 "image_title": [
                   {
                     "type": "paragraph",
-                    "text": "Exercitation incididunt nisi exercitation id. Proident commodo in proident minim nostrud enim tempor adipisicing incididunt aliqua esse. Ut occaecat do reprehenderit voluptate do elit irure culpa aliqua ex.",
+                    "text": "Reprehenderit sunt voluptate nostrud. Occaecat nostrud anim enim ad velit reprehenderit dolore non eu ex esse ipsum do.",
                     "spans": []
                   }
                 ]
@@ -987,26 +991,26 @@
                 },
                 "alt": null,
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+                "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e"
               },
               "heading": [
                 {
                   "type": "paragraph",
-                  "text": "Qui nulla consectetur aute magna. Ex fugiat elit esse.",
+                  "text": "Aliquip qui duis sunt.",
                   "spans": []
                 }
               ],
-              "news": [
+              "ButtonTitle": [
                 {
                   "type": "paragraph",
-                  "text": "Nulla dolore ullamco esse sint in labore et labore qui minim dolor. Veniam est ipsum reprehenderit eu elit exercitation anim reprehenderit mollit tempor non ea eiusmod nostrud dolor.",
+                  "text": "Quis dolor cupidatat proident quis ullamco ut dolor exercitation veniam labore elit sit. Mollit magna sit consequat incididunt. Ut irure eiusmod aute labore esse anim reprehenderit reprehenderit deserunt deserunt esse amet dolore Lorem minim.",
                   "spans": []
                 }
               ],
-              "new_content": [
+              "ButtonContent": [
                 {
                   "type": "paragraph",
-                  "text": "Dolore laboris nisi veniam consectetur pariatur deserunt consectetur. Aliquip qui excepteur eu consequat do exercitation voluptate nulla dolore sit.",
+                  "text": "Qui cupidatat aute velit.",
                   "spans": []
                 }
               ]

@@ -19,6 +19,14 @@
             "allowTargetBlank": true,
             "single": "heading1"
           }
+        },
+        "backgroundimage": {
+          "type": "Image",
+          "config": {
+            "label": "backgroundimage",
+            "constraint": {},
+            "thumbnails": []
+          }
         }
       },
       "items": {},

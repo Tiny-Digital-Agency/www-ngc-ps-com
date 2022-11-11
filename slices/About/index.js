@@ -19,7 +19,7 @@ import {
 const About = ({ slice }) => (
   <Box bg={'#e5e1dd'} paddingTop={"30px"} paddingBottom={"20px"}>
     <Stack spacing={6} as={Container} maxW={'50vw'} textAlign={'center'}
-       _before={{
+      _before={{
         content: `""`,
         backgroundColor: '#4d8b3f',
         width: '84px',
@@ -28,10 +28,10 @@ const About = ({ slice }) => (
         left: '0',
         right: '0',
         top: '-20px',
-      
-    }}>
+
+      }}>
       <Heading fontSize={'2xl'} paddingTop='20px'>
-      <PrismicRichText field={slice.primary.heading} /></Heading>
+        <PrismicRichText field={slice.primary.heading} /></Heading>
       <Box color={'gray.600'} fontSize={'xl'}>
         <PrismicRichText field={slice.primary.paragraph_1} />
       </Box>
@@ -46,7 +46,7 @@ const About = ({ slice }) => (
           {
             slice.items.map((item, i) =>
               <Box key={i}>
-              <img src={item.image.url} alt={item.image.alt} />
+                <img src={item.image.url} alt={item.image.alt} />
               </Box>
             )
           }
@@ -54,8 +54,8 @@ const About = ({ slice }) => (
         <Flex justifyContent={'space-between'} textAlign={"center"}>
           {
             slice.items.map((item, i) =>
-              <Box maxW={160} width={150}  key={i}>
-              <PrismicRichText field={item.title} />
+              <Box maxW={160} width={150} key={i}>
+                <PrismicRichText field={item.title} />
               </Box>
             )
           }

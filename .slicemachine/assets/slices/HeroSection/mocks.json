@@ -11,12 +11,12 @@
           },
           "alt": null,
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6"
+          "url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b"
         },
         "image_title": [
           {
             "type": "paragraph",
-            "text": "Exercitation incididunt nisi exercitation id. Proident commodo in proident minim nostrud enim tempor adipisicing incididunt aliqua esse. Ut occaecat do reprehenderit voluptate do elit irure culpa aliqua ex.",
+            "text": "Reprehenderit sunt voluptate nostrud. Occaecat nostrud anim enim ad velit reprehenderit dolore non eu ex esse ipsum do.",
             "spans": []
           }
         ]
@@ -30,26 +30,26 @@
         },
         "alt": null,
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+        "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e"
       },
       "heading": [
         {
           "type": "paragraph",
-          "text": "Qui nulla consectetur aute magna. Ex fugiat elit esse.",
+          "text": "Aliquip qui duis sunt.",
           "spans": []
         }
       ],
-      "news": [
+      "ButtonTitle": [
         {
           "type": "paragraph",
-          "text": "Nulla dolore ullamco esse sint in labore et labore qui minim dolor. Veniam est ipsum reprehenderit eu elit exercitation anim reprehenderit mollit tempor non ea eiusmod nostrud dolor.",
+          "text": "Quis dolor cupidatat proident quis ullamco ut dolor exercitation veniam labore elit sit. Mollit magna sit consequat incididunt. Ut irure eiusmod aute labore esse anim reprehenderit reprehenderit deserunt deserunt esse amet dolore Lorem minim.",
           "spans": []
         }
       ],
-      "new_content": [
+      "ButtonContent": [
         {
           "type": "paragraph",
-          "text": "Dolore laboris nisi veniam consectetur pariatur deserunt consectetur. Aliquip qui excepteur eu consequat do exercitation voluptate nulla dolore sit.",
+          "text": "Qui cupidatat aute velit.",
           "spans": []
         }
       ]

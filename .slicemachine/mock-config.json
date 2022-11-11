@@ -24,7 +24,20 @@
     },
     "HeroSection": {
       "default": {
-        "primary": {},
+        "primary": {
+          "ButtonContent": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "ButtonTitle": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        },
         "items": {}
       }
     },
@@ -87,10 +100,15 @@
               "blocks": 1
             }
           }
-        }
+        },
+        "primary": {}
       }
     },
-    "CardsSection": {},
+    "CardsSection": {
+      "default": {
+        "primary": {}
+      }
+    },
     "BannerWithMiddleContent": {
       "default": {
         "primary": {
@@ -103,6 +121,11 @@
         }
       }
     },
-    "BannerSectionSideContent": {}
+    "BannerSectionSideContent": {},
+    "BannerSectionMiddleContent": {
+      "default": {
+        "items": {}
+      }
+    }
   }
 }

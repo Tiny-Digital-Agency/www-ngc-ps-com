@@ -3,83 +3,29 @@ import {
   VStack,
   Box,
   useBreakpointValue,
-  Link,
   Image,
-  Text,
 } from "@chakra-ui/react";
+import { PrismicRichText, PrismicLink } from '@prismicio/react'
 
-const Grid = [
-  {
-    imageUrl: "https://bit.ly/2Z4KKcF",
-    imageAlt: "Rear view of modern home with pool",
-    url: "asd",
-    linkList: ["First", "Second", "Third"],
-    id: 1,
-  },
-  {
-    imageUrl: "https://bit.ly/2Z4KKcF",
-    imageAlt: "Rear view of modern home with pool",
-    url: "asdf",
-    linkList: ["First", "Second", "Third"],
-    id: 2,
-  },
-  {
-    imageUrl: "https://bit.ly/2Z4KKcF",
-    imageAlt: "Rear view of modern home with pool",
-    url: "asdfg",
-    linkList: ["First", "Second", "Third"],
-    id: 3,
-  },
-  {
-    imageUrl: "https://bit.ly/2Z4KKcF",
-    imageAlt: "Rear view of modern home with pool",
-    url: "asdfgh",
-    linkList: ["First", "Second", "Third"],
-    id: 4,
-  },
-  {
-    imageUrl: "https://bit.ly/2Z4KKcF",
-    imageAlt: "Rear view of modern home with pool",
-    url: "asdfghj",
-    linkList: ["First", "Second", "Third"],
-    id: 5,
-  },
-  {
-    imageUrl: "https://bit.ly/2Z4KKcF",
-    imageAlt: "Rear view of modern home with pool",
-    linkList: ["First", "Second", "Third"],
-    url: "asdfghjk",
-    id: 6,
-  },
-  {
-    imageAlt: "Rear view of modern home with pool",
-    linkList: ["First", "Second", "Third"],
-    url: "asdfghjkl",
-    id: 7,
-  },
-];
-
-export default function GridSection() {
-  return (
-    <Flex w={"full"}>
-      <VStack
-        w="full"
-        justify={"center"}
-        px={useBreakpointValue({ base: 4, md: 8 })}
-        bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
+const GridSection = ({ slice }) => (
+  <Flex w={"full"}>
+    <VStack
+      w="full"
+      justify={"center"}
+      px={useBreakpointValue({ base: 4, md: 8 })}
+      bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
+      direction="row"
+    >
+      <Flex
+        w={{ xl: "80em", base: "full" }}
+        flexWrap="wrap"
         direction="row"
+        justify={"center"}
+        my="50px"
       >
-        <Flex
-          w={{ xl: "80em", base: "full" }}
-          flexWrap="wrap"
-          direction="row"
-          justify={"center"}
-          my="50px"
-        >
-          {Grid.map((grid) => (
-            <Link
-              key={grid.id}
-              href={`${grid.imageUrl}`}
+        {
+          slice?.items?.map((item, i) =>
+            <Box
               display="flex"
               alignItems="center"
               justifyContent={"center"}
@@ -96,7 +42,7 @@ export default function GridSection() {
                 textDecoration: "none",
               }}
             >
-              {grid.imageUrl ? <Image src={`${grid.imageUrl}`} /> : ""}
+              {item.logoimage.url ? <Image src={item.logoimage.url} alt={item.logoimage.alt} /> : ""}
 
               <Box
                 mt="10px"
@@ -104,25 +50,21 @@ export default function GridSection() {
                 fontSize={18}
                 fontWeight="bold"
                 textAlign={"center"}
+                _hover={{
+                  color: "#ef483e",
+                }}
               >
                 <Flex flexDirection={"column"}>
-                  {/* {grid.linkList.map((type, index) => (
-                    <Link
-                      href={`/${type}`}
-                      key={index}
-                      _hover={{
-                        color: "#ef483e",
-                      }}
-                    >
-                      {type}
-                    </Link>
-                  ))} */}
+                  <PrismicLink field={item.gridlink}>
+                    <PrismicRichText field={item.gridcontent} />
+                  </PrismicLink>
                 </Flex>
               </Box>
-            </Link>
-          ))}
-        </Flex>
-      </VStack>
-    </Flex>
-  );
-}
+            </Box>
+          )
+        }
+      </Flex>
+    </VStack>
+  </Flex>
+)
+export default GridSection

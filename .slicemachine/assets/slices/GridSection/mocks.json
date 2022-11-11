@@ -11,18 +11,18 @@
           },
           "alt": null,
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72"
+          "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e"
         },
         "gridcontent": [
           {
             "type": "paragraph",
-            "text": "Exercitation sint mollit veniam elit magna laboris. Qui laborum ullamco mollit amet officia officia et enim tempor Lorem anim amet consequat.",
+            "text": "Deserunt aliquip proident ad eu anim ut pariatur occaecat quis et.",
             "spans": []
           }
         ],
         "gridlink": {
           "link_type": "Web",
-          "url": "https://slicemachine.dev"
+          "url": "http://twitter.com"
         }
       }
     ],
@@ -30,14 +30,7 @@
       "title": [
         {
           "type": "heading1",
-          "text": "Property",
-          "spans": []
-        }
-      ],
-      "description": [
-        {
-          "type": "paragraph",
-          "text": "Pariatur officia ipsum labore.",
+          "text": "Everywhere",
           "spans": []
         }
       ]

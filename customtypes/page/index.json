@@ -31,6 +31,18 @@
             },
             "grid_section": {
               "type": "SharedSlice"
+            },
+            "cards_section": {
+              "type": "SharedSlice"
+            },
+            "banner_with_middle_content": {
+              "type": "SharedSlice"
+            },
+            "banner_section_side_content": {
+              "type": "SharedSlice"
+            },
+            "hero_section": {
+              "type": "SharedSlice"
             }
           }
         }
