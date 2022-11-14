@@ -11,6 +11,8 @@ import GridSection from './GridSection';
 import Header from './Header';
 import HeroSection from './HeroSection';
 import News from './News';
+import Resources from './Resources';
+import SidebarDropdownWithContent from './SidebarDropdownWithContent';
 import TeamDropdown from './TeamDropdown';
 import TeamProfile from './TeamProfile';
 import TopNav from './TopNav';
@@ -27,6 +29,8 @@ export {
 	Header,
 	HeroSection,
 	News,
+	Resources,
+	SidebarDropdownWithContent,
 	TeamDropdown,
 	TeamProfile,
 	TopNav,
@@ -44,6 +48,8 @@ export const components = {
 	header: Header,
 	hero_section: HeroSection,
 	news: News,
+	resources: Resources,
+	sidebar_dropdown_with_content: SidebarDropdownWithContent,
 	team_dropdown: TeamDropdown,
 	team_profile: TeamProfile,
 	top_nav: TopNav,

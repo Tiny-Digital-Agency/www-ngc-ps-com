@@ -43,6 +43,12 @@
             },
             "hero_section": {
               "type": "SharedSlice"
+            },
+            "sidebar_dropdown_with_content": {
+              "type": "SharedSlice"
+            },
+            "resources": {
+              "type": "SharedSlice"
             }
           }
         }

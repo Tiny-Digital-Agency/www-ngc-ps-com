@@ -126,6 +126,31 @@
       "default": {
         "items": {}
       }
+    },
+    "SidebarDropdownWithContent": {
+      "default": {
+        "primary": {},
+        "items": {
+          "menu_items_child": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "Resources": {
+      "default": {
+        "primary": {
+          "description": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
     }
   }
 }

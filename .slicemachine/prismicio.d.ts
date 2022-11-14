@@ -75,7 +75,7 @@ interface PageDocumentData {
  * Slice for *page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = CallToActionSlice | GridSectionSlice | CardsSectionSlice | BannerWithMiddleContentSlice | BannerSectionSideContentSlice | HeroSectionSlice;
+type PageDocumentDataSlicesSlice = CallToActionSlice | GridSectionSlice | CardsSectionSlice | BannerWithMiddleContentSlice | BannerSectionSideContentSlice | HeroSectionSlice | SidebarDropdownWithContentSlice | ResourcesSlice;
 /**
  * page document from Prismic
  *
@@ -833,6 +833,167 @@ type NewsSliceVariation = NewsSliceDefault;
  */
 export type NewsSlice = prismicT.SharedSlice<"news", NewsSliceVariation>;
 /**
+ * Primary content in Resources → Primary
+ *
+ */
+interface ResourcesSliceDefaultPrimary {
+    /**
+     * Title field in *Resources → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: This is where it all begins...
+     * - **API ID Path**: resources.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * Description field in *Resources → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: A nice description of your feature
+     * - **API ID Path**: resources.primary.description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+}
+/**
+ * Item in Resources → Items
+ *
+ */
+export interface ResourcesSliceDefaultItem {
+    /**
+     * text field in *Resources → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: resources.items[].text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    text: prismicT.RichTextField;
+}
+/**
+ * Default variation for Resources Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Resources`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ResourcesSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<ResourcesSliceDefaultPrimary>, Simplify<ResourcesSliceDefaultItem>>;
+/**
+ * Slice variation for *Resources*
+ *
+ */
+type ResourcesSliceVariation = ResourcesSliceDefault;
+/**
+ * Resources Shared Slice
+ *
+ * - **API ID**: `resources`
+ * - **Description**: `Resources`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ResourcesSlice = prismicT.SharedSlice<"resources", ResourcesSliceVariation>;
+/**
+ * Primary content in SidebarDropdownWithContent → Primary
+ *
+ */
+interface SidebarDropdownWithContentSliceDefaultPrimary {
+    /**
+     * Title field in *SidebarDropdownWithContent → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: This is where it all begins...
+     * - **API ID Path**: sidebar_dropdown_with_content.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+}
+/**
+ * Item in SidebarDropdownWithContent → Items
+ *
+ */
+export interface SidebarDropdownWithContentSliceDefaultItem {
+    /**
+     * Title field in *SidebarDropdownWithContent → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: sidebar_dropdown_with_content.items[].title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+    /**
+     * content field in *SidebarDropdownWithContent → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: sidebar_dropdown_with_content.items[].content
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    content: prismicT.RichTextField;
+    /**
+     * Title Menu field in *SidebarDropdownWithContent → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: sidebar_dropdown_with_content.items[].titlemenu
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    titlemenu: prismicT.RichTextField;
+    /**
+     * Turn Into Menu field in *SidebarDropdownWithContent → Items*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: sidebar_dropdown_with_content.items[].turnintomenu
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    turnintomenu: prismicT.BooleanField;
+    /**
+     * Menu items child field in *SidebarDropdownWithContent → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: sidebar_dropdown_with_content.items[].menu_items_child
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    menu_items_child: prismicT.RichTextField;
+}
+/**
+ * Default variation for SidebarDropdownWithContent Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `SidebarDropdownWithContent`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type SidebarDropdownWithContentSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<SidebarDropdownWithContentSliceDefaultPrimary>, Simplify<SidebarDropdownWithContentSliceDefaultItem>>;
+/**
+ * Slice variation for *SidebarDropdownWithContent*
+ *
+ */
+type SidebarDropdownWithContentSliceVariation = SidebarDropdownWithContentSliceDefault;
+/**
+ * SidebarDropdownWithContent Shared Slice
+ *
+ * - **API ID**: `sidebar_dropdown_with_content`
+ * - **Description**: `SidebarDropdownWithContent`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type SidebarDropdownWithContentSlice = prismicT.SharedSlice<"sidebar_dropdown_with_content", SidebarDropdownWithContentSliceVariation>;
+/**
  * Item in TeamDropdown → Items
  *
  */
@@ -1030,6 +1191,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, AboutSliceDefaultPrimary, AboutSliceDefaultItem, AboutSliceDefault, AboutSliceVariation, AboutSlice, BannerWithMiddleContentSliceDefaultPrimary, BannerWithMiddleContentSliceDefault, BannerWithMiddleContentSliceVariation, BannerWithMiddleContentSlice, BannerSectionSideContentSliceDefaultPrimary, BannerSectionSideContentSliceDefault, BannerSectionSideContentSliceVariation, BannerSectionSideContentSlice, CallToActionSliceDefaultPrimary, CallToActionSliceDefault, CallToActionSliceVariation, CallToActionSlice, CardsSectionSliceDefaultPrimary, CardsSectionSliceDefaultItem, CardsSectionSliceDefault, CardsSectionSliceVariation, CardsSectionSlice, CertificationSliceDefaultItem, CertificationSliceDefault, CertificationSliceVariation, CertificationSlice, FooterSliceDefaultPrimary, FooterSliceDefaultItem, FooterSliceDefault, FooterSliceVariation, FooterSlice, GridSectionSliceDefaultPrimary, GridSectionSliceDefaultItem, GridSectionSliceDefault, GridSectionSliceVariation, GridSectionSlice, HeaderSliceDefaultPrimary, HeaderSliceDefaultItem, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, HeroSectionSliceDefaultPrimary, HeroSectionSliceDefaultItem, HeroSectionSliceDefault, HeroSectionSliceVariation, HeroSectionSlice, NewsSliceDefaultPrimary, NewsSliceDefault, NewsSliceVariation, NewsSlice, TeamDropdownSliceDefaultItem, TeamDropdownSliceDefault, TeamDropdownSliceVariation, TeamDropdownSlice, TeamProfileSliceDefaultPrimary, TeamProfileSliceDefault, TeamProfileSliceVariation, TeamProfileSlice, TopNavSliceDefaultPrimary, TopNavSliceDefaultItem, TopNavSliceDefault, TopNavSliceVariation, TopNavSlice };
+        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, AboutSliceDefaultPrimary, AboutSliceDefaultItem, AboutSliceDefault, AboutSliceVariation, AboutSlice, BannerWithMiddleContentSliceDefaultPrimary, BannerWithMiddleContentSliceDefault, BannerWithMiddleContentSliceVariation, BannerWithMiddleContentSlice, BannerSectionSideContentSliceDefaultPrimary, BannerSectionSideContentSliceDefault, BannerSectionSideContentSliceVariation, BannerSectionSideContentSlice, CallToActionSliceDefaultPrimary, CallToActionSliceDefault, CallToActionSliceVariation, CallToActionSlice, CardsSectionSliceDefaultPrimary, CardsSectionSliceDefaultItem, CardsSectionSliceDefault, CardsSectionSliceVariation, CardsSectionSlice, CertificationSliceDefaultItem, CertificationSliceDefault, CertificationSliceVariation, CertificationSlice, FooterSliceDefaultPrimary, FooterSliceDefaultItem, FooterSliceDefault, FooterSliceVariation, FooterSlice, GridSectionSliceDefaultPrimary, GridSectionSliceDefaultItem, GridSectionSliceDefault, GridSectionSliceVariation, GridSectionSlice, HeaderSliceDefaultPrimary, HeaderSliceDefaultItem, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, HeroSectionSliceDefaultPrimary, HeroSectionSliceDefaultItem, HeroSectionSliceDefault, HeroSectionSliceVariation, HeroSectionSlice, NewsSliceDefaultPrimary, NewsSliceDefault, NewsSliceVariation, NewsSlice, ResourcesSliceDefaultPrimary, ResourcesSliceDefaultItem, ResourcesSliceDefault, ResourcesSliceVariation, ResourcesSlice, SidebarDropdownWithContentSliceDefaultPrimary, SidebarDropdownWithContentSliceDefaultItem, SidebarDropdownWithContentSliceDefault, SidebarDropdownWithContentSliceVariation, SidebarDropdownWithContentSlice, TeamDropdownSliceDefaultItem, TeamDropdownSliceDefault, TeamDropdownSliceVariation, TeamDropdownSlice, TeamProfileSliceDefaultPrimary, TeamProfileSliceDefault, TeamProfileSliceVariation, TeamProfileSlice, TopNavSliceDefaultPrimary, TopNavSliceDefaultItem, TopNavSliceDefault, TopNavSliceVariation, TopNavSlice };
     }
 }
