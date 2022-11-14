@@ -20,20 +20,34 @@ import { SliceZone } from '@prismicio/react'
 import { createClient } from '../prismicio'
 import { components } from '../slices'
 
-const Page = ({ page, navigation, settings }) => {
-  return <SliceZone slices={page.data.slices} components={components} />
-}
+/*Components*/
+import { Navigation } from '../components/Navigation'
 
+const Page = ({ navigation, page }) => {
+
+  return (
+    <div>
+      <Navigation navigation={navigation} />
+      <SliceZone slices={page?.data.slices} components={components} />
+      {/* The rest of your component... */}
+    </div>
+  )
+}
 export default Page
 
-export async function getStaticProps({ previewData }) {
+export async function getStaticProps({  previewData }) {
   const client = createClient({ previewData })
 
+  const [navigation] = await Promise.all([
+    client.getByUID('navigation', 'navigation'),
+  ])
   const page = await client.getSingle('homepage')
 
   return {
     props: {
-      page,
+      navigation,
+      page
     },
   }
 }
+

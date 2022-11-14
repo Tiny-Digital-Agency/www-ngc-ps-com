@@ -4,19 +4,31 @@ import * as prismicH from '@prismicio/helpers'
 import { createClient } from '../prismicio'
 import { components } from '../slices'
 
-const Page = ({ page, navigation, settings }) => {
-  return <SliceZone slices={page.data.slices} components={components} />
-}
+/*Components*/
+import { Navigation } from '../components/Navigation'
 
-export default Page
+export async function Page({ navigation, page }) {
+
+  return (
+    <div>
+      <Navigation navigation={navigation} />
+      <SliceZone slices={page.data.slices} components={components} />
+      {/* The rest of your component... */}
+    </div>
+  )
+}
 
 export async function getStaticProps({ params, previewData }) {
   const client = createClient({ previewData })
 
-  const page = await client.getByUID('page', params.uid)
+  const [navigation, page] = await Promise.all([
+    client.getByUID('navigation', 'header'),
+    client.getByUID('page', params.uid),
+  ])
 
   return {
     props: {
+      navigation,
       page,
     },
   }

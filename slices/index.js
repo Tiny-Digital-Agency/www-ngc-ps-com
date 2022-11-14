@@ -8,6 +8,7 @@ import CardsSection from './CardsSection';
 import Certification from './Certification';
 import Footer from './Footer';
 import GridSection from './GridSection';
+import { Navigation } from '../components/Navigation';
 import Header from './Header';
 import HeroSection from './HeroSection';
 import Main from './Main';
@@ -25,6 +26,7 @@ export {
 	Certification,
 	Footer,
 	GridSection,
+	Navigation,
 	Header,
 	HeroSection,
 	Main,
@@ -43,6 +45,7 @@ export const components = {
 	certification: Certification,
 	footer: Footer,
 	grid_section: GridSection,
+	navigation: Navigation,
 	header: Header,
 	hero_section: HeroSection,
 	main: Main,
