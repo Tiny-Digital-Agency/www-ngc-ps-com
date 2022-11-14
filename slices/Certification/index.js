@@ -25,7 +25,7 @@ const Certification = ({ slice }) => (
       top: '-20px',
 
     }}>
-      <Flex justifyContent={'center'} alignItems={"center"} >
+      <Flex justifyContent={'center'} alignItems={"center"} flexDirection={{ base: 'column', md: 'row', sm: 'column' }}>
         {
 
           slice.items?.map((item, i) =>
@@ -33,9 +33,7 @@ const Certification = ({ slice }) => (
               <Box maxW={"190px"} margin={"20px"}>
                 <Image  src={item.image.url} alt={item.image.alt} />
               </Box>
-
             </PrismicLink>
-
           )
         }
       </Flex>

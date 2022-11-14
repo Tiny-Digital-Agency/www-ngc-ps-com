@@ -18,8 +18,8 @@ import {
 
 const About = ({ slice }) => (
   <Box bg={'#e5e1dd'} paddingTop={"30px"} paddingBottom={"20px"}>
-    <Stack spacing={6} as={Container} maxW={'50vw'} textAlign={'center'}
-       _before={{
+    <Stack spacing={6} as={Container} maxW={{base: '100vw', sm:'80vw' , md:'80vw' , xl: '50vw'}} textAlign={'center'}
+      _before={{
         content: `""`,
         backgroundColor: '#4d8b3f',
         width: '84px',
@@ -28,34 +28,38 @@ const About = ({ slice }) => (
         left: '0',
         right: '0',
         top: '-20px',
-      
-    }}>
+
+      }}>
       <Heading fontSize={'2xl'} paddingTop='20px'>
-      <PrismicRichText field={slice.primary.heading} /></Heading>
+        <PrismicRichText field={slice.primary.heading} /></Heading>
       <Box color={'gray.600'} fontSize={'xl'}>
         <PrismicRichText field={slice.primary.paragraph_1} />
       </Box>
     </Stack>
-    <Container maxW={'50vw'} mt={10}>
+    <Container maxW={{base: '100vw', sm:'80vw' , md:'80vw' , xl: '50vw'}} mt={10}>
       <Heading fontSize={'3xl'}><PrismicRichText field={slice.primary.list_title} /></Heading>
       <UnorderedList mt={5} ml={10}>
         <PrismicRichText field={slice.primary.list} />
       </UnorderedList>
-      <Box display={'block'}>
-        <Flex justifyContent={'space-between'} textAlign={"center"} spacing={6} paddingTop={"10"}>
+      <Box>
+        <Flex 
+        justifyContent={'space-between'}  
+        alignItems="center" 
+        textAlign={"center"} 
+        spacing={6} 
+        paddingTop={"10"} 
+        flexDirection={{ base: 'column', md: 'row', sm: 'column' }} >
           {
             slice.items.map((item, i) =>
-              <Box key={i}>
-              <img src={item.image.url} alt={item.image.alt} />
-              </Box>
-            )
-          }
-        </Flex>
-        <Flex justifyContent={'space-between'} textAlign={"center"}>
-          {
-            slice.items.map((item, i) =>
-              <Box maxW={160} width={150}  key={i}>
-              <PrismicRichText field={item.title} />
+              <Box key={i} alignSelf={"center"} 
+              maxH={"150px"} 
+              maxW={"150px"} 
+              h="150px" w="150px" 
+              mt={"40px"} mb={"40px"} 
+              mr={"20px"} ml={"20px"}
+              >
+                <img src={item.image.url} alt={item.image.alt} />
+                { item.image_title }
               </Box>
             )
           }

@@ -27,12 +27,10 @@ const TopNav = ({ slice }) => (
             slice?.items?.map((item, i) =>
               <PrismicLink field={item.link} key={i}>
             <Box 
-
             _before={{
               content: `"/"`,
               padding: '0 10px',
               color: '#ef483e'
-
             }}>{item.contact_details}
             </Box>
               </PrismicLink>

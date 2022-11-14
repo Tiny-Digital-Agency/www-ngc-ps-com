@@ -32,7 +32,7 @@ import {
               eiusmod tempor
             </Text>
             <Stack direction={'row'}>
-              <Button
+              <Button 
                 bg={'blue.400'}
                 rounded={'full'}
                 color={'white'}

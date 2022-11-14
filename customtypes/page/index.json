@@ -28,6 +28,15 @@
           "choices": {
             "call_to_action": {
               "type": "SharedSlice"
+            },
+            "industries_banner": {
+              "type": "SharedSlice"
+            },
+            "industries_content": {
+              "type": "SharedSlice"
+            },
+            "vertical_navigation": {
+              "type": "SharedSlice"
             }
           }
         }

@@ -6,10 +6,15 @@ import Certification from './Certification';
 import Footer from './Footer';
 import Header from './Header';
 import HeroSection from './HeroSection';
+import IndustriesBanner from './IndustriesBanner';
+import IndustriesContent from './IndustriesContent';
+import Logo from './Logo';
+import Navigation from './Navigation';
 import News from './News';
 import TeamDropdown from './TeamDropdown';
 import TeamProfile from './TeamProfile';
 import TopNav from './TopNav';
+import VerticalNavigation from './VerticalNavigation';
 
 export {
 	About,
@@ -18,10 +23,15 @@ export {
 	Footer,
 	Header,
 	HeroSection,
+	IndustriesBanner,
+	IndustriesContent,
+	Logo,
+	Navigation,
 	News,
 	TeamDropdown,
 	TeamProfile,
 	TopNav,
+	VerticalNavigation,
 };
 
 export const components = {
@@ -31,8 +41,13 @@ export const components = {
 	footer: Footer,
 	header: Header,
 	hero_section: HeroSection,
+	industries_banner: IndustriesBanner,
+	industries_content: IndustriesContent,
+	logo: Logo,
+	navigation: Navigation,
 	news: News,
 	team_dropdown: TeamDropdown,
 	team_profile: TeamProfile,
 	top_nav: TopNav,
+	vertical_navigation: VerticalNavigation,
 };

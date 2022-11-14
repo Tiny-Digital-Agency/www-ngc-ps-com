@@ -46,6 +46,46 @@ type HomepageDocumentDataSlicesSlice = TopNavSlice | HeaderSlice | HeroSectionSl
  * @typeParam Lang - Language API ID of the document.
  */
 export type HomepageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<HomepageDocumentData>, "homepage", Lang>;
+/** Content for Navigation documents */
+interface NavigationDocumentData {
+    /**
+     * Logo field in *Navigation*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navigation.logo
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    logo: prismicT.ImageField<never>;
+    /**
+     * Slice Zone field in *Navigation*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navigation.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<NavigationDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *Navigation → Slice Zone*
+ *
+ */
+type NavigationDocumentDataSlicesSlice = NavigationSlice;
+/**
+ * Navigation document from Prismic
+ *
+ * - **API ID**: `navigation`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type NavigationDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<NavigationDocumentData>, "navigation", Lang>;
 /** Content for page documents */
 interface PageDocumentData {
     /**
@@ -75,7 +115,7 @@ interface PageDocumentData {
  * Slice for *page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = CallToActionSlice;
+type PageDocumentDataSlicesSlice = CallToActionSlice | IndustriesBannerSlice | IndustriesContentSlice | VerticalNavigationSlice;
 /**
  * page document from Prismic
  *
@@ -86,7 +126,7 @@ type PageDocumentDataSlicesSlice = CallToActionSlice;
  * @typeParam Lang - Language API ID of the document.
  */
 export type PageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
-export type AllDocumentTypes = HomepageDocument | PageDocument;
+export type AllDocumentTypes = HomepageDocument | NavigationDocument | PageDocument;
 /**
  * Primary content in About → Primary
  *
@@ -158,6 +198,16 @@ export interface AboutSliceDefaultItem {
      *
      */
     title: prismicT.RichTextField;
+    /**
+     * Image Title field in *About → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: about.items[].image_title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    image_title: prismicT.KeyTextField;
 }
 /**
  * Default variation for About Slice
@@ -526,6 +576,228 @@ type HeroSectionSliceVariation = HeroSectionSliceDefault;
  */
 export type HeroSectionSlice = prismicT.SharedSlice<"hero_section", HeroSectionSliceVariation>;
 /**
+ * Primary content in IndustriesBanner → Primary
+ *
+ */
+interface IndustriesBannerSliceDefaultPrimary {
+    /**
+     * Image field in *IndustriesBanner → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: industries_banner.primary.image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<never>;
+    /**
+     * title field in *IndustriesBanner → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: industries_banner.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+}
+/**
+ * Default variation for IndustriesBanner Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `IndustriesBanner`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type IndustriesBannerSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<IndustriesBannerSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *IndustriesBanner*
+ *
+ */
+type IndustriesBannerSliceVariation = IndustriesBannerSliceDefault;
+/**
+ * IndustriesBanner Shared Slice
+ *
+ * - **API ID**: `industries_banner`
+ * - **Description**: `IndustriesBanner`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type IndustriesBannerSlice = prismicT.SharedSlice<"industries_banner", IndustriesBannerSliceVariation>;
+/**
+ * Item in IndustriesContent → Items
+ *
+ */
+export interface IndustriesContentSliceDefaultItem {
+    /**
+     * Title field in *IndustriesContent → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: industries_content.items[].title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+    /**
+     * Navigation field in *IndustriesContent → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: industries_content.items[].navigation
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    navigation: prismicT.RichTextField;
+    /**
+     * RightContent field in *IndustriesContent → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: industries_content.items[].rightcontent
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    rightcontent: prismicT.RichTextField;
+}
+/**
+ * Default variation for IndustriesContent Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `IndustriesContent`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type IndustriesContentSliceDefault = prismicT.SharedSliceVariation<"default", Record<string, never>, Simplify<IndustriesContentSliceDefaultItem>>;
+/**
+ * Slice variation for *IndustriesContent*
+ *
+ */
+type IndustriesContentSliceVariation = IndustriesContentSliceDefault;
+/**
+ * IndustriesContent Shared Slice
+ *
+ * - **API ID**: `industries_content`
+ * - **Description**: `IndustriesContent`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type IndustriesContentSlice = prismicT.SharedSlice<"industries_content", IndustriesContentSliceVariation>;
+/**
+ * Primary content in Logo → Primary
+ *
+ */
+interface LogoSliceDefaultPrimary {
+    /**
+     * image field in *Logo → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: logo.primary.image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<never>;
+}
+/**
+ * Default variation for Logo Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Logo`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type LogoSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<LogoSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *Logo*
+ *
+ */
+type LogoSliceVariation = LogoSliceDefault;
+/**
+ * Logo Shared Slice
+ *
+ * - **API ID**: `logo`
+ * - **Description**: `Logo`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type LogoSlice = prismicT.SharedSlice<"logo", LogoSliceVariation>;
+/**
+ * Primary content in Navigation → Primary
+ *
+ */
+interface NavigationSliceDefaultPrimary {
+    /**
+     * Name field in *Navigation → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navigation.primary.name
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    name: prismicT.RichTextField;
+    /**
+     * Link field in *Navigation → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navigation.primary.link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    link: prismicT.RichTextField;
+}
+/**
+ * Item in Navigation → Items
+ *
+ */
+export interface NavigationSliceDefaultItem {
+    /**
+     * Name field in *Navigation → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navigation.items[].name
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    name: prismicT.RichTextField;
+    /**
+     * Link field in *Navigation → Items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navigation.items[].link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    link: prismicT.LinkField;
+}
+/**
+ * Default variation for Navigation Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Navigation`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type NavigationSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<NavigationSliceDefaultPrimary>, Simplify<NavigationSliceDefaultItem>>;
+/**
+ * Slice variation for *Navigation*
+ *
+ */
+type NavigationSliceVariation = NavigationSliceDefault;
+/**
+ * Navigation Shared Slice
+ *
+ * - **API ID**: `navigation`
+ * - **Description**: `Navigation`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type NavigationSlice = prismicT.SharedSlice<"navigation", NavigationSliceVariation>;
+/**
  * Primary content in News → Primary
  *
  */
@@ -767,11 +1039,76 @@ type TopNavSliceVariation = TopNavSliceDefault;
  *
  */
 export type TopNavSlice = prismicT.SharedSlice<"top_nav", TopNavSliceVariation>;
+/**
+ * Primary content in VerticalNavigation → Primary
+ *
+ */
+interface VerticalNavigationSliceDefaultPrimary {
+    /**
+     * titleRightcontent field in *VerticalNavigation → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: vertical_navigation.primary.titlerightcontent
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    titlerightcontent: prismicT.RichTextField;
+}
+/**
+ * Item in VerticalNavigation → Items
+ *
+ */
+export interface VerticalNavigationSliceDefaultItem {
+    /**
+     * navList field in *VerticalNavigation → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: vertical_navigation.items[].navlist
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    navlist: prismicT.KeyTextField;
+    /**
+     * navContent field in *VerticalNavigation → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: vertical_navigation.items[].navcontent
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    navcontent: prismicT.RichTextField;
+}
+/**
+ * Default variation for VerticalNavigation Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `VerticalNavigation`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type VerticalNavigationSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<VerticalNavigationSliceDefaultPrimary>, Simplify<VerticalNavigationSliceDefaultItem>>;
+/**
+ * Slice variation for *VerticalNavigation*
+ *
+ */
+type VerticalNavigationSliceVariation = VerticalNavigationSliceDefault;
+/**
+ * VerticalNavigation Shared Slice
+ *
+ * - **API ID**: `vertical_navigation`
+ * - **Description**: `VerticalNavigation`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type VerticalNavigationSlice = prismicT.SharedSlice<"vertical_navigation", VerticalNavigationSliceVariation>;
 declare module "@prismicio/client" {
     interface CreateClient {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, AboutSliceDefaultPrimary, AboutSliceDefaultItem, AboutSliceDefault, AboutSliceVariation, AboutSlice, CallToActionSliceDefaultPrimary, CallToActionSliceDefault, CallToActionSliceVariation, CallToActionSlice, CertificationSliceDefaultItem, CertificationSliceDefault, CertificationSliceVariation, CertificationSlice, FooterSliceDefaultPrimary, FooterSliceDefaultItem, FooterSliceDefault, FooterSliceVariation, FooterSlice, HeaderSliceDefaultPrimary, HeaderSliceDefaultItem, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, HeroSectionSliceDefaultPrimary, HeroSectionSliceDefaultItem, HeroSectionSliceDefault, HeroSectionSliceVariation, HeroSectionSlice, NewsSliceDefaultPrimary, NewsSliceDefault, NewsSliceVariation, NewsSlice, TeamDropdownSliceDefaultItem, TeamDropdownSliceDefault, TeamDropdownSliceVariation, TeamDropdownSlice, TeamProfileSliceDefaultPrimary, TeamProfileSliceDefault, TeamProfileSliceVariation, TeamProfileSlice, TopNavSliceDefaultPrimary, TopNavSliceDefaultItem, TopNavSliceDefault, TopNavSliceVariation, TopNavSlice };
+        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, AboutSliceDefaultPrimary, AboutSliceDefaultItem, AboutSliceDefault, AboutSliceVariation, AboutSlice, CallToActionSliceDefaultPrimary, CallToActionSliceDefault, CallToActionSliceVariation, CallToActionSlice, CertificationSliceDefaultItem, CertificationSliceDefault, CertificationSliceVariation, CertificationSlice, FooterSliceDefaultPrimary, FooterSliceDefaultItem, FooterSliceDefault, FooterSliceVariation, FooterSlice, HeaderSliceDefaultPrimary, HeaderSliceDefaultItem, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, HeroSectionSliceDefaultPrimary, HeroSectionSliceDefaultItem, HeroSectionSliceDefault, HeroSectionSliceVariation, HeroSectionSlice, IndustriesBannerSliceDefaultPrimary, IndustriesBannerSliceDefault, IndustriesBannerSliceVariation, IndustriesBannerSlice, IndustriesContentSliceDefaultItem, IndustriesContentSliceDefault, IndustriesContentSliceVariation, IndustriesContentSlice, LogoSliceDefaultPrimary, LogoSliceDefault, LogoSliceVariation, LogoSlice, NavigationSliceDefaultPrimary, NavigationSliceDefaultItem, NavigationSliceDefault, NavigationSliceVariation, NavigationSlice, NewsSliceDefaultPrimary, NewsSliceDefault, NewsSliceVariation, NewsSlice, TeamDropdownSliceDefaultItem, TeamDropdownSliceDefault, TeamDropdownSliceVariation, TeamDropdownSlice, TeamProfileSliceDefaultPrimary, TeamProfileSliceDefault, TeamProfileSliceVariation, TeamProfileSlice, TopNavSliceDefaultPrimary, TopNavSliceDefaultItem, TopNavSliceDefault, TopNavSliceVariation, TopNavSlice, VerticalNavigationSliceDefaultPrimary, VerticalNavigationSliceDefaultItem, VerticalNavigationSliceDefault, VerticalNavigationSliceVariation, VerticalNavigationSlice };
     }
 }
