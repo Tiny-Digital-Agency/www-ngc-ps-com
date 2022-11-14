@@ -22,7 +22,7 @@ import { components } from '../slices'
 
 /*Components*/
 import { Navigation } from '../components/Navigation'
-
+// import { NavigationItems } from '../slices/NavigationItems/index'
 const Page = ({ navigation, page }) => {
 
   return (

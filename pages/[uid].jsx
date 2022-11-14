@@ -6,7 +6,7 @@ import { components } from '../slices'
 
 /*Components*/
 import { Navigation } from '../components/Navigation'
-
+// import { NavigationItems } from '../slices/NavigationItems/index'
 export async function Page({ navigation, page }) {
 
   return (

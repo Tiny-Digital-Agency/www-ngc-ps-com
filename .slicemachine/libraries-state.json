@@ -777,108 +777,6 @@
         },
         "screenshotPaths": {}
       },
-      "header": {
-        "library": "slices",
-        "id": "header",
-        "name": "Header",
-        "description": "Header",
-        "model": {
-          "id": "header",
-          "type": "SharedSlice",
-          "name": "Header",
-          "description": "Header",
-          "variations": [
-            {
-              "id": "default",
-              "name": "Default",
-              "docURL": "...",
-              "version": "sktwi1xtmkfgx8626",
-              "description": "Header",
-              "primary": {
-                "logo": {
-                  "type": "Image",
-                  "config": {
-                    "label": "logo",
-                    "constraint": {},
-                    "thumbnails": []
-                  }
-                },
-                "hamburger": {
-                  "type": "StructuredText",
-                  "config": {
-                    "label": "Hamburger",
-                    "placeholder": "",
-                    "allowTargetBlank": true,
-                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-                  }
-                }
-              },
-              "items": {
-                "nav_link": {
-                  "type": "Link",
-                  "config": {
-                    "label": "Nav link",
-                    "placeholder": "",
-                    "select": null
-                  }
-                },
-                "nav_dropdown": {
-                  "type": "Select",
-                  "config": {
-                    "label": "Nav dropdown",
-                    "placeholder": "",
-                    "options": [
-                      "Lined Solution",
-                      "Valves",
-                      "Leak Detection & Protection"
-                    ]
-                  }
-                }
-              },
-              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
-            }
-          ]
-        },
-        "mocks": {
-          "default": {
-            "variation": "default",
-            "version": "sktwi1xtmkfgx8626",
-            "items": [
-              {
-                "nav_link": {
-                  "link_type": "Web",
-                  "url": "https://slicemachine.dev"
-                },
-                "nav_dropdown": "Lined Solution"
-              }
-            ],
-            "primary": {
-              "logo": {
-                "dimensions": {
-                  "width": 900,
-                  "height": 500
-                },
-                "alt": null,
-                "copyright": null,
-                "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a"
-              },
-              "hamburger": [
-                {
-                  "type": "paragraph",
-                  "text": "Mollit id culpa amet aliquip veniam qui labore velit dolor.",
-                  "spans": []
-                }
-              ]
-            },
-            "slice_type": "header"
-          }
-        },
-        "meta": {
-          "fileName": "index",
-          "extension": "js"
-        },
-        "screenshotPaths": {}
-      },
       "hero_section": {
         "library": "slices",
         "id": "hero_section",
@@ -1070,6 +968,106 @@
               ]
             },
             "slice_type": "main"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
+      "navigation_items": {
+        "library": "slices",
+        "id": "navigation_items",
+        "name": "NavigationItems",
+        "description": "NavigationItems",
+        "model": {
+          "id": "navigation_items",
+          "type": "SharedSlice",
+          "name": "NavigationItems",
+          "description": "NavigationItems",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "NavigationItems",
+              "primary": {
+                "name": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Name",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "link": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Link",
+                    "placeholder": "",
+                    "select": null
+                  }
+                }
+              },
+              "items": {
+                "name": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Name",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "link": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Link",
+                    "placeholder": "",
+                    "select": null
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "name": [
+                  {
+                    "type": "paragraph",
+                    "text": "Reprehenderit aute cupidatat nulla ipsum sunt fugiat pariatur sunt duis irure sint quis minim. Ipsum ea aute elit cillum ex exercitation adipisicing. Eiusmod cillum dolor anim eu dolor sint do excepteur est culpa eiusmod pariatur magna eiusmod.",
+                    "spans": []
+                  }
+                ],
+                "link": {
+                  "link_type": "Web",
+                  "url": "https://prismic.io"
+                }
+              }
+            ],
+            "primary": {
+              "name": [
+                {
+                  "type": "paragraph",
+                  "text": "Nulla excepteur exercitation occaecat qui. Eiusmod occaecat reprehenderit cillum laborum proident dolor veniam dolor do officia reprehenderit aliquip ullamco nulla. Duis velit id fugiat non duis eiusmod occaecat Lorem velit labore non.",
+                  "spans": []
+                }
+              ],
+              "link": {
+                "link_type": "Web",
+                "url": "https://slicemachine.dev"
+              }
+            },
+            "slice_type": "navigation_items"
           }
         },
         "meta": {

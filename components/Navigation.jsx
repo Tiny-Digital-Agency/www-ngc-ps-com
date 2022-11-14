@@ -31,6 +31,5 @@ export function Navigation({ navigation }) {
         })}
       </ul>
     </nav>
-  //  <div>aaa</div>
   )
 }

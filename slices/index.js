@@ -8,10 +8,9 @@ import CardsSection from './CardsSection';
 import Certification from './Certification';
 import Footer from './Footer';
 import GridSection from './GridSection';
-import { Navigation } from '../components/Navigation';
-import Header from './Header';
 import HeroSection from './HeroSection';
 import Main from './Main';
+import NavigationItems from './NavigationItems';
 import News from './News';
 import TeamDropdown from './TeamDropdown';
 import TeamProfile from './TeamProfile';
@@ -26,10 +25,9 @@ export {
 	Certification,
 	Footer,
 	GridSection,
-	Navigation,
-	Header,
 	HeroSection,
 	Main,
+	NavigationItems,
 	News,
 	TeamDropdown,
 	TeamProfile,
@@ -45,10 +43,9 @@ export const components = {
 	certification: Certification,
 	footer: Footer,
 	grid_section: GridSection,
-	navigation: Navigation,
-	header: Header,
 	hero_section: HeroSection,
 	main: Main,
+	navigation_items: NavigationItems,
 	news: News,
 	team_dropdown: TeamDropdown,
 	team_profile: TeamProfile,
