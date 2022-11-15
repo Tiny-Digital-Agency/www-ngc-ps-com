@@ -26,13 +26,7 @@
             "hero_section": {
               "type": "SharedSlice"
             },
-            "about": {
-              "type": "SharedSlice"
-            },
             "certification": {
-              "type": "SharedSlice"
-            },
-            "team_profile": {
               "type": "SharedSlice"
             },
             "team_dropdown": {
@@ -42,6 +36,12 @@
               "type": "SharedSlice"
             },
             "news": {
+              "type": "SharedSlice"
+            },
+            "team_profile": {
+              "type": "SharedSlice"
+            },
+            "about": {
               "type": "SharedSlice"
             }
           }

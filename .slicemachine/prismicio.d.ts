@@ -35,7 +35,7 @@ interface HomepageDocumentData {
  * Slice for *homepage → Slice Zone*
  *
  */
-type HomepageDocumentDataSlicesSlice = TopNavSlice | HeaderSlice | HeroSectionSlice | AboutSlice | CertificationSlice | TeamProfileSlice | TeamDropdownSlice | FooterSlice | NewsSlice;
+type HomepageDocumentDataSlicesSlice = TopNavSlice | HeaderSlice | HeroSectionSlice | CertificationSlice | TeamDropdownSlice | FooterSlice | NewsSlice | TeamProfileSlice | AboutSlice;
 /**
  * homepage document from Prismic
  *
