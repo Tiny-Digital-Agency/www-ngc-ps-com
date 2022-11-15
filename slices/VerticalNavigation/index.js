@@ -6,7 +6,11 @@ import {
   TabPanels,
   Tab,
   TabPanel,
-  Image
+  Image,
+  Box,
+  Flex,
+  Button,
+  Text,
 
 } from '@chakra-ui/react';
 /**
@@ -16,52 +20,47 @@ import {
  */
 const VerticalNavigation = ({ slice }) => (
   <section>
-    <Tabs>
-      <TabList>
-
-      </TabList>
-
-      <TabPanels>
-        <TabPanel>
-          {
-            slice?.items?.map((item, i) =>
-              <PrismicRichText field={item.navcontent} />
-            )
-          }
-        </TabPanel>
-      </TabPanels>
-    </Tabs>
-
-
-    <Tabs defaultIndex={1}>
-  <TabPanels>
-    <TabPanel>
-      <Image
-        boxSize='200px'
-        fit='cover'
-        src='https://www.freepnglogos.com/uploads/naruto-png/image-kunai-naruto-fictional-battle-omniverse-23.png'
-      />
-    </TabPanel>
-    <TabPanel>
-      <Image
-        boxSize='200px'
-        fit='cover'
-        src='https://images5.alphacoders.com/810/thumbbig-810547.webp'
-      />
-    </TabPanel>
-  </TabPanels>
-  <TabList>
-      {
-        slice?.items?.map((item, i) =>
-    <Tab key={i}>
-            <span>{item.navlist}</span>
-        </Tab>
-          )
-        }
-    <Tab>Sasuke</Tab>
-  </TabList>
-</Tabs>
-
+    <Flex justifyContent={"center"} bg={"#e5e1dd"}>
+      <Tabs defaultIndex={1}  >
+        <Flex justifyContent={"space-between"} display={{ base: "block", sm: "block", md: "flex", xl: "flex" }}>
+          <Box width={{base: "100%", sm:"400px"}} bg="#e5e1dd">
+            <Flex justifyContent={"center"}>
+              <TabList display={"block"}>
+                {
+                  slice?.items?.map((item, i) =>
+                    <Tab key={i} maxW="100%" w={{base:"250px", sm:"300px"}} bg={"#ef483e"} margin={5} color={"#fff"} fontSize="14px"
+                      _focus={{
+                        bg: '#4d8b3f',
+                        transform: 'scale(0.98)',
+                        borderColor: '#bec3c9',
+                        color: '#fff'
+                      }}>
+                      <span>{item.navlist}</span>
+                    </Tab>
+                  )
+                }
+              </TabList>
+            </Flex>
+          </Box>
+          <Box width={{base: "100%", sm:"400px"}}  bg="#fff" pt="10px">
+            <Box color="#4d8b3f" fontWeight={600} ml="40px" mt="25px">
+              <PrismicRichText field={slice.primary.titlerightcontent} />
+            </Box>
+            <TabPanels >
+              <TabPanels>
+                {
+                  slice?.items?.map((item, i) =>
+                    <TabPanel ml="25px" mt="10px">
+                      <PrismicRichText field={item.navcontent} />
+                    </TabPanel>
+                  )
+                }
+              </TabPanels>
+            </TabPanels>
+          </Box>
+        </Flex>
+      </Tabs>
+    </Flex>
   </section>
 )
 
