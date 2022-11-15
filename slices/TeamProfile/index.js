@@ -93,8 +93,8 @@ const TeamProfile = ({ slice }) => (
                     h="full"
                     w="full"
                     alt={'Blog Image'}>           {
-                      slice?.items?.map((item, i) =>
-                        <img src={item.profile_image.url} alt={item.profile_image.alt} />
+                      slice.items.map((item, i) =>
+                        <img src={item.profile_image.url} alt={item.profile_image.alt} key={i} />
                       )
                     }</Box>
                 </Box>
@@ -108,18 +108,22 @@ const TeamProfile = ({ slice }) => (
                     mb={2}>
                     {
                       slice?.items?.map((item, i) =>
-                        <span >{item.position}</span>
+                        <span key={i}>{item.position}</span>
                       )
                     }
                   </Box>
                   {
                     slice?.items?.map((item, i) =>
+                    <Box key={i}>
                       <PrismicRichText field={item.name} />
+                    </Box>
                     )
                   }
                   {
                     slice?.items?.map((item, i) =>
+                    <Box key={i}>
                       <PrismicRichText field={item.description} />
+                    </Box>
                     )
                   }
                 </Box>
