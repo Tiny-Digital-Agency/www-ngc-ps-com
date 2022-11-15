@@ -42,9 +42,19 @@ const TeamProfile = ({ slice }) => (
           w={'full'}
           justify={'center'}
           px={useBreakpointValue({ base: 4, md: 8 })}
-          bgGradient={'linear(to-r, blackAlpha.600, transparent)'}>
+          bgGradient={'linear(to-r, blackAlpha.600, transparent)'}
+          _before={{
+            content: `""`,
+            backgroundColor: '#ef483e',
+            width: '84px',
+            height: '2px',
+            left: '0',
+            right: '0',
+          }}>
           <Stack maxW={'2xl'} align={'flex-start'} spacing={6}>
             <Box
+              pt="20px"
+              pb="20px"
               color={'white'}
               fontWeight={700}
               lineHeight={1.2}
@@ -56,8 +66,7 @@ const TeamProfile = ({ slice }) => (
         </VStack>
       </Flex>
       <Accordion allowToggle pos={"relative"}>
-        <AccordionItem
-        >
+        <AccordionItem>
           <AccordionButton justifyContent={"center"} pos={"absolute"}
             zIndex={1}
             mt="-60px"

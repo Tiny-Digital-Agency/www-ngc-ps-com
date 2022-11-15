@@ -82,7 +82,8 @@
     },
     "News": {
       "default": {
-        "primary": {}
+        "primary": {},
+        "items": {}
       }
     },
     "IndustriesContent": {
