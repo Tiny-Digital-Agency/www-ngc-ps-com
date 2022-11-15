@@ -26,7 +26,20 @@
     },
     "HeroSection": {
       "default": {
-        "primary": {},
+        "primary": {
+          "button_content": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "button_title": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        },
         "items": {}
       }
     },
@@ -124,6 +137,28 @@
             }
           }
         }
+      }
+    },
+    "BannerSectionWithMiddleContent": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "BannerSectionWithSideContent": {},
+    "CardSection": {
+      "default": {
+        "items": {},
+        "primary": {}
+      }
+    },
+    "GridSections": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "SideDropdownWithContent": {
+      "default": {
+        "primary": {}
       }
     }
   }
