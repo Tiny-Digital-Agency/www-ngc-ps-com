@@ -75,16 +75,11 @@ const SideDropdownWithContent = ({ slice }) => (
               </Tabs>
             </TabPanel>
 
-            <TabPanel>normal</TabPanel>
+            <TabPanel><PrismicRichText field={item.parent_menu_items} /></TabPanel>
           </TabPanels></>
       </Tabs>
     </Box>
     <style jsx>{`
-        // section {
-        //   max-width: 600px;
-        //   margin: 4em auto;
-        //   text-align: center;
-        // }
         .title {
           color: #8592e0;
         }
