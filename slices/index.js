@@ -6,6 +6,7 @@ import BannerSectionWithSideContent from './BannerSectionWithSideContent';
 import CallToAction from './CallToAction';
 import CardSection from './CardSection';
 import Certification from './Certification';
+import Contact from './Contact';
 import Footer from './Footer';
 import GridSections from './GridSections';
 import Header from './Header';
@@ -28,6 +29,7 @@ export {
 	CallToAction,
 	CardSection,
 	Certification,
+	Contact,
 	Footer,
 	GridSections,
 	Header,
@@ -51,6 +53,7 @@ export const components = {
 	call_to_action: CallToAction,
 	card_section: CardSection,
 	certification: Certification,
+	contact: Contact,
 	footer: Footer,
 	grid_sections: GridSections,
 	header: Header,

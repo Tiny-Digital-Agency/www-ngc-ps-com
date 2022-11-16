@@ -23,7 +23,7 @@ const HeroSection = ({ slice }) => (
         bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
       >
         <Stack maxW={{ base: "95%", md: "75%" }} align={"center"} spacing={6}>
-          <Text
+          <Box
             pt={{ base: "18%", md: "12%", xl: "8%" }}
             pb={{ base: "5%", md: "60px" }}
             color={"white"}
@@ -33,7 +33,7 @@ const HeroSection = ({ slice }) => (
             textAlign="center"
           >
             <PrismicRichText field={slice.primary.heading} />
-          </Text>
+          </Box>
           <Stack
             direction={"row"}
             justifyContent={{ base: "center", md: "space-between" }}
@@ -52,9 +52,9 @@ const HeroSection = ({ slice }) => (
                 >
                   <Image src={item.image.url} alt={item.image.alt} h={"60px"} />
 
-                  <Text align={"left"} color="#fff" fontWeight={"600"} fontSize="20px">
+                  <Box align={"left"} color="#fff" fontWeight={"600"} fontSize="20px">
                     <PrismicRichText field={item.image_title} />
-                  </Text>
+                  </Box>
                 </Flex>
               )
             }
@@ -76,21 +76,21 @@ const HeroSection = ({ slice }) => (
                 border={"5px solid #fff;"}
                 _hover={{ bg: "rgba(32,80,29,255)" }}
               >
-                <Text
+                <Box
                   w={"fit-content"}
                   fontSize={{ base: "xl", lg: "3xl" }}
                   fontWeight="bold"
                 >
                   <PrismicRichText field={slice.primary.button_title} />
-                </Text>
-                <Text
+                </Box>
+                <Box
                   fontSize={{ base: "lg", lg: "2xl" }}
                   lineHeight="1.3"
                   textAlign={{ base: "center", md: "left" }}
                   w={"80%"}
                 >
                   <PrismicRichText field={slice.primary.button_content} />
-                  <Text
+                  <Box
                     fontWeight="bold"
                     borderBottom="2px solid #ff4438"
                     w="fit-content"
@@ -99,8 +99,8 @@ const HeroSection = ({ slice }) => (
                     }}
                   >
                     Read More{" "}
-                  </Text>
-                </Text>
+                  </Box>
+                </Box>
               </Flex>
             </Link>
           </Box>

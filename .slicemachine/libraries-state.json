@@ -573,6 +573,97 @@
         },
         "screenshotPaths": {}
       },
+      "contact": {
+        "library": "slices",
+        "id": "contact",
+        "name": "Contact",
+        "description": "Contact",
+        "model": {
+          "id": "contact",
+          "type": "SharedSlice",
+          "name": "Contact",
+          "description": "Contact",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Contact",
+              "primary": {
+                "banner": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Banner",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "heading": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Heading",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Description",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "banner": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb"
+              },
+              "heading": [
+                {
+                  "type": "paragraph",
+                  "text": "Elit adipisicing aliquip labore cillum exercitation laborum exercitation exercitation amet mollit veniam. Aliquip irure pariatur aute dolor ut. Sunt aliqua ut dolor do sint reprehenderit nulla irure qui incididunt consequat.",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Mollit veniam adipisicing cillum officia pariatur mollit elit ex eu.",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "contact"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
       "footer": {
         "library": "slices",
         "id": "footer",

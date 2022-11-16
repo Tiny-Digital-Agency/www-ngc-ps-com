@@ -187,6 +187,11 @@
           }
         }
       }
+    },
+    "Contact": {
+      "default": {
+        "primary": {}
+      }
     }
   }
 }

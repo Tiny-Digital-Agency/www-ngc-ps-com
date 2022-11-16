@@ -30,15 +30,15 @@ const About = ({ slice }) => (
         top: '-20px',
 
       }}>
-      <Heading fontSize={'2xl'} paddingTop='20px'>
+      <Heading fontSize={'2xl'} paddingTop='20px' color="#53575a" fontWeight="500">
         <PrismicRichText field={slice.primary.heading} /></Heading>
       <Box color={'gray.600'} fontSize={'xl'}>
         <PrismicRichText field={slice.primary.paragraph_1} />
       </Box>
     </Stack>
     <Container maxW={{base: '100vw', sm:'80vw' , md:'80vw' , xl: '50vw'}} mt={10}>
-      <Heading fontSize={'3xl'}><PrismicRichText field={slice.primary.list_title} /></Heading>
-      <UnorderedList mt={5} ml={10}>
+      <Heading color="#53575a" fontSize={'3xl'}><PrismicRichText field={slice.primary.list_title} /></Heading>
+      <UnorderedList mt={5} ml={10} color="#53575a">
         <PrismicRichText field={slice.primary.list} />
       </UnorderedList>
       <Box>
@@ -48,7 +48,8 @@ const About = ({ slice }) => (
         textAlign={"center"} 
         spacing={6} 
         paddingTop={"10"} 
-        flexDirection={{ base: 'column', md: 'row', sm: 'column' }} >
+        flexDirection={{ base: 'column', md: 'row', sm: 'column' }}
+        color="#53575a" fontWeight="600">
           {
             slice.items.map((item, i) =>
               <Box key={i} alignSelf={"center"} 

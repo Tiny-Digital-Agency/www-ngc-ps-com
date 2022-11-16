@@ -43,6 +43,12 @@
             },
             "about": {
               "type": "SharedSlice"
+            },
+            "banner_section_with_middle_content": {
+              "type": "SharedSlice"
+            },
+            "banner_section_with_side_content": {
+              "type": "SharedSlice"
             }
           }
         }
