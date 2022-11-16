@@ -37,6 +37,24 @@
             },
             "vertical_navigation": {
               "type": "SharedSlice"
+            },
+            "banner_section_with_middle_content": {
+              "type": "SharedSlice"
+            },
+            "banner_section_with_side_content": {
+              "type": "SharedSlice"
+            },
+            "card_section": {
+              "type": "SharedSlice"
+            },
+            "grid_sections": {
+              "type": "SharedSlice"
+            },
+            "hero_section": {
+              "type": "SharedSlice"
+            },
+            "side_dropdown_with_content": {
+              "type": "SharedSlice"
             }
           }
         }

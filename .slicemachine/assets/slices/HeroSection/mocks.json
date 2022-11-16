@@ -11,12 +11,12 @@
           },
           "alt": null,
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6"
+          "url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468"
         },
         "image_title": [
           {
             "type": "paragraph",
-            "text": "Exercitation incididunt nisi exercitation id. Proident commodo in proident minim nostrud enim tempor adipisicing incididunt aliqua esse. Ut occaecat do reprehenderit voluptate do elit irure culpa aliqua ex.",
+            "text": "Anim proident dolor ipsum sint magna culpa veniam ad enim deserunt occaecat mollit.",
             "spans": []
           }
         ]
@@ -30,29 +30,33 @@
         },
         "alt": null,
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+        "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f"
       },
       "heading": [
         {
           "type": "paragraph",
-          "text": "Qui nulla consectetur aute magna. Ex fugiat elit esse.",
+          "text": "Voluptate nisi cupidatat magna non occaecat anim voluptate ex Lorem qui. Dolor laboris deserunt veniam ut nulla duis sit fugiat nisi magna anim. Non fugiat sint velit culpa.",
           "spans": []
         }
       ],
-      "news": [
+      "button_title": [
         {
           "type": "paragraph",
-          "text": "Nulla dolore ullamco esse sint in labore et labore qui minim dolor. Veniam est ipsum reprehenderit eu elit exercitation anim reprehenderit mollit tempor non ea eiusmod nostrud dolor.",
+          "text": "Magna irure incididunt occaecat dolore ex.",
           "spans": []
         }
       ],
-      "new_content": [
+      "button_content": [
         {
           "type": "paragraph",
-          "text": "Dolore laboris nisi veniam consectetur pariatur deserunt consectetur. Aliquip qui excepteur eu consequat do exercitation voluptate nulla dolore sit.",
+          "text": "Officia consectetur voluptate pariatur fugiat adipisicing tempor voluptate elit commodo pariatur voluptate in aute ipsum minim. Do deserunt tempor officia minim pariatur veniam sit do. Amet eu ex incididunt.",
           "spans": []
         }
-      ]
+      ],
+      "button_link": {
+        "link_type": "Web",
+        "url": "http://google.com"
+      }
     },
     "slice_type": "hero_section"
   }

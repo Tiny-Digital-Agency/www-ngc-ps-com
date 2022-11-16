@@ -1,73 +1,48 @@
 {
-  "id": "hero_section",
+  "id": "side_dropdown_with_content",
   "type": "SharedSlice",
-  "name": "HeroSection",
-  "description": "HeroSection",
+  "name": "SideDropdownWithContent",
+  "description": "SideDropdownWithContent",
   "variations": [
     {
       "id": "default",
       "name": "Default",
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
-      "description": "HeroSection",
+      "description": "SideDropdownWithContent",
       "primary": {
-        "banner": {
-          "type": "Image",
-          "config": {
-            "label": "banner",
-            "constraint": {},
-            "thumbnails": []
-          }
-        },
-        "heading": {
+        "title": {
           "type": "StructuredText",
           "config": {
-            "label": "heading",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-          }
-        },
-        "button_title": {
-          "type": "StructuredText",
-          "config": {
-            "label": "Button Title",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-          }
-        },
-        "button_content": {
-          "type": "StructuredText",
-          "config": {
-            "label": "Button Content",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-          }
-        },
-        "button_link": {
-          "type": "Link",
-          "config": {
-            "label": "Button Link",
-            "placeholder": "",
-            "select": null
+            "single": "heading1",
+            "label": "Title",
+            "placeholder": "This is where it all begins..."
           }
         }
       },
       "items": {
-        "image": {
-          "type": "Image",
-          "config": {
-            "label": "image",
-            "constraint": {},
-            "thumbnails": []
-          }
-        },
-        "image_title": {
+        "parent_menu_items": {
           "type": "StructuredText",
           "config": {
-            "label": "image title",
+            "label": "Menu Items (Parent)",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "parent_menu_items_content": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Menu Items Content (Parent)",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "child_menu_items": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Menu Items (Child)",
             "placeholder": "",
             "allowTargetBlank": true,
             "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
