@@ -74,8 +74,8 @@ const SideDropdownWithContent = ({ slice }) => (
                 </TabPanels>
               </Tabs>
             </TabPanel>
-
-            <TabPanel><PrismicRichText field={item.parent_menu_items} /></TabPanel>
+{/* 
+            <TabPanel><PrismicRichText field={item.parent_menu_items} /></TabPanel> */}
           </TabPanels></>
       </Tabs>
     </Box>
