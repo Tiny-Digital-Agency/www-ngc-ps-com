@@ -30,7 +30,7 @@ const GridSection = ({ slice }) => (
           borderTop: "2px solid #ef483e",
         }}
       >
-        <Text
+        <Box
           py="10px"
           color={"#53575a"}
           fontSize={{ base: "3xl", lg: "4xl" }}
@@ -38,14 +38,16 @@ const GridSection = ({ slice }) => (
           textAlign="center"
         >
           <PrismicRichText field={slice.primary.title} />
-        </Text>
+        </Box>
       </Box>
       <Flex
         w={{ xl: "80em", base: "full" }}
         flexWrap="wrap"
         direction="row"
-        justify={"center"}
+        justify={{ base: "center", sm: "flex-start" }}
         my="50px"
+        // borderRight={{ base: "none", sm: "solid 3px #2a2424" }}
+        borderLeft={{ base: "none", sm: "solid 3px #2a2424" }}
       >
         {
           slice?.items?.map((item, i) =>
@@ -54,21 +56,22 @@ const GridSection = ({ slice }) => (
               alignItems="center"
               justifyContent={"center"}
               flexDirection={"column"}
-              w={{ sm: "45%", md: "50%", lg: "32%", base: "250px" }}
-              h="auto"
-              pt={{ base: "0", sm: "25px" }}
+              w={{ base: "80%", sm: "50%", lg: "33.33333333333333333333333333333333%" }}
+              h="300px"
+              // pt={{ base: "0", sm: "25px" }}
               px={{ base: "0", sm: "40px" }}
               pb={{ base: "35px", sm: "10px" }}
-              my="25px"
-              borderX={{ base: "none", sm: "solid 1px gray" }}
-              borderBottom={{ base: "solid 1px gray", sm: "none" }}
-              className="grid-item"
+              py="25px"
+              borderRight={{ base: "none", sm: "solid 3px #2a2424" }}
+              borderBottom={{ base: "solid 3px #2a2424" }}
               _hover={{
                 textDecoration: "none",
               }}
+              _last={{
+                borderRight: "solid 3px #2a2424"
+              }}
             >
-              {item.image.url ? <Image src={item.image.url} alt={item.image.alt} /> : ""}
-
+              {item.image.url ? <Image h="60%" src={item.image.url} alt={item.image.alt} /> : ""}
               <Box
                 mt="10px"
                 color="#626669"
@@ -87,7 +90,8 @@ const GridSection = ({ slice }) => (
           )
         }
       </Flex>
-    </VStack>
-  </Flex>
+
+    </VStack >
+  </Flex >
 )
 export default GridSection
