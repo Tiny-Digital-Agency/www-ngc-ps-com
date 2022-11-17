@@ -2,12 +2,10 @@ import Header from "./Header";
 import { Navigation } from "./Navigation";
 import Footer from "./Footer";
 import Topnav from "./Topnav";
-const Layout = ({ children }) => {
+const Layout = ({ navigation, children }) => {
     return ( 
         <div className="content">
-            {/* <Topnav/> */}
-            {/* <Header/> */}
-            <Navigation />
+            <Navigation navigation={navigation}/>
             { children }
             <Footer/>
         </div>

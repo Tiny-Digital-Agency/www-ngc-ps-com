@@ -3,35 +3,32 @@ import * as prismicH from '@prismicio/helpers'
 
 import { createClient } from '../prismicio'
 import { components } from '../slices'
-
-/*Components*/
-import { Navigation } from '../components/Navigation'
-// import { NavigationItems } from '../slices/NavigationItems/index'
-export async function Page({ navigation, page }) {
-
+import Navigation from '../components/Navigation'
+import Layout from '../components/Layout'
+const Page = ({ page, navigation }) => {
   return (
     <div>
-      <Navigation navigation={navigation} />
+    <Layout navigation={navigation}>
       <SliceZone slices={page.data.slices} components={components} />
-      {/* The rest of your component... */}
+      </Layout>
     </div>
-  )
-}
+  );
+};
+
+export default Page
 
 export async function getStaticProps({ params, previewData }) {
-  const client = createClient({ previewData })
+  const client = createClient({ previewData });
 
-  const [navigation, page] = await Promise.all([
-    client.getByUID('navigation', 'header'),
-    client.getByUID('page', params.uid),
-  ])
+  const page = await client.getByUID("page", params.uid);
+  const navigation = await client.getByUID("navigation", "navigation");
 
   return {
     props: {
-      navigation,
       page,
+      navigation,
     },
-  }
+  };
 }
 
 export async function getStaticPaths() {
