@@ -75,7 +75,7 @@ interface NavigationDocumentData {
  * Slice for *Navigation → Slice Zone*
  *
  */
-type NavigationDocumentDataSlicesSlice = NavigationSlice;
+type NavigationDocumentDataSlicesSlice = NavigationSlice | LogoSlice;
 /**
  * Navigation document from Prismic
  *
@@ -1047,13 +1047,13 @@ interface NavigationSliceDefaultPrimary {
     /**
      * Link field in *Navigation → Primary*
      *
-     * - **Field Type**: Rich Text
+     * - **Field Type**: Link
      * - **Placeholder**: *None*
      * - **API ID Path**: navigation.primary.link
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
      *
      */
-    link: prismicT.RichTextField;
+    link: prismicT.LinkField;
 }
 /**
  * Item in Navigation → Items
@@ -1071,7 +1071,7 @@ export interface NavigationSliceDefaultItem {
      */
     name: prismicT.RichTextField;
     /**
-     * Link field in *Navigation → Items*
+     * link field in *Navigation → Items*
      *
      * - **Field Type**: Link
      * - **Placeholder**: *None*
@@ -1120,15 +1120,35 @@ interface NewsSliceDefaultPrimary {
      */
     background_image: prismicT.ImageField<never>;
     /**
-     * News content field in *News → Primary*
+     * Title field in *News → Primary*
      *
      * - **Field Type**: Rich Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: news.primary.news_content
+     * - **API ID Path**: news.primary.title
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
-    news_content: prismicT.RichTextField;
+    title: prismicT.RichTextField;
+    /**
+     * Description field in *News → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: news.primary.description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+    /**
+     * Heading 2 field in *News → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: news.primary.heading_2
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    heading_2: prismicT.RichTextField;
 }
 /**
  * Item in News → Items

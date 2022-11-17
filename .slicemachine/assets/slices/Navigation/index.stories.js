@@ -5,5 +5,5 @@ export default {
 }
 
 
-export const _Default = () => <MyComponent slice={{"variation":"default","version":"sktwi1xtmkfgx8626","items":[{"name":[{"type":"paragraph","text":"Nostrud exercitation reprehenderit ullamco proident voluptate aliqua eiusmod fugiat nisi sunt nostrud. Non voluptate consequat do voluptate aliqua est dolor veniam adipisicing cupidatat minim tempor consequat quis.","spans":[]}],"link":{"link_type":"Web","url":"http://twitter.com"}}],"primary":{"name":[{"type":"paragraph","text":"Ea sint aute ea reprehenderit fugiat exercitation magna ipsum minim. Eiusmod magna Lorem magna ullamco do amet est reprehenderit officia irure.","spans":[]}],"link":[{"type":"paragraph","text":"Esse ut laborum excepteur veniam. In officia sunt cupidatat.","spans":[]}]},"slice_type":"navigation","id":"_Default"}} />
+export const _Default = () => <MyComponent slice={{"variation":"default","version":"sktwi1xtmkfgx8626","items":[{"name":[{"type":"paragraph","text":"Ut laborum consequat dolore sunt ipsum minim non do.","spans":[]}],"link":{"link_type":"Web","url":"https://prismic.io"}}],"primary":{"name":[{"type":"paragraph","text":"Et elit laborum dolore. Magna in ex sint non ea reprehenderit aliquip irure eu.","spans":[]}],"link":{"link_type":"Web","url":"http://twitter.com"}},"slice_type":"navigation","id":"_Default"}} />
 _Default.storyName = ''

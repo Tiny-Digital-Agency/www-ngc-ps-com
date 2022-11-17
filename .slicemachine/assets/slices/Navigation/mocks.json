@@ -7,13 +7,13 @@
         "name": [
           {
             "type": "paragraph",
-            "text": "Nostrud exercitation reprehenderit ullamco proident voluptate aliqua eiusmod fugiat nisi sunt nostrud. Non voluptate consequat do voluptate aliqua est dolor veniam adipisicing cupidatat minim tempor consequat quis.",
+            "text": "Ut laborum consequat dolore sunt ipsum minim non do.",
             "spans": []
           }
         ],
         "link": {
           "link_type": "Web",
-          "url": "http://twitter.com"
+          "url": "https://prismic.io"
         }
       }
     ],
@@ -21,17 +21,14 @@
       "name": [
         {
           "type": "paragraph",
-          "text": "Ea sint aute ea reprehenderit fugiat exercitation magna ipsum minim. Eiusmod magna Lorem magna ullamco do amet est reprehenderit officia irure.",
+          "text": "Et elit laborum dolore. Magna in ex sint non ea reprehenderit aliquip irure eu.",
           "spans": []
         }
       ],
-      "link": [
-        {
-          "type": "paragraph",
-          "text": "Esse ut laborum excepteur veniam. In officia sunt cupidatat.",
-          "spans": []
-        }
-      ]
+      "link": {
+        "link_type": "Web",
+        "url": "http://twitter.com"
+      }
     },
     "slice_type": "navigation"
   }

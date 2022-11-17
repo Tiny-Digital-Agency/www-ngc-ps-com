@@ -52,11 +52,17 @@ const News = ({ slice }) => (
               pt="20px"
               pb="20px"
               color={'white'}
-              fontWeight={700}
-              lineHeight={1.2}
-              fontSize={useBreakpointValue({ base: '2xl', md: '3xl' })}
+              lineHeight={1.5}
               textAlign={"center"}>
-              <PrismicRichText field={slice.primary.news_content} />
+              <Box fontSize="38px" fontWeight="600">
+              <PrismicRichText field={slice.primary.title} />
+              </Box>
+              <Box fontSize="24px" fontWeight="400">
+              <PrismicRichText field={slice.primary.description} />
+              </Box>
+              <Box fontSize="28px" fontWeight="600">
+              <PrismicRichText field={slice.primary.heading_2} /> 
+              </Box>
             </Box>
           </Stack>
         </VStack>

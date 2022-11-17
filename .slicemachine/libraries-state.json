@@ -1352,12 +1352,11 @@
                   }
                 },
                 "link": {
-                  "type": "StructuredText",
+                  "type": "Link",
                   "config": {
                     "label": "Link",
                     "placeholder": "",
-                    "allowTargetBlank": true,
-                    "single": "hyperlink"
+                    "select": null
                   }
                 }
               },
@@ -1374,7 +1373,7 @@
                 "link": {
                   "type": "Link",
                   "config": {
-                    "label": "Link",
+                    "label": "link",
                     "placeholder": "",
                     "select": null
                   }
@@ -1393,13 +1392,13 @@
                 "name": [
                   {
                     "type": "paragraph",
-                    "text": "Nostrud exercitation reprehenderit ullamco proident voluptate aliqua eiusmod fugiat nisi sunt nostrud. Non voluptate consequat do voluptate aliqua est dolor veniam adipisicing cupidatat minim tempor consequat quis.",
+                    "text": "Ut laborum consequat dolore sunt ipsum minim non do.",
                     "spans": []
                   }
                 ],
                 "link": {
                   "link_type": "Web",
-                  "url": "http://twitter.com"
+                  "url": "https://prismic.io"
                 }
               }
             ],
@@ -1407,17 +1406,14 @@
               "name": [
                 {
                   "type": "paragraph",
-                  "text": "Ea sint aute ea reprehenderit fugiat exercitation magna ipsum minim. Eiusmod magna Lorem magna ullamco do amet est reprehenderit officia irure.",
+                  "text": "Et elit laborum dolore. Magna in ex sint non ea reprehenderit aliquip irure eu.",
                   "spans": []
                 }
               ],
-              "link": [
-                {
-                  "type": "paragraph",
-                  "text": "Esse ut laborum excepteur veniam. In officia sunt cupidatat.",
-                  "spans": []
-                }
-              ]
+              "link": {
+                "link_type": "Web",
+                "url": "http://twitter.com"
+              }
             },
             "slice_type": "navigation"
           }
@@ -1454,10 +1450,28 @@
                     "thumbnails": []
                   }
                 },
-                "news_content": {
+                "title": {
                   "type": "StructuredText",
                   "config": {
-                    "label": "News content",
+                    "label": "Title",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Description",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "heading_2": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Heading 2",
                     "placeholder": "",
                     "allowTargetBlank": true,
                     "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
@@ -1515,17 +1529,17 @@
                   },
                   "alt": null,
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5"
+                  "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db"
                 },
                 "video_link": {
                   "link_type": "Web",
-                  "url": "http://google.com"
+                  "url": "https://slicemachine.dev"
                 },
-                "title": "golden",
+                "title": "clothing",
                 "description": [
                   {
                     "type": "paragraph",
-                    "text": "Incididunt enim aliqua sint ea velit irure Lorem proident pariatur commodo deserunt sunt adipisicing ipsum consectetur. Velit nostrud nisi proident consequat laborum dolor. Consectetur fugiat duis irure proident enim tempor pariatur eu.",
+                    "text": "Sit tempor sunt commodo ea cillum elit cupidatat irure eiusmod. Consectetur cupidatat duis in amet voluptate consectetur labore adipisicing nulla. Esse et et culpa.",
                     "spans": []
                   }
                 ]
@@ -1539,12 +1553,26 @@
                 },
                 "alt": null,
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+                "url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118"
               },
-              "news_content": [
+              "title": [
                 {
                   "type": "paragraph",
-                  "text": "Est ex in fugiat mollit pariatur labore aliquip labore sit aliquip. Fugiat eiusmod anim eu ut eiusmod amet duis id do duis ad nostrud.",
+                  "text": "Consectetur nulla mollit voluptate. Mollit dolor id deserunt veniam excepteur mollit eu duis consequat irure. Duis ipsum adipisicing eiusmod esse cupidatat ullamco.",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Quis dolore ipsum consequat cupidatat est excepteur laborum proident.",
+                  "spans": []
+                }
+              ],
+              "heading_2": [
+                {
+                  "type": "paragraph",
+                  "text": "Voluptate consequat sunt Lorem cupidatat elit aliqua do adipisicing pariatur ut Lorem minim elit minim enim.",
                   "spans": []
                 }
               ]

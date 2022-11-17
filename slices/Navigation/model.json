@@ -21,12 +21,11 @@
           }
         },
         "link": {
-          "type": "StructuredText",
+          "type": "Link",
           "config": {
             "label": "Link",
             "placeholder": "",
-            "allowTargetBlank": true,
-            "single": "hyperlink"
+            "select": null
           }
         }
       },
@@ -43,7 +42,7 @@
         "link": {
           "type": "Link",
           "config": {
-            "label": "Link",
+            "label": "link",
             "placeholder": "",
             "select": null
           }
