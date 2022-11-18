@@ -16,12 +16,12 @@ import {
 export function Navigation({ navigation }) {
   return (
     <Box>
-    
+
       <Box>
-      
+
         {/* Renders top-level links. */}
         {navigation?.data.slices.map((slice) => {
-          
+
           return (
             <Box key={slice.id}>
               <PrismicLink field={slice.primary.link}>
@@ -38,17 +38,15 @@ export function Navigation({ navigation }) {
                           <PrismicText field={item.name} />
                         </PrismicLink>
                       </Box>
-
                     )
-                    
                   })}
                 </Box>
-                
+
               )}
             </Box>
           )
         })}
-        
+
       </Box>
     </Box>
   )

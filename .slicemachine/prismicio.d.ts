@@ -49,6 +49,17 @@ export type HomepageDocument<Lang extends string = string> = prismicT.PrismicDoc
 /** Content for Navigation documents */
 interface NavigationDocumentData {
     /**
+     * Logo field in *Navigation*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navigation.logo
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    logo: prismicT.ImageField<never>;
+    /**
      * Slice Zone field in *Navigation*
      *
      * - **Field Type**: Slice Zone
