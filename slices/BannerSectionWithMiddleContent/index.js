@@ -9,19 +9,21 @@ import { PrismicRichText } from "@prismicio/react";
 
 const BannerSectionWithMiddleContent = ({ slice }) => (
   <section>
-    <Flex
-      w={"full"}
-    >
+    <Flex w="full">
       <VStack
-        w={"full"}
-        justify={"center"}
+        w="full"
+        justify="center"
         px={useBreakpointValue({ base: 4, md: 8 })}
         bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
       >
-        <Stack maxW={{ base: "95%", md: "75%" }} align={"center"} spacing={6}>
+        <Stack
+          maxW={{ base: "95%", md: "75%" }}
+          align="center"
+          spacing={6}
+        >
           <Text
             py="35%"
-            color={"white"}
+            color="#fff"
             fontSize={{ base: "3xl", lg: "4xl" }}
             lineHeight={1.2}
             textAlign="center"

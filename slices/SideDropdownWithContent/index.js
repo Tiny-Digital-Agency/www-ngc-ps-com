@@ -7,88 +7,106 @@ import {
   TabPanels,
   Tab,
   TabPanel,
+  Grid,
+  GridItem,
+  Flex
 } from "@chakra-ui/react";
 
-/**
- * @typedef {import("@prismicio/client").Content.SideDropdownWithContentSlice} SideDropdownWithContentSlice
- * @typedef {import("@prismicio/react").SliceComponentProps<SideDropdownWithContentSlice>} SideDropdownWithContentProps
- * @param { SideDropdownWithContentProps }
- */
 const SideDropdownWithContent = ({ slice }) => (
   <section>
-    <Box padding={0} w="100%">
-      <Tabs display="flex" w="70%" m="auto">
+    <Box padding="0" w="100%">
+      <Tabs
+        w={{ base: "full", lg: "62em", xl: "65em" }}
+        m="auto">
         <>
-          <TabList
-            display="flex"
-            flexDirection={"column"}
-            bgColor={"#4d8b3f"}
-          >
-            {
-              slice?.items?.map((item, i) =>
-                <Tab w={"fit-content"}
-                  ml="30px"
-                  mb="5px"
-                  p="0"
-                  fontSize={"20px"}
-                  borderBottom={"2px solid #4d8b3f"}
-                  _selected={{
-                    borderBottom: "2px solid #ef483e"
-                  }}
-                  _active={{
-                    background: "#4d8b3f"
-                  }}><PrismicRichText field={item.parent_menu_items} />
-                </Tab>
-              )
-            }
-          </TabList>
-
-          <TabPanels>
-            <TabPanel
-              p="0"
-            >
-              <Tabs display={"flex"} flexDirection={"row"}>
-                <TabList
-                  display={"flex"}
-                  flexDirection={"column"}
-                  bgColor={"#4d8b3f"}
-                  borderRight={"3px solid #ef483e"}
-                >
-                  {
-                    slice?.items?.map((item, i) =>
-                      <Tab>
+          <Grid templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(7, 1fr)' }} templateRows={{ base: 'repeat(2, 1fr)', lg: "none" }}>
+            <GridItem w='100%' colSpan={{ base: "1", lg: "3" }} color="#fff">
+              <TabList
+                display="flex"
+                flexDirection="column"
+                p="50px 35px"
+                w='100%'
+                bgColor="#4d8b3f"
+                borderRight={{ base: "none", lg: "3px solid #ef483e" }}
+              >
+                {
+                  slice?.items?.map((item, i) =>
+                    <>
+                      <Box fontSize="20px">
+                        {item.child_menu_items ?
+                          <PrismicRichText field={item.parent_menu_items} />
+                          : ""}
+                      </Box>
+                      <Tab w="fit-content"
+                        ml="30px"
+                        mb="5px"
+                        p="0"
+                        fontSize="20px"
+                        borderBottom="2px solid #4d8b3f"
+                        _selected={{
+                          borderBottom: "2px solid #ef483e"
+                        }}
+                        _active={{
+                          background: "#4d8b3f"
+                        }}>
                         <PrismicRichText field={item.parent_menu_items_content} />
                       </Tab>
-                    )
-                  }
-                </TabList>
+                    </>
+                  )
+                }
+              </TabList>
+            </GridItem>
 
-                <TabPanels bgColor={"#e5e1dd"}>
-                  {
-                    slice?.items?.map((item, i) =>
-                      <TabPanel>
-                        <PrismicRichText field={item.child_menu_items} />
-                      </TabPanel>
-                    )
-                  }
-                </TabPanels>
-              </Tabs>
-            </TabPanel>
+            <GridItem w='100%' bgColor="#e5e1dd" colSpan={{ base: "1", lg: "4" }} >
+              <Box
+                m="50px 35px 0"
+                color="#4d8b3f"
+                fontSize="18px"
+                fontWeight="700"
+              >
+                PRODUCT SOLUTIONS
+              </Box>
+              <TabPanels>
+                {
+                  slice?.items?.map((item, i) =>
+                    <TabPanel p="0">
+                      <Tabs display="flex" flexDirection="row">
+                        <TabList
+                          display="flex"
+                          flexDirection="column"
+                          w="100%"
+                          h="100%"
+                          m="0 19px 0"
+                        >
+                          <Tab borderColor={"#e5e1dd !important"}>
+                            <Flex
+                              w="100%"
+                              color="#585c5e"
+                              alignItems="flex-start"
+                              _hover={{
+                                color: "#ef483e",
+                              }}>
+                              <PrismicRichText field={item.child_menu_items} />
+                            </Flex>
 
-            <TabPanel>normal</TabPanel>
-          </TabPanels></>
+                          </Tab>
+                        </TabList>
+                      </Tabs>
+                    </TabPanel>
+                  )
+                }
+              </TabPanels>
+            </GridItem>
+
+          </Grid>
+        </>
       </Tabs>
     </Box>
-    <style jsx>{`
-        // section {
-        //   max-width: 600px;
-        //   margin: 4em auto;
-        //   text-align: center;
+    {/* <style jsx>{`
+        // .title {
+        //   color: #8592e0;
         // }
-        .title {
-          color: #8592e0;
-        }
-    `}</style>
+    `}</style> */}
   </section >
 )
 
