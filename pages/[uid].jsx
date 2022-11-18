@@ -8,8 +8,8 @@ import Layout from '../components/Layout'
 const Page = ({ page, navigation }) => {
   return (
     <div>
-    <Layout navigation={navigation}>
-      <SliceZone slices={page.data.slices} components={components} />
+      <Layout navigation={navigation}>
+        <SliceZone slices={page.data.slices} components={components} />
       </Layout>
     </div>
   );

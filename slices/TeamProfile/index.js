@@ -56,11 +56,17 @@ const TeamProfile = ({ slice }) => (
               pt="20px"
               pb="20px"
               color={'white'}
-              fontWeight={700}
               lineHeight={1.2}
-              fontSize={useBreakpointValue({ base: '2xl', md: '3xl' })}
               textAlign={"center"}>
-              <PrismicRichText field={slice.primary.team_content} />
+              <Box fontSize={"30px"}>
+                <PrismicRichText field={slice.primary.heading_1} />
+              </Box>
+              <Box fontSize={"28px"} fontWeight={"600"}>
+                <PrismicRichText field={slice.primary.heading_2} />
+              </Box>
+              <Box fontSize={"24px"} fontWeight={"400"}>
+                <PrismicRichText field={slice.primary.description} />
+              </Box>
             </Box>
           </Stack>
         </VStack>
@@ -114,16 +120,16 @@ const TeamProfile = ({ slice }) => (
                   </Box>
                   {
                     slice?.items?.map((item, i) =>
-                    <Box key={i}>
-                      <PrismicRichText field={item.name} />
-                    </Box>
+                      <Box key={i}>
+                        <PrismicRichText field={item.name} />
+                      </Box>
                     )
                   }
                   {
                     slice?.items?.map((item, i) =>
-                    <Box key={i}>
-                      <PrismicRichText field={item.description} />
-                    </Box>
+                      <Box key={i}>
+                        <PrismicRichText field={item.description} />
+                      </Box>
                     )
                   }
                 </Box>

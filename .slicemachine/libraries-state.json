@@ -1450,10 +1450,28 @@
                     "thumbnails": []
                   }
                 },
-                "news_content": {
+                "heading": {
                   "type": "StructuredText",
                   "config": {
-                    "label": "News content",
+                    "label": "Heading 1",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Description",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "heading_2": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Heading 2",
                     "placeholder": "",
                     "allowTargetBlank": true,
                     "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
@@ -1511,17 +1529,17 @@
                   },
                   "alt": null,
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5"
+                  "url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468"
                 },
                 "video_link": {
                   "link_type": "Web",
                   "url": "http://google.com"
                 },
-                "title": "golden",
+                "title": "mission",
                 "description": [
                   {
                     "type": "paragraph",
-                    "text": "Incididunt enim aliqua sint ea velit irure Lorem proident pariatur commodo deserunt sunt adipisicing ipsum consectetur. Velit nostrud nisi proident consequat laborum dolor. Consectetur fugiat duis irure proident enim tempor pariatur eu.",
+                    "text": "Sit amet ad sint consequat occaecat dolor sint ea esse cupidatat. Adipisicing mollit proident veniam velit reprehenderit nisi eiusmod culpa nisi. Mollit dolor deserunt id reprehenderit ut quis culpa sit minim.",
                     "spans": []
                   }
                 ]
@@ -1535,12 +1553,26 @@
                 },
                 "alt": null,
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+                "url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055"
               },
-              "news_content": [
+              "heading": [
                 {
                   "type": "paragraph",
-                  "text": "Est ex in fugiat mollit pariatur labore aliquip labore sit aliquip. Fugiat eiusmod anim eu ut eiusmod amet duis id do duis ad nostrud.",
+                  "text": "Duis non ea cillum sunt exercitation et est nostrud aliquip amet ipsum dolore reprehenderit. Do mollit est aliqua exercitation laborum consectetur commodo aute cillum cillum excepteur aliquip aliquip et.",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Consequat veniam magna cupidatat dolor veniam laboris tempor proident irure mollit duis amet duis.",
+                  "spans": []
+                }
+              ],
+              "heading_2": [
+                {
+                  "type": "paragraph",
+                  "text": "Consectetur ea non et ullamco tempor amet. Minim fugiat est Lorem quis sit. Nisi ipsum laboris sit minim mollit ullamco.",
                   "spans": []
                 }
               ]
@@ -1795,13 +1827,31 @@
                     "thumbnails": []
                   }
                 },
-                "team_content": {
+                "heading_1": {
                   "type": "StructuredText",
                   "config": {
-                    "label": "Team Content",
+                    "label": "Heading 1",
                     "placeholder": "",
                     "allowTargetBlank": true,
-                    "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "heading_2": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Heading 2",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Description",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
                   }
                 }
               },
@@ -1857,20 +1907,20 @@
                   },
                   "alt": null,
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db"
+                  "url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb"
                 },
                 "name": [
                   {
                     "type": "paragraph",
-                    "text": "Irure velit anim esse do magna minim aute cupidatat proident. Voluptate ipsum esse in enim Lorem non labore ullamco nisi laborum tempor tempor culpa.",
+                    "text": "Reprehenderit exercitation fugiat id et incididunt consequat minim qui veniam consequat enim officia incididunt adipisicing. Minim adipisicing commodo commodo tempor eiusmod eiusmod ad cupidatat et anim duis mollit. Duis qui sunt laborum culpa voluptate consectetur.",
                     "spans": []
                   }
                 ],
-                "position": "tower",
+                "position": "stood",
                 "description": [
                   {
                     "type": "paragraph",
-                    "text": "Ut dolore exercitation velit consectetur consectetur laborum sint deserunt reprehenderit est.",
+                    "text": "Nostrud sunt nulla fugiat aute nisi Lorem cillum id. Laboris dolor mollit incididunt quis exercitation nulla Lorem ad excepteur aute culpa velit.",
                     "spans": []
                   }
                 ]
@@ -1884,12 +1934,26 @@
                 },
                 "alt": null,
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1587614295999-6c1c13675117"
+                "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db"
               },
-              "team_content": [
+              "heading_1": [
                 {
                   "type": "paragraph",
-                  "text": "Et eiusmod magna non proident voluptate aute occaecat magna labore duis deserunt aliquip cupidatat.",
+                  "text": "Aliqua aliqua aute duis ullamco cillum est.",
+                  "spans": []
+                }
+              ],
+              "heading_2": [
+                {
+                  "type": "paragraph",
+                  "text": "Et aute aute sit.",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Cupidatat Lorem tempor elit enim deserunt est reprehenderit eu. Quis non laboris commodo in eu.",
                   "spans": []
                 }
               ]

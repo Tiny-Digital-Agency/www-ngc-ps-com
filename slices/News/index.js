@@ -52,11 +52,17 @@ const News = ({ slice }) => (
               pt="20px"
               pb="20px"
               color={'white'}
-              fontWeight={700}
-              lineHeight={1.2}
-              fontSize={useBreakpointValue({ base: '2xl', md: '3xl' })}
+              lineHeight={1.5}
               textAlign={"center"}>
-              <PrismicRichText field={slice.primary.news_content} />
+              <Box fontSize={"30px"}>
+                <PrismicRichText field={slice.primary.heading} />
+              </Box>
+              <Box fontSize={"24px"} fontWeight={"400"}>
+                <PrismicRichText field={slice.primary.description} />
+              </Box>
+              <Box fontSize={"28px"} fontWeight={"600"}>
+                <PrismicRichText field={slice.primary.heading_2} />
+              </Box>
             </Box>
           </Stack>
         </VStack>
@@ -71,12 +77,12 @@ const News = ({ slice }) => (
             <AccordionIcon />
           </AccordionButton>
           <AccordionPanel pb={4}>
-            <Flex justifyContent={"center"}  alignItems={"center"} flexDirection={{base:"column", md:"row"}}>
+            <Flex justifyContent={"center"} alignItems={"center"} flexDirection={{ base: "column", md: "row" }}>
               {
                 slice?.items?.map((item, i) =>
                   <Box key={i} padding={10}>
                     <img src={item.video_image.url} alt={item.video_image.alt} />
-                    <Flex justifyContent="center"  alignItems={"center"}  flexDirection={{base:"column", md:"row"}}>
+                    <Flex justifyContent="center" alignItems={"center"} flexDirection={{ base: "column", md: "row" }}>
                       <Box>
                         {item.title}
                         <PrismicRichText field={item.description} />

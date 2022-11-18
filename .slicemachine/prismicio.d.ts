@@ -1109,15 +1109,35 @@ interface NewsSliceDefaultPrimary {
      */
     background_image: prismicT.ImageField<never>;
     /**
-     * News content field in *News → Primary*
+     * Heading 1 field in *News → Primary*
      *
      * - **Field Type**: Rich Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: news.primary.news_content
+     * - **API ID Path**: news.primary.heading
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
-    news_content: prismicT.RichTextField;
+    heading: prismicT.RichTextField;
+    /**
+     * Description field in *News → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: news.primary.description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+    /**
+     * Heading 2 field in *News → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: news.primary.heading_2
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    heading_2: prismicT.RichTextField;
 }
 /**
  * Item in News → Items
@@ -1348,15 +1368,35 @@ interface TeamProfileSliceDefaultPrimary {
      */
     background_image: prismicT.ImageField<never>;
     /**
-     * Team Content field in *TeamProfile → Primary*
+     * Heading 1 field in *TeamProfile → Primary*
      *
      * - **Field Type**: Rich Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: team_profile.primary.team_content
+     * - **API ID Path**: team_profile.primary.heading_1
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
-    team_content: prismicT.RichTextField;
+    heading_1: prismicT.RichTextField;
+    /**
+     * Heading 2 field in *TeamProfile → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: team_profile.primary.heading_2
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    heading_2: prismicT.RichTextField;
+    /**
+     * Description field in *TeamProfile → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: team_profile.primary.description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
 }
 /**
  * Item in TeamProfile → Items
