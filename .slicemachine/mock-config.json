@@ -129,12 +129,6 @@
               "patternType": "PARAGRAPH",
               "blocks": 1
             }
-          },
-          "link": {
-            "config": {
-              "patternType": "PARAGRAPH",
-              "blocks": 1
-            }
           }
         }
       }

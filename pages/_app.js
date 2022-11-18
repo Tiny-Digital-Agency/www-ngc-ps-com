@@ -8,19 +8,19 @@ import { ChakraProvider } from '@chakra-ui/react'
 export default function App({ Component, pageProps }) {
   return (
     <ChakraProvider>
-          <Layout>
-    <PrismicProvider
-      internalLinkComponent={({ href, ...props }) => (
-        (<Link href={href} {...props}>
+      <Layout>
+        <PrismicProvider
+          internalLinkComponent={({ href, ...props }) => (
+            (<Link href={href} {...props}>
 
-        </Link>)
-      )}
-    >
-      <PrismicPreview repositoryName={repositoryName}>
-        <Component {...pageProps} />
-      </PrismicPreview>
-    </PrismicProvider>
-    </Layout>
-        </ChakraProvider>
-  );
+            </Link>)
+          )}
+        >
+          <PrismicPreview repositoryName={repositoryName}>
+            <Component {...pageProps} />
+          </PrismicPreview>
+        </PrismicProvider>
+      </Layout>
+    </ChakraProvider>
+  ); 
 }

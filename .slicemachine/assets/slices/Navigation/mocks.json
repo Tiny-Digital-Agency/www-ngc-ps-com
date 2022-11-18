@@ -7,13 +7,13 @@
         "name": [
           {
             "type": "paragraph",
-            "text": "Nostrud exercitation reprehenderit ullamco proident voluptate aliqua eiusmod fugiat nisi sunt nostrud. Non voluptate consequat do voluptate aliqua est dolor veniam adipisicing cupidatat minim tempor consequat quis.",
+            "text": "Reprehenderit ex nostrud minim dolor reprehenderit magna.",
             "spans": []
           }
         ],
         "link": {
           "link_type": "Web",
-          "url": "http://twitter.com"
+          "url": "http://google.com"
         }
       }
     ],
@@ -21,17 +21,14 @@
       "name": [
         {
           "type": "paragraph",
-          "text": "Ea sint aute ea reprehenderit fugiat exercitation magna ipsum minim. Eiusmod magna Lorem magna ullamco do amet est reprehenderit officia irure.",
+          "text": "Veniam laboris nisi nulla qui incididunt minim officia tempor exercitation eiusmod. Est proident mollit culpa nisi velit culpa laboris magna enim exercitation do reprehenderit aliquip mollit. Adipisicing laboris dolor ea adipisicing ipsum elit anim sit dolor qui.",
           "spans": []
         }
       ],
-      "link": [
-        {
-          "type": "paragraph",
-          "text": "Esse ut laborum excepteur veniam. In officia sunt cupidatat.",
-          "spans": []
-        }
-      ]
+      "link": {
+        "link_type": "Web",
+        "url": "https://slicemachine.dev"
+      }
     },
     "slice_type": "navigation"
   }

@@ -1,18 +1,3 @@
-// import Head from 'next/head'
-// import styles from '../styles/Home.module.css'
-// import Herosection from "../components/Herosection";
-// import About from "../components/About";
-
-// import CardsSection from "../components/CardsSection";
-// export default function Home() {
-//   return (
-//     <>
-//       <CardsSection />
-//       <Herosection />
-//       <About />
-//     </>
-//   )
-// }
 
 
 import { SliceZone } from '@prismicio/react'
@@ -20,20 +5,34 @@ import { SliceZone } from '@prismicio/react'
 import { createClient } from '../prismicio'
 import { components } from '../slices'
 
-const Page = ({ page, navigation, settings }) => {
-  return <SliceZone slices={page.data.slices} components={components} />
-}
+/*Components*/
+import { Navigation } from '../components/Navigation'
+import  Layout  from '../components/Layout'
+// import { NavigationItems } from '../slices/NavigationItems/index'
 
-export default Page
+const Index = ({ page, navigation }) => {
+  return (
+    <Layout navigation={navigation}>
+      <SliceZone slices={page.data.slices} components={components} />
+    </Layout>
+  );
+};
+
+export default Index;
+
 
 export async function getStaticProps({ previewData }) {
   const client = createClient({ previewData })
 
+  const [navigation] = await Promise.all([
+    client.getByUID('navigation', 'navigation'),
+  ])
   const page = await client.getSingle('homepage')
 
   return {
     props: {
-      page,
+      navigation,
+      page
     },
   }
 }

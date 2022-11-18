@@ -49,17 +49,6 @@ export type HomepageDocument<Lang extends string = string> = prismicT.PrismicDoc
 /** Content for Navigation documents */
 interface NavigationDocumentData {
     /**
-     * Logo field in *Navigation*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: navigation.logo
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    logo: prismicT.ImageField<never>;
-    /**
      * Slice Zone field in *Navigation*
      *
      * - **Field Type**: Slice Zone
@@ -75,7 +64,7 @@ interface NavigationDocumentData {
  * Slice for *Navigation → Slice Zone*
  *
  */
-type NavigationDocumentDataSlicesSlice = NavigationSlice;
+type NavigationDocumentDataSlicesSlice = NavigationSlice | LogoSlice;
 /**
  * Navigation document from Prismic
  *
@@ -1047,13 +1036,13 @@ interface NavigationSliceDefaultPrimary {
     /**
      * Link field in *Navigation → Primary*
      *
-     * - **Field Type**: Rich Text
+     * - **Field Type**: Link
      * - **Placeholder**: *None*
      * - **API ID Path**: navigation.primary.link
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
      *
      */
-    link: prismicT.RichTextField;
+    link: prismicT.LinkField;
 }
 /**
  * Item in Navigation → Items
