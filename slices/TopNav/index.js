@@ -16,7 +16,7 @@ import {
 } from '@chakra-ui/react'
 const TopNav = ({ slice }) => (
   <section>
-    <Flex h={16} bg={'#4c4f51'} alignItems={'center'} justifyContent={'end'}>
+    {/* <Flex h={16} bg={'#4c4f51'} alignItems={'center'} justifyContent={'end'}>
       <Breadcrumb
         fontSize={'16px'}
         color={'#fff'}
@@ -26,13 +26,13 @@ const TopNav = ({ slice }) => (
           {
             slice?.items?.map((item, i) =>
               <PrismicLink field={item.link} key={i}>
-            <Box 
-            _before={{
-              content: `"/"`,
-              padding: '0 10px',
-              color: '#ef483e'
-            }}>{item.contact_details}
-            </Box>
+                <Box
+                  _before={{
+                    content: `"/"`,
+                    padding: '0 10px',
+                    color: '#ef483e'
+                  }}>{item.contact_details}
+                </Box>
               </PrismicLink>
 
             )
@@ -42,7 +42,7 @@ const TopNav = ({ slice }) => (
       <Button bg={'#ff4438'} ml={'20px'} mr={'20px'} color={'#fff'} borderRadius={'0'}>
         <PrismicLink document={slice.primary.button}>Contact</PrismicLink>
       </Button>
-    </Flex>
+    </Flex> */}
   </section>
 )
 

@@ -11,7 +11,7 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "TopNav",
       "primary": {
-        "button": {
+        "button_link": {
           "type": "Link",
           "config": {
             "label": "button link",
@@ -33,17 +33,20 @@
       },
       "items": {
         "contact_details": {
-          "type": "Text",
+          "type": "StructuredText",
           "config": {
-            "label": "Contact details",
-            "placeholder": ""
+            "label": "contact details",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         },
-        "link": {
+        "contactlink": {
           "type": "Link",
           "config": {
-            "label": "link",
+            "label": "contact_link",
             "placeholder": "",
+            "allowTargetBlank": false,
             "select": null
           }
         }

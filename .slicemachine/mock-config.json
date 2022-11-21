@@ -10,7 +10,8 @@
     },
     "homepage": {},
     "logo": {},
-    "navigation": {}
+    "navigation": {},
+    "settings": {}
   },
   "slices": {
     "CallToAction": {},

@@ -4,15 +4,21 @@
     "version": "sktwi1xtmkfgx8626",
     "items": [
       {
-        "contact_details": "fifth",
-        "link": {
+        "contact_details": [
+          {
+            "type": "paragraph",
+            "text": "Fugiat aliquip irure cupidatat cillum voluptate ex.",
+            "spans": []
+          }
+        ],
+        "contactlink": {
           "link_type": "Web",
-          "url": "http://google.com"
+          "url": "http://twitter.com"
         }
       }
     ],
     "primary": {
-      "button": {
+      "button_link": {
         "id": "mock_document_id",
         "link_type": "Document",
         "type": "homepage",
@@ -25,7 +31,7 @@
       "button_text": [
         {
           "type": "paragraph",
-          "text": "Adipisicing sint mollit est cupidatat.",
+          "text": "Duis dolor culpa ex ad sint ut reprehenderit velit laboris consequat incididunt commodo. Nulla nulla mollit in sit officia sunt laborum id magna enim. Et eiusmod excepteur adipisicing ipsum deserunt amet cillum irure exercitation in.",
           "spans": []
         }
       ]

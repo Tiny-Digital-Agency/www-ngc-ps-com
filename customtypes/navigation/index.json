@@ -30,6 +30,9 @@
             },
             "logo": {
               "type": "SharedSlice"
+            },
+            "top_nav": {
+              "type": "SharedSlice"
             }
           }
         }
