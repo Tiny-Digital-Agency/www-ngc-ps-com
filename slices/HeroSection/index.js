@@ -40,6 +40,7 @@ const HeroSection = ({ slice }) => (
             direction={"row"}
             flexWrap="wrap"
             justifyContent={{ base: "center", md: "space-between" }}
+            gap={{ base: "10px", sm: "20px" }}
             w="full"
             pb={{ base: "5%", md: "60px" }}
           >
@@ -49,7 +50,7 @@ const HeroSection = ({ slice }) => (
                   align={"center"}
                   direction={{ base: "column", xl: "row" }}
                   gap={{ base: "10px", sm: "20px" }}
-                  w={{ base: "120px", md: "23%" }}
+                  w={{ base: "120px", md: "20%" }}
                 >
                   <Image
                     src={item.image.url}

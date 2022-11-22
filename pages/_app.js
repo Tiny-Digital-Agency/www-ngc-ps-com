@@ -4,8 +4,7 @@ import { PrismicPreview } from '@prismicio/next'
 import { repositoryName } from '../prismicio'
 import '../styles/globals.css'
 import '../styles/navigation.css'
-import '../styles/product-pages.css'
-import '../styles/product-detail.css'
+import Layout from '../components/Layout'
 import { ChakraProvider } from '@chakra-ui/react'
 export default function App({ Component, pageProps }) {
   return (

@@ -23,18 +23,19 @@ export function Navigation({ navigation, settings }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Box>
-
-      <Flex pt="2px" pb="10px" bg={'#4c4f51'} alignItems={'center'} justifyContent={'end'}
-        flexDirection={{ base: "column", md: "row" }}>
+      <Flex
+        pt="2px"
+        pb="10px"
+        bg={"#4c4f51"}
+        alignItems={"center"}
+        justifyContent={"end"}
+        flexDirection={{ base: "column", md: "row" }}
+      >
         <Box>
           {navigation?.data?.slices.map((slice) => {
             return (
-              <Flex key={slice.id} >
-
-                <Breadcrumb
-                  fontSize={'16px'}
-                  color={'#fff'}
-                  as={'nav'}>
+              <Flex key={slice.id}>
+                <Breadcrumb fontSize={"16px"} color={"#fff"} as={"nav"}>
                   {slice.items.length > 0 && (
                     <BreadcrumbItem
                       flexDirection={{ base: "column", sm: "row" }}
@@ -44,7 +45,16 @@ export function Navigation({ navigation, settings }) {
                         return (
                           <PrismicLink field={item.contactlink} key={i}>
                             <Box className="item">
-                              {i != 0 && <Text as="span" color="#ef483e" px="2" display={{ base: "none", sm: "unset" }}>/</Text>}
+                              {i != 0 && (
+                                <Text
+                                  as="span"
+                                  color="#ef483e"
+                                  px="2"
+                                  display={{ base: "none", sm: "unset" }}
+                                >
+                                  /
+                                </Text>
+                              )}
                               <PrismicText field={item.contact_details} />
                             </Box>
                           </PrismicLink>
@@ -52,9 +62,7 @@ export function Navigation({ navigation, settings }) {
                       })}
                     </BreadcrumbItem>
                   )}
-
                 </Breadcrumb>
-
               </Flex>
             );
           })}
@@ -63,12 +71,7 @@ export function Navigation({ navigation, settings }) {
           {navigation?.data?.slices.map((slice) => {
             return (
               <Flex key={slice.id}>
-
-                <Breadcrumb
-                  fontSize={'16px'}
-                  color={'#000'}
-                  as={'nav'}
-                >
+                <Breadcrumb fontSize={"16px"} color={"#000"} as={"nav"}>
                   {slice.items.length == 3 && (
                     <BreadcrumbItem>
                       <Button
@@ -137,7 +140,7 @@ export function Navigation({ navigation, settings }) {
             {/* Renders top-level links. */}
             {navigation?.data.slices.map((slice, i) => {
               return (
-                <Menu key={slice.id} >
+                <Menu key={slice.id}>
                   <PrismicLink field={slice.primary.link}>
                     <MenuButton className="item">
                       {i != 1 && (
