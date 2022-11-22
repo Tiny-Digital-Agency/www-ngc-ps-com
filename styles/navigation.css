@@ -1,0 +1,14 @@
+/* Custom styles for navigation */
+
+.menu-items-holder .css-r6z5ec {
+  width: 100%;
+}
+
+.menu-items-holder .css-r6z5ec .css-pwdhbc,
+.menu-items-holder .css-r6z5ec .css-pwdhbc button {
+  justify-content: center;
+  color: #fff;
+  background-color: #444;
+  border-radius: 0;
+  border-width: 0;
+}

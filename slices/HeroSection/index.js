@@ -28,7 +28,7 @@ const HeroSection = ({ slice }) => (
             pt={{ base: "18%", md: "12%", xl: "8%" }}
             pb={{ base: "5%", md: "60px" }}
             color="#fff"
-            fontSize={{ base: "3xl", md: "5xl", lg: "6xl" }}
+            fontSize={{ base: "4xl", md: "5xl", lg: "6xl" }}
             fontWeight="700"
             lineHeight={1.2}
             textAlign="center"
@@ -37,9 +37,9 @@ const HeroSection = ({ slice }) => (
           </Box>
           <Stack
             direction={"row"}
-            flexWrap={{ base: "wrap", md: "nowrap" }}
+            flexWrap="wrap"
             justifyContent={{ base: "center", md: "space-between" }}
-            gap="20px"
+            gap={{ base: "10px", sm: "20px" }}
             w="full"
             pb={{ base: "5%", md: "60px" }}
           >
@@ -47,9 +47,9 @@ const HeroSection = ({ slice }) => (
               slice?.items?.map((item, i) =>
                 <Flex key={i}
                   align={"center"}
-                  direction={{ base: "column", lg: "row" }}
-                  gap="20px"
-                  w={{ base: "auto", md: "20%" }}
+                  direction={{ base: "column", xl: "row" }}
+                  gap={{ base: "10px", sm: "20px" }}
+                  w={{ base: "120px", md: "20%" }}
                 >
                   <Image
                     src={item.image.url}
@@ -60,7 +60,7 @@ const HeroSection = ({ slice }) => (
                     align="left"
                     color="#fff"
                     fontSize="20px"
-                    fontWeight="600" >
+                    fontWeight="600" textAlign={{ base: "center", xl: "left" }} >
                     <PrismicRichText field={item.image_title} />
                   </Box>
                 </Flex>
@@ -102,6 +102,7 @@ const HeroSection = ({ slice }) => (
                   <PrismicRichText field={slice.primary.button_content} />
                   <Flex
                     alignItems="flex-end"
+                    justifyContent={{ base: "center", md: "flex-start" }}
                   >
                     <Box
                       w="fit-content"
