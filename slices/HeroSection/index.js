@@ -45,7 +45,7 @@ const HeroSection = ({ slice }) => (
           >
             {
               slice?.items?.map((item, i) =>
-                <Flex
+                <Flex key={i}
                   align={"center"}
                   direction={{ base: "column", lg: "row" }}
                   gap="20px"

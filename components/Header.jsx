@@ -63,7 +63,17 @@ export default function Simple() {
           />
           <HStack spacing={8} alignItems={'center'} >
             <Flex justifyContent={'end'}>
-              <Box h={{ base: '25%', md: '100%', sm: '50%' }} w={{ base: '25%', md: '100%', sm: '50%' }}>
+              <Box
+                h={{
+                  base: '25%',
+                  md: '100%',
+                  sm: '50%'
+                }}
+                w={{
+                  base: '25%',
+                  md: '100%',
+                  sm: '50%'
+                }}>
                 <Image src='/NGC-logo.webp' alt='ngc-logo' />
               </Box>
             </Flex>
@@ -76,23 +86,22 @@ export default function Simple() {
               spacing={6}
             >
               {Links.map((link) => (
-                <BreadcrumbItem  key={link.id}>
+                <BreadcrumbItem key={link.id}>
                   <BreadcrumbLink>{link.title}</BreadcrumbLink>
                 </BreadcrumbItem>
               ))}
             </Breadcrumb>
           </Flex>
+          {isOpen ? (
+            <Box pb={4} display={{ md: 'none' }}>
+              <Stack as={'nav'} spacing={4}>
+                {Links.map((link) => (
+                  <NavLink key={link.id}>{link.title}</NavLink>
+                ))}
+              </Stack>
+            </Box>
+          ) : null}
         </Flex>
-
-        {isOpen ? (
-          <Box pb={4} display={{ md: 'none' }}>
-            <Stack as={'nav'} spacing={4}>
-              {Links.map((link) => (
-                <NavLink key={link.id}>{link.title}</NavLink>
-              ))}
-            </Stack>
-          </Box>
-        ) : null}
       </Box>
     </>
   );

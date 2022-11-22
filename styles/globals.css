@@ -3,7 +3,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif ;
 }
 
 a {
@@ -29,6 +29,6 @@ span.css-h85r5n, span.css-t4q1nq {
   color: #ef483e;
 }
 
-ul {
-  list-style: none;
+.resource-link a:hover {
+  color: #ef483e;
 }

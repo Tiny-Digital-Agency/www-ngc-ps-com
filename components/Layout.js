@@ -1,15 +1,22 @@
 import Header from "./Header";
-import Footer from "./Footer";
+import { Navigation } from "./Navigation";
+import { Footer } from "./Footer";
 import Topnav from "./Topnav";
-const Layout = ({ children }) => {
-    return ( 
+const Layout = ({ navigation, children, settings, }) => {
+    return (
         <div className="content">
-            <Topnav/>
-            <Header/>
-            { children }
-            <Footer/>
+
+            <Navigation
+                navigation={navigation}
+                settings={settings}
+            />
+            {children}
+            <Footer
+                navigation={navigation}
+                settings={settings}
+            />
         </div>
-     );
+    );
 }
- 
+
 export default Layout;

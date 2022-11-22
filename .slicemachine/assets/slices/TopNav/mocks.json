@@ -4,15 +4,21 @@
     "version": "sktwi1xtmkfgx8626",
     "items": [
       {
-        "contact_details": "fifth",
-        "link": {
+        "contact_details": [
+          {
+            "type": "paragraph",
+            "text": "Est ea reprehenderit mollit Lorem commodo dolor. Consectetur non laboris ut est ex magna excepteur exercitation sit ex excepteur.",
+            "spans": []
+          }
+        ],
+        "contactlink": {
           "link_type": "Web",
-          "url": "http://google.com"
+          "url": "https://prismic.io"
         }
       }
     ],
     "primary": {
-      "button": {
+      "button_link": {
         "id": "mock_document_id",
         "link_type": "Document",
         "type": "homepage",
@@ -25,7 +31,14 @@
       "button_text": [
         {
           "type": "paragraph",
-          "text": "Adipisicing sint mollit est cupidatat.",
+          "text": "Dolor deserunt voluptate consequat nulla do aliquip officia. Laborum dolor duis nulla quis commodo anim Lorem nisi minim.",
+          "spans": []
+        }
+      ],
+      "address": [
+        {
+          "type": "paragraph",
+          "text": "Et excepteur aliquip amet adipisicing officia proident id do laboris. Sit excepteur aute et sunt sint adipisicing quis sunt laboris esse magna sit. Fugiat est et elit anim est est id do quis consequat ex.",
           "spans": []
         }
       ]

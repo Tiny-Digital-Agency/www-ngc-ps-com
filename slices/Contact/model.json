@@ -1,55 +1,44 @@
 {
-  "id": "side_dropdown_with_content",
+  "id": "contact",
   "type": "SharedSlice",
-  "name": "SideDropdownWithContent",
-  "description": "SideDropdownWithContent",
+  "name": "Contact",
+  "description": "Contact",
   "variations": [
     {
       "id": "default",
       "name": "Default",
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
-      "description": "SideDropdownWithContent",
+      "description": "Contact",
       "primary": {
-        "title": {
-          "type": "StructuredText",
+        "banner": {
+          "type": "Image",
           "config": {
-            "label": "Title",
-            "placeholder": "This is where it all begins...",
-            "allowTargetBlank": true,
-            "single": "heading1"
+            "label": "Banner",
+            "constraint": {},
+            "thumbnails": []
           }
-        }
-      },
-      "items": {
-        "parent_menu_items": {
+        },
+        "heading": {
           "type": "StructuredText",
           "config": {
-            "label": "Menu Items (Parent)",
+            "label": "Heading",
             "placeholder": "",
             "allowTargetBlank": true,
             "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         },
-        "parent_menu_items_content": {
+        "description": {
           "type": "StructuredText",
           "config": {
-            "label": "Menu Items Content (Parent)",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-          }
-        },
-        "child_menu_items": {
-          "type": "StructuredText",
-          "config": {
-            "label": "Menu Items (Child)",
+            "label": "Description",
             "placeholder": "",
             "allowTargetBlank": true,
             "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         }
       },
+      "items": {},
       "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
     }
   ]

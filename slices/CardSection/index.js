@@ -1,19 +1,19 @@
 import React from 'react'
 import { PrismicRichText } from '@prismicio/react'
-import { Flex, VStack, Box, useBreakpointValue } from "@chakra-ui/react";
+import { Flex, VStack, Box, useBreakpointValue, Grid, GridItem } from "@chakra-ui/react";
 
 
 const CardsSection = ({ slice }) => (
-  <Flex w={"full"}>
+  <Flex w="full">
     <VStack
       w="full"
-      justify={"center"}
+      justify="center"
       px={useBreakpointValue({ base: 4, md: 8 })}
       bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
       direction="row"
     >
       <Box
-        pt="55px"
+        p="55px 0 30px"
         _before={{
           content: `""`,
           position: "absolute",
@@ -28,28 +28,28 @@ const CardsSection = ({ slice }) => (
         <Box
           py="10px"
           color="#53575a"
-          fontSize={{ base: "3xl", lg: "40px" }}
+          fontSize={{ base: "3xl", lg: "35px" }}
           lineHeight={1.2}
           textAlign="center"
         >
           <PrismicRichText field={slice.primary.title} />
         </Box>
       </Box>
-      <Flex
+
+
+      <Grid
+        pb="30px"
         w={{ xl: "80em", base: "full" }}
-        flexWrap="wrap"
-        direction="row"
-        justify={"space-evenly"}
-        my="50px"
+        templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' }}
+        gap={6}
       >
         {
           slice?.items?.map((item, i) =>
             <>
-              <Box
-                w={{ base: "80%", sm: "47%", lg: "30%" }}
-                h={{ sm: "320px", base: "250px" }}
-                my="25px"
-                mx={{ base: "5px" }}
+              <GridItem
+                colSpan="1"
+                h={{ base: "inherit", md: "320px" }}
+                w="100%"
               >
                 <section>
                   <Box
@@ -57,14 +57,14 @@ const CardsSection = ({ slice }) => (
                     alignItems="center"
                     justifyContent="center"
                     mx="auto"
-                    w="fit-content"
                     h="100%"
                     color="#fff"
-                    fontSize={32}
+                    fontSize="32px"
                     fontWeight="bold"
-                  // textAlign={"center"}
+                    textAlign="center"
                   >
                     <Box
+                      m={{ base: "0 20px 0 20px", sm: "0 50px 0 50px" }}
                       borderBottom={"4px solid transparent"}
                       _hover={{
                         borderBottom: "4px solid #ef483e",
@@ -73,7 +73,7 @@ const CardsSection = ({ slice }) => (
                     </Box>
                   </Box>
                 </section>
-              </Box>
+              </GridItem>
               <style jsx>{`
                   section{
                     background-image: url("${item.background_image.url}");
@@ -82,11 +82,64 @@ const CardsSection = ({ slice }) => (
                     height: 320px;
                     width: 100%;
                   }
-              `}</style>
+                `}</style>
             </>
           )
         }
-      </Flex>
+      </Grid>
+
+      {/* <Grid
+          pb="30px"
+          w={{ xl: "63em", base: "full" }}
+          templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(2, 1fr)' }}
+          gap={6}
+        >
+          false
+          {
+            slice?.items?.map((item, i) =>
+              <>
+                <GridItem
+                  colSpan="1"
+                  h={{ base: "inherit", md: "320px" }}
+                  w="100%"
+                >
+                  <section>
+                    <Box
+                      display="flex"
+                      alignItems="center"
+                      justifyContent="center"
+                      mx="auto"
+                      h="100%"
+                      color="#fff"
+                      fontSize="32px"
+                      fontWeight="bold"
+                      textAlign="center"
+                    >
+                      <Box
+                        m={{ base: "0 20px 0 20px", sm: "0 50px 0 50px" }}
+                        borderBottom={"4px solid transparent"}
+                        _hover={{
+                          borderBottom: "4px solid #ef483e",
+                        }}>
+                        <PrismicRichText field={item.text_content} />
+                      </Box>
+                    </Box>
+                  </section>
+                </GridItem>
+                <style jsx>{`
+                  section{
+                    background-image: url("${item.background_image.url}");
+                    background-size: cover;
+                    background-position: center;
+                    height: 320px;
+                    width: 100%;
+                  }
+                `}</style>
+              </>
+            )
+          }
+        </Grid> */}
+
     </VStack>
   </Flex>
 )

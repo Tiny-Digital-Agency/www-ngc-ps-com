@@ -55,6 +55,9 @@
             },
             "side_dropdown_with_content": {
               "type": "SharedSlice"
+            },
+            "contact": {
+              "type": "SharedSlice"
             }
           }
         }
