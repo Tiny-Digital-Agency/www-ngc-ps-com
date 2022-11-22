@@ -1,7 +1,7 @@
 import {
   Stack,
   Flex,
-  Text,
+  Box,
   VStack,
   useBreakpointValue,
 } from "@chakra-ui/react";
@@ -17,20 +17,22 @@ const BannerSectionWithSideContent = ({ slice }) => (
         bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
       >
         <Stack
-          maxW={{ base: "95%", md: "75%" }}
-          ml="15em"
+          // maxW={{ base: "95%", md: "75%" }}
+          w={{ base: "50%", lg: "630px" }}
+          ml="40%"
           align="center"
           spacing={6}
         >
-          <Text
+          <Box
             py="35%"
+            // w="630px"
             color="#fff"
             fontSize={{ base: "3xl", lg: "4xl" }}
             lineHeight={1.2}
-            textAlign="center"
+            textAlign="left"
           >
             <PrismicRichText field={slice.primary.title} />
-          </Text>
+          </Box>
         </Stack>
       </VStack>
     </Flex>
