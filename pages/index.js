@@ -29,12 +29,13 @@ export async function getStaticProps({ previewData }) {
   ])
   const page = await client.getSingle('homepage')
   const settings = await client.getSingle('settings')
-
+  const footer = await client.getSingle('footer')
   return {
     props: {
       navigation,
       page,
       settings,
+      footer,
     },
   }
 }

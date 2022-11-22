@@ -54,7 +54,6 @@ export function Navigation({ navigation, settings }) {
                               <PrismicText field={item.contact_details} />
                             </Box>
                           </PrismicLink>
-
                         )
                       })
                       }
