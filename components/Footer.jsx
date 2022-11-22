@@ -21,7 +21,7 @@ import {
 export function Footer({ navigation, settings }) {
     return (
         <Box>
-            <Box bg={'#2c2e35'} px={6}>
+            <Box bg={'#000'} px={6}>
                 <Flex justifyContent="space-between" alignItems="center">
                     <HStack spacing={8} alignItems={'center'} >
                         <Flex justifyContent={'end'}>
@@ -44,7 +44,7 @@ export function Footer({ navigation, settings }) {
                             </Box>
                         </Flex>
                     </HStack>
-                    <Flex pt="2px" pb="10px" bg={'#2c2e35'} alignItems={'center'} justifyContent={'end'}>
+                    <Flex pt="2px" pb="10px" bg={'#000'} alignItems={'center'} justifyContent={'end'}>
                         <Box>
                             <Box>
                                 {navigation?.data?.slices.map((slice) => {
@@ -53,7 +53,11 @@ export function Footer({ navigation, settings }) {
                                             <Box
                                                 fontSize={'16px'}
                                                 color={'#fff'}
-                                                as={'nav'}>
+                                                as={'nav'}
+                                                _active={{
+                                                    color:"#000"
+                                                }}
+                                                >
                                                 {slice.items.length == 3 && (
                                                     <Box>
                                                         <PrismicText field={slice.primary.address} />
