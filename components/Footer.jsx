@@ -22,20 +22,16 @@ export function Footer({ navigation, settings }) {
     return (
         <Box>
             <Box bg={'#000'} px={6}>
-                <Flex justifyContent="space-between" alignItems="center">
+                <Flex 
+                justifyContent="space-between" 
+                alignItems="center"
+                flexDirection={{base:"column", md:"row"}}
+                >
                     <HStack spacing={8} alignItems={'center'} >
                         <Flex justifyContent={'end'}>
                             <Box
-                                h={{
-                                    base: '25%',
-                                    md: '100%',
-                                    sm: '50%'
-                                }}
-                                w={{
-                                    base: '25%',
-                                    md: '100%',
-                                    sm: '50%'
-                                }}>
+                                h="100%"
+                                w="100%">
                                 <PrismicLink href="/">
                                     {prismicH.isFilled.image(settings?.data?.logo) && (
                                         <PrismicNextImage field={settings.data.logo} />
@@ -44,7 +40,7 @@ export function Footer({ navigation, settings }) {
                             </Box>
                         </Flex>
                     </HStack>
-                    <Flex pt="2px" pb="10px" bg={'#000'} alignItems={'center'} justifyContent={'end'}>
+                    <Flex pt="2px" pb="10px" bg={'#000'} alignItems={'center'} justifyContent={'center'}>
                         <Box>
                             <Box>
                                 {navigation?.data?.slices.map((slice) => {
@@ -55,13 +51,13 @@ export function Footer({ navigation, settings }) {
                                                 color={'#fff'}
                                                 as={'nav'}
                                                 _active={{
-                                                    color:"#000"
+                                                    color: "#000"
                                                 }}
-                                                >
+                                            >
                                                 {slice.items.length == 3 && (
-                                                    <Box>
+                                                    <Flex justifyContent="center" textAlign="center">
                                                         <PrismicText field={slice.primary.address} />
-                                                    </Box>
+                                                    </Flex>
                                                 )}
                                             </Box>
                                         </Flex>
@@ -70,25 +66,24 @@ export function Footer({ navigation, settings }) {
                             </Box>
                             {navigation?.data?.slices.map((slice) => {
                                 return (
-                                    <Flex key={slice.id}>
-
+                                    <Flex key={slice.id} justifyContent="center">
                                         <Breadcrumb
                                             fontSize={'16px'}
                                             color={'#fff'}
-                                            as={'nav'}>
-
+                                            as={'nav'}
+                                        >
                                             {slice.items.length > 0 && (
-
-                                                <BreadcrumbItem>
+                                                <BreadcrumbItem
+                                                    flexDirection={{ base: "column", sm: "row" }}
+                                                >
                                                     {slice.items.map((item, i) => {
                                                         return (
                                                             <PrismicLink field={item.contactlink} key={i}>
                                                                 <Box className="item">
-                                                                    {i != 0 && <Text as="span" color="#ef483e" px="2">/</Text>}
+                                                                    {i != 0 && <Text as="span" color="#ef483e" px="2" display={{ base: "none", sm: "unset" }}>/</Text>}
                                                                     <PrismicText field={item.contact_details} />
                                                                 </Box>
                                                             </PrismicLink>
-
                                                         )
                                                     })
                                                     }
@@ -104,7 +99,7 @@ export function Footer({ navigation, settings }) {
                         color={'#48823b'}
                         alignItems={'end'}
                         justifyContent="end"
-                        display={{ base: 'none', md: 'flex' }}
+                        display={{ base: 'none', md: 'unset' }}
                         flexDirection="column"
                         fontWeight={"500"}
                     >
@@ -113,19 +108,15 @@ export function Footer({ navigation, settings }) {
                             return (
                                 <Flex key={slice.id}
                                     flexDirection="column"
-                                    color={'#48823b'}
-                                >
+                                    color={'#48823b'}>
                                     <PrismicLink field={slice.primary.link}>
                                         <Flex className="item" color={"#48823b"}>
-
                                             <PrismicText field={slice.primary.name} />
                                         </Flex>
                                     </PrismicLink>
-                                    {/* Renders child links, if present. */}
                                 </Flex>
                             )
                         })}
-
                     </Flex>
                 </Flex>
             </Box>

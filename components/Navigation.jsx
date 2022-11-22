@@ -19,12 +19,8 @@ import {
   BreadcrumbItem,
   Button,
   HStack,
-  Link,
   IconButton,
   useDisclosure,
-  useColorModeValue,
-  BreadcrumbLink,
-  Image,
   Stack,
   Text
 } from '@chakra-ui/react';
@@ -34,23 +30,25 @@ export function Navigation({ navigation, settings }) {
   return (
     <Box>
 
-      <Flex pt="2px" pb="10px" bg={'#4c4f51'} alignItems={'center'} justifyContent={'end'}>
+      <Flex pt="2px" pb="10px" bg={'#4c4f51'} alignItems={'center'} justifyContent={'end'}
+        flexDirection={{ base: "column", md: "row" }}>
         <Box>
           {navigation?.data?.slices.map((slice) => {
             return (
-              <Flex key={slice.id}>
+              <Flex key={slice.id} >
 
                 <Breadcrumb
                   fontSize={'16px'}
                   color={'#fff'}
                   as={'nav'}>
                   {slice.items.length > 0 && (
-                    <BreadcrumbItem>
+                    <BreadcrumbItem
+                      flexDirection={{ base: "column", sm: "row" }}>
                       {slice.items.map((item, i) => {
                         return (
                           <PrismicLink field={item.contactlink} key={i}>
                             <Box className="item">
-                              {i != 0 && <Text as="span" color="#ef483e" px="2">/</Text>}
+                              {i != 0 && <Text as="span" color="#ef483e" px="2"  display={{base:"none", sm:"unset"}}>/</Text>}
                               <PrismicText field={item.contact_details} />
                             </Box>
                           </PrismicLink>
@@ -131,19 +129,13 @@ export function Navigation({ navigation, settings }) {
             {/* Renders top-level links. */}
             {navigation?.data.slices.map((slice, i) => {
               return (
-                <Menu key={slice.id}
-                >
-
-
+                <Menu key={slice.id}>
                   <PrismicLink field={slice.primary.link}>
                     <MenuButton className="item">
                       {i != 1 && <Text as="span" color="#ef483e" px="2">/</Text>}
-
                       <PrismicText field={slice.primary.name} />
                     </MenuButton>
                   </PrismicLink>
-
-
                   {/* Renders child links, if present. */}
                   {slice.items.length > 0 && (
                     <MenuList color="#000">
@@ -184,9 +176,7 @@ export function Navigation({ navigation, settings }) {
                       <MenuList color="#000">
                         {slice.items.map((item, i) => {
                           return (
-                            <MenuItem key={i}
-
-                            >
+                            <MenuItem key={i}>
                               <PrismicLink field={item.link} >
                                 <PrismicText field={item.name} />
                               </PrismicLink>
