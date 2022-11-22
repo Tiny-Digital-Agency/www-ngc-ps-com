@@ -43,7 +43,9 @@ export function Navigation({ navigation, settings }) {
                   as={'nav'}>
                   {slice.items.length > 0 && (
                     <BreadcrumbItem
-                      flexDirection={{ base: "column", sm: "row" }}>
+                      flexDirection={{ base: "column", sm: "row" }}
+                      pb={{base:"5px", sm:"unset"}}
+                      >
                       {slice.items.map((item, i) => {
                         return (
                           <PrismicLink field={item.contactlink} key={i}>
@@ -72,7 +74,8 @@ export function Navigation({ navigation, settings }) {
                 <Breadcrumb
                   fontSize={'16px'}
                   color={'#000'}
-                  as={'nav'}>
+                  as={'nav'}
+                  >
                   {slice.items.length == 3 && (
                     <BreadcrumbItem >
                       <Button bg={'#ff4438'} ml={'20px'} mr={'20px'} color={'#fff'} borderRadius={'0'}>
