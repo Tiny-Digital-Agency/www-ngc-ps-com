@@ -32,6 +32,11 @@ const BannerSectionWithSideContent = ({ slice }) => (
             textAlign="left"
           >
             <PrismicRichText field={slice.primary.title} />
+            <Box 
+            pt="5"
+            fontSize={22}>
+            <PrismicRichText field={slice.primary.description} />
+            </Box>
           </Box>
         </Stack>
       </VStack>

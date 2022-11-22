@@ -137,11 +137,11 @@ export function Navigation({ navigation, settings }) {
 
 
                   <PrismicLink field={slice.primary.link}>
-                    <Box className="item">
+                    <MenuButton className="item">
                       {i != 1 && <Text as="span" color="#ef483e" px="2">/</Text>}
 
                       <PrismicText field={slice.primary.name} />
-                    </Box>
+                    </MenuButton>
                   </PrismicLink>
 
 
