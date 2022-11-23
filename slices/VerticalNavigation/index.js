@@ -11,44 +11,42 @@ import {
   Flex,
   Button,
   Text,
-
 } from '@chakra-ui/react';
-/**
- * @typedef {import("@prismicio/client").Content.VerticalNavigationSlice} VerticalNavigationSlice
- * @typedef {import("@prismicio/react").SliceComponentProps<VerticalNavigationSlice>} VerticalNavigationProps
- * @param { VerticalNavigationProps }
- */
+import { ChevronRightIcon } from '@chakra-ui/icons'
+
 const VerticalNavigation = ({ slice }) => (
   <section>
     <Flex justifyContent={"center"} bg={"#e5e1dd"}>
-      <Tabs defaultIndex={0}  >
-        <Flex justifyContent={"space-between"} display={{ base: "block", sm: "block", md: "flex", xl: "flex" }}>
-          <Box width={{ base: "100%", md: "200px" }} bg="#e5e1dd">
-            <Flex justifyContent={"center"}>
-              <TabList display={"block"} >
-                {
-                  slice.items.map((item, i) =>
-                    <Tab key={i} maxW="100%" w={{ base: "250px", sm: "100%" }} bg={"#ef483e"} color={"#fff"} fontSize="14px" fontWeight={"400"}
-                      _selected={{
-                        bg: '#fff',
-                        borderColor: '#4D8B3F',
-                        borderLeft: '3px solid',
-                        color: '#4D8B3F'
-                      }}>
-                      <Box>
-                        {item.navlist}
-                      </Box>
-                    </Tab>
-                  )
-                }
-              </TabList>
-            </Flex>
+      <Tabs defaultIndex={0} w={{ base: "100%", lg: "80%" }} m="auto" >
+        <Flex display="flex" direction={{ base: "column", lg: "row" }} justifyContent={"center"} w={{ base: "100%", lg: "80%" }} margin={"auto"}>
+          <Box width={{ base: "100%", lg: "45%" }} bg="#e5e1dd">
+            <TabList display={"block"} >
+              {
+                slice?.items?.map((item, i) =>
+                  <Tab key={i}
+                    maxW="100%"
+                    w={{ base: "60%", lg: "60%" }}
+                    bg={"#ef483e"}
+                    margin="15px auto"
+                    p="5px 0"
+                    color={"#fff"}
+                    fontSize="14px"
+                    _focus={{
+                      bg: '#4d8b3f',
+                      transform: 'scale(0.98)',
+                      borderColor: '#bec3c9',
+                      color: '#fff'
+                    }}>
+                    <Box display="flex" direction="row" alignItems="center">
+                      {item.navlist}
+                      <ChevronRightIcon />
+                    </Box>
+                  </Tab>
+                )
+              }
+            </TabList>
           </Box>
-          <Box
-            width={{
-              base: "100%",
-              sm: "500px"
-            }}
+          <Box width={{ base: "100%", lg: "55%" }}
             bg="#fff"
             pt="10px"
             lineHeight="2"
@@ -74,8 +72,8 @@ const VerticalNavigation = ({ slice }) => (
           </Box>
         </Flex>
       </Tabs>
-    </Flex>
-  </section>
+    </Flex >
+  </section >
 )
 
 export default VerticalNavigation
