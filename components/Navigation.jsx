@@ -80,6 +80,7 @@ export function Navigation({ navigation, settings }) {
                         mr={"20px"}
                         color={"#fff"}
                         borderRadius={"0"}
+                        _hover={{}}
                       >
                         <PrismicLink document={slice.primary.button_link}>
                           <PrismicText field={slice.primary.button_text} />
@@ -93,29 +94,15 @@ export function Navigation({ navigation, settings }) {
           })}
         </Box>
       </Flex>
-
-      <Box bg={"#2c2e35"} px={6} py="15px">
-        <Flex
-          justifyContent="space-between"
-          direction={{ base: "column-reverse", md: "row" }}
-          alignItems="center"
-          h={{ base: "180px", md: "90px", lg: "auto" }}
-        >
-          <Box
-            display={{ base: "flex", md: "none" }}
-            w="full"
-            justifyContent={{ base: "flex-end", md: "center" }}
-          >
-            <IconButton
-              display={{ md: "none" }}
-              size={"md"}
-              icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-              aria-label={"Open Menu"}
-              backgroundColor="#5c5c5c"
-              onClick={isOpen ? onClose : onOpen}
-            />
-          </Box>
-
+      <Box bg={"#2c2e35"} px={6}>
+        <Flex justifyContent="space-between" alignItems="center">
+          <IconButton
+            size={"md"}
+            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+            aria-label={"Open Menu"}
+            display={{ md: "none" }}
+            onClick={isOpen ? onClose : onOpen}
+          />
           <HStack spacing={8} alignItems={"center"}>
             <Flex
               justifyContent={{ base: "center", md: "flex-start", lg: "end" }}
@@ -142,23 +129,30 @@ export function Navigation({ navigation, settings }) {
               return (
                 <Menu key={slice.id}>
                   <PrismicLink field={slice.primary.link}>
-                    <MenuButton className="item">
-                      {i != 1 && (
-                        <Text as="span" color="#ef483e" px="2">
-                          /
-                        </Text>
-                      )}
-
+                    {i != 1 && (
+                      <Text as="span" color="#ef483e" px="2">
+                        /
+                      </Text>
+                    )}
+                    <MenuButton
+                      className="item"
+                      _hover={{ borderBottom: "green 1px solid" }}
+                      _activeLink={{ color: "red" }}
+                    >
                       <PrismicText field={slice.primary.name} />
                     </MenuButton>
                   </PrismicLink>
-
                   {/* Renders child links, if present. */}
                   {slice.items.length > 0 && (
                     <MenuList color="#000" textTransform="uppercase">
                       {slice.items.map((item, i) => {
                         return (
-                          <MenuItem key={i}>
+                          <MenuItem
+                            key={i}
+                            _activeLink={{
+                              color: "red",
+                            }}
+                          >
                             <PrismicLink field={item.link}>
                               <PrismicText field={item.name} />
                             </PrismicLink>
@@ -174,7 +168,7 @@ export function Navigation({ navigation, settings }) {
         </Flex>
         {isOpen ? (
           <Box pb={4} display={{ md: "none" }} color="#fff">
-            <Stack as={"nav"} spacing={4} className="menu-items-holder">
+            <Stack as={"nav"} spacing={4}>
               {navigation?.data.slices.map((slice) => {
                 return (
                   <Menu key={slice.id}>

@@ -28,20 +28,11 @@ const Certification = ({ slice }) => (
       >
         {
           slice.items?.map((item, i) =>
-
-            <Flex
-              justifyContent={"center"}
-              alignItems="center"
-              maxW={{ base: "unset", lg: "190px" }}
-              w={{ base: "45%", md: "28%", lg: "auto" }}
-              margin={{ base: "15px 0", lg: "20px" }}
-
-            >
-              <PrismicLink field={item.image_link} key={i}>
+            <PrismicLink field={item.image_link} key={i}>
+              <Box maxW={"190px"} margin={"20px"}>
                 <Image src={item.image.url} alt={item.image.alt} />
-              </PrismicLink>
-            </Flex>
-
+              </Box>
+            </PrismicLink>
           )
         }
       </Flex>
