@@ -1323,6 +1323,17 @@ export interface SideDropdownWithContentSliceDefaultItem {
      *
      */
     child_menu_items: prismicT.RichTextField;
+    /**
+     * Nest Element? field in *SideDropdownWithContent → Items*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: side_dropdown_with_content.items[].nest
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    nest: prismicT.BooleanField;
 }
 /**
  * Default variation for SideDropdownWithContent Slice
