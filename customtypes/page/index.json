@@ -58,6 +58,9 @@
             },
             "contact": {
               "type": "SharedSlice"
+            },
+            "products_list": {
+              "type": "SharedSlice"
             }
           }
         }

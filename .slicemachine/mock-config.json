@@ -188,6 +188,13 @@
       "default": {
         "primary": {}
       }
-    }
+    },
+    "ProductsList": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    },
+    "ProductDetail": {}
   }
 }

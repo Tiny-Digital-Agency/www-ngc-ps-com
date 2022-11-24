@@ -1,0 +1,54 @@
+{
+  "id": "products_list",
+  "type": "SharedSlice",
+  "name": "ProductsList",
+  "description": "ProductsList",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "ProductsList",
+      "primary": {
+        "left_hand_image": {
+          "type": "Image",
+          "config": {
+            "label": "Left Hand Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "right_hand_image": {
+          "type": "Image",
+          "config": {
+            "label": "Right Hand Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "product_list_title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Product List Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        }
+      },
+      "items": {
+        "product_name_and_link": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Product Name and Link",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}
