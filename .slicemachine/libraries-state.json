@@ -435,6 +435,15 @@
                     "label": "Title",
                     "placeholder": "This is where it all begins..."
                   }
+                },
+                "card_count": {
+                  "type": "Boolean",
+                  "config": {
+                    "label": "2 Card Count?",
+                    "placeholder_false": "false",
+                    "placeholder_true": "true",
+                    "default_value": false
+                  }
                 }
               },
               "items": {
@@ -473,12 +482,12 @@
                   },
                   "alt": null,
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04"
+                  "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db"
                 },
                 "text_content": [
                   {
                     "type": "paragraph",
-                    "text": "Lorem aliqua qui sunt aliqua quis consequat ullamco irure irure culpa sit. Cillum cupidatat sunt nulla et.",
+                    "text": "Non pariatur consequat magna velit amet cillum eiusmod sit dolore. Dolore proident duis incididunt sunt ut cupidatat culpa nisi excepteur.",
                     "spans": []
                   }
                 ]
@@ -488,10 +497,11 @@
               "title": [
                 {
                   "type": "heading1",
-                  "text": "Wonderful",
+                  "text": "Stranger",
                   "spans": []
                 }
-              ]
+              ],
+              "card_count": false
             },
             "slice_type": "card_section"
           }
@@ -1578,6 +1588,188 @@
               ]
             },
             "slice_type": "news"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
+      "product_detail": {
+        "library": "slices",
+        "id": "product_detail",
+        "name": "ProductDetail",
+        "description": "ProductDetail",
+        "model": {
+          "id": "product_detail",
+          "type": "SharedSlice",
+          "name": "ProductDetail",
+          "description": "ProductDetail",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "ProductDetail",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "paragraph",
+                    "label": "Description",
+                    "placeholder": "A nice description of your feature"
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format",
+              "items": {}
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Waste",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Adipisicing pariatur ipsum esse sit labore ullamco exercitation ex laboris duis fugiat sunt cillum eiusmod irure. Sint laborum laborum ut qui.",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "product_detail"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
+      "products_list": {
+        "library": "slices",
+        "id": "products_list",
+        "name": "ProductsList",
+        "description": "ProductsList",
+        "model": {
+          "id": "products_list",
+          "type": "SharedSlice",
+          "name": "ProductsList",
+          "description": "ProductsList",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "ProductsList",
+              "primary": {
+                "left_hand_image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Left Hand Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "right_hand_image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Right Hand Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "product_list_title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Product List Title",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                }
+              },
+              "items": {
+                "product_name_and_link": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Product Name and Link",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "product_name_and_link": [
+                  {
+                    "type": "paragraph",
+                    "text": "Duis cillum irure velit velit velit dolore fugiat. Adipisicing aliqua reprehenderit cupidatat sunt.",
+                    "spans": []
+                  }
+                ]
+              }
+            ],
+            "primary": {
+              "left_hand_image": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea"
+              },
+              "right_hand_image": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a"
+              },
+              "product_list_title": [
+                {
+                  "type": "paragraph",
+                  "text": "Voluptate elit aliquip sunt duis non aliqua veniam pariatur et dolor labore magna reprehenderit. Veniam Lorem aliquip sit commodo.",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "products_list"
           }
         },
         "meta": {

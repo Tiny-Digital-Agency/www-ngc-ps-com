@@ -18,6 +18,15 @@
             "label": "Title",
             "placeholder": "This is where it all begins..."
           }
+        },
+        "card_count": {
+          "type": "Boolean",
+          "config": {
+            "label": "2 Card Count?",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": false
+          }
         }
       },
       "items": {

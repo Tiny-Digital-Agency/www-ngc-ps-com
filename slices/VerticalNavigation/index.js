@@ -25,7 +25,7 @@ const VerticalNavigation = ({ slice }) => (
                 slice?.items?.map((item, i) =>
                   <Tab key={i}
                     maxW="100%"
-                    w={{ base: "60%", lg: "60%" }}
+                    w={{ base: "250px", lg: "60%" }}
                     bg={"#ef483e"}
                     margin="15px auto"
                     p="5px 0"

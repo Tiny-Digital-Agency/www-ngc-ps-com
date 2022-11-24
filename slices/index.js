@@ -16,6 +16,8 @@ import IndustriesContent from './IndustriesContent';
 import Logo from './Logo';
 import Navigation from './Navigation';
 import News from './News';
+import ProductDetail from './ProductDetail';
+import ProductsList from './ProductsList';
 import SideDropdownWithContent from './SideDropdownWithContent';
 import TeamDropdown from './TeamDropdown';
 import TeamProfile from './TeamProfile';
@@ -39,6 +41,8 @@ export {
 	Logo,
 	Navigation,
 	News,
+	ProductDetail,
+	ProductsList,
 	SideDropdownWithContent,
 	TeamDropdown,
 	TeamProfile,
@@ -63,6 +67,8 @@ export const components = {
 	logo: Logo,
 	navigation: Navigation,
 	news: News,
+	product_detail: ProductDetail,
+	products_list: ProductsList,
 	side_dropdown_with_content: SideDropdownWithContent,
 	team_dropdown: TeamDropdown,
 	team_profile: TeamProfile,
