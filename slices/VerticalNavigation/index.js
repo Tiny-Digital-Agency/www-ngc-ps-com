@@ -23,17 +23,19 @@ const VerticalNavigation = ({ slice }) => (
     <Flex justifyContent={"center"} bg={"#e5e1dd"}>
       <Tabs defaultIndex={0}  >
         <Flex justifyContent={"space-between"} display={{ base: "block", sm: "block", md: "flex", xl: "flex" }}>
-          <Box width={{ base: "100%", sm: "400px" }} bg="#e5e1dd">
+          <Box width={{ base: "100%", md: "200px" }} bg="#e5e1dd">
             <Flex justifyContent={"center"}>
               <TabList display={"block"} >
                 {
-                  slice?.items?.map((item, i) =>
-                    <Tab key={i} maxW="100%" w={{ base: "250px", sm: "300px" }} bg={"#ef483e"} margin={5} color={"#fff"} fontSize="14px"
+                  slice.items.map((item, i) =>
+                    <Tab key={i} maxW="100%" w={{ base: "250px", sm: "100%" }} bg={"#ef483e"}  color={"#fff"} fontSize="14px" fontWeight={"400"}
                       _focus={{
-                        bg: '#4d8b3f',
-                        transform: 'scale(0.98)',
-                        borderColor: '#bec3c9',
-                        color: '#fff'
+                        bg: '#fff',
+                        // transform: 'scale(0.98)',
+                        boxShadow:'0px 0px 3px 2px rgba(0,0,0,0.51)',
+                        borderColor: '#4D8B3F',
+                        borderLeft: '5px solid',
+                        color: '#4D8B3F'
                       }}>
                       <Box>
                         {item.navlist}
