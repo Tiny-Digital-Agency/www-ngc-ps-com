@@ -189,6 +189,7 @@
         "primary": {}
       }
     },
+<<<<<<< HEAD
     "TextEditor": {
       "default": {
         "primary": {
@@ -232,5 +233,14 @@
         "items": {}
       }
     }
+=======
+    "ProductsList": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    },
+    "ProductDetail": {}
+>>>>>>> e4b90e3 (polished and added product list section)
   }
 }

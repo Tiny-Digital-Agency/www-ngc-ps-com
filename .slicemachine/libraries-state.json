@@ -202,9 +202,7 @@
           "default": {
             "variation": "default",
             "version": "sktwi1xtmkfgx8626",
-            "items": [
-              {}
-            ],
+            "items": [{}],
             "primary": {
               "title": [
                 {
@@ -284,9 +282,7 @@
           "default": {
             "variation": "default",
             "version": "sktwi1xtmkfgx8626",
-            "items": [
-              {}
-            ],
+            "items": [{}],
             "primary": {
               "title": [
                 {
@@ -373,9 +369,7 @@
           "default": {
             "variation": "default",
             "version": "sktwi1xtmkfgx8626",
-            "items": [
-              {}
-            ],
+            "items": [{}],
             "primary": {
               "title": [
                 {
@@ -637,9 +631,7 @@
           "default": {
             "variation": "default",
             "version": "sktwi1xtmkfgx8626",
-            "items": [
-              {}
-            ],
+            "items": [{}],
             "primary": {
               "banner": {
                 "dimensions": {
@@ -905,10 +897,7 @@
                   "config": {
                     "label": "Nav dropdown",
                     "placeholder": "",
-                    "options": [
-                      "1",
-                      "2"
-                    ]
+                    "options": ["1", "2"]
                   }
                 }
               },
@@ -1155,9 +1144,7 @@
           "default": {
             "variation": "default",
             "version": "sktwi1xtmkfgx8626",
-            "items": [
-              {}
-            ],
+            "items": [{}],
             "primary": {
               "image": {
                 "dimensions": {
@@ -1311,9 +1298,7 @@
           "default": {
             "variation": "default",
             "version": "sktwi1xtmkfgx8626",
-            "items": [
-              {}
-            ],
+            "items": [{}],
             "primary": {
               "image": {
                 "dimensions": {
@@ -1629,90 +1614,10 @@
                     "label": "Description",
                     "placeholder": "A nice description of your feature"
                   }
-                },
-                "product_image": {
-                  "type": "Image",
-                  "config": {
-                    "label": "Product Image",
-                    "constraint": {},
-                    "thumbnails": []
-                  }
-                },
-                "background_image": {
-                  "type": "Image",
-                  "config": {
-                    "label": "Background Image",
-                    "constraint": {},
-                    "thumbnails": []
-                  }
-                },
-                "product_name": {
-                  "type": "StructuredText",
-                  "config": {
-                    "label": "Product Name",
-                    "placeholder": "",
-                    "allowTargetBlank": true,
-                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-                  }
-                },
-                "product_type": {
-                  "type": "StructuredText",
-                  "config": {
-                    "label": "Product Type",
-                    "placeholder": "",
-                    "allowTargetBlank": true,
-                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-                  }
-                },
-                "product_details_right": {
-                  "type": "StructuredText",
-                  "config": {
-                    "label": "Product Details (Right Content)",
-                    "placeholder": "",
-                    "allowTargetBlank": true,
-                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-                  }
-                },
-                "product_resources_left": {
-                  "type": "StructuredText",
-                  "config": {
-                    "label": "Product Resources (Left Content)",
-                    "placeholder": "",
-                    "allowTargetBlank": true,
-                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-                  }
                 }
               },
-              "items": {
-                "table_class": {
-                  "type": "StructuredText",
-                  "config": {
-                    "label": "Table Class",
-                    "placeholder": "",
-                    "allowTargetBlank": true,
-                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-                  }
-                },
-                "table_size_range": {
-                  "type": "StructuredText",
-                  "config": {
-                    "label": "Table Size Range",
-                    "placeholder": "",
-                    "allowTargetBlank": true,
-                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-                  }
-                },
-                "table_pressure_temperature_rating": {
-                  "type": "StructuredText",
-                  "config": {
-                    "label": "Table Pressure Temperature Rating",
-                    "placeholder": "",
-                    "allowTargetBlank": true,
-                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-                  }
-                }
-              },
-              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format",
+              "items": {}
             }
           ]
         },
@@ -1720,185 +1625,24 @@
           "default": {
             "variation": "default",
             "version": "sktwi1xtmkfgx8626",
-            "items": [
-              {
-                "table_class": [
-                  {
-                    "type": "paragraph",
-                    "text": "Culpa est Lorem ipsum. Deserunt sunt laborum incididunt amet non pariatur velit aute veniam mollit occaecat laboris consectetur quis sint. Mollit consectetur ex tempor Lorem voluptate quis adipisicing fugiat est.",
-                    "spans": []
-                  }
-                ],
-                "table_size_range": [
-                  {
-                    "type": "paragraph",
-                    "text": "Fugiat nulla aute reprehenderit duis tempor fugiat duis voluptate mollit est sit laborum fugiat proident. Consequat reprehenderit reprehenderit ad fugiat nulla sint.",
-                    "spans": []
-                  }
-                ],
-                "table_pressure_temperature_rating": [
-                  {
-                    "type": "paragraph",
-                    "text": "Proident ad deserunt est proident enim tempor minim irure tempor id sint consequat eiusmod mollit.",
-                    "spans": []
-                  }
-                ]
-              }
-            ],
+            "items": [{}],
             "primary": {
               "title": [
                 {
                   "type": "heading1",
-                  "text": "White",
+                  "text": "Waste",
                   "spans": []
                 }
               ],
               "description": [
                 {
                   "type": "paragraph",
-                  "text": "Irure labore laboris ea ad elit deserunt aliquip amet. Dolor occaecat id proident voluptate elit et ex. Nisi nostrud dolor ullamco deserunt minim sint velit enim dolor.",
-                  "spans": []
-                }
-              ],
-              "product_image": {
-                "dimensions": {
-                  "width": 900,
-                  "height": 500
-                },
-                "alt": null,
-                "copyright": null,
-                "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e"
-              },
-              "background_image": {
-                "dimensions": {
-                  "width": 900,
-                  "height": 500
-                },
-                "alt": null,
-                "copyright": null,
-                "url": "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea"
-              },
-              "product_name": [
-                {
-                  "type": "paragraph",
-                  "text": "Elit commodo nulla occaecat veniam magna sint ullamco veniam et ad nostrud amet velit consequat.",
-                  "spans": []
-                }
-              ],
-              "product_type": [
-                {
-                  "type": "paragraph",
-                  "text": "Aute ut et sint. In mollit non id velit sunt veniam dolor aliqua deserunt voluptate in ipsum fugiat. Ullamco eiusmod veniam voluptate esse non proident est mollit Lorem.",
-                  "spans": []
-                }
-              ],
-              "product_details_right": [
-                {
-                  "type": "paragraph",
-                  "text": "Ut non fugiat nulla do velit consequat commodo. Dolor sunt officia Lorem dolore magna tempor reprehenderit ut.",
-                  "spans": []
-                }
-              ],
-              "product_resources_left": [
-                {
-                  "type": "paragraph",
-                  "text": "Anim fugiat ipsum officia nulla ut aliquip labore nostrud. Consequat exercitation aliqua cillum aute esse veniam. Ut est adipisicing sint duis dolore mollit et sunt reprehenderit commodo.",
+                  "text": "Adipisicing pariatur ipsum esse sit labore ullamco exercitation ex laboris duis fugiat sunt cillum eiusmod irure. Sint laborum laborum ut qui.",
                   "spans": []
                 }
               ]
             },
             "slice_type": "product_detail"
-          }
-        },
-        "meta": {
-          "fileName": "index",
-          "extension": "js"
-        },
-        "screenshotPaths": {}
-      },
-      "product_slider": {
-        "library": "slices",
-        "id": "product_slider",
-        "name": "ProductSlider",
-        "description": "ProductSlider",
-        "model": {
-          "id": "product_slider",
-          "type": "SharedSlice",
-          "name": "ProductSlider",
-          "description": "ProductSlider",
-          "variations": [
-            {
-              "id": "default",
-              "name": "Default",
-              "docURL": "...",
-              "version": "sktwi1xtmkfgx8626",
-              "description": "ProductSlider",
-              "primary": {
-                "title": {
-                  "type": "StructuredText",
-                  "config": {
-                    "single": "heading1",
-                    "label": "Title",
-                    "placeholder": "This is where it all begins..."
-                  }
-                },
-                "description": {
-                  "type": "StructuredText",
-                  "config": {
-                    "single": "paragraph",
-                    "label": "Description",
-                    "placeholder": "A nice description of your feature"
-                  }
-                }
-              },
-              "items": {
-                "product_image": {
-                  "type": "Image",
-                  "config": {
-                    "label": "Product Image",
-                    "constraint": {},
-                    "thumbnails": []
-                  }
-                }
-              },
-              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
-            }
-          ]
-        },
-        "mocks": {
-          "default": {
-            "variation": "default",
-            "version": "sktwi1xtmkfgx8626",
-            "items": [
-              {
-                "product_image": {
-                  "dimensions": {
-                    "width": 900,
-                    "height": 500
-                  },
-                  "alt": null,
-                  "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04"
-                }
-              }
-            ],
-            "primary": {
-              "title": [
-                {
-                  "type": "heading1",
-                  "text": "Wrapped",
-                  "spans": []
-                }
-              ],
-              "description": [
-                {
-                  "type": "paragraph",
-                  "text": "Magna aute id elit anim veniam culpa magna irure exercitation.",
-                  "spans": []
-                }
-              ]
-            },
-            "slice_type": "product_slider"
           }
         },
         "meta": {
@@ -1925,24 +1669,6 @@
               "version": "sktwi1xtmkfgx8626",
               "description": "ProductsList",
               "primary": {
-                "title": {
-                  "type": "StructuredText",
-                  "config": {
-                    "label": "Banner Title",
-                    "placeholder": "",
-                    "allowTargetBlank": true,
-                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-                  }
-                },
-                "show_banner": {
-                  "type": "Boolean",
-                  "config": {
-                    "label": "Show Banner?",
-                    "default_value": false,
-                    "placeholder_true": "true",
-                    "placeholder_false": "false"
-                  }
-                },
                 "left_hand_image": {
                   "type": "Image",
                   "config": {
@@ -1993,21 +1719,13 @@
                 "product_name_and_link": [
                   {
                     "type": "paragraph",
-                    "text": "Ipsum voluptate excepteur reprehenderit aliqua ex cillum et velit enim tempor excepteur. Tempor do occaecat fugiat enim exercitation. Aliquip aute laboris ea sint occaecat incididunt occaecat pariatur nulla pariatur.",
+                    "text": "Duis cillum irure velit velit velit dolore fugiat. Adipisicing aliqua reprehenderit cupidatat sunt.",
                     "spans": []
                   }
                 ]
               }
             ],
             "primary": {
-              "title": [
-                {
-                  "type": "paragraph",
-                  "text": "Commodo duis voluptate ea aliquip occaecat.",
-                  "spans": []
-                }
-              ],
-              "show_banner": false,
               "left_hand_image": {
                 "dimensions": {
                   "width": 900,
@@ -2015,7 +1733,7 @@
                 },
                 "alt": null,
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db"
+                "url": "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea"
               },
               "right_hand_image": {
                 "dimensions": {
@@ -2024,12 +1742,12 @@
                 },
                 "alt": null,
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6"
+                "url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a"
               },
               "product_list_title": [
                 {
                   "type": "paragraph",
-                  "text": "In sunt irure qui Lorem elit proident anim aliquip ut. Ex nostrud pariatur ipsum nulla laborum cupidatat sunt dolore occaecat occaecat Lorem sunt ea. Elit sint anim nostrud est consectetur dolor esse irure.",
+                  "text": "Voluptate elit aliquip sunt duis non aliqua veniam pariatur et dolor labore magna reprehenderit. Veniam Lorem aliquip sit commodo.",
                   "spans": []
                 }
               ]
@@ -2557,9 +2275,7 @@
                   "config": {
                     "label": "button link",
                     "select": "document",
-                    "customtypes": [
-                      "homepage"
-                    ]
+                    "customtypes": ["homepage"]
                   }
                 },
                 "button_text": {

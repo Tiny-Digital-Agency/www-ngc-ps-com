@@ -44,8 +44,8 @@ const About = ({ slice }) => (
       </UnorderedList>
       <Box>
         <Flex
-          justifyContent={{ base: "center", lg: 'space-between' }}
-          alignItems="space-evenly"
+          justifyContent="center"
+          alignItems={{ base: "space-evenly" }}
           flexWrap={"wrap"}
           textAlign={"center"}
           spacing={6}

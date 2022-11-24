@@ -17,7 +17,10 @@ import Logo from './Logo';
 import Navigation from './Navigation';
 import News from './News';
 import ProductDetail from './ProductDetail';
+<<<<<<< HEAD
 import ProductSlider from './ProductSlider';
+=======
+>>>>>>> d87b077 (polished and added product list section)
 import ProductsList from './ProductsList';
 import SideDropdownWithContent from './SideDropdownWithContent';
 import TeamDropdown from './TeamDropdown';
@@ -44,7 +47,10 @@ export {
 	Navigation,
 	News,
 	ProductDetail,
+<<<<<<< HEAD
 	ProductSlider,
+=======
+>>>>>>> d87b077 (polished and added product list section)
 	ProductsList,
 	SideDropdownWithContent,
 	TeamDropdown,
@@ -72,7 +78,10 @@ export const components = {
 	navigation: Navigation,
 	news: News,
 	product_detail: ProductDetail,
+<<<<<<< HEAD
 	product_slider: ProductSlider,
+=======
+>>>>>>> d87b077 (polished and added product list section)
 	products_list: ProductsList,
 	side_dropdown_with_content: SideDropdownWithContent,
 	team_dropdown: TeamDropdown,
