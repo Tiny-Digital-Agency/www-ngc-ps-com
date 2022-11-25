@@ -11,6 +11,24 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "ProductsList",
       "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Banner Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "show_banner": {
+          "type": "Boolean",
+          "config": {
+            "label": "Show Banner?",
+            "default_value": false,
+            "placeholder_true": "true",
+            "placeholder_false": "false"
+          }
+        },
         "left_hand_image": {
           "type": "Image",
           "config": {
