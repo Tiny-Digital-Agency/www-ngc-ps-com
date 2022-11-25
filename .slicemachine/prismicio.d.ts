@@ -181,7 +181,8 @@ type PageDocumentDataSlicesSlice =
   | HeroSectionSlice
   | SideDropdownWithContentSlice
   | ContactSlice
-  | ProductsListSlice;
+  | ProductsListSlice
+  | ProductDetailSlice;
 /**
  * page document from Prismic
  *
@@ -1462,6 +1463,102 @@ interface ProductDetailSliceDefaultPrimary {
    *
    */
   description: prismicT.RichTextField;
+  /**
+   * Product Image field in *ProductDetail → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: product_detail.primary.product_image
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  product_image: prismicT.ImageField<never>;
+  /**
+   * Background Image field in *ProductDetail → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: product_detail.primary.background_image
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  background_image: prismicT.ImageField<never>;
+  /**
+   * Product Name field in *ProductDetail → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: product_detail.primary.product_name
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  product_name: prismicT.RichTextField;
+  /**
+   * Product Type field in *ProductDetail → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: product_detail.primary.product_type
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  product_type: prismicT.RichTextField;
+  /**
+   * Product Details (Right Content) field in *ProductDetail → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: product_detail.primary.product_details_right
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  product_details_right: prismicT.RichTextField;
+  /**
+   * Product Resources (Left Content) field in *ProductDetail → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: product_detail.primary.product_resources_left
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  product_resources_left: prismicT.RichTextField;
+}
+/**
+ * Item in ProductDetail → Items
+ *
+ */
+export interface ProductDetailSliceDefaultItem {
+  /**
+   * Table Class field in *ProductDetail → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: product_detail.items[].table_class
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  table_class: prismicT.RichTextField;
+  /**
+   * Table Size Range field in *ProductDetail → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: product_detail.items[].table_size_range
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  table_size_range: prismicT.RichTextField;
+  /**
+   * Table Pressure Temperature Rating field in *ProductDetail → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: product_detail.items[].table_pressure_temperature_rating
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  table_pressure_temperature_rating: prismicT.RichTextField;
 }
 /**
  * Default variation for ProductDetail Slice
@@ -1474,7 +1571,7 @@ interface ProductDetailSliceDefaultPrimary {
 export type ProductDetailSliceDefault = prismicT.SharedSliceVariation<
   "default",
   Simplify<ProductDetailSliceDefaultPrimary>,
-  never
+  Simplify<ProductDetailSliceDefaultItem>
 >;
 /**
  * Slice variation for *ProductDetail*
@@ -1498,6 +1595,27 @@ export type ProductDetailSlice = prismicT.SharedSlice<
  *
  */
 interface ProductsListSliceDefaultPrimary {
+  /**
+   * Banner Title field in *ProductsList → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: products_list.primary.title
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  title: prismicT.RichTextField;
+  /**
+   * Show Banner? field in *ProductsList → Primary*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: products_list.primary.show_banner
+   * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+   *
+   */
+  show_banner: prismicT.BooleanField;
   /**
    * Left Hand Image field in *ProductsList → Primary*
    *
@@ -2207,6 +2325,7 @@ declare module "@prismicio/client" {
       NewsSliceVariation,
       NewsSlice,
       ProductDetailSliceDefaultPrimary,
+      ProductDetailSliceDefaultItem,
       ProductDetailSliceDefault,
       ProductDetailSliceVariation,
       ProductDetailSlice,

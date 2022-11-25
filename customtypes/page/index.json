@@ -62,13 +62,7 @@
             "products_list": {
               "type": "SharedSlice"
             },
-            "products_list": {
-              "type": "SharedSlice"
-            },
             "product_detail": {
-              "type": "SharedSlice"
-            },
-            "product_slider": {
               "type": "SharedSlice"
             }
           }
