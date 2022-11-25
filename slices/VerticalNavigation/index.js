@@ -28,13 +28,11 @@ const VerticalNavigation = ({ slice }) => (
               <TabList display={"block"} >
                 {
                   slice.items.map((item, i) =>
-                    <Tab key={i} maxW="100%" w={{ base: "250px", sm: "100%" }} bg={"#ef483e"}  color={"#fff"} fontSize="14px" fontWeight={"400"}
-                      _focus={{
+                    <Tab key={i} maxW="100%" w={{ base: "250px", sm: "100%" }} bg={"#ef483e"} color={"#fff"} fontSize="14px" fontWeight={"400"}
+                      _selected={{
                         bg: '#fff',
-                        // transform: 'scale(0.98)',
-                        boxShadow:'0px 0px 3px 2px rgba(0,0,0,0.51)',
                         borderColor: '#4D8B3F',
-                        borderLeft: '5px solid',
+                        borderLeft: '3px solid',
                         color: '#4D8B3F'
                       }}>
                       <Box>
@@ -62,11 +60,11 @@ const VerticalNavigation = ({ slice }) => (
               <TabPanels>
                 {
                   slice?.items?.map((item, i) =>
-                    <TabPanel 
-                    ml="25px"
-                    color="#585c5e"
-                    fontSize={20}
-                    fontWeight={400} className="resource-link">
+                    <TabPanel
+                      ml="25px"
+                      color="#585c5e"
+                      fontSize={20}
+                      fontWeight={400} className="resource-link">
                       <PrismicRichText field={item.navcontent} />
                     </TabPanel>
                   )
