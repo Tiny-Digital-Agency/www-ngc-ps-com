@@ -1,0 +1,11 @@
+/* .backgroundTHISBOX {
+  background: radial-gradient(#d8d6d6, #54575a);
+} */
+
+.child:nth-child(odd) {
+  background-color: #d7e8ec;
+}
+
+.child:nth-child(even) {
+  background-color: #ebf3f5;
+}

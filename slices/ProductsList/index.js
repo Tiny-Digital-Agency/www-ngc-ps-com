@@ -4,15 +4,41 @@ import { Flex, Box, Grid } from '@chakra-ui/react'
 
 const ProductsList = ({ slice }) => (
   <Flex
-    flexDirection="row"
+    flexDirection="column"
     w="full"
   >
+    {slice.primary.show_banner ?
+      <Box
+        p="55px 0 30px"
+        _before={{
+          content: `""`,
+          position: "absolute",
+          m: "auto",
+          right: "0",
+          left: "0",
+          mt: "-20px",
+          w: "84px",
+          borderTop: "2px solid #4d8b3f",
+        }}
+      >
+        <Box
+          py="10px"
+          color="#53575a"
+          fontSize={{ base: "3xl", lg: "40px" }}
+          lineHeight={1.2}
+          textAlign="center"
+        >
+          <PrismicRichText field={slice.primary.title} />
+        </Box>
+      </Box>
+      : ''}
+
     <Grid
       templateAreas={{ base: `"main"`, md: `"left main right"` }}
       gridTemplateRows='auto'
       gridTemplateColumns={{ base: "1fr", md: '185px 1fr' }}
     >
-      <Flex >
+      <Flex>
         <Box display={{ base: "none", md: "flex" }} w={"185px"} position="relative" h="fit-content">
           <img src={slice.primary.left_hand_image.url} alt={slice.primary.left_hand_image.alt} />
           <Box

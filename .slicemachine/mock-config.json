@@ -191,10 +191,29 @@
     },
     "ProductsList": {
       "default": {
-        "primary": {},
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        },
         "items": {}
       }
     },
-    "ProductDetail": {}
+    "ProductDetail": {
+      "default": {
+        "items": {},
+        "primary": {
+          "product_resources_left": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    }
   }
 }

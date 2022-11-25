@@ -31,6 +31,7 @@ const VerticalNavigation = ({ slice }) => (
                     p="5px 0"
                     color={"#fff"}
                     fontSize="14px"
+                    fontWeight={"400"}
                     _focus={{
                       bg: '#4d8b3f',
                       transform: 'scale(0.98)',
