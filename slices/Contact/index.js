@@ -46,21 +46,21 @@ const Contact = ({ slice }) => (
             }}>
             <PrismicRichText field={slice.primary.heading} />
             <PrismicRichText field={slice.primary.description} />
-            <Flex pt="20px" flexDirection={{ base: "column", sm: "row" }}>
+            <Flex pt={{ base: "10px", sm: "20px" }} flexDirection={{ base: "column", sm: "row" }} color="#000">
               <form name="contact" method="POST" data-netlify="true">
                 <input type="hidden" name="form-name" value="contact" />
-                <p>
-                  <label>Your Name: <input type="text" name="first-name" /></label>
-                </p>
-                <p>
-                  <label>Your Name: <input type="text" name="last-name" /></label>
-                </p>
-                <p>
+                <Flex w={{ base: "100%", sm: "50%" }} pl="10px" pr="10px">
+                  <input type="text" name="first-name" />
+                </Flex>
+                <Flex w={{ base: "100%", sm: "50%" }} pl="10px" pr="10px">
+                  <input type="text" name="last-name" />
+                </Flex>
+                <Flex w={{ base: "100%", sm: "50%" }} pl="10px" pr="10px">
                   <label>Your Email: <input type="tel" name="phone" /></label>
-                </p>
-                <p>
+                </Flex>
+                <Flex w={{ base: "100%", sm: "50%" }} pl="10px" pr="10px">
                   <label>Your Email: <input type="email" name="email" /></label>
-                </p>
+                </Flex>
                 <p>
                   <label>Message: <textarea name="message"></textarea></label>
                 </p>
@@ -68,49 +68,7 @@ const Contact = ({ slice }) => (
                   <button type="submit">Send</button>
                 </p>
               </form>
-              <FormControl w={{ base: "100%", sm: "50%" }} pl="10px" pr="10px"
-                name="contact" method="POST" data-netlify="true"
-              >
-                <Input type="hidden" name="form-name" value="contact" />
-                <Flex w={{ base: "100%", sm: "50%" }} pl="10px" pr="10px" pt={{ base: "10px", sm: "0" }}>
-                  <Input type='text' placeholder='FIRST NAME' name="name" _placeholder={{ opacity: 1, color: '#fff' }} />
-                </Flex>
-                <Flex w={{ base: "100%", sm: "50%" }} pl="10px" pr="10px" pt={{ base: "10px", sm: "0" }}>
-                  <Input type='email' placeholder='LAST NAME' name="email" _placeholder={{ opacity: 1, color: '#fff' }} />
-                </Flex>
-                <button
-                  mt={4}
-                  w="200px"
-                  type='submit'
-                  bg="#ef483e"
-                  borderRadius={0}
-                >
-                  SUBMIT
-                </button>
-              </FormControl>
-
-
             </Flex>
-            {/* <Flex pt={{ base: "10px", sm: "20px" }} flexDirection={{ base: "column", sm: "row" }}>
-              <FormControl w={{ base: "100%", sm: "50%" }} pl="10px" pr="10px">
-                <Input type='tel' placeholder='PHONE' _placeholder={{ opacity: 1, color: '#fff' }} />
-              </FormControl>
-              <FormControl w={{ base: "100%", sm: "50%" }} pl="10px" pr="10px" pt={{ base: "10px", sm: "0" }}>
-                <Input type='email' placeholder='EMAIL' _placeholder={{ opacity: 1, color: '#fff' }} />
-              </FormControl>
-            </Flex> */}
-            {/* <Flex pt="20px" w="100%" pl="10px" pr="10px">
-              <Textarea placeholder='MESSAGE' _placeholder={{ opacity: 1, color: '#fff' }} />
-            </Flex> */}
-            {/* <Button
-              mt={4}
-              w="200px"
-              type='submit'
-              bg="#ef483e"
-              borderRadius={0}
-            >
-              SUBMIT
-            </Button> */}
           </Box>
         </Stack>
       </VStack>
