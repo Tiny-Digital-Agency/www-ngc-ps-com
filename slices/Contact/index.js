@@ -80,7 +80,7 @@ const Contact = ({ slice }) => (
                 <Flex w={{ base: "100%", sm: "50%" }} pl="10px" pr="10px" pt={{ base: "10px", sm: "0" }}>
                   <Input type='email' placeholder='LAST NAME' name="email" _placeholder={{ opacity: 1, color: '#fff' }} />
                 </Flex>
-                <Button
+                <button
                   mt={4}
                   w="200px"
                   type='submit'
@@ -88,7 +88,7 @@ const Contact = ({ slice }) => (
                   borderRadius={0}
                 >
                   SUBMIT
-                </Button>
+                </button>
               </FormControl>
               {/* <FormControl w={{ base: "100%", sm: "50%" }} pl="10px" pr="10px" pt={{ base: "10px", sm: "0" }}>
                 <Input type='name' placeholder='LAST NAME' _placeholder={{ opacity: 1, color: '#fff' }} />
