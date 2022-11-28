@@ -47,7 +47,27 @@ const Contact = ({ slice }) => (
             <PrismicRichText field={slice.primary.heading} />
             <PrismicRichText field={slice.primary.description} />
             <Flex pt="20px" flexDirection={{ base: "column", sm: "row" }}>
-              <FormControl w={{ base: "100%", sm: "50%" }} pl="10px" pr="10px"
+              <form name="contact" method="POST" data-netlify="true">
+                <p>
+                  <label>Your Name: <input type="text" name="name" /></label>
+                </p>
+                <p>
+                  <label>Your Email: <input type="email" name="email" /></label>
+                </p>
+                <p>
+                  <label>Your Role: <select name="role[]" multiple>
+                    <option value="leader">Leader</option>
+                    <option value="follower">Follower</option>
+                  </select></label>
+                </p>
+                <p>
+                  <label>Message: <textarea name="message"></textarea></label>
+                </p>
+                <p>
+                  <button type="submit">Send</button>
+                </p>
+              </form>
+              {/* <FormControl w={{ base: "100%", sm: "50%" }} pl="10px" pr="10px"
                 name="contact"
                 method="POST" data-netlify="true"
               >
@@ -63,10 +83,11 @@ const Contact = ({ slice }) => (
                 >
                   SUBMIT
                 </Button>
-              </FormControl>
+              </FormControl> */}
               {/* <FormControl w={{ base: "100%", sm: "50%" }} pl="10px" pr="10px" pt={{ base: "10px", sm: "0" }}>
                 <Input type='name' placeholder='LAST NAME' _placeholder={{ opacity: 1, color: '#fff' }} />
               </FormControl> */}
+
             </Flex>
             {/* <Flex pt={{base:"10px", sm:"20px"}} flexDirection={{base:"column", sm:"row"}}>
               <FormControl w={{base:"100%", sm:"50%" }} pl="10px" pr="10px">
