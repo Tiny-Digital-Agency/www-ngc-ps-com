@@ -27,6 +27,7 @@ const HeroSection = ({ slice }) => (
           <Box
             pt={{ base: "18%", md: "12%", xl: "8%" }}
             pb={{ base: "5%", md: "60px" }}
+            w={{ base: "90%", md: "85%" }}
             color="#fff"
             fontSize={{ base: "4xl", md: "5xl", lg: "6xl" }}
             fontWeight="700"
@@ -39,7 +40,6 @@ const HeroSection = ({ slice }) => (
             direction={"row"}
             flexWrap="wrap"
             justifyContent={{ base: "center", md: "space-between" }}
-            gap={{ base: "10px", sm: "20px" }}
             w="full"
             pb={{ base: "5%", md: "60px" }}
           >
@@ -49,7 +49,7 @@ const HeroSection = ({ slice }) => (
                   align={"center"}
                   direction={{ base: "column", xl: "row" }}
                   gap={{ base: "10px", sm: "20px" }}
-                  w={{ base: "120px", md: "20%" }}
+                  w={{ base: "120px", md: "23%" }}
                 >
                   <Image
                     src={item.image.url}
