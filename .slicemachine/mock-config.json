@@ -227,6 +227,10 @@
         }
       }
     },
-    "ProductSlider": {}
+    "ProductSlider": {
+      "default": {
+        "items": {}
+      }
+    }
   }
 }

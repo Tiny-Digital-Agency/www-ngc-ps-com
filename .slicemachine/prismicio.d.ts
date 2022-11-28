@@ -182,7 +182,8 @@ type PageDocumentDataSlicesSlice =
   | SideDropdownWithContentSlice
   | ContactSlice
   | ProductsListSlice
-  | ProductDetailSlice;
+  | ProductDetailSlice
+  | ProductSliderSlice;
 /**
  * page document from Prismic
  *
@@ -1622,15 +1623,15 @@ interface ProductSliderSliceDefaultPrimary {
  */
 export interface ProductSliderSliceDefaultItem {
   /**
-   * text_content field in *ProductSlider → Items*
+   * Product Image field in *ProductSlider → Items*
    *
-   * - **Field Type**: Rich Text
+   * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: product_slider.items[].text_content
-   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   * - **API ID Path**: product_slider.items[].product_image
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
    *
    */
-  text_content: prismicT.RichTextField;
+  product_image: prismicT.ImageField<never>;
 }
 /**
  * Default variation for ProductSlider Slice
