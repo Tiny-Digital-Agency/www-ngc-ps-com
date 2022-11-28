@@ -46,29 +46,32 @@ const Contact = ({ slice }) => (
             }}>
             <PrismicRichText field={slice.primary.heading} />
             <PrismicRichText field={slice.primary.description} />
-            <Flex pt={{ base: "10px", sm: "20px" }} flexDirection={{ base: "column", sm: "row" }} color="#000">
-              <form name="contact" method="POST" data-netlify="true">
+            <form className='forms' name="contact" method="POST" data-netlify="true">
+              <Flex pt={{ base: "10px", sm: "20px" }} flexDirection={{ base: "column", sm: "row" }}>
                 <input type="hidden" name="form-name" value="contact" />
-                <Flex w={{ base: "100%", sm: "50%" }} pl="10px" pr="10px">
-                  <input type="text" name="first-name" />
-                </Flex>
-                <Flex w={{ base: "100%", sm: "50%" }} pl="10px" pr="10px">
-                  <input type="text" name="last-name" />
-                </Flex>
-                <Flex w={{ base: "100%", sm: "50%" }} pl="10px" pr="10px">
-                  <label>Your Email: <input type="tel" name="phone" /></label>
-                </Flex>
-                <Flex w={{ base: "100%", sm: "50%" }} pl="10px" pr="10px">
-                  <label>Your Email: <input type="email" name="email" /></label>
-                </Flex>
-                <p>
-                  <label>Message: <textarea name="message"></textarea></label>
-                </p>
-                <p>
-                  <button type="submit">Send</button>
-                </p>
-              </form>
-            </Flex>
+                <Box w={{ base: "80%", sm: "50%" }} pl="10px" pr="10px">
+                  <input type="text" name="first-name" placeholder="FIRST NAME" />
+                </Box>
+                <Box w={{ base: "80%", sm: "50%" }} pl="10px" pr="10px" pt={{ base: "10px", sm: "0" }}>
+                  <input type="text" name="last-name" placeholder="LAST NAME" />
+                </Box>
+              </Flex>
+              <Flex pt={{ base: "10px", sm: "20px" }} flexDirection={{ base: "column", sm: "row" }}>
+                <Box w={{ base: "80%", sm: "50%" }} pl="10px" pr="10px">
+                  <input type="tel" name="phone" placeholder="PHONE" />
+                </Box>
+                <Box w={{ base: "80%", sm: "50%" }} pl="10px" pr="10px" pt={{ base: "10px", sm: "0" }}>
+                  <input type="email" name="email" placeholder="EMAIL" />
+                </Box>
+              </Flex>
+              <Box pt="20px" w="100%" pl="10px" pr="10px">
+                <textarea name="message" placeholder="MESSAGE"></textarea>
+              </Box>
+              <Box>
+                <button className='btn' type="submit">Submit</button>
+              </Box>
+            </form>
+
           </Box>
         </Stack>
       </VStack>
@@ -80,7 +83,7 @@ const Contact = ({ slice }) => (
           background-position: center;
         }
     `}</style>
-  </section>
+  </section >
 )
 
 export default Contact

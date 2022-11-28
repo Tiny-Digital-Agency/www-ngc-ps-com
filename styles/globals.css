@@ -32,3 +32,27 @@ span.css-h85r5n, span.css-t4q1nq {
 .resource-link a:hover {
   color: #ef483e;
 }
+
+.btn {
+ background-color: #ef483e;
+ width: 200px;
+ padding:10px 0;
+ font-size: 30px;
+ margin-top: 5px;
+}
+
+input, textarea {
+  border: 2px solid #ef483e;
+}
+
+input::placeholder {
+  font-size: 20px;
+  text-indent: 15px;
+  top: 6px;
+  position: absolute;
+}
+textarea::placeholder{
+  font-size: 20px;
+  text-indent: 15px;
+  padding-top: 10px;
+}
