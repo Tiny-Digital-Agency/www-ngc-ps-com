@@ -17,6 +17,7 @@ import Logo from './Logo';
 import Navigation from './Navigation';
 import News from './News';
 import ProductDetail from './ProductDetail';
+import ProductSlider from './ProductSlider';
 import ProductsList from './ProductsList';
 import SideDropdownWithContent from './SideDropdownWithContent';
 import TeamDropdown from './TeamDropdown';
@@ -42,6 +43,7 @@ export {
 	Navigation,
 	News,
 	ProductDetail,
+	ProductSlider,
 	ProductsList,
 	SideDropdownWithContent,
 	TeamDropdown,
@@ -68,6 +70,7 @@ export const components = {
 	navigation: Navigation,
 	news: News,
 	product_detail: ProductDetail,
+	product_slider: ProductSlider,
 	products_list: ProductsList,
 	side_dropdown_with_content: SideDropdownWithContent,
 	team_dropdown: TeamDropdown,
