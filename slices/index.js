@@ -18,9 +18,13 @@ import Navigation from './Navigation';
 import News from './News';
 import ProductDetail from './ProductDetail';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import ProductSlider from './ProductSlider';
 =======
 >>>>>>> d87b077 (polished and added product list section)
+=======
+import ProductSlider from './ProductSlider';
+>>>>>>> 9296e29 (slider wip)
 import ProductsList from './ProductsList';
 import SideDropdownWithContent from './SideDropdownWithContent';
 import TeamDropdown from './TeamDropdown';
@@ -48,9 +52,13 @@ export {
 	News,
 	ProductDetail,
 <<<<<<< HEAD
+<<<<<<< HEAD
 	ProductSlider,
 =======
 >>>>>>> d87b077 (polished and added product list section)
+=======
+	ProductSlider,
+>>>>>>> 9296e29 (slider wip)
 	ProductsList,
 	SideDropdownWithContent,
 	TeamDropdown,
@@ -79,9 +87,13 @@ export const components = {
 	news: News,
 	product_detail: ProductDetail,
 <<<<<<< HEAD
+<<<<<<< HEAD
 	product_slider: ProductSlider,
 =======
 >>>>>>> d87b077 (polished and added product list section)
+=======
+	product_slider: ProductSlider,
+>>>>>>> 9296e29 (slider wip)
 	products_list: ProductsList,
 	side_dropdown_with_content: SideDropdownWithContent,
 	team_dropdown: TeamDropdown,

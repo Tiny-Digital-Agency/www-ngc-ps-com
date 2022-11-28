@@ -1591,6 +1591,78 @@ export type ProductDetailSlice = prismicT.SharedSlice<
   ProductDetailSliceVariation
 >;
 /**
+ * Primary content in ProductSlider → Primary
+ *
+ */
+interface ProductSliderSliceDefaultPrimary {
+  /**
+   * Title field in *ProductSlider → Primary*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: This is where it all begins...
+   * - **API ID Path**: product_slider.primary.title
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  title: prismicT.TitleField;
+  /**
+   * Description field in *ProductSlider → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: A nice description of your feature
+   * - **API ID Path**: product_slider.primary.description
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  description: prismicT.RichTextField;
+}
+/**
+ * Item in ProductSlider → Items
+ *
+ */
+export interface ProductSliderSliceDefaultItem {
+  /**
+   * text_content field in *ProductSlider → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: product_slider.items[].text_content
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  text_content: prismicT.RichTextField;
+}
+/**
+ * Default variation for ProductSlider Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `ProductSlider`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ProductSliderSliceDefault = prismicT.SharedSliceVariation<
+  "default",
+  Simplify<ProductSliderSliceDefaultPrimary>,
+  Simplify<ProductSliderSliceDefaultItem>
+>;
+/**
+ * Slice variation for *ProductSlider*
+ *
+ */
+type ProductSliderSliceVariation = ProductSliderSliceDefault;
+/**
+ * ProductSlider Shared Slice
+ *
+ * - **API ID**: `product_slider`
+ * - **Description**: `ProductSlider`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ProductSliderSlice = prismicT.SharedSlice<
+  "product_slider",
+  ProductSliderSliceVariation
+>;
+/**
  * Primary content in ProductsList → Primary
  *
  */
@@ -2329,6 +2401,11 @@ declare module "@prismicio/client" {
       ProductDetailSliceDefault,
       ProductDetailSliceVariation,
       ProductDetailSlice,
+      ProductSliderSliceDefaultPrimary,
+      ProductSliderSliceDefaultItem,
+      ProductSliderSliceDefault,
+      ProductSliderSliceVariation,
+      ProductSliderSlice,
       ProductsListSliceDefaultPrimary,
       ProductsListSliceDefaultItem,
       ProductsListSliceDefault,
