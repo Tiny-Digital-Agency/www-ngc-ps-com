@@ -1,5 +1,3 @@
-
-
 import { SliceZone } from '@prismicio/react'
 
 import { createClient } from '../prismicio'
