@@ -1,43 +1,57 @@
 import React from 'react'
-import { PrismicRichText } from '@prismicio/react'
-
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/navigation";
+import "swiper/css/thumbs";
+import { FreeMode, Navigation, Thumbs } from "swiper";
 
 const ProductSlider = ({ slice }) => (
-  // <section>
-  //   <span className="title">
-  //     {
-  //       slice.primary.title ?
-  //         <PrismicRichText field={slice.primary.title} />
-  //         : <h2>Template slice, update me!</h2>
-  //     }
-  //   </span>
-  //   {
-  //     slice.primary.description ?
-  //       <PrismicRichText field={slice.primary.description} />
-  //       : <p>start by editing this slice from inside Slice Machine!</p>
-  //   }
-  //   <style jsx>{`
-  //       section {
-  //         max-width: 600px;
-  //         margin: 4em auto;
-  //         text-align: center;
-  //       }
-  //       .title {
-  //         color: #8592e0;
-  //       }
-  //   `}</style>
-  // </section>
-  // <Swiper
-  //   spaceBetween={50}
-  //   slidesPerView={3}
-  // >
-  //   <SwiperSlide>Slide 1</SwiperSlide>
-  //   <SwiperSlide>Slide 2</SwiperSlide>
-  //   <SwiperSlide>Slide 3</SwiperSlide>
-  //   <SwiperSlide>Slide 4</SwiperSlide>
-  // </Swiper>
-  <></>
+  <>
+    <Swiper
+      style={{
+        "--swiper-navigation-color": "#000",
+        "--swiper-pagination-color": "#000",
+        "--swiper-pagination-size": "10px",
+        "padding-top": "20px",
+        "background-color": "#e5e1dd",
+      }}
+      spaceBetween={10}
+      navigation={true}
+      modules={[FreeMode, Navigation, Thumbs]}
+      className="mainSwiper"
+    >
+      {
+        slice?.items?.map((item, i) =>
+          <SwiperSlide>
+            <img src={item.product_image.url} alt={item.product_image.alt} />
+          </SwiperSlide>
+        )
+      }
+    </Swiper>
+    <Swiper
+      style={{
+        "--swiper-navigation-color": "#fff",
+        "--swiper-pagination-color": "#fff",
+        "padding": "5px",
+        "background-color": "#242424",
+      }}
+      spaceBetween={10}
+      freeMode={true}
+      navigation={true}
+      watchSlidesProgress={true}
+      modules={[FreeMode, Navigation, Thumbs]}
+      className="thumbnailSwiper"
+    >
+      {
+        slice?.items?.map((item, i) =>
+          <SwiperSlide>
+            <img src={item.product_image.url} alt={item.product_image.alt} />
+          </SwiperSlide>
+        )
+      }
+    </Swiper>
+  </>
 )
 
 export default ProductSlider

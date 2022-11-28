@@ -64,6 +64,9 @@
             },
             "product_detail": {
               "type": "SharedSlice"
+            },
+            "product_slider": {
+              "type": "SharedSlice"
             }
           }
         }
