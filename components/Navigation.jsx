@@ -152,7 +152,7 @@ export function Navigation({ navigation, settings }) {
 
                   {/* Renders child links, if present. */}
                   {slice.items.length > 0 && (
-                    <MenuList color="#000">
+                    <MenuList color="#000" textTransform="uppercase">
                       {slice.items.map((item, i) => {
                         return (
                           <MenuItem key={i}>
