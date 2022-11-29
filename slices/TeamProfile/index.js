@@ -11,14 +11,11 @@ import {
   AccordionButton,
   AccordionPanel,
   AccordionIcon,
-  Heading,
-  Text,
-  Img,
+  Image,
   Center,
   useColorModeValue,
-  HStack,
-
-
+  Grid,
+  GridItem,
 } from '@chakra-ui/react';
 /**
  * @typedef {import("@prismicio/client").Content.TeamProfileSlice} TeamProfileSlice
@@ -81,67 +78,55 @@ const TeamProfile = ({ slice }) => (
             <AccordionIcon />
           </AccordionButton>
           <AccordionPanel pb={4}>
-            <Center py={6}>
-              <Box
-                w="300px"
-                rounded={'sm'}
-                my={5}
-                mx={[0, 5]}
-                overflow={'hidden'}
-                bg="white"
-                border={'1px'}
-                borderColor="black"
-                boxShadow={useColorModeValue('6px 6px 0 black', '6px 6px 0 cyan')}>
-                <Box h={'300px'} borderBottom={'1px'} borderColor="black">
-                  <Box
-                    roundedTop={'sm'}
-                    objectFit="cover"
-                    h="full"
-                    w="full"
-                    alt={'Blog Image'}>           {
-                      slice.items.map((item, i) =>
-                        <img src={item.profile_image.url} alt={item.profile_image.alt} key={i} />
-                      )
-                    }</Box>
-                </Box>
-                <Box p={4}>
-                  <Box
-                    bg="black"
-                    display={'inline-block'}
-                    px={2}
-                    py={1}
-                    color="white"
-                    mb={2}>
-                    {
-                      slice?.items?.map((item, i) =>
-                        <span key={i}>{item.position}</span>
-                      )
-                    }
-                  </Box>
-                  {
-                    slice?.items?.map((item, i) =>
-                      <Box key={i}>
-                        <PrismicRichText field={item.name} />
+            <Flex>
+              <Grid templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)", xl: "repeat(3, 1fr)" }} justifyItems="center" py={6} margin="0">
+                {
+                  slice.items.map((item, i) =>
+                    <GridItem
+                      className='team-profile'
+                      maxWidth={"800px"}
+                      w={{ base: "300px", sm: "350px", md: "450px", xl: "450px", '2xl': "550px" }}
+                      h="auto"
+                      minH="100px"
+                      rounded={'sm'}
+                      pt={5} mt={5}
+                      pb={5}
+                      m={5} p={5}
+                      overflow={'hidden'}
+                      bg="white"
+                      border={'1px'}
+                      borderColor="black"
+                      boxShadow={useColorModeValue('6px 6px 0 black', '6px 6px 0 cyan')}>
+                      <Box h={'300px'}>
+                        <Box className='image-profile'
+                          borderRadius="50%"
+                          alt={'Blog Image'}>
+                          <Image src={item.profile_image.url} alt={item.profile_image.alt} key={i} w={{ base: "250px", md: "300px" }} h={{ base: "250px", md: "300px" }} />
+                        </Box>
                       </Box>
-                    )
-                  }
-                  {
-                    slice?.items?.map((item, i) =>
-                      <Box key={i}>
-                        <PrismicRichText field={item.description} />
+                      <Box p={4}>
+                        <Flex justifyContent="center" alignItems="baseline">
+                          <Box color="#4d8b3f" fontWeight={600} fontSize={{ base: "18px", md: "22px" }}>
+                            <PrismicRichText field={item.name} />
+                          </Box>
+                          <Box fontSize={{ base: "14px", md: "18px" }} fontWeight={600} color="#6b6e71">
+                            {item.position}
+                          </Box>
+                        </Flex>
+                        <Box fontSize={{ base: "16px", md: "18px", xl: "20px" }}>
+                          <PrismicRichText field={item.description} />
+                        </Box>
                       </Box>
-                    )
-                  }
-                </Box>
-                <HStack borderTop={'1px'} color="black">
-                </HStack>
-              </Box>
-            </Center>
+                    </GridItem>
+                  )
+                }
+              </Grid>
+            </Flex>
           </AccordionPanel>
         </AccordionItem>
       </Accordion>
     </Flex>
-  </section>
+  </section >
 
 )
 

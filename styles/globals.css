@@ -43,6 +43,7 @@ span.css-h85r5n, span.css-t4q1nq {
 
 input, textarea {
   border: 2px solid #ef483e;
+  color: #000;
 }
 
 input::placeholder {
@@ -55,4 +56,13 @@ textarea::placeholder{
   font-size: 20px;
   text-indent: 15px;
   padding-top: 10px;
+}
+
+.image-profile img {
+  margin: auto;
+  border-radius: 50%;
+}
+
+.team-profile strong {
+  color: #00629b;
 }

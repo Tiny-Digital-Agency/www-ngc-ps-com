@@ -19,6 +19,7 @@ import News from './News';
 import SideDropdownWithContent from './SideDropdownWithContent';
 import TeamDropdown from './TeamDropdown';
 import TeamProfile from './TeamProfile';
+import TextEditor from './TextEditor';
 import TopNav from './TopNav';
 import VerticalNavigation from './VerticalNavigation';
 
@@ -42,6 +43,7 @@ export {
 	SideDropdownWithContent,
 	TeamDropdown,
 	TeamProfile,
+	TextEditor,
 	TopNav,
 	VerticalNavigation,
 };
@@ -66,6 +68,7 @@ export const components = {
 	side_dropdown_with_content: SideDropdownWithContent,
 	team_dropdown: TeamDropdown,
 	team_profile: TeamProfile,
+	text_editor: TextEditor,
 	top_nav: TopNav,
 	vertical_navigation: VerticalNavigation,
 };

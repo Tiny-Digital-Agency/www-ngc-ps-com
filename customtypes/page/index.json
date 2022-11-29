@@ -58,6 +58,18 @@
             },
             "contact": {
               "type": "SharedSlice"
+            },
+            "certification": {
+              "type": "SharedSlice"
+            },
+            "team_profile": {
+              "type": "SharedSlice"
+            },
+            "text_editor": {
+              "type": "SharedSlice"
+            },
+            "news": {
+              "type": "SharedSlice"
             }
           }
         }
