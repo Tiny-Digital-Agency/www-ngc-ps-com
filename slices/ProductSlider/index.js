@@ -1,14 +1,18 @@
 import React from 'react'
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/free-mode";
-import "swiper/css/navigation";
-import "swiper/css/thumbs";
-import { FreeMode, Navigation, Thumbs } from "swiper";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import "swiper/css";
+// import "swiper/css/free-mode";
+// import "swiper/css/navigation";
+// import "swiper/css/thumbs";
+// import { FreeMode, Navigation, Thumbs } from "swiper";
+
+import '@splidejs/react-splide/css';
+import '@splidejs/react-splide/css/core';
+import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 const ProductSlider = ({ slice }) => (
   <>
-    <Swiper
+    {/* <Swiper
       style={{
         "--swiper-navigation-color": "#000",
         "--swiper-pagination-color": "#000",
@@ -50,7 +54,64 @@ const ProductSlider = ({ slice }) => (
           </SwiperSlide>
         )
       }
-    </Swiper>
+    </Swiper> */}
+
+    {/* <Splide aria-label="My Favorite Images">
+      {
+        slice?.items?.map((item, i) =>
+          <SplideSlide>
+            <img src={item.product_image.url} alt={item.product_image.alt} />
+          </SplideSlide>
+        )
+      }
+    </Splide> */}
+
+    <Splide
+      id="main-carousel"
+      class="splide"
+      options={{
+        type: 'fade',
+        rewind: true,
+        pagination: false,
+        arrows: true,
+
+      }}
+    >
+      {
+        slice?.items?.map((item, i) =>
+          <SplideSlide>
+            <img src={item.product_image.url} alt={item.product_image.alt} />
+          </SplideSlide>
+        )
+      }
+    </Splide>
+
+    <Splide
+      id="thumbnail-carousel"
+      class="splide"
+      options={{
+        fixedWidth: 100,
+        fixedHeight: 60,
+        gap: 10,
+        rewind: true,
+        pagination: false,
+        isNavigation: true,
+        breakpoints: {
+          600: {
+            fixedWidth: 60,
+            fixedHeight: 44,
+          },
+        },
+      }}
+    >
+      {
+        slice?.items?.map((item, i) =>
+          <SplideSlide>
+            <img src={item.product_image.url} alt={item.product_image.alt} />
+          </SplideSlide>
+        )
+      }
+    </Splide>
   </>
 )
 
