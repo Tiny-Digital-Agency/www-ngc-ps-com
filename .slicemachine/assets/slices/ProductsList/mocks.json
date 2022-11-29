@@ -1,0 +1,53 @@
+[
+  {
+    "variation": "default",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {
+        "product_name_and_link": [
+          {
+            "type": "paragraph",
+            "text": "Ipsum voluptate excepteur reprehenderit aliqua ex cillum et velit enim tempor excepteur. Tempor do occaecat fugiat enim exercitation. Aliquip aute laboris ea sint occaecat incididunt occaecat pariatur nulla pariatur.",
+            "spans": []
+          }
+        ]
+      }
+    ],
+    "primary": {
+      "title": [
+        {
+          "type": "paragraph",
+          "text": "Commodo duis voluptate ea aliquip occaecat.",
+          "spans": []
+        }
+      ],
+      "show_banner": false,
+      "left_hand_image": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db"
+      },
+      "right_hand_image": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6"
+      },
+      "product_list_title": [
+        {
+          "type": "paragraph",
+          "text": "In sunt irure qui Lorem elit proident anim aliquip ut. Ex nostrud pariatur ipsum nulla laborum cupidatat sunt dolore occaecat occaecat Lorem sunt ea. Elit sint anim nostrud est consectetur dolor esse irure.",
+          "spans": []
+        }
+      ]
+    },
+    "slice_type": "products_list"
+  }
+]
