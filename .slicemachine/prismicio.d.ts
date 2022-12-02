@@ -195,6 +195,66 @@ type PageDocumentDataSlicesSlice =
  */
 export type PageDocument<Lang extends string = string> =
   prismicT.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
+/** Content for Product Pages documents */
+interface ProductPagesDocumentData {
+  /**
+   * Title field in *Product Pages*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: product_pages.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  title: prismicT.RichTextField;
+  /**
+   * Slice Zone field in *Product Pages*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: product_pages.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+   *
+   */
+  slices: prismicT.SliceZone<ProductPagesDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *Product Pages → Slice Zone*
+ *
+ */
+type ProductPagesDocumentDataSlicesSlice =
+  | BannerSectionWithMiddleContentSlice
+  | BannerSectionWithSideContentSlice
+  | VerticalNavigationSlice
+  | TeamProfileSlice
+  | TeamDropdownSlice
+  | SideDropdownWithContentSlice
+  | ProductsListSlice
+  | ProductSliderSlice
+  | ProductDetailSlice
+  | NewsSlice
+  | HeroSectionSlice
+  | GridSectionsSlice
+  | CertificationSlice
+  | CardSectionSlice
+  | CallToActionSlice;
+/**
+ * Product Pages document from Prismic
+ *
+ * - **API ID**: `product_pages`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type ProductPagesDocument<Lang extends string = string> =
+  prismicT.PrismicDocumentWithUID<
+    Simplify<ProductPagesDocumentData>,
+    "product_pages",
+    Lang
+  >;
 /** Content for settings documents */
 interface SettingsDocumentData {
   /**
@@ -234,6 +294,7 @@ export type AllDocumentTypes =
   | HomepageDocument
   | NavigationDocument
   | PageDocument
+  | ProductPagesDocument
   | SettingsDocument;
 /**
  * Primary content in About → Primary
@@ -2322,6 +2383,9 @@ declare module "@prismicio/client" {
       PageDocumentData,
       PageDocumentDataSlicesSlice,
       PageDocument,
+      ProductPagesDocumentData,
+      ProductPagesDocumentDataSlicesSlice,
+      ProductPagesDocument,
       SettingsDocumentData,
       SettingsDocument,
       AllDocumentTypes,

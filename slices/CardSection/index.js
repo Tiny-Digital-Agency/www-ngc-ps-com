@@ -47,6 +47,7 @@ const CardsSection = ({ slice }) => (
             slice?.items?.map((item, i) =>
               <>
                 <GridItem
+                  key={slice.id}
                   colSpan="1"
                   h={{ base: "190px", md: "320px" }}
                   w="100%"
@@ -97,6 +98,7 @@ const CardsSection = ({ slice }) => (
             slice?.items?.map((item, i) =>
               <>
                 <GridItem
+                  key={slice.id}
                   colSpan="1"
                   h={{ base: "190px", md: "320px" }}
                   w="100%"

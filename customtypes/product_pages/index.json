@@ -1,0 +1,79 @@
+{
+  "id": "product_pages",
+  "label": "Product Pages",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "uid",
+          "placeholder": ""
+        }
+      },
+      "title": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Title",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "banner_section_with_middle_content": {
+              "type": "SharedSlice"
+            },
+            "banner_section_with_side_content": {
+              "type": "SharedSlice"
+            },
+            "vertical_navigation": {
+              "type": "SharedSlice"
+            },
+            "team_profile": {
+              "type": "SharedSlice"
+            },
+            "team_dropdown": {
+              "type": "SharedSlice"
+            },
+            "side_dropdown_with_content": {
+              "type": "SharedSlice"
+            },
+            "products_list": {
+              "type": "SharedSlice"
+            },
+            "product_slider": {
+              "type": "SharedSlice"
+            },
+            "product_detail": {
+              "type": "SharedSlice"
+            },
+            "news": {
+              "type": "SharedSlice"
+            },
+            "hero_section": {
+              "type": "SharedSlice"
+            },
+            "grid_sections": {
+              "type": "SharedSlice"
+            },
+            "certification": {
+              "type": "SharedSlice"
+            },
+            "card_section": {
+              "type": "SharedSlice"
+            },
+            "call_to_action": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    }
+  }
+}

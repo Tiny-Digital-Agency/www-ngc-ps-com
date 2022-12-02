@@ -12,7 +12,8 @@
     "logo": {},
     "navigation": {},
     "settings": {},
-    "footer": {}
+    "footer": {},
+    "product_pages": {}
   },
   "slices": {
     "CallToAction": {},

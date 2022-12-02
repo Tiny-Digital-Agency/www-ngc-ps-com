@@ -74,7 +74,6 @@ const ProductSlider = ({ slice }) => (
         rewind: true,
         pagination: false,
         arrows: true,
-
       }}
     >
       {
