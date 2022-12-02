@@ -3,6 +3,7 @@ import { PrismicLink, PrismicText } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
 
 /**
+ * 
  * @typedef {import("@prismicio/client").Content.TopNavSlice} TopNavSlice
  * @typedef {import("@prismicio/react").SliceComponentProps<TopNavSlice>} TopNavProps
  * @param { TopNavProps }
@@ -13,7 +14,6 @@ import {
     Flex,
     Breadcrumb,
     BreadcrumbItem,
-    Button,
     HStack,
     Text
 } from '@chakra-ui/react';
@@ -22,10 +22,10 @@ export function Footer({ navigation, settings }) {
     return (
         <Box>
             <Box bg={'#000'} px={6}>
-                <Flex 
-                justifyContent="space-between" 
-                alignItems="center"
-                flexDirection={{base:"column", md:"row"}}
+                <Flex
+                    justifyContent="space-between"
+                    alignItems="center"
+                    flexDirection={{ base: "column", md: "row" }}
                 >
                     <HStack spacing={8} alignItems={'center'} >
                         <Flex justifyContent={'end'}>
