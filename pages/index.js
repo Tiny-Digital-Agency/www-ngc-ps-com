@@ -5,11 +5,12 @@ import { components } from '../slices'
 import Layout from '../components/Layout'
 // import { NavigationItems } from '../slices/NavigationItems/index'
 
-const Index = ({ page, navigation, settings }) => {
+const Index = ({ page, navigation, settings, footer }) => {
   return (
     <Layout
       navigation={navigation}
       settings={settings}
+      footer={footer}
     >
       <SliceZone slices={page.data.slices} components={components} />
     </Layout>

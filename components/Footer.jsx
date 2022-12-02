@@ -18,14 +18,14 @@ import {
     Text
 } from '@chakra-ui/react';
 
-export function Footer({ navigation, settings }) {
+export function Footer({ footer, settings }) {
     return (
         <Box>
             <Box bg={'#000'} px={6}>
-                <Flex 
-                justifyContent="space-between" 
-                alignItems="center"
-                flexDirection={{base:"column", md:"row"}}
+                <Flex
+                    justifyContent="space-between"
+                    alignItems="center"
+                    flexDirection={{ base: "column", md: "row" }}
                 >
                     <HStack spacing={8} alignItems={'center'} >
                         <Flex justifyContent={'end'}>
@@ -43,7 +43,7 @@ export function Footer({ navigation, settings }) {
                     <Flex pt="2px" pb="10px" bg={'#000'} alignItems={'center'} justifyContent={'center'}>
                         <Box>
                             <Box>
-                                {navigation?.data?.slices.map((slice) => {
+                                {footer?.data?.slices.map((slice) => {
                                     return (
                                         <Flex key={slice.id} justifyContent="center">
                                             <Box
@@ -64,7 +64,7 @@ export function Footer({ navigation, settings }) {
                                     )
                                 })}
                             </Box>
-                            {navigation?.data?.slices.map((slice) => {
+                            {footer?.data?.slices.map((slice) => {
                                 return (
                                     <Flex key={slice.id} justifyContent="center">
                                         <Breadcrumb
@@ -104,7 +104,7 @@ export function Footer({ navigation, settings }) {
                         fontWeight={"500"}
                     >
                         {/* Renders top-level links. */}
-                        {navigation?.data.slices.map((slice, i) => {
+                        {footer?.data.slices.map((slice, i) => {
                             return (
                                 <Flex key={slice.id}
                                     flexDirection="column"
