@@ -56,13 +56,13 @@ const GridSection = ({ slice }) => (
               flexDirection={"column"}
               w={{ base: "80%", sm: "50%", lg: "33.3%" }}
               h="300px"
-              borderRight={{ base: "none", sm: "solid 3px #2a2424" }}
-              borderBottom={{ base: "solid 3px #2a2424" }}
+              borderRight={{ base: "none", sm: "solid 3px #333333" }}
+              borderBottom={{ base: "solid 3px #333333" }}
               _hover={{
                 textDecoration: "none",
               }}
               _last={{
-                borderRight: "solid 3px #2a2424"
+                borderRight: "solid 3px #333333"
               }}
             >
               {item.image.url ?
