@@ -12,7 +12,6 @@ export default function App({ Component, pageProps }) {
         <PrismicProvider
           internalLinkComponent={({ href, ...props }) => (
             (<Link href={href} {...props}>
-
             </Link>)
           )}
         >
@@ -22,5 +21,5 @@ export default function App({ Component, pageProps }) {
         </PrismicProvider>
       </Layout>
     </ChakraProvider>
-  ); 
+  );
 }
