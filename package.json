@@ -20,14 +20,18 @@
     "@prismicio/next": "^0.1.7",
     "@prismicio/react": "^2.5.0",
     "@prismicio/slice-simulator-react": "^0.2.2",
+    "@splidejs/react-splide": "^0.7.12",
     "eslint": "8.26.0",
     "eslint-config-next": "13.0.1",
     "framer-motion": "^6.5.1",
+    "jquery": "^3.6.1",
     "next": "13.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-helmet": "^6.1.0",
     "react-icons": "^4.6.0",
-    "react-node": "^1.0.2"
+    "react-node": "^1.0.2",
+    "swiper": "^8.4.5"
   },
   "devDependencies": {
     "@prismicio/types": "^0.2.4",

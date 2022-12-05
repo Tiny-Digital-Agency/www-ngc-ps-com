@@ -1,6 +1,6 @@
 {
-  "id": "page",
-  "label": "page",
+  "id": "product_pages",
+  "label": "Product Pages",
   "repeatable": true,
   "status": true,
   "json": {
@@ -8,7 +8,7 @@
       "uid": {
         "type": "UID",
         "config": {
-          "label": "Uid",
+          "label": "uid",
           "placeholder": ""
         }
       },
@@ -18,7 +18,7 @@
           "label": "Title",
           "placeholder": "",
           "allowTargetBlank": true,
-          "single": "heading1"
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
         }
       },
       "slices": {
@@ -26,46 +26,49 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "call_to_action": {
-              "type": "SharedSlice"
-            },
-            "industries_banner": {
-              "type": "SharedSlice"
-            },
-            "industries_content": {
-              "type": "SharedSlice"
-            },
-            "vertical_navigation": {
-              "type": "SharedSlice"
-            },
             "banner_section_with_middle_content": {
               "type": "SharedSlice"
             },
             "banner_section_with_side_content": {
               "type": "SharedSlice"
             },
-            "card_section": {
+            "vertical_navigation": {
               "type": "SharedSlice"
             },
-            "grid_sections": {
+            "team_profile": {
               "type": "SharedSlice"
             },
-            "hero_section": {
+            "team_dropdown": {
               "type": "SharedSlice"
             },
             "side_dropdown_with_content": {
               "type": "SharedSlice"
             },
-            "contact": {
+            "products_list": {
               "type": "SharedSlice"
             },
-            "products_list": {
+            "product_slider": {
               "type": "SharedSlice"
             },
             "product_detail": {
               "type": "SharedSlice"
             },
-            "product_slider": {
+            "news": {
+              "type": "SharedSlice"
+            },
+            "hero_section": {
+              "type": "SharedSlice"
+            },
+            "grid_sections": {
+              "type": "SharedSlice"
+            },
+            "certification": {
+              "type": "SharedSlice"
+            },
+            "card_section": {
+              "type": "SharedSlice"
+            },
+            "call_to_action": {
               "type": "SharedSlice"
             }
           }

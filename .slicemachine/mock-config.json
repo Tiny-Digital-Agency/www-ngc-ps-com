@@ -12,7 +12,8 @@
     "logo": {},
     "navigation": {},
     "settings": {},
-    "footer": {}
+    "footer": {},
+    "product_pages": {}
   },
   "slices": {
     "CallToAction": {},
@@ -199,6 +200,37 @@
             }
           }
         }
+      }
+    },
+    "ProductsList": {
+      "default": {
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        },
+        "items": {}
+      }
+    },
+    "ProductDetail": {
+      "default": {
+        "items": {},
+        "primary": {
+          "product_resources_left": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "ProductSlider": {
+      "default": {
+        "items": {}
       }
     }
   }
