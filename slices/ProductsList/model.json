@@ -1,61 +1,68 @@
 {
-  "id": "side_dropdown_with_content",
+  "id": "products_list",
   "type": "SharedSlice",
-  "name": "SideDropdownWithContent",
-  "description": "SideDropdownWithContent",
+  "name": "ProductsList",
+  "description": "ProductsList",
   "variations": [
     {
       "id": "default",
       "name": "Default",
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
-      "description": "SideDropdownWithContent",
+      "description": "ProductsList",
       "primary": {
         "title": {
           "type": "StructuredText",
           "config": {
-            "label": "Title",
-            "placeholder": "This is where it all begins...",
+            "label": "Banner Title",
+            "placeholder": "",
             "allowTargetBlank": true,
-            "single": "heading1"
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "show_banner": {
+          "type": "Boolean",
+          "config": {
+            "label": "Show Banner?",
+            "default_value": false,
+            "placeholder_true": "true",
+            "placeholder_false": "false"
+          }
+        },
+        "left_hand_image": {
+          "type": "Image",
+          "config": {
+            "label": "Left Hand Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "right_hand_image": {
+          "type": "Image",
+          "config": {
+            "label": "Right Hand Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "product_list_title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Product List Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         }
       },
       "items": {
-        "parent_menu_items": {
+        "product_name_and_link": {
           "type": "StructuredText",
           "config": {
-            "label": "Menu Items (Parent)",
+            "label": "Product Name and Link",
             "placeholder": "",
             "allowTargetBlank": true,
             "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-          }
-        },
-        "parent_menu_items_content": {
-          "type": "StructuredText",
-          "config": {
-            "label": "Menu Items Content (Parent)",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-          }
-        },
-        "child_menu_items": {
-          "type": "StructuredText",
-          "config": {
-            "label": "Menu Items (Child)",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-          }
-        },
-        "nest": {
-          "type": "Boolean",
-          "config": {
-            "label": "Nest Element?",
-            "placeholder_false": "false",
-            "placeholder_true": "true",
-            "default_value": false
           }
         }
       },

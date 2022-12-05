@@ -3,6 +3,7 @@ import { PrismicLink, PrismicText } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
 
 /**
+ * 
  * @typedef {import("@prismicio/client").Content.TopNavSlice} TopNavSlice
  * @typedef {import("@prismicio/react").SliceComponentProps<TopNavSlice>} TopNavProps
  * @param { TopNavProps }
@@ -13,7 +14,6 @@ import {
     Flex,
     Breadcrumb,
     BreadcrumbItem,
-    Button,
     HStack,
     Text
 } from '@chakra-ui/react';

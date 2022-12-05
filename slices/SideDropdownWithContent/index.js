@@ -32,25 +32,44 @@ const SideDropdownWithContent = ({ slice }) => (
                 {
                   slice?.items?.map((item, i) =>
                     <>
-                      <Box fontSize="20px">
-                        {item.child_menu_items ?
-                          <PrismicRichText field={item.parent_menu_items} />
-                          : ""}
-                      </Box>
-                      <Tab w="fit-content"
-                        ml="30px"
-                        mb="5px"
-                        p="0"
-                        fontSize="20px"
-                        borderBottom="2px solid #4d8b3f"
-                        _selected={{
-                          borderBottom: "2px solid #ef483e"
-                        }}
-                        _active={{
-                          background: "#4d8b3f"
-                        }}>
-                        <PrismicRichText field={item.parent_menu_items_content} />
-                      </Tab>
+                      {item.nest ?
+                        <>
+                          <Box fontSize="20px">
+                            <PrismicRichText field={item.parent_menu_items} />
+                          </Box>
+                          <Tab w="fit-content"
+                            ml="30px"
+                            mb="5px"
+                            p="0"
+                            fontSize="20px"
+                            borderBottom="2px solid #4d8b3f"
+                            _selected={{
+                              borderBottom: "2px solid #ef483e"
+                            }}
+                            _active={{
+                              background: "#4d8b3f"
+                            }}>
+                            <PrismicRichText field={item.parent_menu_items_content} />
+                          </Tab>
+                        </>
+                        :
+                        <>
+                          <Tab w="fit-content"
+                            ml="0"
+                            mb="5px"
+                            p="0"
+                            fontSize="20px"
+                            borderBottom="2px solid #4d8b3f"
+                            _selected={{
+                              borderBottom: "2px solid #ef483e"
+                            }}
+                            _active={{
+                              background: "#4d8b3f"
+                            }}>
+                            <PrismicRichText field={item.parent_menu_items_content} />
+                          </Tab>
+                        </>
+                      }
                     </>
                   )
                 }
@@ -88,7 +107,6 @@ const SideDropdownWithContent = ({ slice }) => (
                               }}>
                               <PrismicRichText field={item.child_menu_items} />
                             </Flex>
-
                           </Tab>
                         </TabList>
                       </Tabs>
@@ -97,16 +115,10 @@ const SideDropdownWithContent = ({ slice }) => (
                 }
               </TabPanels>
             </GridItem>
-
           </Grid>
         </>
       </Tabs>
     </Box>
-    {/* <style jsx>{`
-        // .title {
-        //   color: #8592e0;
-        // }
-    `}</style> */}
   </section >
 )
 
