@@ -13,8 +13,8 @@ const GridSection = ({ slice }) => (
       w="full"
       justify="center"
       px={useBreakpointValue({ base: 4, md: 8 })}
-      bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
       direction="row"
+      my="50px"
     >
       <Box
         pt="55px"
@@ -43,26 +43,28 @@ const GridSection = ({ slice }) => (
         flexWrap="wrap"
         direction="row"
         justify={{ base: "center", sm: "flex-start" }}
-        w={{ xl: "80em", base: "full" }}
-        my="50px"
-        borderLeft={{ base: "none", sm: "solid 3px #2a2424" }}
+        // w={{ xl: "80em", base: "full" }}
+        w={{ base: "90%", xl: "62%" }}
+        borderLeft={{ base: "none", sm: "solid 3px #adadad" }}
       >
         {
           slice?.items?.map((item, i) =>
             <Box
+              key={i}
               display="flex"
               alignItems="center"
               justifyContent={"center"}
               flexDirection={"column"}
               w={{ base: "80%", sm: "50%", lg: "33.3%" }}
               h="300px"
-              borderRight={{ base: "none", sm: "solid 3px #333333" }}
-              borderBottom={{ base: "solid 3px #333333" }}
+              borderRight="solid 3px #adadad"
+              borderLeft={{ base: "solid 3px #adadad", md: "none" }}
+              borderBottom="solid 3px #adadad"
               _hover={{
                 textDecoration: "none",
               }}
               _last={{
-                borderRight: "solid 3px #333333"
+                borderRight: "solid 3px #adadad"
               }}
             >
               {item.image.url ?
