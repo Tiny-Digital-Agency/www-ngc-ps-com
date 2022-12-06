@@ -75,10 +75,50 @@ type HomepageDocumentDataSlicesSlice = TopNavSlice | HeaderSlice | HeroSectionSl
  * @typeParam Lang - Language API ID of the document.
  */
 export type HomepageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<HomepageDocumentData>, "homepage", Lang>;
-/** Content for Lined Solutions Pages documents */
+/** Content for Leak Detection and Protection Pages documents */
+interface LeakDetectionAndProtectionDocumentData {
+    /**
+     * title field in *Leak Detection and Protection Pages*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: leak_detection_and_protection.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+    /**
+     * Slice Zone field in *Leak Detection and Protection Pages*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: leak_detection_and_protection.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<LeakDetectionAndProtectionDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *Leak Detection and Protection Pages → Slice Zone*
+ *
+ */
+type LeakDetectionAndProtectionDocumentDataSlicesSlice = BannerSectionWithMiddleContentSlice | BannerSectionWithSideContentSlice | ProductSliderSlice | ProductDetailSlice | ProductsListSlice | VerticalNavigationSlice | GridSectionsSlice;
+/**
+ * Leak Detection and Protection Pages document from Prismic
+ *
+ * - **API ID**: `leak_detection_and_protection`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type LeakDetectionAndProtectionDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<LeakDetectionAndProtectionDocumentData>, "leak_detection_and_protection", Lang>;
+/** Content for Lined Solutions/Lined Pipes Fittings Pages documents */
 interface LinedSolutionsDocumentData {
     /**
-     * Title field in *Lined Solutions Pages*
+     * Title field in *Lined Solutions/Lined Pipes Fittings Pages*
      *
      * - **Field Type**: Rich Text
      * - **Placeholder**: *None*
@@ -89,7 +129,7 @@ interface LinedSolutionsDocumentData {
      */
     title: prismicT.RichTextField;
     /**
-     * Slice Zone field in *Lined Solutions Pages*
+     * Slice Zone field in *Lined Solutions/Lined Pipes Fittings Pages*
      *
      * - **Field Type**: Slice Zone
      * - **Placeholder**: *None*
@@ -101,12 +141,12 @@ interface LinedSolutionsDocumentData {
     slices: prismicT.SliceZone<LinedSolutionsDocumentDataSlicesSlice>;
 }
 /**
- * Slice for *Lined Solutions Pages → Slice Zone*
+ * Slice for *Lined Solutions/Lined Pipes Fittings Pages → Slice Zone*
  *
  */
 type LinedSolutionsDocumentDataSlicesSlice = BannerSectionWithMiddleContentSlice | BannerSectionWithSideContentSlice | CardSectionSlice | GridSectionsSlice | HeroSectionSlice | ProductDetailSlice | ProductSliderSlice | ProductsListSlice | SideDropdownWithContentSlice;
 /**
- * Lined Solutions Pages document from Prismic
+ * Lined Solutions/Lined Pipes Fittings Pages document from Prismic
  *
  * - **API ID**: `lined_solutions`
  * - **Repeatable**: `true`
@@ -184,7 +224,7 @@ interface PageDocumentData {
  * Slice for *page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = CallToActionSlice | IndustriesBannerSlice | IndustriesContentSlice | VerticalNavigationSlice | BannerSectionWithMiddleContentSlice | BannerSectionWithSideContentSlice | CardSectionSlice | GridSectionsSlice | HeroSectionSlice | SideDropdownWithContentSlice | ContactSlice | ProductsListSlice | ProductDetailSlice | ProductSliderSlice;
+type PageDocumentDataSlicesSlice = CallToActionSlice | IndustriesBannerSlice | IndustriesContentSlice | VerticalNavigationSlice | BannerSectionWithMiddleContentSlice | BannerSectionWithSideContentSlice | CardSectionSlice | GridSectionsSlice | HeroSectionSlice | SideDropdownWithContentSlice | ContactSlice | ProductsListSlice | ProductDetailSlice | ProductSliderSlice | TextEditorSlice | UptimeSlice;
 /**
  * page document from Prismic
  *
@@ -275,6 +315,46 @@ type SettingsDocumentDataSlicesSlice = NavigationSlice;
  * @typeParam Lang - Language API ID of the document.
  */
 export type SettingsDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<SettingsDocumentData>, "settings", Lang>;
+/** Content for Structural Support Products documents */
+interface StructuralSupportProductsDocumentData {
+    /**
+     * title field in *Structural Support Products*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: structural_support_products.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+    /**
+     * Slice Zone field in *Structural Support Products*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: structural_support_products.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<StructuralSupportProductsDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *Structural Support Products → Slice Zone*
+ *
+ */
+type StructuralSupportProductsDocumentDataSlicesSlice = SideDropdownWithContentSlice | ProductsListSlice | ProductSliderSlice | ProductDetailSlice | HeroSectionSlice | GridSectionsSlice | CardSectionSlice | BannerSectionWithMiddleContentSlice | BannerSectionWithSideContentSlice;
+/**
+ * Structural Support Products document from Prismic
+ *
+ * - **API ID**: `structural_support_products`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type StructuralSupportProductsDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<StructuralSupportProductsDocumentData>, "structural_support_products", Lang>;
 /** Content for Valves Pages documents */
 interface ValvesDocumentData {
     /**
@@ -315,7 +395,7 @@ type ValvesDocumentDataSlicesSlice = BannerSectionWithMiddleContentSlice | Banne
  * @typeParam Lang - Language API ID of the document.
  */
 export type ValvesDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<ValvesDocumentData>, "valves", Lang>;
-export type AllDocumentTypes = FooterDocument | HomepageDocument | LinedSolutionsDocument | NavigationDocument | PageDocument | ProductPagesDocument | SettingsDocument | ValvesDocument;
+export type AllDocumentTypes = FooterDocument | HomepageDocument | LeakDetectionAndProtectionDocument | LinedSolutionsDocument | NavigationDocument | PageDocument | ProductPagesDocument | SettingsDocument | StructuralSupportProductsDocument | ValvesDocument;
 /**
  * Primary content in About → Primary
  *
@@ -1994,7 +2074,6 @@ interface TextEditorSliceDefaultPrimary {
      *
      */
     color: prismicT.ColorField;
-<<<<<<< HEAD
     /**
      * Image field in *TextEditor → Primary*
      *
@@ -2015,8 +2094,6 @@ interface TextEditorSliceDefaultPrimary {
      *
      */
     link: prismicT.LinkField;
-=======
->>>>>>> bd4c68a (polished and added custom type)
 }
 /**
  * Item in TextEditor → Items
@@ -2271,10 +2348,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-<<<<<<< HEAD
-        export type { FooterDocumentData, FooterDocumentDataSlicesSlice, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, ProductPagesDocumentData, ProductPagesDocumentDataSlicesSlice, ProductPagesDocument, SettingsDocumentData, SettingsDocumentDataSlicesSlice, SettingsDocument, AllDocumentTypes, AboutSliceDefaultPrimary, AboutSliceDefaultItem, AboutSliceDefault, AboutSliceVariation, AboutSlice, BannerSectionWithMiddleContentSliceDefaultPrimary, BannerSectionWithMiddleContentSliceDefault, BannerSectionWithMiddleContentSliceVariation, BannerSectionWithMiddleContentSlice, BannerSectionWithSideContentSliceDefaultPrimary, BannerSectionWithSideContentSliceDefault, BannerSectionWithSideContentSliceVariation, BannerSectionWithSideContentSlice, CallToActionSliceDefaultPrimary, CallToActionSliceDefault, CallToActionSliceVariation, CallToActionSlice, CardSectionSliceDefaultPrimary, CardSectionSliceDefaultItem, CardSectionSliceDefault, CardSectionSliceVariation, CardSectionSlice, CertificationSliceDefaultItem, CertificationSliceDefault, CertificationSliceVariation, CertificationSlice, ContactSliceDefaultPrimary, ContactSliceDefault, ContactSliceVariation, ContactSlice, FooterSliceDefaultPrimary, FooterSliceDefaultItem, FooterSliceDefault, FooterSliceVariation, FooterSlice, GridSectionsSliceDefaultPrimary, GridSectionsSliceDefaultItem, GridSectionsSliceDefault, GridSectionsSliceVariation, GridSectionsSlice, HeaderSliceDefaultPrimary, HeaderSliceDefaultItem, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, HeroSectionSliceDefaultPrimary, HeroSectionSliceDefaultItem, HeroSectionSliceDefault, HeroSectionSliceVariation, HeroSectionSlice, IndustriesBannerSliceDefaultPrimary, IndustriesBannerSliceDefault, IndustriesBannerSliceVariation, IndustriesBannerSlice, IndustriesContentSliceDefaultItem, IndustriesContentSliceDefault, IndustriesContentSliceVariation, IndustriesContentSlice, LogoSliceDefaultPrimary, LogoSliceDefault, LogoSliceVariation, LogoSlice, NavigationSliceDefaultPrimary, NavigationSliceDefaultItem, NavigationSliceDefault, NavigationSliceVariation, NavigationSlice, NewsSliceDefaultPrimary, NewsSliceDefaultItem, NewsSliceDefault, NewsSliceVariation, NewsSlice, ProductDetailSliceDefaultPrimary, ProductDetailSliceDefaultItem, ProductDetailSliceDefault, ProductDetailSliceVariation, ProductDetailSlice, ProductSliderSliceDefaultItem, ProductSliderSliceDefault, ProductSliderSliceVariation, ProductSliderSlice, ProductsListSliceDefaultPrimary, ProductsListSliceDefaultItem, ProductsListSliceDefault, ProductsListSliceVariation, ProductsListSlice, SideDropdownWithContentSliceDefaultPrimary, SideDropdownWithContentSliceDefaultItem, SideDropdownWithContentSliceDefault, SideDropdownWithContentSliceVariation, SideDropdownWithContentSlice, TeamDropdownSliceDefaultItem, TeamDropdownSliceDefault, TeamDropdownSliceVariation, TeamDropdownSlice, TeamProfileSliceDefaultPrimary, TeamProfileSliceDefaultItem, TeamProfileSliceDefault, TeamProfileSliceVariation, TeamProfileSlice, TextEditorSliceDefaultPrimary, TextEditorSliceDefaultItem, TextEditorSliceDefault, TextEditorSliceVariation, TextEditorSlice, TopNavSliceDefaultPrimary, TopNavSliceDefaultItem, TopNavSliceDefault, TopNavSliceVariation, TopNavSlice, UptimeSliceDefaultPrimary, UptimeSliceDefault, UptimeSliceVariation, UptimeSlice, VerticalNavigationSliceDefaultPrimary, VerticalNavigationSliceDefaultItem, VerticalNavigationSliceDefault, VerticalNavigationSliceVariation, VerticalNavigationSlice };
-=======
-        export type { FooterDocumentData, FooterDocumentDataSlicesSlice, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, LinedSolutionsDocumentData, LinedSolutionsDocumentDataSlicesSlice, LinedSolutionsDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, ProductPagesDocumentData, ProductPagesDocumentDataSlicesSlice, ProductPagesDocument, SettingsDocumentData, SettingsDocumentDataSlicesSlice, SettingsDocument, ValvesDocumentData, ValvesDocumentDataSlicesSlice, ValvesDocument, AllDocumentTypes, AboutSliceDefaultPrimary, AboutSliceDefaultItem, AboutSliceDefault, AboutSliceVariation, AboutSlice, BannerSectionWithMiddleContentSliceDefaultPrimary, BannerSectionWithMiddleContentSliceDefault, BannerSectionWithMiddleContentSliceVariation, BannerSectionWithMiddleContentSlice, BannerSectionWithSideContentSliceDefaultPrimary, BannerSectionWithSideContentSliceDefault, BannerSectionWithSideContentSliceVariation, BannerSectionWithSideContentSlice, CallToActionSliceDefaultPrimary, CallToActionSliceDefault, CallToActionSliceVariation, CallToActionSlice, CardSectionSliceDefaultPrimary, CardSectionSliceDefaultItem, CardSectionSliceDefault, CardSectionSliceVariation, CardSectionSlice, CertificationSliceDefaultItem, CertificationSliceDefault, CertificationSliceVariation, CertificationSlice, ContactSliceDefaultPrimary, ContactSliceDefault, ContactSliceVariation, ContactSlice, FooterSliceDefaultPrimary, FooterSliceDefaultItem, FooterSliceDefault, FooterSliceVariation, FooterSlice, GridSectionsSliceDefaultPrimary, GridSectionsSliceDefaultItem, GridSectionsSliceDefault, GridSectionsSliceVariation, GridSectionsSlice, HeaderSliceDefaultPrimary, HeaderSliceDefaultItem, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, HeroSectionSliceDefaultPrimary, HeroSectionSliceDefaultItem, HeroSectionSliceDefault, HeroSectionSliceVariation, HeroSectionSlice, IndustriesBannerSliceDefaultPrimary, IndustriesBannerSliceDefault, IndustriesBannerSliceVariation, IndustriesBannerSlice, IndustriesContentSliceDefaultItem, IndustriesContentSliceDefault, IndustriesContentSliceVariation, IndustriesContentSlice, LogoSliceDefaultPrimary, LogoSliceDefault, LogoSliceVariation, LogoSlice, NavigationSliceDefaultPrimary, NavigationSliceDefaultItem, NavigationSliceDefault, NavigationSliceVariation, NavigationSlice, NewsSliceDefaultPrimary, NewsSliceDefaultItem, NewsSliceDefault, NewsSliceVariation, NewsSlice, ProductDetailSliceDefaultPrimary, ProductDetailSliceDefaultItem, ProductDetailSliceDefault, ProductDetailSliceVariation, ProductDetailSlice, ProductSliderSliceDefaultItem, ProductSliderSliceDefault, ProductSliderSliceVariation, ProductSliderSlice, ProductsListSliceDefaultPrimary, ProductsListSliceDefaultItem, ProductsListSliceDefault, ProductsListSliceVariation, ProductsListSlice, SideDropdownWithContentSliceDefaultPrimary, SideDropdownWithContentSliceDefaultItem, SideDropdownWithContentSliceDefault, SideDropdownWithContentSliceVariation, SideDropdownWithContentSlice, TeamDropdownSliceDefaultItem, TeamDropdownSliceDefault, TeamDropdownSliceVariation, TeamDropdownSlice, TeamProfileSliceDefaultPrimary, TeamProfileSliceDefaultItem, TeamProfileSliceDefault, TeamProfileSliceVariation, TeamProfileSlice, TextEditorSliceDefaultPrimary, TextEditorSliceDefaultItem, TextEditorSliceDefault, TextEditorSliceVariation, TextEditorSlice, TopNavSliceDefaultPrimary, TopNavSliceDefaultItem, TopNavSliceDefault, TopNavSliceVariation, TopNavSlice, VerticalNavigationSliceDefaultPrimary, VerticalNavigationSliceDefaultItem, VerticalNavigationSliceDefault, VerticalNavigationSliceVariation, VerticalNavigationSlice };
->>>>>>> bd4c68a (polished and added custom type)
+        export type { FooterDocumentData, FooterDocumentDataSlicesSlice, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, LeakDetectionAndProtectionDocumentData, LeakDetectionAndProtectionDocumentDataSlicesSlice, LeakDetectionAndProtectionDocument, LinedSolutionsDocumentData, LinedSolutionsDocumentDataSlicesSlice, LinedSolutionsDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, ProductPagesDocumentData, ProductPagesDocumentDataSlicesSlice, ProductPagesDocument, SettingsDocumentData, SettingsDocumentDataSlicesSlice, SettingsDocument, StructuralSupportProductsDocumentData, StructuralSupportProductsDocumentDataSlicesSlice, StructuralSupportProductsDocument, ValvesDocumentData, ValvesDocumentDataSlicesSlice, ValvesDocument, AllDocumentTypes, AboutSliceDefaultPrimary, AboutSliceDefaultItem, AboutSliceDefault, AboutSliceVariation, AboutSlice, BannerSectionWithMiddleContentSliceDefaultPrimary, BannerSectionWithMiddleContentSliceDefault, BannerSectionWithMiddleContentSliceVariation, BannerSectionWithMiddleContentSlice, BannerSectionWithSideContentSliceDefaultPrimary, BannerSectionWithSideContentSliceDefault, BannerSectionWithSideContentSliceVariation, BannerSectionWithSideContentSlice, CallToActionSliceDefaultPrimary, CallToActionSliceDefault, CallToActionSliceVariation, CallToActionSlice, CardSectionSliceDefaultPrimary, CardSectionSliceDefaultItem, CardSectionSliceDefault, CardSectionSliceVariation, CardSectionSlice, CertificationSliceDefaultItem, CertificationSliceDefault, CertificationSliceVariation, CertificationSlice, ContactSliceDefaultPrimary, ContactSliceDefault, ContactSliceVariation, ContactSlice, FooterSliceDefaultPrimary, FooterSliceDefaultItem, FooterSliceDefault, FooterSliceVariation, FooterSlice, GridSectionsSliceDefaultPrimary, GridSectionsSliceDefaultItem, GridSectionsSliceDefault, GridSectionsSliceVariation, GridSectionsSlice, HeaderSliceDefaultPrimary, HeaderSliceDefaultItem, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, HeroSectionSliceDefaultPrimary, HeroSectionSliceDefaultItem, HeroSectionSliceDefault, HeroSectionSliceVariation, HeroSectionSlice, IndustriesBannerSliceDefaultPrimary, IndustriesBannerSliceDefault, IndustriesBannerSliceVariation, IndustriesBannerSlice, IndustriesContentSliceDefaultItem, IndustriesContentSliceDefault, IndustriesContentSliceVariation, IndustriesContentSlice, LogoSliceDefaultPrimary, LogoSliceDefault, LogoSliceVariation, LogoSlice, NavigationSliceDefaultPrimary, NavigationSliceDefaultItem, NavigationSliceDefault, NavigationSliceVariation, NavigationSlice, NewsSliceDefaultPrimary, NewsSliceDefaultItem, NewsSliceDefault, NewsSliceVariation, NewsSlice, ProductDetailSliceDefaultPrimary, ProductDetailSliceDefaultItem, ProductDetailSliceDefault, ProductDetailSliceVariation, ProductDetailSlice, ProductSliderSliceDefaultItem, ProductSliderSliceDefault, ProductSliderSliceVariation, ProductSliderSlice, ProductsListSliceDefaultPrimary, ProductsListSliceDefaultItem, ProductsListSliceDefault, ProductsListSliceVariation, ProductsListSlice, SideDropdownWithContentSliceDefaultPrimary, SideDropdownWithContentSliceDefaultItem, SideDropdownWithContentSliceDefault, SideDropdownWithContentSliceVariation, SideDropdownWithContentSlice, TeamDropdownSliceDefaultItem, TeamDropdownSliceDefault, TeamDropdownSliceVariation, TeamDropdownSlice, TeamProfileSliceDefaultPrimary, TeamProfileSliceDefaultItem, TeamProfileSliceDefault, TeamProfileSliceVariation, TeamProfileSlice, TextEditorSliceDefaultPrimary, TextEditorSliceDefaultItem, TextEditorSliceDefault, TextEditorSliceVariation, TextEditorSlice, TopNavSliceDefaultPrimary, TopNavSliceDefaultItem, TopNavSliceDefault, TopNavSliceVariation, TopNavSlice, UptimeSliceDefaultPrimary, UptimeSliceDefault, UptimeSliceVariation, UptimeSlice, VerticalNavigationSliceDefaultPrimary, VerticalNavigationSliceDefaultItem, VerticalNavigationSliceDefault, VerticalNavigationSliceVariation, VerticalNavigationSlice };
     }
 }
