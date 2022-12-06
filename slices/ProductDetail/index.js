@@ -7,7 +7,6 @@ import {
 import { PrismicRichText } from "@prismicio/react";
 import React from 'react'
 
-
 const ProductDetail = ({ slice }) => (
   <>
     <Grid
