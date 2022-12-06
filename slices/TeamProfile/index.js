@@ -78,7 +78,7 @@ const TeamProfile = ({ slice }) => (
             <AccordionIcon />
           </AccordionButton>
           <AccordionPanel pb={4}>
-            <Flex>
+            <Flex justifyContent="center">
               <Grid templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)", xl: "repeat(3, 1fr)" }} justifyItems="center" py={6} margin="0">
                 {
                   slice.items.map((item, i) =>
