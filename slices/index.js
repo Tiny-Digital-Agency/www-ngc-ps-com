@@ -16,11 +16,15 @@ import IndustriesContent from './IndustriesContent';
 import Logo from './Logo';
 import Navigation from './Navigation';
 import News from './News';
+import ProductDetail from './ProductDetail';
+import ProductSlider from './ProductSlider';
+import ProductsList from './ProductsList';
 import SideDropdownWithContent from './SideDropdownWithContent';
 import TeamDropdown from './TeamDropdown';
 import TeamProfile from './TeamProfile';
 import TextEditor from './TextEditor';
 import TopNav from './TopNav';
+import UptimeHeaderAndFooter from './UptimeHeaderAndFooter';
 import VerticalNavigation from './VerticalNavigation';
 
 export {
@@ -40,11 +44,15 @@ export {
 	Logo,
 	Navigation,
 	News,
+	ProductDetail,
+	ProductSlider,
+	ProductsList,
 	SideDropdownWithContent,
 	TeamDropdown,
 	TeamProfile,
 	TextEditor,
 	TopNav,
+	UptimeHeaderAndFooter,
 	VerticalNavigation,
 };
 
@@ -65,10 +73,14 @@ export const components = {
 	logo: Logo,
 	navigation: Navigation,
 	news: News,
+	product_detail: ProductDetail,
+	product_slider: ProductSlider,
+	products_list: ProductsList,
 	side_dropdown_with_content: SideDropdownWithContent,
 	team_dropdown: TeamDropdown,
 	team_profile: TeamProfile,
 	text_editor: TextEditor,
 	top_nav: TopNav,
+	uptime: UptimeHeaderAndFooter,
 	vertical_navigation: VerticalNavigation,
 };

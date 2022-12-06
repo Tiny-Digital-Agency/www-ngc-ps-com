@@ -67,6 +67,12 @@
             },
             "product_slider": {
               "type": "SharedSlice"
+            },
+            "text_editor": {
+              "type": "SharedSlice"
+            },
+            "uptime": {
+              "type": "SharedSlice"
             }
           }
         }
