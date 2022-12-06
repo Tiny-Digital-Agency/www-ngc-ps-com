@@ -1,0 +1,23 @@
+{
+  "id": "mock-doc-id",
+  "url": null,
+  "type": "valves",
+  "href": null,
+  "tags": [],
+  "first_publication_date": "1970-01-01T00:00:01+0000",
+  "last_publication_date": "1970-01-01T00:00:01+0000",
+  "slugs": [],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
+  "data": {
+    "title": [
+      {
+        "type": "paragraph",
+        "text": "Consequat enim nisi duis laboris nisi velit. Nostrud voluptate nulla elit voluptate magna sit cupidatat. Mollit adipisicing dolore reprehenderit deserunt ullamco officia occaecat minim commodo in ullamco.",
+        "spans": []
+      }
+    ],
+    "slices": []
+  }
+}
