@@ -6,7 +6,6 @@ import {
 } from "@chakra-ui/react";
 import { PrismicRichText } from "@prismicio/react";
 import React from 'react'
-import { PrismicRichText } from '@prismicio/react'
 
 const ProductDetail = ({ slice }) => (
   <>
