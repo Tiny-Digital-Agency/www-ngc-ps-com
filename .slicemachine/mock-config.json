@@ -13,7 +13,16 @@
     "navigation": {},
     "settings": {},
     "footer": {},
-    "product_pages": {}
+    "product_pages": {},
+    "lined_solutions": {
+      "title": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    },
+    "valves": {}
   },
   "slices": {
     "CallToAction": {},
