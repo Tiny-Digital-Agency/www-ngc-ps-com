@@ -18,7 +18,6 @@ function ProductSlider({ slice }) {
   return (
     <>
       <Splide
-        // w={{ base: "90%", md: "730px" }}
         id="main-carousel"
         ref={(slider) => (main.current = slider)}
         onArrowsMounted={(splide) => (splideRef.current = splide)}

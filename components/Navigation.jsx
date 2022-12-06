@@ -136,6 +136,7 @@ export function Navigation({ navigation, settings }) {
                     )}
                     <MenuButton
                       className="item"
+                      borderBottom="transparent 1px solid"
                       _hover={{ borderBottom: "green 1px solid" }}
                       _activeLink={{ color: "red" }}
                     >
