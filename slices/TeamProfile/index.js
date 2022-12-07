@@ -82,7 +82,7 @@ const TeamProfile = ({ slice }) => (
               <Grid templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)", xl: "repeat(3, 1fr)" }} justifyItems="center" py={6} margin="0">
                 {
                   slice.items.map((item, i) =>
-                    <GridItem
+                    <GridItem key={i}
                       className='team-profile'
                       maxWidth={"800px"}
                       w={{ base: "300px", sm: "350px", md: "450px", xl: "450px", '2xl': "550px" }}
