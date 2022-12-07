@@ -75,10 +75,10 @@ type HomepageDocumentDataSlicesSlice = TopNavSlice | HeaderSlice | HeroSectionSl
  * @typeParam Lang - Language API ID of the document.
  */
 export type HomepageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<HomepageDocumentData>, "homepage", Lang>;
-/** Content for Leak Detection and Protection Pages documents */
+/** Content for Leak Detection & Protection Pages documents */
 interface LeakDetectionAndProtectionDocumentData {
     /**
-     * title field in *Leak Detection and Protection Pages*
+     * title field in *Leak Detection & Protection Pages*
      *
      * - **Field Type**: Rich Text
      * - **Placeholder**: *None*
@@ -89,7 +89,7 @@ interface LeakDetectionAndProtectionDocumentData {
      */
     title: prismicT.RichTextField;
     /**
-     * Slice Zone field in *Leak Detection and Protection Pages*
+     * Slice Zone field in *Leak Detection & Protection Pages*
      *
      * - **Field Type**: Slice Zone
      * - **Placeholder**: *None*
@@ -101,12 +101,12 @@ interface LeakDetectionAndProtectionDocumentData {
     slices: prismicT.SliceZone<LeakDetectionAndProtectionDocumentDataSlicesSlice>;
 }
 /**
- * Slice for *Leak Detection and Protection Pages → Slice Zone*
+ * Slice for *Leak Detection & Protection Pages → Slice Zone*
  *
  */
 type LeakDetectionAndProtectionDocumentDataSlicesSlice = BannerSectionWithMiddleContentSlice | BannerSectionWithSideContentSlice | ProductSliderSlice | ProductDetailSlice | ProductsListSlice | VerticalNavigationSlice | GridSectionsSlice;
 /**
- * Leak Detection and Protection Pages document from Prismic
+ * Leak Detection & Protection Pages document from Prismic
  *
  * - **API ID**: `leak_detection_and_protection`
  * - **Repeatable**: `true`
@@ -115,10 +115,10 @@ type LeakDetectionAndProtectionDocumentDataSlicesSlice = BannerSectionWithMiddle
  * @typeParam Lang - Language API ID of the document.
  */
 export type LeakDetectionAndProtectionDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<LeakDetectionAndProtectionDocumentData>, "leak_detection_and_protection", Lang>;
-/** Content for Lined Solutions/Lined Pipes Fittings Pages documents */
+/** Content for Lined Solutions/Pipes Pages documents */
 interface LinedSolutionsDocumentData {
     /**
-     * Title field in *Lined Solutions/Lined Pipes Fittings Pages*
+     * Title field in *Lined Solutions/Pipes Pages*
      *
      * - **Field Type**: Rich Text
      * - **Placeholder**: *None*
@@ -129,7 +129,7 @@ interface LinedSolutionsDocumentData {
      */
     title: prismicT.RichTextField;
     /**
-     * Slice Zone field in *Lined Solutions/Lined Pipes Fittings Pages*
+     * Slice Zone field in *Lined Solutions/Pipes Pages*
      *
      * - **Field Type**: Slice Zone
      * - **Placeholder**: *None*
@@ -141,12 +141,12 @@ interface LinedSolutionsDocumentData {
     slices: prismicT.SliceZone<LinedSolutionsDocumentDataSlicesSlice>;
 }
 /**
- * Slice for *Lined Solutions/Lined Pipes Fittings Pages → Slice Zone*
+ * Slice for *Lined Solutions/Pipes Pages → Slice Zone*
  *
  */
 type LinedSolutionsDocumentDataSlicesSlice = BannerSectionWithMiddleContentSlice | BannerSectionWithSideContentSlice | CardSectionSlice | GridSectionsSlice | HeroSectionSlice | ProductDetailSlice | ProductSliderSlice | ProductsListSlice | SideDropdownWithContentSlice;
 /**
- * Lined Solutions/Lined Pipes Fittings Pages document from Prismic
+ * Lined Solutions/Pipes Pages document from Prismic
  *
  * - **API ID**: `lined_solutions`
  * - **Repeatable**: `true`
@@ -1591,6 +1591,27 @@ interface ProductDetailSliceDefaultPrimary {
  */
 export interface ProductDetailSliceDefaultItem {
     /**
+     * Table Category field in *ProductDetail → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: product_detail.items[].table_category
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    table_category: prismicT.RichTextField;
+    /**
+     * Add Table Category field in *ProductDetail → Items*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: product_detail.items[].add_table_category
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    add_table_category: prismicT.BooleanField;
+    /**
      * Table Class field in *ProductDetail → Items*
      *
      * - **Field Type**: Rich Text
@@ -1600,26 +1621,6 @@ export interface ProductDetailSliceDefaultItem {
      *
      */
     table_class: prismicT.RichTextField;
-    /**
-     * Table Size Range field in *ProductDetail → Items*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: product_detail.items[].table_size_range
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    table_size_range: prismicT.RichTextField;
-    /**
-     * Table Pressure Temperature Rating field in *ProductDetail → Items*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: product_detail.items[].table_pressure_temperature_rating
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    table_pressure_temperature_rating: prismicT.RichTextField;
 }
 /**
  * Default variation for ProductDetail Slice
