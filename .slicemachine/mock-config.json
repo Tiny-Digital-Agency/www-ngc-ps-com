@@ -22,7 +22,9 @@
         }
       }
     },
-    "valves": {}
+    "valves": {},
+    "leak_detection_and_protection": {},
+    "structural_support_products": {}
   },
   "slices": {
     "CallToAction": {},

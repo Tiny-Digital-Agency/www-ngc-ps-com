@@ -4,24 +4,18 @@
     "version": "sktwi1xtmkfgx8626",
     "items": [
       {
+        "table_category": [
+          {
+            "type": "paragraph",
+            "text": "Exercitation laboris proident sunt esse nulla. Nulla et sunt ex aliqua mollit elit amet id dolore nostrud. Quis culpa velit adipisicing minim excepteur dolor laboris aliqua velit quis aute ad nostrud deserunt magna.",
+            "spans": []
+          }
+        ],
+        "add_table_category": false,
         "table_class": [
           {
             "type": "paragraph",
-            "text": "Culpa est Lorem ipsum. Deserunt sunt laborum incididunt amet non pariatur velit aute veniam mollit occaecat laboris consectetur quis sint. Mollit consectetur ex tempor Lorem voluptate quis adipisicing fugiat est.",
-            "spans": []
-          }
-        ],
-        "table_size_range": [
-          {
-            "type": "paragraph",
-            "text": "Fugiat nulla aute reprehenderit duis tempor fugiat duis voluptate mollit est sit laborum fugiat proident. Consequat reprehenderit reprehenderit ad fugiat nulla sint.",
-            "spans": []
-          }
-        ],
-        "table_pressure_temperature_rating": [
-          {
-            "type": "paragraph",
-            "text": "Proident ad deserunt est proident enim tempor minim irure tempor id sint consequat eiusmod mollit.",
+            "text": "Labore exercitation ea irure irure aliquip pariatur id nulla enim consequat do ex esse enim. Incididunt duis consequat ipsum esse sit deserunt laborum labore magna laboris velit proident duis tempor.",
             "spans": []
           }
         ]
@@ -31,14 +25,14 @@
       "title": [
         {
           "type": "heading1",
-          "text": "White",
+          "text": "Interest",
           "spans": []
         }
       ],
       "description": [
         {
           "type": "paragraph",
-          "text": "Irure labore laboris ea ad elit deserunt aliquip amet. Dolor occaecat id proident voluptate elit et ex. Nisi nostrud dolor ullamco deserunt minim sint velit enim dolor.",
+          "text": "Aliquip sunt ipsum aute eiusmod amet nisi nisi eiusmod commodo.",
           "spans": []
         }
       ],
@@ -49,7 +43,7 @@
         },
         "alt": null,
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e"
+        "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6"
       },
       "background_image": {
         "dimensions": {
@@ -58,33 +52,33 @@
         },
         "alt": null,
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea"
+        "url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1"
       },
       "product_name": [
         {
           "type": "paragraph",
-          "text": "Elit commodo nulla occaecat veniam magna sint ullamco veniam et ad nostrud amet velit consequat.",
+          "text": "Irure officia veniam exercitation pariatur incididunt consequat nisi.",
           "spans": []
         }
       ],
       "product_type": [
         {
           "type": "paragraph",
-          "text": "Aute ut et sint. In mollit non id velit sunt veniam dolor aliqua deserunt voluptate in ipsum fugiat. Ullamco eiusmod veniam voluptate esse non proident est mollit Lorem.",
+          "text": "Amet ex excepteur elit et sunt labore sit adipisicing in tempor proident proident deserunt. Incididunt dolore sit sint adipisicing minim fugiat.",
           "spans": []
         }
       ],
       "product_details_right": [
         {
           "type": "paragraph",
-          "text": "Ut non fugiat nulla do velit consequat commodo. Dolor sunt officia Lorem dolore magna tempor reprehenderit ut.",
+          "text": "Duis do esse dolor est nisi tempor ut fugiat.",
           "spans": []
         }
       ],
       "product_resources_left": [
         {
           "type": "paragraph",
-          "text": "Anim fugiat ipsum officia nulla ut aliquip labore nostrud. Consequat exercitation aliqua cillum aute esse veniam. Ut est adipisicing sint duis dolore mollit et sunt reprehenderit commodo.",
+          "text": "Ut sint mollit ea dolore elit non consequat.",
           "spans": []
         }
       ]

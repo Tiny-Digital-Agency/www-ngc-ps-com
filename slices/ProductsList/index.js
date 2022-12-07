@@ -52,9 +52,9 @@ const ProductsList = ({ slice }) => (
       </Flex>
       <Flex
         alignItems="flex-start"
-        flexDirection="row"
+        flexDirection="column"
         flexWrap="wrap"
-        justifyContent="flex-start"
+        justifyContent="center"
         m={{ base: "40px", md: "10px 40px" }}
       >
         <Box color="#00629b" fontWeight="700">
@@ -65,6 +65,7 @@ const ProductsList = ({ slice }) => (
           flexDirection="row"
           flexWrap="wrap"
           gap="8px"
+
         >
           {
             slice?.items?.map((item, i) =>

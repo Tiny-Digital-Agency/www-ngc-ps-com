@@ -1,6 +1,6 @@
 {
-  "id": "lined_solutions",
-  "label": "Lined Solutions/Pipes Pages",
+  "id": "structural_support_products",
+  "label": "Structural Support Products",
   "repeatable": true,
   "status": true,
   "json": {
@@ -15,7 +15,7 @@
       "title": {
         "type": "StructuredText",
         "config": {
-          "label": "Title",
+          "label": "title",
           "placeholder": "",
           "allowTargetBlank": true,
           "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
@@ -26,31 +26,31 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "banner_section_with_middle_content": {
-              "type": "SharedSlice"
-            },
-            "banner_section_with_side_content": {
-              "type": "SharedSlice"
-            },
-            "card_section": {
-              "type": "SharedSlice"
-            },
-            "grid_sections": {
-              "type": "SharedSlice"
-            },
-            "hero_section": {
-              "type": "SharedSlice"
-            },
-            "product_detail": {
-              "type": "SharedSlice"
-            },
-            "product_slider": {
+            "side_dropdown_with_content": {
               "type": "SharedSlice"
             },
             "products_list": {
               "type": "SharedSlice"
             },
-            "side_dropdown_with_content": {
+            "product_slider": {
+              "type": "SharedSlice"
+            },
+            "product_detail": {
+              "type": "SharedSlice"
+            },
+            "hero_section": {
+              "type": "SharedSlice"
+            },
+            "grid_sections": {
+              "type": "SharedSlice"
+            },
+            "card_section": {
+              "type": "SharedSlice"
+            },
+            "banner_section_with_middle_content": {
+              "type": "SharedSlice"
+            },
+            "banner_section_with_side_content": {
               "type": "SharedSlice"
             }
           }
