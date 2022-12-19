@@ -24,14 +24,14 @@ export function Navigation({ navigation, settings }) {
   return (
     <Box>
       <Flex
-        pt={{base:"unset", md:"10px"}}
-        pb={{base:"unset", md:"10px"}}
+        pt={{ base: "unset", md: "10px" }}
+        pb={{ base: "unset", md: "10px" }}
         bg={"#4c4f51"}
         alignItems={"center"}
         justifyContent={"end"}
         flexDirection={{ base: "column", md: "row" }}
       >
-        <Box display={{base:"none", md:"unset"}}>
+        <Box display={{ base: "none", md: "unset" }}>
           {navigation?.data?.slices.map((slice) => {
             return (
               <Flex key={slice.id}>
@@ -70,7 +70,7 @@ export function Navigation({ navigation, settings }) {
         <Box>
           {navigation?.data?.slices.map((slice) => {
             return (
-              <Flex key={slice.id} display={{base:"none", md:"unset"}}>
+              <Flex key={slice.id} display={{ base: "none", md: "unset" }}>
                 <Breadcrumb fontSize={"16px"} color={"#000"} as={"nav"}>
                   {slice.items.length == 3 && (
                     <BreadcrumbItem>
@@ -94,15 +94,15 @@ export function Navigation({ navigation, settings }) {
           })}
         </Box>
       </Flex>
-      <Box bg={{base:"#000", md:"#2c2e35"}} px={6} pos="relative" padding={{base:"20px",md:"20px 60px"}}>
+      <Box bg={{ base: "#000", md: "#2c2e35" }} px={6} pos="relative" >
         <Flex justifyContent="space-between" alignItems="center">
           <HStack spacing={8} alignItems={"center"}>
             <Flex
               justifyContent={{ base: "center", md: "flex-start", lg: "end" }}
             >
               <Box
-                h={{ base: "80%",  sm: "100%" }}
-                w={{ base: "80%",  sm: "100%" }}
+                h={{ base: "80%", sm: "100%" }}
+                w={{ base: "80%", sm: "100%" }}
               >
                 <PrismicLink href="/">
                   {prismicH.isFilled.image(settings?.data?.logo) && (
@@ -113,7 +113,7 @@ export function Navigation({ navigation, settings }) {
             </Flex>
           </HStack>
           <IconButton
-            bg={{base:"#000", md:"#2c2e35"}}
+            bg={{ base: "#000", md: "#2c2e35" }}
             size={"md"}
             icon={isOpen ? <CloseIcon color="#ff3e34" fontSize="25px" /> : <HamburgerIcon color="#ff3e34" fontSize="50px" />}
             aria-label={"Open Menu"}
@@ -127,13 +127,23 @@ export function Navigation({ navigation, settings }) {
           />
         </Flex>
         {isOpen ? (
-          <Box bg={{ md: "#fff" }} h={{ md: "665px" }} w={{ md: "225px" }} pb={4} color={{base:"#6c6f70", md:"#000"}} mr="-25px" ml="-25px" right={{ md: "0" }} pos={{ md: "absolute" }}>
-            <Stack as={"nav"} spacing={4} pb="25px" bg="#fff">
+          <Box
+            bg={{ md: "#fff" }}
+            h={{ md: "655px" }}
+            w={{ md: "260px" }}
+            color={{ base: "#6c6f70", md: "#000" }}
+            mr={{ base: "-24px", md: "unset" }} ml={{ base: "-24px", md: "unset" }}
+            right={{ md: "0" }}
+            pos={{ md: "absolute" }}>
+            <Stack as={"nav"} spacing={4} pb="25px" bg="#fff" pl={{base:"0", md:"20px"}}>
               {navigation?.data.slices.map((slice) => {
                 return (
                   <Menu key={slice.id}>
                     <MenuButton>
-                      <Box className="custom-menu-item" >
+                      <Box
+                        className="custom-menu-item"
+                        textAlign={{ md: "left" }}
+                        >
                         <PrismicLink field={slice.primary.link}>
                           <PrismicText field={slice.primary.name} />
                         </PrismicLink>
@@ -158,7 +168,7 @@ export function Navigation({ navigation, settings }) {
             </Stack>
             <Box bg="#4c4f51"
               padding="10px"
-              mb="-16px"
+              mb="-20px"
               display={{ md: "none" }}>
               <Box>
                 {navigation?.data?.slices.map((slice) => {
