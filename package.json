@@ -17,7 +17,7 @@
     "@next/font": "^13.0.3",
     "@prismicio/client": "^6.7.1",
     "@prismicio/helpers": "^2.3.6",
-    "@prismicio/next": "^0.1.7",
+    "@prismicio/next": "^0.1.9",
     "@prismicio/react": "^2.5.0",
     "@prismicio/slice-simulator-react": "^0.2.2",
     "@splidejs/react-splide": "^0.7.12",

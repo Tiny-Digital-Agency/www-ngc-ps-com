@@ -7,12 +7,10 @@ import '../styles/navigation.css'
 import '../styles/product-pages.css'
 import '../styles/product-detail.css'
 import '../styles/product-slider.css'
-import Layout from '../components/Layout'
 import { ChakraProvider } from '@chakra-ui/react'
 export default function App({ Component, pageProps }) {
   return (
     <ChakraProvider>
-      <Layout>
         <PrismicProvider
           internalLinkComponent={({ href, ...props }) => (
             (<Link href={href} {...props}>
@@ -23,7 +21,6 @@ export default function App({ Component, pageProps }) {
             <Component {...pageProps} />
           </PrismicPreview>
         </PrismicProvider>
-      </Layout>
     </ChakraProvider>
   );
 }

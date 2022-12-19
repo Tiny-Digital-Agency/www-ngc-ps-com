@@ -168,7 +168,7 @@ export function Navigation({ navigation, settings }) {
           </Box>
         </Flex>
         {isOpen ? (
-          <Box pb={4} display={{ md: "none" }} color="#fff">
+          <Box pb={4} color="#fff">
             <Stack as={"nav"} spacing={4}>
               {navigation?.data.slices.map((slice) => {
                 return (
