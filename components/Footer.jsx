@@ -74,13 +74,13 @@ export function Footer({ footer, settings }) {
                                         >
                                             {slice.items.length > 0 && (
                                                 <BreadcrumbItem
-                                                    flexDirection={{ base: "column", sm: "row" }}
+                                                    flexDirection={{ base: "column", xl: "row" }}
                                                 >
                                                     {slice.items.map((item, i) => {
                                                         return (
                                                             <PrismicLink field={item.contactlink} key={i}>
                                                                 <Box className="item">
-                                                                    {i != 0 && <Text as="span" color="#ef483e" px="2" display={{ base: "none", sm: "unset" }}>/</Text>}
+                                                                    {i != 0 && <Text as="span" color="#ef483e" px="2" display={{ base: "none", xl: "unset" }}>/</Text>}
                                                                     <PrismicText field={item.contact_details} />
                                                                 </Box>
                                                             </PrismicLink>

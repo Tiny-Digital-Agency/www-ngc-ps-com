@@ -24,14 +24,14 @@ export function Navigation({ navigation, settings }) {
   return (
     <Box>
       <Flex
-        pt="10px"
-        pb="10px"
+        pt={{base:"unset", md:"10px"}}
+        pb={{base:"unset", md:"10px"}}
         bg={"#4c4f51"}
         alignItems={"center"}
         justifyContent={"end"}
         flexDirection={{ base: "column", md: "row" }}
       >
-        <Box>
+        <Box display={{base:"none", md:"unset"}}>
           {navigation?.data?.slices.map((slice) => {
             return (
               <Flex key={slice.id}>
@@ -70,7 +70,7 @@ export function Navigation({ navigation, settings }) {
         <Box>
           {navigation?.data?.slices.map((slice) => {
             return (
-              <Flex key={slice.id}>
+              <Flex key={slice.id} display={{base:"none", md:"unset"}}>
                 <Breadcrumb fontSize={"16px"} color={"#000"} as={"nav"}>
                   {slice.items.length == 3 && (
                     <BreadcrumbItem>
@@ -94,15 +94,15 @@ export function Navigation({ navigation, settings }) {
           })}
         </Box>
       </Flex>
-      <Box bg={"#2c2e35"} px={6} pos="relative">
+      <Box bg={{base:"#000", md:"#2c2e35"}} px={6} pos="relative" padding={{base:"20px",md:"20px 60px"}}>
         <Flex justifyContent="space-between" alignItems="center">
           <HStack spacing={8} alignItems={"center"}>
             <Flex
               justifyContent={{ base: "center", md: "flex-start", lg: "end" }}
             >
               <Box
-                h={{ base: "100%", md: "60%", lg: "100%" }}
-                w={{ base: "100%", md: "60%", lg: "100%" }}
+                h={{ base: "80%",  sm: "100%" }}
+                w={{ base: "80%",  sm: "100%" }}
               >
                 <PrismicLink href="/">
                   {prismicH.isFilled.image(settings?.data?.logo) && (
@@ -112,8 +112,8 @@ export function Navigation({ navigation, settings }) {
               </Box>
             </Flex>
           </HStack>
-          <IconButton 
-            bg="#2c2e35"
+          <IconButton
+            bg={{base:"#000", md:"#2c2e35"}}
             size={"md"}
             icon={isOpen ? <CloseIcon color="#ff3e34" fontSize="25px" /> : <HamburgerIcon color="#ff3e34" fontSize="50px" />}
             aria-label={"Open Menu"}
@@ -127,8 +127,8 @@ export function Navigation({ navigation, settings }) {
           />
         </Flex>
         {isOpen ? (
-          <Box bg={{md:"#fff"}} w={{md:"200px"}}  pb={4} color="#000" right={{md:"0"}} pos={{md:"absolute"}}>
-            <Stack as={"nav"} spacing={4} pb="25px" >
+          <Box bg={{ md: "#fff" }} h={{ md: "665px" }} w={{ md: "225px" }} pb={4} color={{base:"#6c6f70", md:"#000"}} mr="-25px" ml="-25px" right={{ md: "0" }} pos={{ md: "absolute" }}>
+            <Stack as={"nav"} spacing={4} pb="25px" bg="#fff">
               {navigation?.data.slices.map((slice) => {
                 return (
                   <Menu key={slice.id}>
@@ -138,32 +138,33 @@ export function Navigation({ navigation, settings }) {
                           <PrismicText field={slice.primary.name} />
                         </PrismicLink>
                       </Box>
+                      {slice.items.length > 0 && (
+                        <MenuList color="#000">
+                          {slice.items.map((item, i) => {
+                            return (
+                              <MenuItem key={i}>
+                                <PrismicLink field={item.link}>
+                                  <PrismicText field={item.name} />
+                                </PrismicLink>
+                              </MenuItem>
+                            );
+                          })}
+                        </MenuList>
+                      )}
                     </MenuButton>
-                    {slice.items.length > 0 && (
-                      <MenuList color="#000">
-                        {slice.items.map((item, i) => {
-                          return (
-                            <MenuItem key={i}>
-                              <PrismicLink field={item.link}>
-                                <PrismicText field={item.name} />
-                              </PrismicLink>
-                            </MenuItem>
-                          );
-                        })}
-                      </MenuList>
-                    )}
                   </Menu>
                 );
               })}
             </Stack>
-            <Box bg="#4c4f51" margin={"-15px -25px"}
-            padding="10px"
-            display={{md:"none"}}>
+            <Box bg="#4c4f51"
+              padding="10px"
+              mb="-16px"
+              display={{ md: "none" }}>
               <Box>
                 {navigation?.data?.slices.map((slice) => {
                   return (
                     <Flex key={slice.id} justifyContent="center">
-                      <Breadcrumb fontSize={"16px"} color={"#fff"} as={"nav"}>
+                      <Breadcrumb fontSize={"16px"} color={"#fff"} as={"nav"} >
                         {slice.items.length > 0 && (
                           <BreadcrumbItem
                             flexDirection="column"
