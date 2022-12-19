@@ -24,7 +24,8 @@
     },
     "valves": {},
     "leak_detection_and_protection": {},
-    "structural_support_products": {}
+    "structural_support_products": {},
+    "crane_valves": {}
   },
   "slices": {
     "CallToAction": {},
@@ -40,20 +41,7 @@
     },
     "HeroSection": {
       "default": {
-        "primary": {
-          "button_content": {
-            "config": {
-              "patternType": "PARAGRAPH",
-              "blocks": 1
-            }
-          },
-          "button_title": {
-            "config": {
-              "patternType": "PARAGRAPH",
-              "blocks": 1
-            }
-          }
-        },
+        "primary": {},
         "items": {}
       }
     },
@@ -156,7 +144,14 @@
     "CardSection": {
       "default": {
         "items": {},
-        "primary": {}
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
       }
     },
     "GridSections": {
@@ -231,6 +226,12 @@
         "items": {},
         "primary": {
           "product_resources_left": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "product_details_right": {
             "config": {
               "patternType": "PARAGRAPH",
               "blocks": 1
