@@ -1,0 +1,9 @@
+.dropdown-child li {
+  padding: 3px 0;
+  list-style: none;
+  text-align: left;
+}
+
+.dropdown-child li:hover {
+  color: #ef483e;
+}
