@@ -1,0 +1,23 @@
+{
+  "id": "mock-doc-id",
+  "url": null,
+  "type": "aloyco_valves",
+  "href": null,
+  "tags": [],
+  "first_publication_date": "1970-01-01T00:00:01+0000",
+  "last_publication_date": "1970-01-01T00:00:01+0000",
+  "slugs": [],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
+  "data": {
+    "title": [
+      {
+        "type": "paragraph",
+        "text": "Esse sint eiusmod elit veniam fugiat ex anim exercitation laboris cupidatat aliqua do. Eu fugiat occaecat exercitation eu excepteur duis ut eu officia ut irure nulla ullamco aliquip ullamco. Quis consequat esse tempor cillum ex ex ut aliquip nulla sit ex exercitation adipisicing labore.",
+        "spans": []
+      }
+    ],
+    "slices": []
+  }
+}

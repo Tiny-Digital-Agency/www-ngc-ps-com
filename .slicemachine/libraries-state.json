@@ -431,15 +431,16 @@
                 "title": {
                   "type": "StructuredText",
                   "config": {
-                    "single": "heading1",
                     "label": "Title",
-                    "placeholder": "This is where it all begins..."
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
                   }
                 },
                 "card_count": {
                   "type": "Boolean",
                   "config": {
-                    "label": "2 Card Count?",
+                    "label": "4 Card Count?",
                     "placeholder_false": "false",
                     "placeholder_true": "true",
                     "default_value": false
@@ -482,12 +483,12 @@
                   },
                   "alt": null,
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db"
+                  "url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8"
                 },
                 "text_content": [
                   {
                     "type": "paragraph",
-                    "text": "Non pariatur consequat magna velit amet cillum eiusmod sit dolore. Dolore proident duis incididunt sunt ut cupidatat culpa nisi excepteur.",
+                    "text": "Amet sint mollit ex sint dolor dolor sunt occaecat esse do id in.",
                     "spans": []
                   }
                 ]
@@ -496,12 +497,12 @@
             "primary": {
               "title": [
                 {
-                  "type": "heading1",
-                  "text": "Stranger",
+                  "type": "paragraph",
+                  "text": "Cillum aute duis esse.",
                   "spans": []
                 }
               ],
-              "card_count": false
+              "card_count": true
             },
             "slice_type": "card_section"
           }
@@ -990,32 +991,6 @@
                     "allowTargetBlank": true,
                     "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
                   }
-                },
-                "button_title": {
-                  "type": "StructuredText",
-                  "config": {
-                    "label": "Button Title",
-                    "placeholder": "",
-                    "allowTargetBlank": true,
-                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-                  }
-                },
-                "button_content": {
-                  "type": "StructuredText",
-                  "config": {
-                    "label": "Button Content",
-                    "placeholder": "",
-                    "allowTargetBlank": true,
-                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-                  }
-                },
-                "button_link": {
-                  "type": "Link",
-                  "config": {
-                    "label": "Button Link",
-                    "placeholder": "",
-                    "select": null
-                  }
                 }
               },
               "items": {
@@ -1054,12 +1029,12 @@
                   },
                   "alt": null,
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468"
+                  "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db"
                 },
                 "image_title": [
                   {
                     "type": "paragraph",
-                    "text": "Anim proident dolor ipsum sint magna culpa veniam ad enim deserunt occaecat mollit.",
+                    "text": "Occaecat ea in amet excepteur nulla duis est tempor cillum non. Enim dolor adipisicing elit in anim do esse cillum.",
                     "spans": []
                   }
                 ]
@@ -1073,33 +1048,15 @@
                 },
                 "alt": null,
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f"
+                "url": "https://images.unsplash.com/photo-1600861194802-a2b11076bc51"
               },
               "heading": [
                 {
                   "type": "paragraph",
-                  "text": "Voluptate nisi cupidatat magna non occaecat anim voluptate ex Lorem qui. Dolor laboris deserunt veniam ut nulla duis sit fugiat nisi magna anim. Non fugiat sint velit culpa.",
+                  "text": "Voluptate do labore adipisicing ea irure duis aliqua eu eiusmod cupidatat esse officia do. Elit qui qui consequat laboris labore nisi.",
                   "spans": []
                 }
-              ],
-              "button_title": [
-                {
-                  "type": "paragraph",
-                  "text": "Magna irure incididunt occaecat dolore ex.",
-                  "spans": []
-                }
-              ],
-              "button_content": [
-                {
-                  "type": "paragraph",
-                  "text": "Officia consectetur voluptate pariatur fugiat adipisicing tempor voluptate elit commodo pariatur voluptate in aute ipsum minim. Do deserunt tempor officia minim pariatur veniam sit do. Amet eu ex incididunt.",
-                  "spans": []
-                }
-              ],
-              "button_link": {
-                "link_type": "Web",
-                "url": "http://google.com"
-              }
+              ]
             },
             "slice_type": "hero_section"
           }
@@ -1670,7 +1627,7 @@
                     "label": "Product Details (Right Content)",
                     "placeholder": "",
                     "allowTargetBlank": true,
-                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                    "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
                   }
                 },
                 "product_resources_left": {
@@ -1679,7 +1636,7 @@
                     "label": "Product Resources (Left Content)",
                     "placeholder": "",
                     "allowTargetBlank": true,
-                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                    "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
                   }
                 }
               },
@@ -1725,7 +1682,7 @@
                 "table_category": [
                   {
                     "type": "paragraph",
-                    "text": "Exercitation laboris proident sunt esse nulla. Nulla et sunt ex aliqua mollit elit amet id dolore nostrud. Quis culpa velit adipisicing minim excepteur dolor laboris aliqua velit quis aute ad nostrud deserunt magna.",
+                    "text": "Excepteur magna mollit occaecat sunt incididunt do id do ex sunt cillum cupidatat exercitation occaecat incididunt.",
                     "spans": []
                   }
                 ],
@@ -1733,7 +1690,7 @@
                 "table_class": [
                   {
                     "type": "paragraph",
-                    "text": "Labore exercitation ea irure irure aliquip pariatur id nulla enim consequat do ex esse enim. Incididunt duis consequat ipsum esse sit deserunt laborum labore magna laboris velit proident duis tempor.",
+                    "text": "Aute officia exercitation duis est.",
                     "spans": []
                   }
                 ]
@@ -1743,14 +1700,14 @@
               "title": [
                 {
                   "type": "heading1",
-                  "text": "Interest",
+                  "text": "Twenty",
                   "spans": []
                 }
               ],
               "description": [
                 {
                   "type": "paragraph",
-                  "text": "Aliquip sunt ipsum aute eiusmod amet nisi nisi eiusmod commodo.",
+                  "text": "Dolor sint reprehenderit in anim ea reprehenderit velit voluptate eiusmod adipisicing deserunt. Veniam aliqua nulla ea dolor fugiat incididunt cupidatat enim Lorem elit incididunt aute.",
                   "spans": []
                 }
               ],
@@ -1761,7 +1718,7 @@
                 },
                 "alt": null,
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6"
+                "url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1"
               },
               "background_image": {
                 "dimensions": {
@@ -1770,33 +1727,33 @@
                 },
                 "alt": null,
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1"
+                "url": "https://images.unsplash.com/photo-1591012911207-0dbac31f37da"
               },
               "product_name": [
                 {
                   "type": "paragraph",
-                  "text": "Irure officia veniam exercitation pariatur incididunt consequat nisi.",
+                  "text": "Aute sint ea est labore nisi laboris et dolor reprehenderit tempor elit esse anim. Proident reprehenderit excepteur commodo elit duis voluptate excepteur minim aute culpa excepteur excepteur.",
                   "spans": []
                 }
               ],
               "product_type": [
                 {
                   "type": "paragraph",
-                  "text": "Amet ex excepteur elit et sunt labore sit adipisicing in tempor proident proident deserunt. Incididunt dolore sit sint adipisicing minim fugiat.",
+                  "text": "Est ut in cupidatat veniam irure ex aliquip incididunt elit veniam mollit elit nisi id.",
                   "spans": []
                 }
               ],
               "product_details_right": [
                 {
                   "type": "paragraph",
-                  "text": "Duis do esse dolor est nisi tempor ut fugiat.",
+                  "text": "Est magna ad anim exercitation pariatur sunt consectetur culpa sunt nostrud minim eu officia. Occaecat ea fugiat consequat amet et. Id culpa cillum pariatur ipsum laboris fugiat amet consequat laboris reprehenderit ad minim nulla.",
                   "spans": []
                 }
               ],
               "product_resources_left": [
                 {
                   "type": "paragraph",
-                  "text": "Ut sint mollit ea dolore elit non consequat.",
+                  "text": "Minim proident id ea Lorem ex deserunt eu in eu elit cillum.",
                   "spans": []
                 }
               ]
@@ -2055,25 +2012,7 @@
                     "label": "Menu Items (Parent)",
                     "placeholder": "",
                     "allowTargetBlank": true,
-                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-                  }
-                },
-                "parent_menu_items_content": {
-                  "type": "StructuredText",
-                  "config": {
-                    "label": "Menu Items Content (Parent)",
-                    "placeholder": "",
-                    "allowTargetBlank": true,
-                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-                  }
-                },
-                "child_menu_items": {
-                  "type": "StructuredText",
-                  "config": {
-                    "label": "Menu Items (Child)",
-                    "placeholder": "",
-                    "allowTargetBlank": true,
-                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                    "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
                   }
                 },
                 "nest": {
@@ -2083,6 +2022,24 @@
                     "placeholder_false": "false",
                     "placeholder_true": "true",
                     "default_value": false
+                  }
+                },
+                "parent_menu_items_content": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Menu Items Content (Parent)",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "child_menu_items": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Menu Items (Child)",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
                   }
                 }
               },
@@ -2099,32 +2056,32 @@
                 "parent_menu_items": [
                   {
                     "type": "paragraph",
-                    "text": "Ut incididunt aliquip elit nisi et commodo anim. Occaecat velit ullamco pariatur reprehenderit.",
+                    "text": "Aliquip ad ut aute nostrud deserunt consequat officia.",
                     "spans": []
                   }
                 ],
+                "nest": true,
                 "parent_menu_items_content": [
                   {
                     "type": "paragraph",
-                    "text": "Ea enim elit proident qui. Dolore deserunt cupidatat ipsum qui nostrud voluptate eiusmod.",
+                    "text": "Commodo veniam velit ea.",
                     "spans": []
                   }
                 ],
                 "child_menu_items": [
                   {
                     "type": "paragraph",
-                    "text": "Cillum ipsum aute enim.",
+                    "text": "In reprehenderit id nisi ex aute ex anim. Magna sint tempor qui ea. Voluptate cillum aliqua ea exercitation ut aliquip incididunt excepteur aliquip labore est in sint amet labore.",
                     "spans": []
                   }
-                ],
-                "nest": false
+                ]
               }
             ],
             "primary": {
               "title": [
                 {
                   "type": "heading1",
-                  "text": "Anyway",
+                  "text": "Weather",
                   "spans": []
                 }
               ]
