@@ -20,106 +20,57 @@ const HeroSection = ({ slice }) => (
         bgGradient={"linear(to-r, blackAlpha.600, transparent)"}
       >
         <Stack
-          maxW={{ base: "95%", md: "75%" }}
+          maxW={{ base: "100%", md: "86%" }}
           align="center"
           spacing={6}
         >
           <Box
-            pt={{ base: "18%", md: "12%", xl: "8%" }}
+            pt={{ base: "12%", md: "10%", xl: "8.7%" }}
             pb={{ base: "5%", md: "60px" }}
             w={{ base: "90%", md: "85%" }}
             color="#fff"
-            fontSize={{ base: "4xl", md: "5xl", lg: "6xl" }}
+            fontSize={{ base: "9vw", md: "7xl" }}
             fontWeight="700"
             lineHeight={1.2}
             textAlign="center"
           >
             <PrismicRichText field={slice.primary.heading} />
           </Box>
+
           <Stack
-            direction={"row"}
+            direction={{ base: "column", md: "row" }}
             flexWrap="wrap"
             justifyContent={{ base: "center", md: "space-between" }}
-            w="full"
+            w={{ base: "67%", md: "full" }}
+            pt="30px"
             pb={{ base: "5%", md: "60px" }}
+            m="auto"
           >
             {
               slice?.items?.map((item, i) =>
                 <Flex key={i}
-                  align={"center"}
-                  direction={{ base: "column", xl: "row" }}
+                  align={{ base: "space-evenly", md: "center" }}
+                  direction={{ base: "row", md: "column", xl: "row" }}
                   gap={{ base: "10px", sm: "20px" }}
-                  w={{ base: "120px", md: "23%" }}
+                  pb={{ base: "30px", md: "50px" }}
+                  w={{ base: "99%", md: "45%", lg: "24%" }}
                 >
                   <Image
                     src={item.image.url}
                     alt={item.image.alt}
-                    h="60px"
+                    h={{ base: "12vw", md: "60px" }}
                   />
                   <Box
                     align="left"
                     color="#fff"
-                    fontSize="20px"
-                    fontWeight="600" textAlign={{ base: "center", xl: "left" }} >
+                    fontSize={{ base: "6vw", md: "30px" }}
+                    fontWeight="500" textAlign={{ base: "left", md: "center", xl: "left" }} >
                     <PrismicRichText field={item.image_title} />
                   </Box>
                 </Flex>
               )
             }
           </Stack>
-          <Box
-            pb={{ base: "18%", md: "100px" }}>
-            <Link
-              href="`${slice.primary.button_link}`"
-              _hover={{
-                textDecoration: "none"
-              }}>
-              <Flex
-                align="center"
-                direction={{ base: "column", md: "row" }}
-                gap={{ base: "0", md: "25px" }}
-                w={{ base: "85%", lg: "45em" }}
-                p={{ base: "15px 15px 20px", md: "18px 25px" }}
-                m="auto"
-                color="#fff"
-                bg="rgba(16,65,17,0.8)"
-                border="5px solid #fff;"
-                _hover={{ bg: "rgba(32,80,29,255)" }}
-              >
-                <Box
-                  w="fit-content"
-                  fontSize={{ base: "xl", lg: "3xl" }}
-                  fontWeight="600"
-                >
-                  <PrismicRichText field={slice.primary.button_title} />
-                </Box>
-                <Box
-                  w="80%"
-                  fontSize={{ base: "lg", lg: "2xl" }}
-                  lineHeight="1.3"
-                  textAlign={{ base: "center", md: "left" }}
-                >
-                  <PrismicRichText field={slice.primary.button_content} />
-                  <Flex
-                    alignItems="flex-end"
-                    justifyContent={{ base: "center", md: "flex-start" }}
-                  >
-                    <Box
-                      w="fit-content"
-                      fontWeight="600"
-                      borderBottom="2px solid #ff4438"
-                      _hover={{
-                        textDecoration: "none",
-                      }}
-                    >
-                      Read More
-                    </Box>
-                    <ChevronRightIcon />
-                  </Flex>
-                </Box>
-              </Flex>
-            </Link>
-          </Box>
         </Stack>
       </VStack>
     </Flex>
