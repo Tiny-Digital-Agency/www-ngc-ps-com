@@ -14,9 +14,9 @@ import {
  */
 const TextEditor = ({ slice }) => (
   <section>
-    <Box paddingTop={"10px"} paddingBottom={"10px"} textAlign="center">
+    <Box textAlign="center">
       <Stack spacing={6} as={Container} maxW={{ base: '100vw', sm: '80vw', xl: '70vw' }}>
-        <Heading fontSize={'4xl'} paddingTop='10px' fontWeight="500" textAlign={'center'}>
+        <Heading fontSize={'4xl'} fontWeight="500" textAlign={'center'}>
           <span style={{ color: slice.primary.color }}><PrismicRichText field={slice.primary.heading} /></span>
         </Heading>
         {
@@ -24,9 +24,9 @@ const TextEditor = ({ slice }) => (
 
             <Box color={'gray.600'} fontSize={'2xl'} key={i}>
               <Box>
-                <PrismicRichText field={item.sub_heading} />
-              </Box>
               <PrismicRichText field={item.description} />
+              </Box>
+                <PrismicRichText field={item.sub_heading} />
             </Box>
           )
         }

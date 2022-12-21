@@ -256,6 +256,18 @@
           }
         }
       }
+    },
+    "UptimeContent": {
+      "default": {
+        "primary": {
+          "description": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
     }
   }
 }

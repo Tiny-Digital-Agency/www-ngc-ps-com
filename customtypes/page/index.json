@@ -26,9 +26,6 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "call_to_action": {
-              "type": "SharedSlice"
-            },
             "industries_banner": {
               "type": "SharedSlice"
             },
@@ -68,10 +65,7 @@
             "product_slider": {
               "type": "SharedSlice"
             },
-            "text_editor": {
-              "type": "SharedSlice"
-            },
-            "uptime": {
+            "uptime_content": {
               "type": "SharedSlice"
             }
           }
