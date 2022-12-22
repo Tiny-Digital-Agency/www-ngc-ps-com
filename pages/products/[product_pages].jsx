@@ -3,7 +3,7 @@ import * as prismicH from "@prismicio/helpers";
 import { createClient, linkResolver  } from '../../prismicio'
 import { components } from '../../slices'
 import Layout from '../../components/Layout'
-const valves = ({ valves, navigation, settings, footer }) => {
+const product_pages = ({ product_pages, navigation, settings, footer }) => {
   return (
     <div>
       <Layout
@@ -11,23 +11,23 @@ const valves = ({ valves, navigation, settings, footer }) => {
         settings={settings}
         footer={footer}
       >
-        <SliceZone slices={valves.data.slices} components={components} />
+        <SliceZone slices={product_pages.data.slices} components={components} />
       </Layout>
     </div>
   );
 };
 
-export default valves
+export default product_pages
 
 export async function getStaticProps({ params, previewData }) {
   const client = createClient({ previewData });
-  const valves = await client.getByUID("valves", params.uid);
+  const product_pages = await client.getByUID("product_pages", params.product_pages);
   const navigation = await client.getByUID("navigation", "navigation");
   const settings = await client.getSingle("settings");
   const footer = await client.getByUID("footer", "footer");
   return {
     props: {
-      valves,
+      product_pages,
       navigation,
       settings,
       footer,
@@ -38,10 +38,10 @@ export async function getStaticProps({ params, previewData }) {
 export async function getStaticPaths() {
   const client = createClient()
 
-  const valves = await client.getAllByType('valves')
+  const product_pages = await client.getAllByType('product_pages')
 
   return {
-    paths: valves.map((valves) => prismicH.asLink(valves, linkResolver )),
+    paths: product_pages.map((product_pages) => prismicH.asLink(product_pages, linkResolver )),
     fallback: false,
   }
 }

@@ -12,8 +12,12 @@ export function linkResolver(doc) {
       return '/'
     case 'page':
       return `/${doc.uid}`
-    case 'valves':
+    case 'product_pages':
       return `/products/${doc.uid}`
+    case 'lined_solutions':
+      return `/products/lined-pipes-fittings/${doc.uid}`
+      case 'valves':
+        return `/products/valves/${doc.uid}`
     default:
       return null
   }
