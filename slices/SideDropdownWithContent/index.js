@@ -28,6 +28,7 @@ const SideDropdownWithContent = ({ slice }) => (
                 w='100%'
                 bgColor="#4d8b3f"
                 borderRight={{ base: "none", lg: "3px solid #ef483e" }}
+                borderBottom="none"
               >
                 {
                   slice?.items?.map((item, i) =>
@@ -37,11 +38,13 @@ const SideDropdownWithContent = ({ slice }) => (
                           <Box fontSize="20px">
                             <PrismicRichText field={item.parent_menu_items} />
                           </Box>
-                          <Tab w="fit-content"
+                          <Tab
+                            w="fit-content"
                             ml="30px"
                             mb="5px"
                             p="0"
                             fontSize="20px"
+                            textAlign="left"
                             borderBottom="2px solid #4d8b3f"
                             _selected={{
                               borderBottom: "2px solid #ef483e"
@@ -59,6 +62,7 @@ const SideDropdownWithContent = ({ slice }) => (
                             mb="5px"
                             p="0"
                             fontSize="20px"
+                            textAlign="left"
                             borderBottom="2px solid #4d8b3f"
                             _selected={{
                               borderBottom: "2px solid #ef483e"
@@ -101,10 +105,10 @@ const SideDropdownWithContent = ({ slice }) => (
                             <Flex
                               w="100%"
                               color="#585c5e"
+                              fontSize="20px"
                               alignItems="flex-start"
-                              _hover={{
-                                color: "#ef483e",
-                              }}>
+                              className="dropdown-child"
+                            >
                               <PrismicRichText field={item.child_menu_items} />
                             </Flex>
                           </Tab>

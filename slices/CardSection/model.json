@@ -14,15 +14,16 @@
         "title": {
           "type": "StructuredText",
           "config": {
-            "single": "heading1",
             "label": "Title",
-            "placeholder": "This is where it all begins..."
+            "placeholder": "This is where it all begins...",
+            "allowTargetBlank": true,
+            "single": "paragraph"
           }
         },
         "card_count": {
           "type": "Boolean",
           "config": {
-            "label": "2 Card Count?",
+            "label": "4 Card Count?",
             "placeholder_false": "false",
             "placeholder_true": "true",
             "default_value": false

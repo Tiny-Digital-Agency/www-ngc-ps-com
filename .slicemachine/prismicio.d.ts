@@ -6,6 +6,86 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = {
     [KeyType in keyof T]: T[KeyType];
 };
+/** Content for Aloyco Valves documents */
+interface AloycoValvesDocumentData {
+    /**
+     * title field in *Aloyco Valves*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: aloyco_valves.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+    /**
+     * Slice Zone field in *Aloyco Valves*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: aloyco_valves.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<AloycoValvesDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *Aloyco Valves → Slice Zone*
+ *
+ */
+type AloycoValvesDocumentDataSlicesSlice = ProductDetailSlice;
+/**
+ * Aloyco Valves document from Prismic
+ *
+ * - **API ID**: `aloyco_valves`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type AloycoValvesDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<AloycoValvesDocumentData>, "aloyco_valves", Lang>;
+/** Content for Crane Valves documents */
+interface CraneValvesDocumentData {
+    /**
+     * title field in *Crane Valves*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: crane_valves.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+    /**
+     * Slice Zone field in *Crane Valves*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: crane_valves.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<CraneValvesDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *Crane Valves → Slice Zone*
+ *
+ */
+type CraneValvesDocumentDataSlicesSlice = ProductDetailSlice;
+/**
+ * Crane Valves document from Prismic
+ *
+ * - **API ID**: `crane_valves`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type CraneValvesDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<CraneValvesDocumentData>, "crane_valves", Lang>;
 /** Content for Footer documents */
 interface FooterDocumentData {
     /**
@@ -75,6 +155,46 @@ type HomepageDocumentDataSlicesSlice = TopNavSlice | HeaderSlice | HeroSectionSl
  * @typeParam Lang - Language API ID of the document.
  */
 export type HomepageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<HomepageDocumentData>, "homepage", Lang>;
+/** Content for Industries Pages documents */
+interface IndustriesPagesDocumentData {
+    /**
+     * title field in *Industries Pages*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: industries_pages.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+    /**
+     * Slice Zone field in *Industries Pages*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: industries_pages.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<IndustriesPagesDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *Industries Pages → Slice Zone*
+ *
+ */
+type IndustriesPagesDocumentDataSlicesSlice = SideDropdownWithContentSlice;
+/**
+ * Industries Pages document from Prismic
+ *
+ * - **API ID**: `industries_pages`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type IndustriesPagesDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<IndustriesPagesDocumentData>, "industries_pages", Lang>;
 /** Content for Leak Detection & Protection Pages documents */
 interface LeakDetectionAndProtectionDocumentData {
     /**
@@ -195,6 +315,46 @@ type NavigationDocumentDataSlicesSlice = NavigationSlice | LogoSlice | TopNavSli
  * @typeParam Lang - Language API ID of the document.
  */
 export type NavigationDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<NavigationDocumentData>, "navigation", Lang>;
+/** Content for Pacific Valves documents */
+interface PacificValvesDocumentData {
+    /**
+     * title field in *Pacific Valves*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: pacific_valves.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+    /**
+     * Slice Zone field in *Pacific Valves*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: pacific_valves.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<PacificValvesDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *Pacific Valves → Slice Zone*
+ *
+ */
+type PacificValvesDocumentDataSlicesSlice = ProductDetailSlice;
+/**
+ * Pacific Valves document from Prismic
+ *
+ * - **API ID**: `pacific_valves`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type PacificValvesDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<PacificValvesDocumentData>, "pacific_valves", Lang>;
 /** Content for page documents */
 interface PageDocumentData {
     /**
@@ -395,7 +555,47 @@ type ValvesDocumentDataSlicesSlice = BannerSectionWithMiddleContentSlice | Banne
  * @typeParam Lang - Language API ID of the document.
  */
 export type ValvesDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<ValvesDocumentData>, "valves", Lang>;
-export type AllDocumentTypes = FooterDocument | HomepageDocument | LeakDetectionAndProtectionDocument | LinedSolutionsDocument | NavigationDocument | PageDocument | ProductPagesDocument | SettingsDocument | StructuralSupportProductsDocument | ValvesDocument;
+/** Content for Xomox Valves documents */
+interface XomoxDocumentData {
+    /**
+     * title field in *Xomox Valves*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: xomox.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+    /**
+     * Slice Zone field in *Xomox Valves*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: xomox.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<XomoxDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *Xomox Valves → Slice Zone*
+ *
+ */
+type XomoxDocumentDataSlicesSlice = ProductDetailSlice;
+/**
+ * Xomox Valves document from Prismic
+ *
+ * - **API ID**: `xomox`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type XomoxDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<XomoxDocumentData>, "xomox", Lang>;
+export type AllDocumentTypes = AloycoValvesDocument | CraneValvesDocument | FooterDocument | HomepageDocument | IndustriesPagesDocument | LeakDetectionAndProtectionDocument | LinedSolutionsDocument | NavigationDocument | PacificValvesDocument | PageDocument | ProductPagesDocument | SettingsDocument | StructuralSupportProductsDocument | ValvesDocument | XomoxDocument;
 /**
  * Primary content in About → Primary
  *
@@ -676,15 +876,15 @@ interface CardSectionSliceDefaultPrimary {
     /**
      * Title field in *CardSection → Primary*
      *
-     * - **Field Type**: Title
+     * - **Field Type**: Rich Text
      * - **Placeholder**: This is where it all begins...
      * - **API ID Path**: card_section.primary.title
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
-    title: prismicT.TitleField;
+    title: prismicT.RichTextField;
     /**
-     * 2 Card Count? field in *CardSection → Primary*
+     * 4 Card Count? field in *CardSection → Primary*
      *
      * - **Field Type**: Boolean
      * - **Placeholder**: *None*
@@ -1082,36 +1282,6 @@ interface HeroSectionSliceDefaultPrimary {
      *
      */
     heading: prismicT.RichTextField;
-    /**
-     * Button Title field in *HeroSection → Primary*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: hero_section.primary.button_title
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    button_title: prismicT.RichTextField;
-    /**
-     * Button Content field in *HeroSection → Primary*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: hero_section.primary.button_content
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    button_content: prismicT.RichTextField;
-    /**
-     * Button Link field in *HeroSection → Primary*
-     *
-     * - **Field Type**: Link
-     * - **Placeholder**: *None*
-     * - **API ID Path**: hero_section.primary.button_link
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
-     *
-     */
-    button_link: prismicT.LinkField;
 }
 /**
  * Item in HeroSection → Items
@@ -1812,6 +1982,17 @@ export interface SideDropdownWithContentSliceDefaultItem {
      */
     parent_menu_items: prismicT.RichTextField;
     /**
+     * Nest Element? field in *SideDropdownWithContent → Items*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: side_dropdown_with_content.items[].nest
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    nest: prismicT.BooleanField;
+    /**
      * Menu Items Content (Parent) field in *SideDropdownWithContent → Items*
      *
      * - **Field Type**: Rich Text
@@ -1831,17 +2012,6 @@ export interface SideDropdownWithContentSliceDefaultItem {
      *
      */
     child_menu_items: prismicT.RichTextField;
-    /**
-     * Nest Element? field in *SideDropdownWithContent → Items*
-     *
-     * - **Field Type**: Boolean
-     * - **Placeholder**: *None*
-     * - **Default Value**: false
-     * - **API ID Path**: side_dropdown_with_content.items[].nest
-     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
-     *
-     */
-    nest: prismicT.BooleanField;
 }
 /**
  * Default variation for SideDropdownWithContent Slice
