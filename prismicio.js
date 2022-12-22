@@ -14,10 +14,24 @@ export function linkResolver(doc) {
       return `/${doc.uid}`
     case 'product_pages':
       return `/products/${doc.uid}`
+    case 'industries_pages':
+      return `/industries/${doc.uid}`
     case 'lined_solutions':
       return `/products/lined-pipes-fittings/${doc.uid}`
-      case 'valves':
-        return `/products/valves/${doc.uid}`
+    case 'leak_detection_and_protection':
+      return `/products/leak-detection-protection/${doc.uid}`
+    case 'structural_support_products':
+      return `/products/structural-support/${doc.uid}`
+    case 'valves':
+      return `/products/valves/${doc.uid}`
+    case 'crane_valves':
+      return `/products/valves/crane/${doc.uid}`
+    case 'aloyco_valves':
+      return `/products/valves/aloyco/${doc.uid}`
+    case 'xomox':
+      return `/products/valves/xomox/${doc.uid}`
+    case 'pacific_valves':
+      return `/products/valves/pacific/${doc.uid}`
     default:
       return null
   }
