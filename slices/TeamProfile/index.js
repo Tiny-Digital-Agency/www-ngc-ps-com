@@ -12,8 +12,6 @@ import {
   AccordionPanel,
   AccordionIcon,
   Image,
-  Center,
-  useColorModeValue,
   Grid,
   GridItem,
 } from '@chakra-ui/react';
