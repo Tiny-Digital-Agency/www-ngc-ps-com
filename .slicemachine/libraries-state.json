@@ -462,7 +462,7 @@
                     "label": "Text Content",
                     "placeholder": "",
                     "allowTargetBlank": true,
-                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                    "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
                   }
                 }
               },
@@ -483,12 +483,12 @@
                   },
                   "alt": null,
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8"
+                  "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764"
                 },
                 "text_content": [
                   {
                     "type": "paragraph",
-                    "text": "Amet sint mollit ex sint dolor dolor sunt occaecat esse do id in.",
+                    "text": "Cillum Lorem magna anim cillum laboris aliqua proident tempor sit ea deserunt cupidatat nulla adipisicing ex. Aute sit fugiat adipisicing nulla cillum occaecat. Nisi velit consequat irure pariatur aute velit deserunt non nulla Lorem qui quis.",
                     "spans": []
                   }
                 ]
@@ -498,11 +498,11 @@
               "title": [
                 {
                   "type": "paragraph",
-                  "text": "Cillum aute duis esse.",
+                  "text": "Non officia commodo consectetur nisi amet.",
                   "spans": []
                 }
               ],
-              "card_count": true
+              "card_count": false
             },
             "slice_type": "card_section"
           }

@@ -147,7 +147,14 @@
     "BannerSectionWithSideContent": {},
     "CardSection": {
       "default": {
-        "items": {},
+        "items": {
+          "text_content": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        },
         "primary": {
           "title": {
             "config": {
