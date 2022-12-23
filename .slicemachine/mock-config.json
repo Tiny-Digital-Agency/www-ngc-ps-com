@@ -32,7 +32,6 @@
     "industries_pages": {}
   },
   "slices": {
-    "CallToAction": {},
     "Header": {
       "default": {
         "primary": {}
