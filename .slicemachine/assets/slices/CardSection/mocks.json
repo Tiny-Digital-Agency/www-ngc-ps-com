@@ -11,12 +11,12 @@
           },
           "alt": null,
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db"
+          "url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8"
         },
         "text_content": [
           {
             "type": "paragraph",
-            "text": "Non pariatur consequat magna velit amet cillum eiusmod sit dolore. Dolore proident duis incididunt sunt ut cupidatat culpa nisi excepteur.",
+            "text": "Amet sint mollit ex sint dolor dolor sunt occaecat esse do id in.",
             "spans": []
           }
         ]
@@ -25,12 +25,12 @@
     "primary": {
       "title": [
         {
-          "type": "heading1",
-          "text": "Stranger",
+          "type": "paragraph",
+          "text": "Cillum aute duis esse.",
           "spans": []
         }
       ],
-      "card_count": false
+      "card_count": true
     },
     "slice_type": "card_section"
   }

@@ -4,17 +4,17 @@
     "version": "sktwi1xtmkfgx8626",
     "items": [
       {
-        "sub_heading": [
-          {
-            "type": "paragraph",
-            "text": "Exercitation aliqua aliquip proident.",
-            "spans": []
-          }
-        ],
         "description": [
           {
             "type": "paragraph",
-            "text": "Dolore nisi aliquip sit culpa ipsum ipsum non elit cillum ullamco est officia aliqua. Do commodo laboris labore sint pariatur Lorem reprehenderit esse voluptate adipisicing minim. Mollit enim ullamco dolore consectetur.",
+            "text": "Esse eiusmod sit labore quis sunt eiusmod eiusmod non est.",
+            "spans": []
+          }
+        ],
+        "sub_heading": [
+          {
+            "type": "paragraph",
+            "text": "Dolore exercitation voluptate nostrud proident dolor. Aliqua pariatur cillum sit elit proident dolor consectetur pariatur mollit sint proident esse laborum. Nisi dolore aliquip tempor incididunt in non esse ut ut.",
             "spans": []
           }
         ]
@@ -24,11 +24,24 @@
       "heading": [
         {
           "type": "heading1",
-          "text": "Bring",
+          "text": "Average",
           "spans": []
         }
       ],
-      "color": "#413674"
+      "color": "#97dec8",
+      "image": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db"
+      },
+      "link": {
+        "link_type": "Web",
+        "url": "https://slicemachine.dev"
+      }
     },
     "slice_type": "text_editor"
   }

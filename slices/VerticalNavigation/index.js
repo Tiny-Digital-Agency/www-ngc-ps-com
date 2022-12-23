@@ -18,11 +18,7 @@ const VerticalNavigation = ({ slice }) => (
   <section>
     <Flex justifyContent={"center"} bg={"#e5e1dd"}>
       <Tabs defaultIndex={0} w={{ base: "100%", lg: "80%" }} m="auto" >
-        <Flex
-          direction={{ base: "column", lg: "row" }}
-          justifyContent={"center"}
-          w={{ base: "100%", lg: "80%" }}
-          margin={"20px auto"}>
+        <Flex display="flex" direction={{ base: "column", lg: "row" }} justifyContent={"center"} w={{ base: "100%", lg: "80%" }} margin={"auto"}>
           <Box width={{ base: "100%", lg: "45%" }} bg="#e5e1dd">
             <TabList display={"block"} >
               {

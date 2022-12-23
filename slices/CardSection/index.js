@@ -4,31 +4,34 @@ import { Flex, VStack, Box, useBreakpointValue, Grid, GridItem } from "@chakra-u
 
 
 const CardsSection = ({ slice }) => (
-  <Flex w="full" bgGradient={"linear(to-r, blackAlpha.600, transparent)"}>
+  <Flex w="full">
     <VStack
       direction="row"
       justify="center"
-      w={{ md: "90%", xl: "62%" }}
+      w={{ md: "90%", xl: "85%" }}
+      p="0 40px"
       margin={"auto"}
       px={useBreakpointValue({ base: 4, md: 8 })}
     >
       <Box
-        p="55px 0 30px"
+        p={{ base: "15vw 0 4vw", lg: "68px 0 0" }}
         _before={{
           content: `""`,
           position: "absolute",
           m: "auto",
           right: "0",
           left: "0",
-          mt: "-20px",
-          w: "84px",
-          borderTop: "2px solid #4d8b3f",
+          mt: "-8px",
+          w: "95px",
+          borderTop: "4px solid #4d8b3f",
         }}
       >
         <Box
           py="10px"
+          margin="auto"
+          w={{ base: "64%", lg: "full" }}
           color="#53575a"
-          fontSize={{ base: "3xl", lg: "35px" }}
+          fontSize={{ base: "5vw", lg: "45px" }}
           lineHeight={1.2}
           textAlign="center"
         >
@@ -37,19 +40,20 @@ const CardsSection = ({ slice }) => (
       </Box>
 
       {slice.primary.card_count ?
-        <Grid
-          pb="30px"
-          w={{ xl: "auto", base: "full" }}
-          templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)' }}
-          gap={6}
+        <Flex
+          flexWrap={{ base: "wrap", xl: "nowrap" }}
+          justifyContent={"space-between"}
+          p="30px 0 70px"
+          w={{ base: "86%", lg: "93%" }}
         >
           {
             slice?.items?.map((item, i) =>
               <>
-                <GridItem
-                  colSpan="1"
-                  h={{ base: "190px", md: "320px" }}
-                  w="100%"
+                <Flex
+                  key={slice.id}
+                  h={{ base: "38vw;", md: "320px" }}
+                  w={{ base: "47%", lg: "30%", xl: "22%" }}
+                  mb="40px"
                 >
                   <section>
                     <Box
@@ -59,12 +63,12 @@ const CardsSection = ({ slice }) => (
                       mx="auto"
                       h="100%"
                       color="#fff"
-                      fontSize={{ base: "20px", md: "32px" }}
+                      fontSize={{ base: "5vw", lg: "44px" }}
                       fontWeight="bold"
                       textAlign="center"
                     >
                       <Box
-                        m={{ base: "0 20px", sm: "0 50px" }}
+                        m={{ base: "0 20px", sm: "0 33px" }}
                         borderBottom={"4px solid transparent"}
                         _hover={{
                           borderBottom: "4px solid #ef483e",
@@ -73,48 +77,51 @@ const CardsSection = ({ slice }) => (
                       </Box>
                     </Box>
                   </section>
-                </GridItem>
+                </Flex>
                 <style jsx>{`
-                  section{
-                    background-image: url("${item.background_image.url}");
-                    background-size: cover;
-                    background-position: center;
-                    height: inherit;
-                    width: 100%;
-                  }
-                `}</style>
+                section{
+                  background-image: url("${item.background_image.url}");
+                  background-size: cover;
+                  background-position: center;
+                  height: inherit;
+                  width: 100%;
+                }
+              `}</style>
               </>
             )
           }
-        </Grid>
-        : <Grid
-          pb="30px"
-          w={{ xl: "auto", base: "full" }}
-          templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)', xl: 'repeat(3, 1fr)' }}
-          gap={6}
+        </Flex>
+        :
+        <Flex
+          flexWrap={{ base: "wrap" }}
+          justifyContent={{ base: "space-evenly", sm: "space-between" }}
+
+          p="30px 0 70px"
+          w={{ base: "full", sm: "86%", lg: "full" }}
         >
           {
             slice?.items?.map((item, i) =>
               <>
-                <GridItem
-                  colSpan="1"
-                  h={{ base: "190px", md: "320px" }}
-                  w="100%"
+                <Flex
+                  key={slice.id}
+                  h={{ base: "30vw", sm: "26vw", md: "240px" }}
+                  w={{ base: "45%", sm: "30%", xl: "230px" }}
+                  mb={{ base: "15px", lg: "20px" }}
                 >
                   <section>
                     <Box
                       display="flex"
                       alignItems="center"
-                      justifyContent="center"
+                      justifyContent="space-evenly"
                       mx="auto"
                       h="100%"
                       color="#fff"
-                      fontSize={{ base: "20px", md: "32px" }}
+                      fontSize={{ base: "4.5vw", sm: "2.5vw", lg: "30px" }}
                       fontWeight="bold"
                       textAlign="center"
                     >
                       <Box
-                        m={{ base: "0 20px", sm: "0 50px" }}
+                        m={{ base: "0 20px", sm: "0 33px" }}
                         borderBottom={"4px solid transparent"}
                         _hover={{
                           borderBottom: "4px solid #ef483e",
@@ -123,22 +130,22 @@ const CardsSection = ({ slice }) => (
                       </Box>
                     </Box>
                   </section>
-                </GridItem>
+                </Flex>
                 <style jsx>{`
-                 section{
-                   background-image: url("${item.background_image.url}");
-                   background-size: cover;
-                   background-position: center;
-                   width: 100%;
-                   height: inherit;
-                 }
-               `}</style>
+                section{
+                  background-image: url("${item.background_image.url}");
+                  background-size: cover;
+                  background-position: center;
+                  height: inherit;
+                  width: 100%;
+                }
+              `}</style>
               </>
             )
           }
-        </Grid>
+        </Flex>
       }
     </VStack>
-  </Flex>
+  </Flex >
 )
 export default CardsSection

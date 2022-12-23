@@ -1,0 +1,37 @@
+[
+  {
+    "variation": "default",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {}
+    ],
+    "primary": {
+      "heading": [
+        {
+          "type": "paragraph",
+          "text": "Enim excepteur labore ullamco est id est tempor elit consequat culpa velit aliqua adipisicing deserunt ex.",
+          "spans": []
+        }
+      ],
+      "color": "#7c1938",
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "Eu ex sunt non cillum exercitation. Commodo eu sint sunt aute aute ipsum duis esse aute.",
+          "spans": []
+        }
+      ],
+      "image": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9"
+      },
+      "copyright": "slabs"
+    },
+    "slice_type": "uptime_content"
+  }
+]

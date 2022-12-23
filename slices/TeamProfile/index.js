@@ -26,6 +26,7 @@ const TeamProfile = ({ slice }) => (
   <section>
     <Flex flexDirection="column">
       <Flex
+      
         w='100%'
         h='400px'
         bg='blue'
@@ -78,6 +79,7 @@ const TeamProfile = ({ slice }) => (
             <AccordionIcon />
           </AccordionButton>
           <AccordionPanel pb={4}>
+            <Flex justifyContent={"center"}>
             <Flex justifyContent="center">
               <Grid templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)", xl: "repeat(3, 1fr)" }} justifyItems="center" py={6} margin="0">
                 {
@@ -94,9 +96,7 @@ const TeamProfile = ({ slice }) => (
                       m={5} p={5}
                       overflow={'hidden'}
                       bg="white"
-                      border={'1px'}
-                      borderColor="black"
-                      boxShadow={useColorModeValue('6px 6px 0 black', '6px 6px 0 cyan')}>
+                      >
                       <Box h={'300px'}>
                         <Box className='image-profile'
                           borderRadius="50%"

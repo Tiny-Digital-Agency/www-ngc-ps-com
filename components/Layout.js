@@ -1,6 +1,7 @@
 import { Navigation } from "./Navigation";
 import { Footer } from "./Footer";
-const Layout = ({ navigation, children, settings, }) => {
+import Topnav from "./Topnav";
+const Layout = ({ navigation, children, settings, footer }) => {
     return (
         <div className="content">
 
@@ -10,7 +11,7 @@ const Layout = ({ navigation, children, settings, }) => {
             />
             {children}
             <Footer
-                navigation={navigation}
+                footer={footer}
                 settings={settings}
             />
         </div>

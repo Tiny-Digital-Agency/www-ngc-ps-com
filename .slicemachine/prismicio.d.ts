@@ -6,6 +6,86 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = {
     [KeyType in keyof T]: T[KeyType];
 };
+/** Content for Aloyco Valves documents */
+interface AloycoValvesDocumentData {
+    /**
+     * title field in *Aloyco Valves*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: aloyco_valves.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+    /**
+     * Slice Zone field in *Aloyco Valves*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: aloyco_valves.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<AloycoValvesDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *Aloyco Valves → Slice Zone*
+ *
+ */
+type AloycoValvesDocumentDataSlicesSlice = ProductDetailSlice;
+/**
+ * Aloyco Valves document from Prismic
+ *
+ * - **API ID**: `aloyco_valves`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type AloycoValvesDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<AloycoValvesDocumentData>, "aloyco_valves", Lang>;
+/** Content for Crane Valves documents */
+interface CraneValvesDocumentData {
+    /**
+     * title field in *Crane Valves*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: crane_valves.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+    /**
+     * Slice Zone field in *Crane Valves*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: crane_valves.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<CraneValvesDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *Crane Valves → Slice Zone*
+ *
+ */
+type CraneValvesDocumentDataSlicesSlice = ProductDetailSlice;
+/**
+ * Crane Valves document from Prismic
+ *
+ * - **API ID**: `crane_valves`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type CraneValvesDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<CraneValvesDocumentData>, "crane_valves", Lang>;
 /** Content for Footer documents */
 interface FooterDocumentData {
     /**
@@ -75,6 +155,126 @@ type HomepageDocumentDataSlicesSlice = TopNavSlice | HeaderSlice | HeroSectionSl
  * @typeParam Lang - Language API ID of the document.
  */
 export type HomepageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<HomepageDocumentData>, "homepage", Lang>;
+/** Content for Industries Pages documents */
+interface IndustriesPagesDocumentData {
+    /**
+     * title field in *Industries Pages*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: industries_pages.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+    /**
+     * Slice Zone field in *Industries Pages*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: industries_pages.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<IndustriesPagesDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *Industries Pages → Slice Zone*
+ *
+ */
+type IndustriesPagesDocumentDataSlicesSlice = SideDropdownWithContentSlice;
+/**
+ * Industries Pages document from Prismic
+ *
+ * - **API ID**: `industries_pages`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type IndustriesPagesDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<IndustriesPagesDocumentData>, "industries_pages", Lang>;
+/** Content for Leak Detection & Protection Pages documents */
+interface LeakDetectionAndProtectionDocumentData {
+    /**
+     * title field in *Leak Detection & Protection Pages*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: leak_detection_and_protection.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+    /**
+     * Slice Zone field in *Leak Detection & Protection Pages*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: leak_detection_and_protection.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<LeakDetectionAndProtectionDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *Leak Detection & Protection Pages → Slice Zone*
+ *
+ */
+type LeakDetectionAndProtectionDocumentDataSlicesSlice = BannerSectionWithMiddleContentSlice | BannerSectionWithSideContentSlice | ProductSliderSlice | ProductDetailSlice | ProductsListSlice | VerticalNavigationSlice | GridSectionsSlice;
+/**
+ * Leak Detection & Protection Pages document from Prismic
+ *
+ * - **API ID**: `leak_detection_and_protection`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type LeakDetectionAndProtectionDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<LeakDetectionAndProtectionDocumentData>, "leak_detection_and_protection", Lang>;
+/** Content for Lined Solutions/Pipes Pages documents */
+interface LinedSolutionsDocumentData {
+    /**
+     * Title field in *Lined Solutions/Pipes Pages*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: lined_solutions.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+    /**
+     * Slice Zone field in *Lined Solutions/Pipes Pages*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: lined_solutions.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<LinedSolutionsDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *Lined Solutions/Pipes Pages → Slice Zone*
+ *
+ */
+type LinedSolutionsDocumentDataSlicesSlice = BannerSectionWithMiddleContentSlice | BannerSectionWithSideContentSlice | CardSectionSlice | GridSectionsSlice | HeroSectionSlice | ProductDetailSlice | ProductSliderSlice | ProductsListSlice | SideDropdownWithContentSlice;
+/**
+ * Lined Solutions/Pipes Pages document from Prismic
+ *
+ * - **API ID**: `lined_solutions`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type LinedSolutionsDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<LinedSolutionsDocumentData>, "lined_solutions", Lang>;
 /** Content for Navigation documents */
 interface NavigationDocumentData {
     /**
@@ -115,6 +315,46 @@ type NavigationDocumentDataSlicesSlice = NavigationSlice | LogoSlice | TopNavSli
  * @typeParam Lang - Language API ID of the document.
  */
 export type NavigationDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<NavigationDocumentData>, "navigation", Lang>;
+/** Content for Pacific Valves documents */
+interface PacificValvesDocumentData {
+    /**
+     * title field in *Pacific Valves*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: pacific_valves.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+    /**
+     * Slice Zone field in *Pacific Valves*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: pacific_valves.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<PacificValvesDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *Pacific Valves → Slice Zone*
+ *
+ */
+type PacificValvesDocumentDataSlicesSlice = ProductDetailSlice;
+/**
+ * Pacific Valves document from Prismic
+ *
+ * - **API ID**: `pacific_valves`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type PacificValvesDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<PacificValvesDocumentData>, "pacific_valves", Lang>;
 /** Content for page documents */
 interface PageDocumentData {
     /**
@@ -144,7 +384,7 @@ interface PageDocumentData {
  * Slice for *page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = CallToActionSlice | IndustriesBannerSlice | IndustriesContentSlice | VerticalNavigationSlice | BannerSectionWithMiddleContentSlice | BannerSectionWithSideContentSlice | CardSectionSlice | GridSectionsSlice | HeroSectionSlice | SideDropdownWithContentSlice | ContactSlice | CertificationSlice | TeamProfileSlice | TextEditorSlice | NewsSlice | ProductsListSlice | ProductDetailSlice | ProductSliderSlice;
+type PageDocumentDataSlicesSlice = IndustriesBannerSlice | IndustriesContentSlice | VerticalNavigationSlice | BannerSectionWithMiddleContentSlice | BannerSectionWithSideContentSlice | CardSectionSlice | GridSectionsSlice | HeroSectionSlice | SideDropdownWithContentSlice | ContactSlice | ProductsListSlice | ProductDetailSlice | ProductSliderSlice | UptimeContentSlice;
 /**
  * page document from Prismic
  *
@@ -155,6 +395,46 @@ type PageDocumentDataSlicesSlice = CallToActionSlice | IndustriesBannerSlice | I
  * @typeParam Lang - Language API ID of the document.
  */
 export type PageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
+/** Content for Product Pages documents */
+interface ProductPagesDocumentData {
+    /**
+     * Title field in *Product Pages*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: product_pages.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+    /**
+     * Slice Zone field in *Product Pages*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: product_pages.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<ProductPagesDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *Product Pages → Slice Zone*
+ *
+ */
+type ProductPagesDocumentDataSlicesSlice = BannerSectionWithMiddleContentSlice | BannerSectionWithSideContentSlice | VerticalNavigationSlice | TeamProfileSlice | TeamDropdownSlice | SideDropdownWithContentSlice | ProductsListSlice | ProductSliderSlice | ProductDetailSlice | NewsSlice | HeroSectionSlice | GridSectionsSlice | CertificationSlice | CardSectionSlice | CallToActionSlice;
+/**
+ * Product Pages document from Prismic
+ *
+ * - **API ID**: `product_pages`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type ProductPagesDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<ProductPagesDocumentData>, "product_pages", Lang>;
 /** Content for settings documents */
 interface SettingsDocumentData {
     /**
@@ -195,7 +475,127 @@ type SettingsDocumentDataSlicesSlice = NavigationSlice;
  * @typeParam Lang - Language API ID of the document.
  */
 export type SettingsDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<SettingsDocumentData>, "settings", Lang>;
-export type AllDocumentTypes = FooterDocument | HomepageDocument | NavigationDocument | PageDocument | SettingsDocument;
+/** Content for Structural Support Products documents */
+interface StructuralSupportProductsDocumentData {
+    /**
+     * title field in *Structural Support Products*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: structural_support_products.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+    /**
+     * Slice Zone field in *Structural Support Products*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: structural_support_products.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<StructuralSupportProductsDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *Structural Support Products → Slice Zone*
+ *
+ */
+type StructuralSupportProductsDocumentDataSlicesSlice = SideDropdownWithContentSlice | ProductsListSlice | ProductSliderSlice | ProductDetailSlice | HeroSectionSlice | GridSectionsSlice | CardSectionSlice | BannerSectionWithMiddleContentSlice | BannerSectionWithSideContentSlice;
+/**
+ * Structural Support Products document from Prismic
+ *
+ * - **API ID**: `structural_support_products`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type StructuralSupportProductsDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<StructuralSupportProductsDocumentData>, "structural_support_products", Lang>;
+/** Content for Valves Pages documents */
+interface ValvesDocumentData {
+    /**
+     * title field in *Valves Pages*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: valves.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+    /**
+     * Slice Zone field in *Valves Pages*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: valves.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<ValvesDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *Valves Pages → Slice Zone*
+ *
+ */
+type ValvesDocumentDataSlicesSlice = BannerSectionWithMiddleContentSlice | BannerSectionWithSideContentSlice | CardSectionSlice | GridSectionsSlice | HeroSectionSlice | ProductsListSlice;
+/**
+ * Valves Pages document from Prismic
+ *
+ * - **API ID**: `valves`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type ValvesDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<ValvesDocumentData>, "valves", Lang>;
+/** Content for Xomox Valves documents */
+interface XomoxDocumentData {
+    /**
+     * title field in *Xomox Valves*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: xomox.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+    /**
+     * Slice Zone field in *Xomox Valves*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: xomox.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<XomoxDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *Xomox Valves → Slice Zone*
+ *
+ */
+type XomoxDocumentDataSlicesSlice = ProductDetailSlice;
+/**
+ * Xomox Valves document from Prismic
+ *
+ * - **API ID**: `xomox`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type XomoxDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<XomoxDocumentData>, "xomox", Lang>;
+export type AllDocumentTypes = AloycoValvesDocument | CraneValvesDocument | FooterDocument | HomepageDocument | IndustriesPagesDocument | LeakDetectionAndProtectionDocument | LinedSolutionsDocument | NavigationDocument | PacificValvesDocument | PageDocument | ProductPagesDocument | SettingsDocument | StructuralSupportProductsDocument | ValvesDocument | XomoxDocument;
 /**
  * Primary content in About → Primary
  *
@@ -476,15 +876,15 @@ interface CardSectionSliceDefaultPrimary {
     /**
      * Title field in *CardSection → Primary*
      *
-     * - **Field Type**: Title
+     * - **Field Type**: Rich Text
      * - **Placeholder**: This is where it all begins...
      * - **API ID Path**: card_section.primary.title
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
-    title: prismicT.TitleField;
+    title: prismicT.RichTextField;
     /**
-     * 2 Card Count? field in *CardSection → Primary*
+     * 4 Card Count? field in *CardSection → Primary*
      *
      * - **Field Type**: Boolean
      * - **Placeholder**: *None*
@@ -882,36 +1282,6 @@ interface HeroSectionSliceDefaultPrimary {
      *
      */
     heading: prismicT.RichTextField;
-    /**
-     * Button Title field in *HeroSection → Primary*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: hero_section.primary.button_title
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    button_title: prismicT.RichTextField;
-    /**
-     * Button Content field in *HeroSection → Primary*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: hero_section.primary.button_content
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    button_content: prismicT.RichTextField;
-    /**
-     * Button Link field in *HeroSection → Primary*
-     *
-     * - **Field Type**: Link
-     * - **Placeholder**: *None*
-     * - **API ID Path**: hero_section.primary.button_link
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
-     *
-     */
-    button_link: prismicT.LinkField;
 }
 /**
  * Item in HeroSection → Items
@@ -1391,6 +1761,27 @@ interface ProductDetailSliceDefaultPrimary {
  */
 export interface ProductDetailSliceDefaultItem {
     /**
+     * Table Category field in *ProductDetail → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: product_detail.items[].table_category
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    table_category: prismicT.RichTextField;
+    /**
+     * Add Table Category field in *ProductDetail → Items*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: product_detail.items[].add_table_category
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    add_table_category: prismicT.BooleanField;
+    /**
      * Table Class field in *ProductDetail → Items*
      *
      * - **Field Type**: Rich Text
@@ -1400,26 +1791,6 @@ export interface ProductDetailSliceDefaultItem {
      *
      */
     table_class: prismicT.RichTextField;
-    /**
-     * Table Size Range field in *ProductDetail → Items*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: product_detail.items[].table_size_range
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    table_size_range: prismicT.RichTextField;
-    /**
-     * Table Pressure Temperature Rating field in *ProductDetail → Items*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: product_detail.items[].table_pressure_temperature_rating
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    table_pressure_temperature_rating: prismicT.RichTextField;
 }
 /**
  * Default variation for ProductDetail Slice
@@ -1445,32 +1816,6 @@ type ProductDetailSliceVariation = ProductDetailSliceDefault;
  */
 export type ProductDetailSlice = prismicT.SharedSlice<"product_detail", ProductDetailSliceVariation>;
 /**
- * Primary content in ProductSlider → Primary
- *
- */
-interface ProductSliderSliceDefaultPrimary {
-    /**
-     * Title field in *ProductSlider → Primary*
-     *
-     * - **Field Type**: Title
-     * - **Placeholder**: This is where it all begins...
-     * - **API ID Path**: product_slider.primary.title
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    title: prismicT.TitleField;
-    /**
-     * Description field in *ProductSlider → Primary*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: A nice description of your feature
-     * - **API ID Path**: product_slider.primary.description
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    description: prismicT.RichTextField;
-}
-/**
  * Item in ProductSlider → Items
  *
  */
@@ -1494,7 +1839,7 @@ export interface ProductSliderSliceDefaultItem {
  * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
  *
  */
-export type ProductSliderSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<ProductSliderSliceDefaultPrimary>, Simplify<ProductSliderSliceDefaultItem>>;
+export type ProductSliderSliceDefault = prismicT.SharedSliceVariation<"default", Record<string, never>, Simplify<ProductSliderSliceDefaultItem>>;
 /**
  * Slice variation for *ProductSlider*
  *
@@ -1637,6 +1982,17 @@ export interface SideDropdownWithContentSliceDefaultItem {
      */
     parent_menu_items: prismicT.RichTextField;
     /**
+     * Nest Element? field in *SideDropdownWithContent → Items*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: side_dropdown_with_content.items[].nest
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    nest: prismicT.BooleanField;
+    /**
      * Menu Items Content (Parent) field in *SideDropdownWithContent → Items*
      *
      * - **Field Type**: Rich Text
@@ -1656,17 +2012,6 @@ export interface SideDropdownWithContentSliceDefaultItem {
      *
      */
     child_menu_items: prismicT.RichTextField;
-    /**
-     * Nest Element? field in *SideDropdownWithContent → Items*
-     *
-     * - **Field Type**: Boolean
-     * - **Placeholder**: *None*
-     * - **Default Value**: false
-     * - **API ID Path**: side_dropdown_with_content.items[].nest
-     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
-     *
-     */
-    nest: prismicT.BooleanField;
 }
 /**
  * Default variation for SideDropdownWithContent Slice
@@ -1900,22 +2245,32 @@ interface TextEditorSliceDefaultPrimary {
      *
      */
     color: prismicT.ColorField;
+    /**
+     * Image field in *TextEditor → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: text_editor.primary.image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<never>;
+    /**
+     * Link field in *TextEditor → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: text_editor.primary.link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    link: prismicT.LinkField;
 }
 /**
  * Item in TextEditor → Items
  *
  */
 export interface TextEditorSliceDefaultItem {
-    /**
-     * Sub Heading field in *TextEditor → Items*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: text_editor.items[].sub_heading
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    sub_heading: prismicT.RichTextField;
     /**
      * Description field in *TextEditor → Items*
      *
@@ -1926,6 +2281,16 @@ export interface TextEditorSliceDefaultItem {
      *
      */
     description: prismicT.RichTextField;
+    /**
+     * Sub Heading field in *TextEditor → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: text_editor.items[].sub_heading
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    sub_heading: prismicT.RichTextField;
 }
 /**
  * Default variation for TextEditor Slice
@@ -2036,6 +2401,134 @@ type TopNavSliceVariation = TopNavSliceDefault;
  */
 export type TopNavSlice = prismicT.SharedSlice<"top_nav", TopNavSliceVariation>;
 /**
+ * Primary content in UptimeContent → Primary
+ *
+ */
+interface UptimeContentSliceDefaultPrimary {
+    /**
+     * Heading field in *UptimeContent → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: uptime_content.primary.heading
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    heading: prismicT.RichTextField;
+    /**
+     * color field in *UptimeContent → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: uptime_content.primary.color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    color: prismicT.ColorField;
+    /**
+     * description field in *UptimeContent → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: uptime_content.primary.description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+    /**
+     * image field in *UptimeContent → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: uptime_content.primary.image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<never>;
+    /**
+     * CopyRight field in *UptimeContent → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: uptime_content.primary.copyright
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    copyright: prismicT.KeyTextField;
+}
+/**
+ * Default variation for UptimeContent Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `UptimeContent`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type UptimeContentSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<UptimeContentSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *UptimeContent*
+ *
+ */
+type UptimeContentSliceVariation = UptimeContentSliceDefault;
+/**
+ * UptimeContent Shared Slice
+ *
+ * - **API ID**: `uptime_content`
+ * - **Description**: `UptimeContent`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type UptimeContentSlice = prismicT.SharedSlice<"uptime_content", UptimeContentSliceVariation>;
+/**
+ * Primary content in UptimeHeaderAndFooter → Primary
+ *
+ */
+interface UptimeSliceDefaultPrimary {
+    /**
+     * Title field in *UptimeHeaderAndFooter → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: This is where it all begins...
+     * - **API ID Path**: uptime.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * Sub Heading field in *UptimeHeaderAndFooter → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: uptime.primary.sub_heading
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    sub_heading: prismicT.RichTextField;
+}
+/**
+ * Default variation for UptimeHeaderAndFooter Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Uptime`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type UptimeSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<UptimeSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *UptimeHeaderAndFooter*
+ *
+ */
+type UptimeSliceVariation = UptimeSliceDefault;
+/**
+ * UptimeHeaderAndFooter Shared Slice
+ *
+ * - **API ID**: `uptime`
+ * - **Description**: `Uptime`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type UptimeSlice = prismicT.SharedSlice<"uptime", UptimeSliceVariation>;
+/**
  * Primary content in VerticalNavigation → Primary
  *
  */
@@ -2105,6 +2598,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { FooterDocumentData, FooterDocumentDataSlicesSlice, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SettingsDocumentData, SettingsDocumentDataSlicesSlice, SettingsDocument, AllDocumentTypes, AboutSliceDefaultPrimary, AboutSliceDefaultItem, AboutSliceDefault, AboutSliceVariation, AboutSlice, BannerSectionWithMiddleContentSliceDefaultPrimary, BannerSectionWithMiddleContentSliceDefault, BannerSectionWithMiddleContentSliceVariation, BannerSectionWithMiddleContentSlice, BannerSectionWithSideContentSliceDefaultPrimary, BannerSectionWithSideContentSliceDefault, BannerSectionWithSideContentSliceVariation, BannerSectionWithSideContentSlice, CallToActionSliceDefaultPrimary, CallToActionSliceDefault, CallToActionSliceVariation, CallToActionSlice, CardSectionSliceDefaultPrimary, CardSectionSliceDefaultItem, CardSectionSliceDefault, CardSectionSliceVariation, CardSectionSlice, CertificationSliceDefaultItem, CertificationSliceDefault, CertificationSliceVariation, CertificationSlice, ContactSliceDefaultPrimary, ContactSliceDefault, ContactSliceVariation, ContactSlice, FooterSliceDefaultPrimary, FooterSliceDefaultItem, FooterSliceDefault, FooterSliceVariation, FooterSlice, GridSectionsSliceDefaultPrimary, GridSectionsSliceDefaultItem, GridSectionsSliceDefault, GridSectionsSliceVariation, GridSectionsSlice, HeaderSliceDefaultPrimary, HeaderSliceDefaultItem, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, HeroSectionSliceDefaultPrimary, HeroSectionSliceDefaultItem, HeroSectionSliceDefault, HeroSectionSliceVariation, HeroSectionSlice, IndustriesBannerSliceDefaultPrimary, IndustriesBannerSliceDefault, IndustriesBannerSliceVariation, IndustriesBannerSlice, IndustriesContentSliceDefaultItem, IndustriesContentSliceDefault, IndustriesContentSliceVariation, IndustriesContentSlice, LogoSliceDefaultPrimary, LogoSliceDefault, LogoSliceVariation, LogoSlice, NavigationSliceDefaultPrimary, NavigationSliceDefaultItem, NavigationSliceDefault, NavigationSliceVariation, NavigationSlice, NewsSliceDefaultPrimary, NewsSliceDefaultItem, NewsSliceDefault, NewsSliceVariation, NewsSlice, ProductDetailSliceDefaultPrimary, ProductDetailSliceDefaultItem, ProductDetailSliceDefault, ProductDetailSliceVariation, ProductDetailSlice, ProductSliderSliceDefaultPrimary, ProductSliderSliceDefaultItem, ProductSliderSliceDefault, ProductSliderSliceVariation, ProductSliderSlice, ProductsListSliceDefaultPrimary, ProductsListSliceDefaultItem, ProductsListSliceDefault, ProductsListSliceVariation, ProductsListSlice, SideDropdownWithContentSliceDefaultPrimary, SideDropdownWithContentSliceDefaultItem, SideDropdownWithContentSliceDefault, SideDropdownWithContentSliceVariation, SideDropdownWithContentSlice, TeamDropdownSliceDefaultItem, TeamDropdownSliceDefault, TeamDropdownSliceVariation, TeamDropdownSlice, TeamProfileSliceDefaultPrimary, TeamProfileSliceDefaultItem, TeamProfileSliceDefault, TeamProfileSliceVariation, TeamProfileSlice, TextEditorSliceDefaultPrimary, TextEditorSliceDefaultItem, TextEditorSliceDefault, TextEditorSliceVariation, TextEditorSlice, TopNavSliceDefaultPrimary, TopNavSliceDefaultItem, TopNavSliceDefault, TopNavSliceVariation, TopNavSlice, VerticalNavigationSliceDefaultPrimary, VerticalNavigationSliceDefaultItem, VerticalNavigationSliceDefault, VerticalNavigationSliceVariation, VerticalNavigationSlice };
+        export type { FooterDocumentData, FooterDocumentDataSlicesSlice, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, LeakDetectionAndProtectionDocumentData, LeakDetectionAndProtectionDocumentDataSlicesSlice, LeakDetectionAndProtectionDocument, LinedSolutionsDocumentData, LinedSolutionsDocumentDataSlicesSlice, LinedSolutionsDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, ProductPagesDocumentData, ProductPagesDocumentDataSlicesSlice, ProductPagesDocument, SettingsDocumentData, SettingsDocumentDataSlicesSlice, SettingsDocument, StructuralSupportProductsDocumentData, StructuralSupportProductsDocumentDataSlicesSlice, StructuralSupportProductsDocument, ValvesDocumentData, ValvesDocumentDataSlicesSlice, ValvesDocument, AllDocumentTypes, AboutSliceDefaultPrimary, AboutSliceDefaultItem, AboutSliceDefault, AboutSliceVariation, AboutSlice, BannerSectionWithMiddleContentSliceDefaultPrimary, BannerSectionWithMiddleContentSliceDefault, BannerSectionWithMiddleContentSliceVariation, BannerSectionWithMiddleContentSlice, BannerSectionWithSideContentSliceDefaultPrimary, BannerSectionWithSideContentSliceDefault, BannerSectionWithSideContentSliceVariation, BannerSectionWithSideContentSlice, CallToActionSliceDefaultPrimary, CallToActionSliceDefault, CallToActionSliceVariation, CallToActionSlice, CardSectionSliceDefaultPrimary, CardSectionSliceDefaultItem, CardSectionSliceDefault, CardSectionSliceVariation, CardSectionSlice, CertificationSliceDefaultItem, CertificationSliceDefault, CertificationSliceVariation, CertificationSlice, ContactSliceDefaultPrimary, ContactSliceDefault, ContactSliceVariation, ContactSlice, FooterSliceDefaultPrimary, FooterSliceDefaultItem, FooterSliceDefault, FooterSliceVariation, FooterSlice, GridSectionsSliceDefaultPrimary, GridSectionsSliceDefaultItem, GridSectionsSliceDefault, GridSectionsSliceVariation, GridSectionsSlice, HeaderSliceDefaultPrimary, HeaderSliceDefaultItem, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, HeroSectionSliceDefaultPrimary, HeroSectionSliceDefaultItem, HeroSectionSliceDefault, HeroSectionSliceVariation, HeroSectionSlice, IndustriesBannerSliceDefaultPrimary, IndustriesBannerSliceDefault, IndustriesBannerSliceVariation, IndustriesBannerSlice, IndustriesContentSliceDefaultItem, IndustriesContentSliceDefault, IndustriesContentSliceVariation, IndustriesContentSlice, LogoSliceDefaultPrimary, LogoSliceDefault, LogoSliceVariation, LogoSlice, NavigationSliceDefaultPrimary, NavigationSliceDefaultItem, NavigationSliceDefault, NavigationSliceVariation, NavigationSlice, NewsSliceDefaultPrimary, NewsSliceDefaultItem, NewsSliceDefault, NewsSliceVariation, NewsSlice, ProductDetailSliceDefaultPrimary, ProductDetailSliceDefaultItem, ProductDetailSliceDefault, ProductDetailSliceVariation, ProductDetailSlice, ProductSliderSliceDefaultItem, ProductSliderSliceDefault, ProductSliderSliceVariation, ProductSliderSlice, ProductsListSliceDefaultPrimary, ProductsListSliceDefaultItem, ProductsListSliceDefault, ProductsListSliceVariation, ProductsListSlice, SideDropdownWithContentSliceDefaultPrimary, SideDropdownWithContentSliceDefaultItem, SideDropdownWithContentSliceDefault, SideDropdownWithContentSliceVariation, SideDropdownWithContentSlice, TeamDropdownSliceDefaultItem, TeamDropdownSliceDefault, TeamDropdownSliceVariation, TeamDropdownSlice, TeamProfileSliceDefaultPrimary, TeamProfileSliceDefaultItem, TeamProfileSliceDefault, TeamProfileSliceVariation, TeamProfileSlice, TextEditorSliceDefaultPrimary, TextEditorSliceDefaultItem, TextEditorSliceDefault, TextEditorSliceVariation, TextEditorSlice, TopNavSliceDefaultPrimary, TopNavSliceDefaultItem, TopNavSliceDefault, TopNavSliceVariation, TopNavSlice, UptimeContentSliceDefaultPrimary, UptimeContentSliceDefault, UptimeContentSliceVariation, UptimeContentSlice, UptimeSliceDefaultPrimary, UptimeSliceDefault, UptimeSliceVariation, UptimeSlice, VerticalNavigationSliceDefaultPrimary, VerticalNavigationSliceDefaultItem, VerticalNavigationSliceDefault, VerticalNavigationSliceVariation, VerticalNavigationSlice };
     }
 }

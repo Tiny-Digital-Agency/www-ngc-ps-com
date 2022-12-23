@@ -2,9 +2,17 @@ import {
   Stack,
   Flex,
   Grid,
-  Box
+  Box,
+  Table,
+  Thead,
+  Tbody,
+  Tr,
+  Th,
+  Td,
+  TableContainer,
 } from "@chakra-ui/react";
 import { PrismicRichText } from "@prismicio/react";
+import React from 'react'
 
 const ProductDetail = ({ slice }) => (
   <>
@@ -62,6 +70,7 @@ const ProductDetail = ({ slice }) => (
       rowGap={"20px"}
     >
       <PrismicRichText field={slice.primary.product_name} />
+
       <PrismicRichText field={slice.primary.product_type} />
     </Flex>
 
@@ -71,47 +80,45 @@ const ProductDetail = ({ slice }) => (
       w={{ base: "95%", md: "60%" }}
       fontSize={{ base: "14px", md: "16px" }}
     >
-      <Flex
-        flexDirection="row"
-        justifyContent="flex-start"
-        p="16px"
-        textColor="#fff"
-        bg="#0070c0"
-      >
-        <Box w={{ base: "60px", md: "110px" }}>Class</Box>
-        <Box w="27%">Size Range</Box>
-        <Box>Pressure Temperature Rating</Box>
-      </Flex>
-      <Flex
-        flexDirection="column"
-        justifyContent="space-between"
-        color="#53575a"
-      >
-        {
-          slice?.items?.map((item, i) =>
-            <>
-              <Flex
-                alignItems="center"
-                flexDirection="row"
-                justifyContent="flex-start"
-                p="18px"
-                className="child"
-                columnGap={{ base: "10px", md: "0" }}
-              >
-                <Box w={{ base: "60px", md: "110px" }} h="fit-content">
-                  <PrismicRichText field={item.table_class} />
-                </Box>
-                <Box w="27%" h="fit-content">
-                  <PrismicRichText field={item.table_size_range} />
-                </Box>
-                <Box h="fit-content">
-                  <PrismicRichText field={item.table_pressure_temperature_rating} />
-                </Box>
-              </Flex>
-            </>
-          )
-        }
-      </Flex>
+      <TableContainer>
+        <Table variant='simple'>
+          <Thead>
+            <Tr
+              p="16px"
+              bg="#0070c0">
+              {slice?.items?.map((item, i) =>
+                <>
+                  {item.add_table_category ?
+                    <Th
+                      key={i}
+                      color="#fff"
+                      fontWight="300"
+                    >
+                      <PrismicRichText field={item.table_category} />
+                    </Th>
+                    : ''}
+                </>
+              )}
+            </Tr>
+          </Thead>
+          <Tbody>
+            <Tr fontSize="16px">
+              {slice?.items?.map((item, i) =>
+                <>
+                  {item.add_table_category ? '' :
+                    <Td
+                      key={i}
+                      p="0"
+                      className="child">
+                      <PrismicRichText field={item.table_class} />
+                    </Td>
+                  }
+                </>
+              )}
+            </Tr>
+          </Tbody>
+        </Table>
+      </TableContainer>
     </Flex>
 
     <Flex

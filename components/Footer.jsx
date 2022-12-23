@@ -18,7 +18,7 @@ import {
     Text
 } from '@chakra-ui/react';
 
-export function Footer({ navigation, settings }) {
+export function Footer({ footer, settings }) {
     return (
         <Box>
             <Box bg={'#000'} px={6}>
@@ -43,7 +43,7 @@ export function Footer({ navigation, settings }) {
                     <Flex pt="2px" pb="10px" bg={'#000'} alignItems={'center'} justifyContent={'center'}>
                         <Box>
                             <Box>
-                                {navigation?.data?.slices.map((slice) => {
+                                {footer?.data?.slices.map((slice) => {
                                     return (
                                         <Flex key={slice.id} justifyContent="center">
                                             <Box
@@ -64,7 +64,7 @@ export function Footer({ navigation, settings }) {
                                     )
                                 })}
                             </Box>
-                            {navigation?.data?.slices.map((slice) => {
+                            {footer?.data?.slices.map((slice) => {
                                 return (
                                     <Flex key={slice.id} justifyContent="center">
                                         <Breadcrumb
@@ -74,13 +74,13 @@ export function Footer({ navigation, settings }) {
                                         >
                                             {slice.items.length > 0 && (
                                                 <BreadcrumbItem
-                                                    flexDirection={{ base: "column", sm: "row" }}
+                                                    flexDirection={{ base: "column", xl: "row" }}
                                                 >
                                                     {slice.items.map((item, i) => {
                                                         return (
                                                             <PrismicLink field={item.contactlink} key={i}>
                                                                 <Box className="item">
-                                                                    {i != 0 && <Text as="span" color="#ef483e" px="2" display={{ base: "none", sm: "unset" }}>/</Text>}
+                                                                    {i != 0 && <Text as="span" color="#ef483e" px="2" display={{ base: "none", xl: "unset" }}>/</Text>}
                                                                     <PrismicText field={item.contact_details} />
                                                                 </Box>
                                                             </PrismicLink>
@@ -104,7 +104,7 @@ export function Footer({ navigation, settings }) {
                         fontWeight={"500"}
                     >
                         {/* Renders top-level links. */}
-                        {navigation?.data.slices.map((slice, i) => {
+                        {footer?.data.slices.map((slice, i) => {
                             return (
                                 <Flex key={slice.id}
                                     flexDirection="column"

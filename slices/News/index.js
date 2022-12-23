@@ -1,5 +1,5 @@
 import React from 'react'
-import { PrismicRichText } from '@prismicio/react'
+import { PrismicRichText, PrismicLink } from '@prismicio/react'
 
 /**
  * @typedef {import("@prismicio/client").Content.NewsSlice} NewsSlice
@@ -81,7 +81,9 @@ const News = ({ slice }) => (
               {
                 slice?.items?.map((item, i) =>
                   <Box key={i} padding={10}>
-                    <img src={item.video_image.url} alt={item.video_image.alt} />
+                    <PrismicLink field={item.video_link}>
+                      <img src={item.video_image.url} alt={item.video_image.alt} />
+                    </PrismicLink>
                     <Flex justifyContent="center" alignItems={"center"} flexDirection={{ base: "column", md: "row" }}>
                       <Box>
                         {item.title}

@@ -12,7 +12,24 @@
     "logo": {},
     "navigation": {},
     "settings": {},
-    "footer": {}
+    "footer": {},
+    "product_pages": {},
+    "lined_solutions": {
+      "title": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    },
+    "valves": {},
+    "leak_detection_and_protection": {},
+    "structural_support_products": {},
+    "crane_valves": {},
+    "aloyco_valves": {},
+    "xomox": {},
+    "pacific_valves": {},
+    "industries_pages": {}
   },
   "slices": {
     "CallToAction": {},
@@ -28,20 +45,7 @@
     },
     "HeroSection": {
       "default": {
-        "primary": {
-          "button_content": {
-            "config": {
-              "patternType": "PARAGRAPH",
-              "blocks": 1
-            }
-          },
-          "button_title": {
-            "config": {
-              "patternType": "PARAGRAPH",
-              "blocks": 1
-            }
-          }
-        },
+        "primary": {},
         "items": {}
       }
     },
@@ -144,7 +148,14 @@
     "CardSection": {
       "default": {
         "items": {},
-        "primary": {}
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
       }
     },
     "GridSections": {
@@ -223,6 +234,12 @@
               "patternType": "PARAGRAPH",
               "blocks": 1
             }
+          },
+          "product_details_right": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
           }
         }
       }
@@ -230,6 +247,31 @@
     "ProductSlider": {
       "default": {
         "items": {}
+      }
+    },
+    "Uptime": {},
+    "UptimeHeaderAndFooter": {
+      "default": {
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "UptimeContent": {
+      "default": {
+        "primary": {
+          "description": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
       }
     }
   }
