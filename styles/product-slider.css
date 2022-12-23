@@ -18,6 +18,10 @@
   padding: 0px 0 1px 1px;
 }
 
+#thumbnail-carousel .splide__track--fade > .splide__list > .splide__slide {
+  margin: auto !important;
+}
+
 #thumbnail-carousel .splide__arrow svg {
   height: 10px;
   width: 10px;
@@ -25,7 +29,7 @@
 }
 
 .splide img {
-  height: 100%;
+  height: auto;
 }
 
 .splide__track--nav > .splide__list > .splide__slide.is-active,
