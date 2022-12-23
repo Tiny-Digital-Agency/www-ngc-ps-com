@@ -24,7 +24,6 @@ import TeamProfile from './TeamProfile';
 import TextEditor from './TextEditor';
 import TopNav from './TopNav';
 import UptimeContent from './UptimeContent';
-import UptimeHeaderAndFooter from './UptimeHeaderAndFooter';
 import VerticalNavigation from './VerticalNavigation';
 
 export {
@@ -52,7 +51,6 @@ export {
 	TextEditor,
 	TopNav,
 	UptimeContent,
-	UptimeHeaderAndFooter,
 	VerticalNavigation,
 };
 
@@ -81,6 +79,5 @@ export const components = {
 	text_editor: TextEditor,
 	top_nav: TopNav,
 	uptime_content: UptimeContent,
-	uptime: UptimeHeaderAndFooter,
 	vertical_navigation: VerticalNavigation,
 };

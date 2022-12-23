@@ -2418,55 +2418,6 @@ type UptimeContentSliceVariation = UptimeContentSliceDefault;
  */
 export type UptimeContentSlice = prismicT.SharedSlice<"uptime_content", UptimeContentSliceVariation>;
 /**
- * Primary content in UptimeHeaderAndFooter → Primary
- *
- */
-interface UptimeSliceDefaultPrimary {
-    /**
-     * Title field in *UptimeHeaderAndFooter → Primary*
-     *
-     * - **Field Type**: Title
-     * - **Placeholder**: This is where it all begins...
-     * - **API ID Path**: uptime.primary.title
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    title: prismicT.TitleField;
-    /**
-     * Sub Heading field in *UptimeHeaderAndFooter → Primary*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: uptime.primary.sub_heading
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    sub_heading: prismicT.RichTextField;
-}
-/**
- * Default variation for UptimeHeaderAndFooter Slice
- *
- * - **API ID**: `default`
- * - **Description**: `Uptime`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type UptimeSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<UptimeSliceDefaultPrimary>, never>;
-/**
- * Slice variation for *UptimeHeaderAndFooter*
- *
- */
-type UptimeSliceVariation = UptimeSliceDefault;
-/**
- * UptimeHeaderAndFooter Shared Slice
- *
- * - **API ID**: `uptime`
- * - **Description**: `Uptime`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type UptimeSlice = prismicT.SharedSlice<"uptime", UptimeSliceVariation>;
-/**
  * Primary content in VerticalNavigation → Primary
  *
  */
