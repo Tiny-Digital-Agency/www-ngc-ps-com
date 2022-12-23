@@ -69,3 +69,7 @@ textarea::placeholder{
 .bold-text strong{
   color: #0072b8;
 }
+
+.tablist button {
+  min-height: 55px;
+}

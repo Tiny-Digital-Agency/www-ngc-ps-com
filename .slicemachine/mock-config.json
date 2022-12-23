@@ -32,7 +32,6 @@
     "industries_pages": {}
   },
   "slices": {
-    "CallToAction": {},
     "Header": {
       "default": {
         "primary": {}
@@ -84,12 +83,6 @@
     "TeamDropdown": {
       "default": {
         "primary": {}
-      }
-    },
-    "TopNav": {
-      "default": {
-        "primary": {},
-        "items": {}
       }
     },
     "News": {
@@ -262,19 +255,6 @@
     "ProductSlider": {
       "default": {
         "items": {}
-      }
-    },
-    "Uptime": {},
-    "UptimeHeaderAndFooter": {
-      "default": {
-        "primary": {
-          "title": {
-            "config": {
-              "patternType": "HEADING",
-              "blocks": 1
-            }
-          }
-        }
       }
     },
     "UptimeContent": {

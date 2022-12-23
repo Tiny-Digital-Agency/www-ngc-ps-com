@@ -1,4 +1,5 @@
 import { SliceZone } from '@prismicio/react'
+import Head from "next/head";
 import * as prismicH from "@prismicio/helpers";
 import { createClient, linkResolver } from '../../../prismicio'
 import { components } from '../../../slices'
@@ -11,6 +12,12 @@ const structural_support_products = ({ structural_support_products, navigation, 
         settings={settings}
         footer={footer}
       >
+        <Head>
+          <title>
+            {prismicH.asText(structural_support_products.data.title)}
+            {prismicH.asText(settings.data.name)}
+          </title>
+        </Head>
         <SliceZone slices={structural_support_products.data.slices} components={components} />
       </Layout>
     </div>

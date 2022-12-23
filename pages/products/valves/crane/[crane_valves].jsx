@@ -1,4 +1,5 @@
 import { SliceZone } from '@prismicio/react'
+import Head from "next/head";
 import * as prismicH from "@prismicio/helpers";
 import { createClient, linkResolver } from '../../../../prismicio'
 import { components } from '../../../../slices'
@@ -11,6 +12,12 @@ const crane_valves = ({ crane_valves, navigation, settings, footer }) => {
                 settings={settings}
                 footer={footer}
             >
+                <Head>
+                    <title>
+                        {prismicH.asText(crane_valves.data.title)}
+                        {prismicH.asText(settings.data.name)}
+                    </title>
+                </Head>
                 <SliceZone slices={crane_valves.data.slices} components={components} />
             </Layout>
         </div>
