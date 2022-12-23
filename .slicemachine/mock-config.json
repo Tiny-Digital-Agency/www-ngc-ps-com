@@ -85,12 +85,6 @@
         "primary": {}
       }
     },
-    "TopNav": {
-      "default": {
-        "primary": {},
-        "items": {}
-      }
-    },
     "News": {
       "default": {
         "primary": {
@@ -253,19 +247,6 @@
     "ProductSlider": {
       "default": {
         "items": {}
-      }
-    },
-    "Uptime": {},
-    "UptimeHeaderAndFooter": {
-      "default": {
-        "primary": {
-          "title": {
-            "config": {
-              "patternType": "HEADING",
-              "blocks": 1
-            }
-          }
-        }
       }
     },
     "UptimeContent": {
