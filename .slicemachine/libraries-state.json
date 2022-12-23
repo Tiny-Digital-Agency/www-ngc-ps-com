@@ -440,7 +440,13 @@
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "C:\\Users\\Fullstack HQ\\Desktop\\www-ngc-ps-com\\slices\\CardSection\\default\\preview.png",
+            "width": 1922,
+            "height": 612
+          }
+        }
       },
       "certification": {
         "library": "slices",
