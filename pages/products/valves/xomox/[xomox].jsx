@@ -11,6 +11,12 @@ const xomox = ({ xomox, navigation, settings, footer }) => {
                 settings={settings}
                 footer={footer}
             >
+                <Head>
+                    <title>
+                        {prismicH.asText(xomox.data.title)}
+                        {prismicH.asText(settings.data.name)}
+                    </title>
+                </Head>
                 <SliceZone slices={xomox.data.slices} components={components} />
             </Layout>
         </div>

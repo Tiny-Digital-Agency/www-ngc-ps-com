@@ -1,80 +1,116 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { PrismicRichText } from '@prismicio/react'
-import {
-  Tabs,
-  TabList,
-  TabPanels,
-  Tab,
-  TabPanel,
-  Image,
-  Box,
-  Flex,
-  Button,
-  Text,
-} from '@chakra-ui/react';
-import { ChevronRightIcon } from '@chakra-ui/icons'
+import { Tabs, TabList, TabPanels, Tab, TabPanel, Image, Box, Flex, Button, Text } from '@chakra-ui/react';
+/**
+ * @typedef {import("@prismicio/client").Content.VerticalNavigationSlice} VerticalNavigationSlice
+ * @typedef {import("@prismicio/react").SliceComponentProps<VerticalNavigationSlice>} VerticalNavigationProps
+ * @param { VerticalNavigationProps }
+ */
 
-const VerticalNavigation = ({ slice }) => (
-  <section>
-    <Flex justifyContent={"center"} bg={"#e5e1dd"}>
-      <Tabs defaultIndex={0} w={{ base: "100%", lg: "80%" }} m="auto" >
-        <Flex display="flex" direction={{ base: "column", lg: "row" }} justifyContent={"center"} w={{ base: "100%", lg: "80%" }} margin={"auto"}>
-          <Box width={{ base: "100%", lg: "45%" }} bg="#e5e1dd">
-            <TabList display={"block"} >
-              {
-                slice?.items?.map((item, i) =>
-                  <Tab key={i}
-                    maxW="100%"
-                    w={{ base: "250px", lg: "60%" }}
-                    bg={"#ef483e"}
-                    margin="15px auto"
-                    p="5px 0"
-                    color={"#fff"}
-                    fontSize="14px"
-                    fontWeight={"400"}
-                    _focus={{
-                      bg: '#4d8b3f',
-                      transform: 'scale(0.98)',
-                      borderColor: '#bec3c9',
-                      color: '#fff'
-                    }}>
-                    <Box display="flex" direction="row" alignItems="center">
-                      {item.navlist}
-                      <ChevronRightIcon />
-                    </Box>
-                  </Tab>
-                )
-              }
-            </TabList>
-          </Box>
-          <Box width={{ base: "100%", lg: "55%" }}
-            bg="#fff"
-            pt="10px"
-            lineHeight="2"
-          >
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+
+const VerticalNavigation = ({ slice }) => {
+
+  const [items, setItems] = useState([])
+  const [product, setProduct] = useState({})
+
+  useEffect(() => {
+    setProduct(slice.items[0])
+    setItems(slice.items)
+  }, [])
+
+  const handleContact = (item) => {
+    setProduct(item)
+  }
+
+  return (
+    <section>
+      {/* Desktop */}
+      <Flex display={{ base: "none", sm: "none", md: "flex", xl: "flex" }} justifyContent={"center"} bg={"#e5e1dd"}>
+        <Tabs defaultIndex={0}  >
+          <Flex justifyContent={"space-between"} display={{ base: "block", sm: "block", md: "flex", xl: "flex" }}>
+            <Box width={{ base: "100%", md: "200px" }} bg="#e5e1dd">
+              <Flex justifyContent={"center"}>
+                <TabList display={"block"} className="tablist">
+                  {slice.items.map((item, i) =>
+                    <Tab
+                      key={i}
+                      maxW="100%" w={{ base: "250px", sm: "100%" }}
+                      bg={"#ef483e"}
+                      color={"#fff"}
+                      fontSize="14px"
+                      fontWeight={"400"}
+                      _selected={{
+                        bg: '#fff',
+                        borderColor: '#4D8B3F',
+                        borderLeft: '3px solid',
+                        color: '#4D8B3F'
+                      }}>
+                      <Box>
+                        {item.navlist}
+                      </Box>
+                    </Tab>
+                  )}
+                </TabList>
+              </Flex>
+            </Box>
+            <Box
+              width={{
+                base: "100%",
+                sm: "500px"
+              }}
+              bg="#fff"
+              pt="10px"
+              lineHeight="2"
+            >
+              <Box color="#4d8b3f" fontWeight={600} ml="40px" mt="20px" fontSize={18}>
+                <PrismicRichText field={slice.primary.titlerightcontent} />
+              </Box>
+              <TabPanels>
+                <TabPanels>
+                  {
+                    slice?.items?.map((item, i) =>
+                      <TabPanel
+                        ml="25px"
+                        color="#585c5e"
+                        fontSize={20}
+                        fontWeight={400} className="resource-link">
+                        <PrismicRichText field={item.navcontent} />
+                      </TabPanel>
+                    )
+                  }
+                </TabPanels>
+              </TabPanels>
+            </Box>
+          </Flex>
+        </Tabs>
+      </Flex>
+      {/* Mobile */}
+      <Box display={{ base: "block", sm: "block", md: "none", xl: "none" }}>
+        <Swiper slidesPerView={3}>
+          {items.map((item, i) =>
+            <SwiperSlide onClick={() => handleContact(item)}
+              style={{ display: 'flex', backgroundColor: product.navlist === item.navlist ? '#fff' : '#ef483e', color: product.navlist === item.navlist ? '#4D8B3F' : '#fff', height: '48px', paddingX: '10px', paddingLeft: '10px', borderColor: product.navlist === item.navlist ? '#4D8B3F' : '#fff', borderLeft: product.navlist === item.navlist ? '3px solid' : '', justifyContent: 'center', alignItems: 'center' }}>
+              <Box>
+                {item.navlist}
+              </Box>
+            </SwiperSlide>
+          )}
+        </Swiper>
+        <Flex justifyContent={"center"} bg={"#e5e1dd"}>
+          <Box width='100%' bg="#fff" pt="10px" lineHeight="2">
             <Box color="#4d8b3f" fontWeight={600} ml="40px" mt="20px" fontSize={18}>
               <PrismicRichText field={slice.primary.titlerightcontent} />
             </Box>
-            <TabPanels >
-              <TabPanels>
-                {
-                  slice?.items?.map((item, i) =>
-                    <TabPanel
-                      ml="25px"
-                      color="#585c5e"
-                      fontSize={20}
-                      fontWeight={400} className="resource-link">
-                      <PrismicRichText field={item.navcontent} />
-                    </TabPanel>
-                  )
-                }
-              </TabPanels>
-            </TabPanels>
+            <Box ml="25px" color="#585c5e" fontSize={20} fontWeight={400} className="resource-link">
+              <PrismicRichText field={product.navcontent} />
+            </Box>
           </Box>
         </Flex>
-      </Tabs>
-    </Flex >
-  </section >
-)
+      </Box>
+    </section>
+  )
+}
 
 export default VerticalNavigation
