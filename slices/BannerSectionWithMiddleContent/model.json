@@ -26,6 +26,15 @@
             "constraint": {},
             "thumbnails": []
           }
+        },
+        "smaller_height": {
+          "type": "Boolean",
+          "config": {
+            "label": "Smaller height?",
+            "default_value": false,
+            "placeholder_true": "true",
+            "placeholder_false": "false"
+          }
         }
       },
       "items": {},

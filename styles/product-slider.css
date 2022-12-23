@@ -18,7 +18,7 @@
   padding: 0px 0 1px 1px;
 }
 
-#thumbnail-carousel .splide__track--fade > .splide__list > .splide__slide {
+#main-carousel .splide__track--fade > .splide__list > .splide__slide {
   margin: auto !important;
 }
 

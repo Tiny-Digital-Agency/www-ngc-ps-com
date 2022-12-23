@@ -191,6 +191,15 @@
                     "constraint": {},
                     "thumbnails": []
                   }
+                },
+                "smaller_height": {
+                  "type": "Boolean",
+                  "config": {
+                    "label": "Smaller height?",
+                    "default_value": false,
+                    "placeholder_true": "true",
+                    "placeholder_false": "false"
+                  }
                 }
               },
               "items": {},
@@ -209,7 +218,7 @@
               "title": [
                 {
                   "type": "heading1",
-                  "text": "Threw",
+                  "text": "Younger",
                   "spans": []
                 }
               ],
@@ -220,8 +229,9 @@
                 },
                 "alt": null,
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c"
-              }
+                "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482"
+              },
+              "smaller_height": true
             },
             "slice_type": "banner_section_with_middle_content"
           }
