@@ -1,6 +1,7 @@
 import { SliceZone } from '@prismicio/react'
+import Head from "next/head";
 import * as prismicH from "@prismicio/helpers";
-import { createClient, linkResolver  } from '../../../prismicio'
+import { createClient, linkResolver } from '../../../prismicio'
 import { components } from '../../../slices'
 import Layout from '../../../components/Layout'
 const valves = ({ valves, navigation, settings, footer }) => {
@@ -11,6 +12,12 @@ const valves = ({ valves, navigation, settings, footer }) => {
         settings={settings}
         footer={footer}
       >
+        <Head>
+          <title>
+            {prismicH.asText(valves.data.title)}
+            {prismicH.asText(settings.data.name)}
+          </title>
+        </Head>
         <SliceZone slices={valves.data.slices} components={components} />
       </Layout>
     </div>
@@ -27,7 +34,7 @@ export async function getStaticProps({ params, previewData }) {
   const footer = await client.getByUID("footer", "footer");
   return {
     props: {
-        valves,
+      valves,
       navigation,
       settings,
       footer,
@@ -41,7 +48,7 @@ export async function getStaticPaths() {
   const valves = await client.getAllByType('valves')
 
   return {
-    paths: valves.map((valves) => prismicH.asLink(valves, linkResolver )),
+    paths: valves.map((valves) => prismicH.asLink(valves, linkResolver)),
     fallback: false,
   }
 }

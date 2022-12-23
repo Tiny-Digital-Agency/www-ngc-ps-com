@@ -3,9 +3,6 @@ import { PrismicRichText, PrismicLink } from '@prismicio/react'
 import {
   Box,
   Flex,
-  Stack,
-  Container,
-  Heading,
 } from '@chakra-ui/react';
 
 /**

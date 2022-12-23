@@ -1,5 +1,6 @@
 import { SliceZone } from '@prismicio/react'
 import * as prismicH from "@prismicio/helpers";
+import Head from "next/head";
 import { createClient, linkResolver } from '../../../prismicio'
 import { components } from '../../../slices'
 import Layout from '../../../components/Layout'
@@ -11,6 +12,12 @@ const leak_detection_and_protection = ({ leak_detection_and_protection, navigati
         settings={settings}
         footer={footer}
       >
+       <Head>
+          <title>
+            {prismicH.asText(leak_detection_and_protection.data.title)}
+            {prismicH.asText(settings.data.name)}
+          </title>
+        </Head>
         <SliceZone slices={leak_detection_and_protection.data.slices} components={components} />
       </Layout>
     </div>

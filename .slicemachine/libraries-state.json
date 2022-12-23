@@ -156,7 +156,13 @@
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "C:\\Users\\Fullstack HQ\\Desktop\\www-ngc-ps-com\\slices\\About\\default\\preview.png",
+            "width": 1905,
+            "height": 887
+          }
+        }
       },
       "banner_section_with_middle_content": {
         "library": "slices",
@@ -230,7 +236,13 @@
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "C:\\Users\\Fullstack HQ\\Desktop\\www-ngc-ps-com\\slices\\BannerSectionWithMiddleContent\\default\\preview.png",
+            "width": 1904,
+            "height": 263
+          }
+        }
       },
       "banner_section_with_side_content": {
         "library": "slices",
@@ -319,96 +331,13 @@
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {}
-      },
-      "call_to_action": {
-        "library": "slices",
-        "id": "call_to_action",
-        "name": "CallToAction",
-        "description": "CallToAction",
-        "model": {
-          "id": "call_to_action",
-          "type": "SharedSlice",
-          "name": "CallToAction",
-          "description": "CallToAction",
-          "variations": [
-            {
-              "id": "default",
-              "name": "Default",
-              "docURL": "...",
-              "version": "sktwi1xtmkfgx8626",
-              "description": "CallToAction",
-              "primary": {
-                "title": {
-                  "type": "StructuredText",
-                  "config": {
-                    "single": "heading1",
-                    "label": "Title",
-                    "placeholder": "This is where it all begins..."
-                  }
-                },
-                "description": {
-                  "type": "StructuredText",
-                  "config": {
-                    "single": "paragraph",
-                    "label": "Description",
-                    "placeholder": "A nice description of your feature"
-                  }
-                },
-                "image": {
-                  "type": "Image",
-                  "config": {
-                    "label": "Image",
-                    "constraint": {},
-                    "thumbnails": []
-                  }
-                }
-              },
-              "items": {},
-              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
-            }
-          ]
-        },
-        "mocks": {
+        "screenshotPaths": {
           "default": {
-            "variation": "default",
-            "version": "sktwi1xtmkfgx8626",
-            "items": [
-              {}
-            ],
-            "primary": {
-              "title": [
-                {
-                  "type": "heading1",
-                  "text": "Exercise",
-                  "spans": []
-                }
-              ],
-              "description": [
-                {
-                  "type": "paragraph",
-                  "text": "Esse mollit reprehenderit ut amet Lorem quis.",
-                  "spans": []
-                }
-              ],
-              "image": {
-                "dimensions": {
-                  "width": 900,
-                  "height": 500
-                },
-                "alt": null,
-                "copyright": null,
-                "url": "https://images.unsplash.com/photo-1547394765-185e1e68f34e"
-              }
-            },
-            "slice_type": "call_to_action"
+            "path": "C:\\Users\\Fullstack HQ\\Desktop\\www-ngc-ps-com\\slices\\BannerSectionWithSideContent\\default\\preview.png",
+            "width": 1903,
+            "height": 624
           }
-        },
-        "meta": {
-          "fileName": "index",
-          "extension": "js"
-        },
-        "screenshotPaths": {}
+        }
       },
       "card_section": {
         "library": "slices",
@@ -511,7 +440,13 @@
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "C:\\Users\\Fullstack HQ\\Desktop\\www-ngc-ps-com\\slices\\CardSection\\default\\preview.png",
+            "width": 1922,
+            "height": 612
+          }
+        }
       },
       "certification": {
         "library": "slices",
@@ -582,7 +517,13 @@
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "C:\\Users\\Fullstack HQ\\Desktop\\www-ngc-ps-com\\slices\\Certification\\default\\preview.png",
+            "width": 1905,
+            "height": 205
+          }
+        }
       },
       "contact": {
         "library": "slices",
@@ -673,7 +614,13 @@
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "C:\\Users\\Fullstack HQ\\Desktop\\www-ngc-ps-com\\slices\\Contact\\default\\preview.png",
+            "width": 1903,
+            "height": 805
+          }
+        }
       },
       "footer": {
         "library": "slices",
@@ -1065,7 +1012,13 @@
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "C:\\Users\\Fullstack HQ\\Desktop\\www-ngc-ps-com\\slices\\HeroSection\\default\\preview.png",
+            "width": 1904,
+            "height": 599
+          }
+        }
       },
       "industries_banner": {
         "library": "slices",
@@ -1551,7 +1504,13 @@
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "C:\\Users\\Fullstack HQ\\Desktop\\www-ngc-ps-com\\slices\\News\\default\\preview.png",
+            "width": 1904,
+            "height": 626
+          }
+        }
       },
       "product_detail": {
         "library": "slices",
@@ -2366,7 +2325,13 @@
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "C:\\Users\\Fullstack HQ\\Desktop\\www-ngc-ps-com\\slices\\TeamProfile\\default\\preview.png",
+            "width": 1904,
+            "height": 881
+          }
+        }
       },
       "text_editor": {
         "library": "slices",
@@ -2497,131 +2462,6 @@
         },
         "screenshotPaths": {}
       },
-      "top_nav": {
-        "library": "slices",
-        "id": "top_nav",
-        "name": "TopNav",
-        "description": "TopNav",
-        "model": {
-          "id": "top_nav",
-          "type": "SharedSlice",
-          "name": "TopNav",
-          "description": "TopNav",
-          "variations": [
-            {
-              "id": "default",
-              "name": "Default",
-              "docURL": "...",
-              "version": "sktwi1xtmkfgx8626",
-              "description": "TopNav",
-              "primary": {
-                "button_link": {
-                  "type": "Link",
-                  "config": {
-                    "label": "button link",
-                    "select": "document",
-                    "customtypes": [
-                      "homepage"
-                    ]
-                  }
-                },
-                "button_text": {
-                  "type": "StructuredText",
-                  "config": {
-                    "label": "Button Text",
-                    "placeholder": "",
-                    "allowTargetBlank": true,
-                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-                  }
-                },
-                "address": {
-                  "type": "StructuredText",
-                  "config": {
-                    "label": "Address",
-                    "placeholder": "",
-                    "allowTargetBlank": true,
-                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-                  }
-                }
-              },
-              "items": {
-                "contact_details": {
-                  "type": "StructuredText",
-                  "config": {
-                    "label": "contact details",
-                    "placeholder": "",
-                    "allowTargetBlank": true,
-                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-                  }
-                },
-                "contactlink": {
-                  "type": "Link",
-                  "config": {
-                    "label": "contact_link",
-                    "placeholder": "",
-                    "allowTargetBlank": false,
-                    "select": null
-                  }
-                }
-              },
-              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
-            }
-          ]
-        },
-        "mocks": {
-          "default": {
-            "variation": "default",
-            "version": "sktwi1xtmkfgx8626",
-            "items": [
-              {
-                "contact_details": [
-                  {
-                    "type": "paragraph",
-                    "text": "Est ea reprehenderit mollit Lorem commodo dolor. Consectetur non laboris ut est ex magna excepteur exercitation sit ex excepteur.",
-                    "spans": []
-                  }
-                ],
-                "contactlink": {
-                  "link_type": "Web",
-                  "url": "https://prismic.io"
-                }
-              }
-            ],
-            "primary": {
-              "button_link": {
-                "id": "mock_document_id",
-                "link_type": "Document",
-                "type": "homepage",
-                "tags": [],
-                "lang": "en-us",
-                "slug": null,
-                "first_publication_date": "1970-01-01T00:00:01+0000",
-                "last_publication_date": "1970-01-01T01:00:00+0000"
-              },
-              "button_text": [
-                {
-                  "type": "paragraph",
-                  "text": "Dolor deserunt voluptate consequat nulla do aliquip officia. Laborum dolor duis nulla quis commodo anim Lorem nisi minim.",
-                  "spans": []
-                }
-              ],
-              "address": [
-                {
-                  "type": "paragraph",
-                  "text": "Et excepteur aliquip amet adipisicing officia proident id do laboris. Sit excepteur aute et sunt sint adipisicing quis sunt laboris esse magna sit. Fugiat est et elit anim est est id do quis consequat ex.",
-                  "spans": []
-                }
-              ]
-            },
-            "slice_type": "top_nav"
-          }
-        },
-        "meta": {
-          "fileName": "index",
-          "extension": "js"
-        },
-        "screenshotPaths": {}
-      },
       "uptime_content": {
         "library": "slices",
         "id": "uptime_content",
@@ -2729,80 +2569,6 @@
         },
         "screenshotPaths": {}
       },
-      "uptime": {
-        "library": "slices",
-        "id": "uptime",
-        "name": "UptimeHeaderAndFooter",
-        "description": "Uptime",
-        "model": {
-          "id": "uptime",
-          "type": "SharedSlice",
-          "name": "UptimeHeaderAndFooter",
-          "description": "Uptime",
-          "variations": [
-            {
-              "id": "default",
-              "name": "Default",
-              "docURL": "...",
-              "version": "sktwi1xtmkfgx8626",
-              "description": "Uptime",
-              "primary": {
-                "title": {
-                  "type": "StructuredText",
-                  "config": {
-                    "label": "Title",
-                    "placeholder": "This is where it all begins...",
-                    "allowTargetBlank": true,
-                    "single": "heading1"
-                  }
-                },
-                "sub_heading": {
-                  "type": "StructuredText",
-                  "config": {
-                    "label": "Sub Heading",
-                    "placeholder": "",
-                    "allowTargetBlank": true,
-                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-                  }
-                }
-              },
-              "items": {},
-              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
-            }
-          ]
-        },
-        "mocks": {
-          "default": {
-            "variation": "default",
-            "version": "sktwi1xtmkfgx8626",
-            "items": [
-              {}
-            ],
-            "primary": {
-              "title": [
-                {
-                  "type": "heading1",
-                  "text": "Powerful",
-                  "spans": []
-                }
-              ],
-              "sub_heading": [
-                {
-                  "type": "paragraph",
-                  "text": "Aliqua excepteur dolor adipisicing. Fugiat sint enim officia minim tempor. Sit officia laborum ea.",
-                  "spans": []
-                }
-              ]
-            },
-            "slice_type": "uptime"
-          }
-        },
-        "meta": {
-          "fileName": "index",
-          "extension": "js"
-        },
-        "screenshotPaths": {}
-      },
       "vertical_navigation": {
         "library": "slices",
         "id": "vertical_navigation",
@@ -2885,7 +2651,13 @@
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "C:\\Users\\Fullstack HQ\\Desktop\\www-ngc-ps-com\\slices\\VerticalNavigation\\default\\preview.png",
+            "width": 1905,
+            "height": 700
+          }
+        }
       }
     }
   }

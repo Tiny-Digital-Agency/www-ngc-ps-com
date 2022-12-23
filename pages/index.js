@@ -1,10 +1,8 @@
 import { SliceZone } from '@prismicio/react'
-
+import Head from "next/head";
 import { createClient } from '../prismicio'
 import { components } from '../slices'
 import Layout from '../components/Layout'
-// import { NavigationItems } from '../slices/NavigationItems/index'
-
 const Index = ({ page, navigation, settings, footer }) => {
   return (
     <Layout
@@ -12,6 +10,11 @@ const Index = ({ page, navigation, settings, footer }) => {
       settings={settings}
       footer={footer}
     >
+      <Head>
+        <title>
+          Home - NGC Product Solutions
+        </title>
+      </Head>
       <SliceZone slices={page.data.slices} components={components} />
     </Layout>
   );
