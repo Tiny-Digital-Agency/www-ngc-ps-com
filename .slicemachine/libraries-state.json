@@ -156,7 +156,13 @@
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "C:\\Users\\Fullstack HQ\\Desktop\\www-ngc-ps-com\\slices\\About\\default\\preview.png",
+            "width": 1905,
+            "height": 887
+          }
+        }
       },
       "banner_section_with_middle_content": {
         "library": "slices",
@@ -230,7 +236,13 @@
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "C:\\Users\\Fullstack HQ\\Desktop\\www-ngc-ps-com\\slices\\BannerSectionWithMiddleContent\\default\\preview.png",
+            "width": 1904,
+            "height": 263
+          }
+        }
       },
       "banner_section_with_side_content": {
         "library": "slices",
@@ -319,7 +331,13 @@
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "C:\\Users\\Fullstack HQ\\Desktop\\www-ngc-ps-com\\slices\\BannerSectionWithSideContent\\default\\preview.png",
+            "width": 1903,
+            "height": 624
+          }
+        }
       },
       "card_section": {
         "library": "slices",
@@ -493,7 +511,13 @@
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "C:\\Users\\Fullstack HQ\\Desktop\\www-ngc-ps-com\\slices\\Certification\\default\\preview.png",
+            "width": 1905,
+            "height": 205
+          }
+        }
       },
       "contact": {
         "library": "slices",
@@ -584,7 +608,13 @@
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "C:\\Users\\Fullstack HQ\\Desktop\\www-ngc-ps-com\\slices\\Contact\\default\\preview.png",
+            "width": 1903,
+            "height": 805
+          }
+        }
       },
       "footer": {
         "library": "slices",
@@ -976,7 +1006,13 @@
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "C:\\Users\\Fullstack HQ\\Desktop\\www-ngc-ps-com\\slices\\HeroSection\\default\\preview.png",
+            "width": 1904,
+            "height": 599
+          }
+        }
       },
       "industries_banner": {
         "library": "slices",
@@ -1462,7 +1498,13 @@
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "C:\\Users\\Fullstack HQ\\Desktop\\www-ngc-ps-com\\slices\\News\\default\\preview.png",
+            "width": 1904,
+            "height": 626
+          }
+        }
       },
       "product_detail": {
         "library": "slices",
@@ -2277,7 +2319,13 @@
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "C:\\Users\\Fullstack HQ\\Desktop\\www-ngc-ps-com\\slices\\TeamProfile\\default\\preview.png",
+            "width": 1904,
+            "height": 881
+          }
+        }
       },
       "text_editor": {
         "library": "slices",
