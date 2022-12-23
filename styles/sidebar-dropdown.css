@@ -7,3 +7,15 @@
 .dropdown-child li:hover {
   color: #ef483e;
 }
+
+.css-ucjunp {
+  display: grid;
+  grid-auto-rows: 1fr;
+}
+
+@media only screen and (max-width: 991px) {
+  .css-ucjunp {
+    display: block;
+    grid-auto-rows: 1fr;
+  }
+}

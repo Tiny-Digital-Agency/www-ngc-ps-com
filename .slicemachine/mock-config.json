@@ -160,7 +160,15 @@
     },
     "GridSections": {
       "default": {
-        "primary": {}
+        "primary": {},
+        "items": {
+          "text_content": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
       }
     },
     "SideDropdownWithContent": {
