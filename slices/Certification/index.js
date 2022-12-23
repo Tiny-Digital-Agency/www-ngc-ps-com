@@ -35,6 +35,7 @@ const Certification = ({ slice }) => (
               maxW={{ base: "unset", lg: "190px" }}
               w={{ base: "45%", md: "28%", lg: "auto" }}
               margin={{ base: "15px 0", lg: "20px" }}
+              key={i}
 
             >
               <PrismicLink field={item.image_link} key={i}>

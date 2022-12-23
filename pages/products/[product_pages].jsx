@@ -1,6 +1,7 @@
 import { SliceZone } from '@prismicio/react'
+import Head from "next/head";
 import * as prismicH from "@prismicio/helpers";
-import { createClient, linkResolver  } from '../../prismicio'
+import { createClient, linkResolver } from '../../prismicio'
 import { components } from '../../slices'
 import Layout from '../../components/Layout'
 const product_pages = ({ product_pages, navigation, settings, footer }) => {
@@ -11,6 +12,12 @@ const product_pages = ({ product_pages, navigation, settings, footer }) => {
         settings={settings}
         footer={footer}
       >
+        <Head>
+          <title>
+            {prismicH.asText(product_pages.data.title)}
+            {prismicH.asText(settings.data.name)}
+          </title>
+        </Head>
         <SliceZone slices={product_pages.data.slices} components={components} />
       </Layout>
     </div>
@@ -41,7 +48,7 @@ export async function getStaticPaths() {
   const product_pages = await client.getAllByType('product_pages')
 
   return {
-    paths: product_pages.map((product_pages) => prismicH.asLink(product_pages, linkResolver )),
+    paths: product_pages.map((product_pages) => prismicH.asLink(product_pages, linkResolver)),
     fallback: false,
   }
 }
