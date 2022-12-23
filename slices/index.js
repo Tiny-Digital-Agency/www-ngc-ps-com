@@ -22,7 +22,6 @@ import SideDropdownWithContent from './SideDropdownWithContent';
 import TeamDropdown from './TeamDropdown';
 import TeamProfile from './TeamProfile';
 import TextEditor from './TextEditor';
-import TopNav from './TopNav';
 import UptimeContent from './UptimeContent';
 import VerticalNavigation from './VerticalNavigation';
 
@@ -49,7 +48,6 @@ export {
 	TeamDropdown,
 	TeamProfile,
 	TextEditor,
-	TopNav,
 	UptimeContent,
 	VerticalNavigation,
 };
@@ -77,7 +75,6 @@ export const components = {
 	team_dropdown: TeamDropdown,
 	team_profile: TeamProfile,
 	text_editor: TextEditor,
-	top_nav: TopNav,
 	uptime_content: UptimeContent,
 	vertical_navigation: VerticalNavigation,
 };
