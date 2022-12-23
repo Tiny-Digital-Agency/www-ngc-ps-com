@@ -121,6 +121,7 @@ const TeamProfile = ({ slice }) => (
                   )
                 }
               </Grid>
+              </Flex>
             </Flex>
           </AccordionPanel>
         </AccordionItem>
