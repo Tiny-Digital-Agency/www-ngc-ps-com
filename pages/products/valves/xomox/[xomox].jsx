@@ -1,5 +1,6 @@
 import { SliceZone } from '@prismicio/react'
 import * as prismicH from "@prismicio/helpers";
+import Head from 'next/head';
 import { createClient, linkResolver } from '../../../../prismicio'
 import { components } from '../../../../slices'
 import Layout from '../../../../components/Layout'
