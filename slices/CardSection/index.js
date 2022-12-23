@@ -106,7 +106,7 @@ const CardsSection = ({ slice }) => (
                   key={slice.id}
                   h={{ base: "30vw", sm: "26vw", md: "240px" }}
                   w={{ base: "45%", sm: "30%", xl: "230px" }}
-                  mb={{ base: "15px", lg: "20px" }}
+                  mb={{ base: "15px", lg: "1%" }}
                 >
                   <section>
                     <Box

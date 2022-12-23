@@ -10,3 +10,27 @@
 .child li:nth-child(even) {
   background-color: #ebf3f5;
 }
+
+.forms input,
+.forms textarea {
+  width: 100%;
+  line-height: 26px;
+}
+
+.forms input::placeholder,
+.forms textarea::placeholder {
+  font: 13px/3 sans-serif;
+}
+
+.forms .btn {
+  padding: 10px 20px;
+  font-size: 20px;
+  width: auto;
+}
+
+@media screen and (max-width: 1279px) {
+  .forms {
+    width: 87%;
+    margin: auto;
+  }
+}

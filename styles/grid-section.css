@@ -1,5 +1,8 @@
-.css-15fwrin:last-child {
+/* .css-15fwrin:last-child {
   border-right: solid 1px #2c2e35;
+} */
+.css-15fwrin:last-child {
+  border-right: none;
 }
 
 @media only screen and (max-width: 1279px) {
@@ -29,7 +32,9 @@
     border-left: none;
     border-right: none;
   }
+
   .css-15fwrin:nth-child(even) {
     border-right: none;
+    border-bottom: solid 1px #2c2e35;
   }
 }

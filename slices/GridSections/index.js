@@ -43,7 +43,7 @@ const GridSection = ({ slice }) => (
       <Flex
         flexWrap="wrap"
         direction="row"
-        justify="flex-start"
+        justify="center"
         // w={{ xl: "80em", base: "full" }}
         w={{ md: "90%", xl: "87%" }}
       // borderLeft={{ base: "none", sm: "solid 1px #adadad" }}
@@ -65,16 +65,16 @@ const GridSection = ({ slice }) => (
               _hover={{
                 textDecoration: "none",
               }}
-            // _last={{
-            //   borderRight: "none"
-            // }}
             >
               {item.image.url ?
-                <Image h="60%" src={item.image.url} alt={item.image.alt} />
+                <Flex h="auto" w="90%" mt="15px" justify="center">
+                  <Image src={item.image.url} alt={item.image.alt} />
+                </Flex>
+
                 : ""
               }
               <Box
-                mt="10px"
+                my="10px"
                 color="#626669"
                 fontSize="18px"
                 fontWeight="bold"

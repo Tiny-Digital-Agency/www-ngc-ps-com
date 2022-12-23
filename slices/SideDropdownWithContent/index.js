@@ -19,8 +19,12 @@ const SideDropdownWithContent = ({ slice }) => (
         w={{ base: "full", lg: "62em", xl: "65em" }}
         m="auto">
         <>
-          <Grid templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(7, 1fr)' }} templateRows={{ base: 'repeat(2, 1fr)', lg: "none" }}>
-            <GridItem w='100%' colSpan={{ base: "1", lg: "3" }} color="#fff">
+          <Grid templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(7, 1fr)' }} templateRows={{ base: "repeat(1, 1fr)", lg: 'repeat(2, 1fr)', lg: "none" }}>
+            <GridItem
+              w='100%'
+              colSpan={{ base: "1", lg: "3" }}
+              color="#fff"
+            >
               <TabList
                 display="flex"
                 flexDirection="column"
@@ -80,7 +84,7 @@ const SideDropdownWithContent = ({ slice }) => (
               </TabList>
             </GridItem>
 
-            <GridItem w='100%' bgColor="#e5e1dd" colSpan={{ base: "1", lg: "4" }} >
+            <GridItem w='100%' bgColor="#e5e1dd" colSpan={{ base: "1", lg: "4" }} pb="50px">
               <Box
                 m="50px 35px 0"
                 color="#4d8b3f"
