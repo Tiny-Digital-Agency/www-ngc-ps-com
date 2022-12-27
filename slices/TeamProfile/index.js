@@ -78,7 +78,7 @@ const TeamProfile = ({ slice }) => (
           </AccordionButton>
           <AccordionPanel pb={4}>
             <Flex justifyContent={"center"}>
-              <Grid templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)", xl: "repeat(3, 1fr)" }} justifyItems="center" py={6} margin="0">
+              <Grid templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(1, 1fr)", xl: "repeat(2, 1fr)", '2xl':"repeat(3, 1fr)" }} justifyItems="center" py={6} margin="0">
                 {
                   slice.items.map((item, i) =>
                     <GridItem
@@ -90,7 +90,8 @@ const TeamProfile = ({ slice }) => (
                       rounded={'sm'}
                       pt={5} mt={5}
                       pb={5}
-                      m={5} p={5}
+                      m={{base:"2" , md:"5"}}
+                      p={{base:"2" , md:"5"}}
                       overflow={'hidden'}
                       bg="white"
                       >
@@ -101,9 +102,9 @@ const TeamProfile = ({ slice }) => (
                           <Image src={item.profile_image.url} alt={item.profile_image.alt} key={i} w={{ base: "250px", md: "300px" }} h={{ base: "250px", md: "300px" }} />
                         </Box>
                       </Box>
-                      <Box p={4}>
-                        <Flex justifyContent="center" alignItems="baseline">
-                          <Box color="#4d8b3f" fontWeight={600} fontSize={{ base: "18px", md: "22px" }}>
+                      <Box>
+                        <Flex justifyContent="center" alignItems="center" flexDirection="column">
+                          <Box color="#4d8b3f" fontWeight={600} fontSize={{ base: "16px", md: "22px" }}>
                             <PrismicRichText field={item.name} />
                           </Box>
                           <Box fontSize={{ base: "14px", md: "18px" }} fontWeight={600} color="#6b6e71">
