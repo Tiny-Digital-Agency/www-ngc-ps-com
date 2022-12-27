@@ -20,8 +20,6 @@ import {
   AccordionPanel,
   Grid,
   GridItem,
-  Grid,
-  GridItem,
 } from '@chakra-ui/react';
 const News = ({ slice }) => (
   <section>
