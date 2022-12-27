@@ -1,5 +1,6 @@
 import { SliceZone } from '@prismicio/react'
 import * as prismicH from "@prismicio/helpers";
+import Head from 'next/head';
 import { createClient, linkResolver } from '../../../../prismicio'
 import { components } from '../../../../slices'
 import Layout from '../../../../components/Layout'
@@ -11,6 +12,12 @@ const xomox = ({ xomox, navigation, settings, footer }) => {
                 settings={settings}
                 footer={footer}
             >
+                <Head>
+                    <title>
+                        {prismicH.asText(xomox.data.title)}
+                        {prismicH.asText(settings.data.name)}
+                    </title>
+                </Head>
                 <SliceZone slices={xomox.data.slices} components={components} />
             </Layout>
         </div>

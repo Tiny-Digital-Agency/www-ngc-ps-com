@@ -39,13 +39,14 @@ const GridSection = ({ slice }) => (
           <PrismicRichText field={slice.primary.title} />
         </Box>
       </Box>
+
       <Flex
         flexWrap="wrap"
         direction="row"
-        justify={{ base: "center", sm: "flex-start" }}
+        justify="center"
         // w={{ xl: "80em", base: "full" }}
-        w={{ base: "90%", xl: "62%" }}
-        borderLeft={{ base: "none", sm: "solid 3px #adadad" }}
+        w={{ md: "90%", xl: "87%" }}
+      // borderLeft={{ base: "none", sm: "solid 1px #adadad" }}
       >
         {
           slice?.items?.map((item, i) =>
@@ -55,24 +56,25 @@ const GridSection = ({ slice }) => (
               alignItems="center"
               justifyContent={"center"}
               flexDirection={"column"}
-              w={{ base: "80%", sm: "50%", lg: "33.3%" }}
-              h="300px"
-              borderRight="solid 3px #adadad"
-              borderLeft={{ base: "solid 3px #adadad", md: "none" }}
-              borderBottom="solid 3px #adadad"
+              w={{ base: "49%", sm: "33%", xl: "20%" }}
+              h={{ base: "auto", lg: "268px" }}
+              p="0 15px"
+              borderRight="solid 1px #2c2e35"
+              borderLeft={{ base: "solid 1px #2c2e35", sm: "none" }}
+              borderBottom="solid 1px #2c2e35"
               _hover={{
                 textDecoration: "none",
               }}
-              _last={{
-                borderRight: "solid 3px #adadad"
-              }}
             >
               {item.image.url ?
-                <Image h="60%" src={item.image.url} alt={item.image.alt} />
+                <Flex h="auto" w="90%" mt="15px" justify="center">
+                  <Image src={item.image.url} alt={item.image.alt} />
+                </Flex>
+
                 : ""
               }
               <Box
-                mt="10px"
+                my="10px"
                 color="#626669"
                 fontSize="18px"
                 fontWeight="bold"

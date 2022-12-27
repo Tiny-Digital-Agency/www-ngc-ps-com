@@ -20,6 +20,8 @@ import {
   AccordionPanel,
   Grid,
   GridItem,
+  Grid,
+  GridItem,
 } from '@chakra-ui/react';
 const News = ({ slice }) => (
   <section>
@@ -78,35 +80,40 @@ const News = ({ slice }) => (
           </AccordionButton>
           <AccordionPanel pb={4}>
             <Flex justifyContent={"center"} alignItems={"center"} flexDirection={{ base: "column", md: "row" }}>
-              <Grid templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)", xl: "repeat(3, 1fr)" }} justifyItems="center" py={6} margin="0">
-                {
-                  slice.items.map((item, i) =>
-                    <GridItem
-                      className='team-profile'
-                      maxWidth={"800px"}
-                      minH="100px"
-                      rounded={'sm'}
-                      pt={5} mt={5}
-                      pb={5}
-                      m={5} p={5}
-                      overflow={'hidden'}
-                      bg="white"
-                    >
-                      <Box key={i} padding={10}>
-                        <PrismicLink field={item.video_link}>
-                          <img src={item.video_image.url} alt={item.video_image.alt} />
-                        </PrismicLink>
-                        <Flex justifyContent="center" alignItems={"center"} flexDirection={{ base: "column", md: "row" }}>
-                          <Box>
-                            {item.title}
-                            <PrismicRichText field={item.description} />
-                          </Box>
-                        </Flex>
-                      </Box>
-                    </GridItem>
-                  )
-                }
-              </Grid>
+              <Flex justifyContent="center">
+                <Grid templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)", xl: "repeat(3, 1fr)" }} justifyItems="center" py={6} margin="0">
+                  {
+
+                    slice?.items?.map((item, i) =>
+                      <GridItem
+                        key={i}
+                        className='team-profile'
+                        maxWidth={"800px"}
+                        h="auto"
+                        minH="100px"
+                        rounded={'sm'}
+                        pt={5} mt={5}
+                        pb={5}
+                        m={5} p={5}
+                        overflow={'hidden'}
+                        bg="white"
+                      >
+                        <Box key={i} padding={10}>
+                          <PrismicLink field={item.video_link}>
+                            <img src={item.video_image.url} alt={item.video_image.alt} />
+                          </PrismicLink>
+                          <Flex justifyContent="center" alignItems={"center"} flexDirection={{ base: "column", md: "row" }}>
+                            <Box>
+                              {item.title}
+                              <PrismicRichText field={item.description} />
+                            </Box>
+                          </Flex>
+                        </Box>
+                      </GridItem>
+                    )
+                  }
+                </Grid>
+              </Flex>
             </Flex>
           </AccordionPanel>
         </AccordionItem>

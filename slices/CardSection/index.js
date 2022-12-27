@@ -1,6 +1,6 @@
 import React from 'react'
 import { PrismicRichText } from '@prismicio/react'
-import { Flex, VStack, Box, useBreakpointValue, Grid, GridItem } from "@chakra-ui/react";
+import { Flex, VStack, Box, useBreakpointValue } from "@chakra-ui/react";
 
 
 const CardsSection = ({ slice }) => (
@@ -50,8 +50,8 @@ const CardsSection = ({ slice }) => (
             slice?.items?.map((item, i) =>
               <>
                 <Flex
-                  key={slice.id}
-                  h={{ base: "38vw;", md: "320px" }}
+                  key={i}
+                  h={{ base: "38vw", md: "320px" }}
                   w={{ base: "47%", lg: "30%", xl: "22%" }}
                   mb="40px"
                 >
@@ -106,7 +106,7 @@ const CardsSection = ({ slice }) => (
                   key={slice.id}
                   h={{ base: "30vw", sm: "26vw", md: "240px" }}
                   w={{ base: "45%", sm: "30%", xl: "230px" }}
-                  mb={{ base: "15px", lg: "20px" }}
+                  mb={{ base: "15px", lg: "1%" }}
                 >
                   <section>
                     <Box

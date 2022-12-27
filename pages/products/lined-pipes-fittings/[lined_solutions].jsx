@@ -1,6 +1,7 @@
 import { SliceZone } from '@prismicio/react'
 import * as prismicH from "@prismicio/helpers";
-import { createClient, linkResolver  } from '../../../prismicio'
+import Head from "next/head";
+import { createClient, linkResolver } from '../../../prismicio'
 import { components } from '../../../slices'
 import Layout from '../../../components/Layout'
 const lined_solutions = ({ lined_solutions, navigation, settings, footer }) => {
@@ -11,6 +12,12 @@ const lined_solutions = ({ lined_solutions, navigation, settings, footer }) => {
         settings={settings}
         footer={footer}
       >
+       <Head>
+          <title>
+            {prismicH.asText(lined_solutions.data.title)}
+            {prismicH.asText(settings.data.name)}
+          </title>
+        </Head>
         <SliceZone slices={lined_solutions.data.slices} components={components} />
       </Layout>
     </div>
@@ -27,7 +34,7 @@ export async function getStaticProps({ params, previewData }) {
   const footer = await client.getByUID("footer", "footer");
   return {
     props: {
-    lined_solutions,
+      lined_solutions,
       navigation,
       settings,
       footer,
@@ -41,7 +48,7 @@ export async function getStaticPaths() {
   const lined_solutions = await client.getAllByType('lined_solutions')
 
   return {
-    paths: lined_solutions.map((lined_solutions) => prismicH.asLink(lined_solutions, linkResolver )),
+    paths: lined_solutions.map((lined_solutions) => prismicH.asLink(lined_solutions, linkResolver)),
     fallback: false,
   }
 }

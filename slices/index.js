@@ -3,7 +3,6 @@
 import About from './About';
 import BannerSectionWithMiddleContent from './BannerSectionWithMiddleContent';
 import BannerSectionWithSideContent from './BannerSectionWithSideContent';
-import CallToAction from './CallToAction';
 import CardSection from './CardSection';
 import Certification from './Certification';
 import Contact from './Contact';
@@ -23,16 +22,13 @@ import SideDropdownWithContent from './SideDropdownWithContent';
 import TeamDropdown from './TeamDropdown';
 import TeamProfile from './TeamProfile';
 import TextEditor from './TextEditor';
-import TopNav from './TopNav';
 import UptimeContent from './UptimeContent';
-import UptimeHeaderAndFooter from './UptimeHeaderAndFooter';
 import VerticalNavigation from './VerticalNavigation';
 
 export {
 	About,
 	BannerSectionWithMiddleContent,
 	BannerSectionWithSideContent,
-	CallToAction,
 	CardSection,
 	Certification,
 	Contact,
@@ -52,9 +48,7 @@ export {
 	TeamDropdown,
 	TeamProfile,
 	TextEditor,
-	TopNav,
 	UptimeContent,
-	UptimeHeaderAndFooter,
 	VerticalNavigation,
 };
 
@@ -62,7 +56,6 @@ export const components = {
 	about: About,
 	banner_section_with_middle_content: BannerSectionWithMiddleContent,
 	banner_section_with_side_content: BannerSectionWithSideContent,
-	call_to_action: CallToAction,
 	card_section: CardSection,
 	certification: Certification,
 	contact: Contact,
@@ -82,8 +75,6 @@ export const components = {
 	team_dropdown: TeamDropdown,
 	team_profile: TeamProfile,
 	text_editor: TextEditor,
-	top_nav: TopNav,
 	uptime_content: UptimeContent,
-	uptime: UptimeHeaderAndFooter,
 	vertical_navigation: VerticalNavigation,
 };

@@ -25,7 +25,7 @@ const HeroSection = ({ slice }) => (
           spacing={6}
         >
           <Box
-            pt={{ base: "12%", md: "10%", xl: "8.7%" }}
+            pt={{ base: "12%", md: "10%", xl: "10%" }}
             pb={{ base: "5%", md: "60px" }}
             w={{ base: "90%", md: "85%" }}
             color="#fff"
@@ -42,8 +42,8 @@ const HeroSection = ({ slice }) => (
             flexWrap="wrap"
             justifyContent={{ base: "center", md: "space-between" }}
             w={{ base: "67%", md: "full" }}
-            pt="30px"
-            pb={{ base: "5%", md: "60px" }}
+            pt="45px"
+            pb={{ base: "5%", md: "70px" }}
             m="auto"
           >
             {

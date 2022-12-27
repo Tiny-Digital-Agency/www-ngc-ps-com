@@ -64,7 +64,7 @@ const ProductDetail = ({ slice }) => (
       justifyContent="space-between"
       flexDirection={{ base: "column", md: "row" }}
       m={{ base: "30px auto", md: "55px auto" }}
-      w={{ base: "85%", md: "60%" }}
+      w={{ base: "85%", xl: "60%" }}
       color="#53575a"
       fontSize={{ base: "18px", md: "24px" }}
       rowGap={"20px"}
@@ -77,8 +77,9 @@ const ProductDetail = ({ slice }) => (
     <Flex
       flexDirection="column"
       m="auto"
-      w={{ base: "95%", md: "60%" }}
+      w={{ base: "85%", xl: "60%" }}
       fontSize={{ base: "14px", md: "16px" }}
+      color="#53575a"
     >
       <TableContainer>
         <Table variant='simple'>
@@ -122,27 +123,74 @@ const ProductDetail = ({ slice }) => (
     </Flex>
 
     <Flex
-      flexDirection={{ base: "column", md: "row" }}
-      w={{ base: "85%", md: "60%" }}
+      flexDirection={{ base: "column", xl: "row" }}
+      w={{ base: "85%", xl: "60%" }}
       m={{ base: "30px auto", md: "20px auto" }}
       columnGap="20px"
       rowGap={{ base: "30px", md: "0" }}
     >
-      <Box w={{ base: "100%", md: "62%" }}
+      <Box
+        w={{ base: "95%", xl: "62%" }}
+        margin="auto"
+        mt="0"
         color="#53575a"
       >
         <PrismicRichText field={slice.primary.product_details_right} />
       </Box>
       <Box
-        w={{ base: "100%", md: "38%" }}
-        p="42px 37px"
+        w={{ base: "100%", xl: "38%" }}
+        p="42px 2%"
+        mt={{ base: "30px", xl: "0" }}
         color="#fff"
         bg={"#00629b"}
         borderLeft={{ base: "none", md: "solid 4px #ef483e" }}
       >
-        <PrismicRichText field={slice.primary.product_resources_left} />
+        <Box w="85%" m="auto">
+          <PrismicRichText field={slice.primary.product_resources_left} />
+        </Box>
+
+        <form className='forms' name="contact" method="POST" data-netlify="true">
+          <Flex
+            pt={{ base: "10px", sm: "5px" }}
+            flexDirection="column"
+            w={{ base: "100%", md: "500px", xl: "auto" }}
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            <Flex direction={{ base: "column", sm: "row" }} justify="space-between" w="100%" pl="10px" pr="10px" m="auto">
+              <Box w={{ base: "100%", sm: "48%" }} pt={{ base: "10px", sm: "8px" }}>
+                <input type="text" name="first-name" placeholder="FIRST NAME" />
+              </Box>
+              <Box w={{ base: "100%", sm: "48%" }} pt={{ base: "10px", sm: "8px" }}>
+                <input type="text" name="last-name" placeholder="LAST NAME" />
+              </Box>
+            </Flex>
+
+            <Box w="100%" pl="10px" pr="10px" pt={{ base: "10px", sm: "8px" }} m="auto">
+              <input type="tel" name="phone" placeholder="PHONE" />
+            </Box>
+            <Box w="100%" pl="10px" pr="10px" pt={{ base: "10px", sm: "8px" }} m="auto">
+              <input type="email" name="email" placeholder="EMAIL" />
+            </Box>
+          </Flex>
+
+          <Box
+            p="8px 10px 0"
+            m={{ base: "0", xl: "auto" }}
+            w={{ base: "100%", md: "500px", xl: "auto" }}
+          >
+            <textarea rows="4" name=" message" placeholder="MESSAGE"></textarea>
+          </Box>
+          <Box
+            display="flex"
+            justifyContent="center"
+            w={{ base: "100%", md: "500px", xl: "auto" }}
+          >
+            <button className='btn' type="submit">Submit</button>
+          </Box>
+        </form>
+
       </Box>
-    </Flex>
+    </Flex >
   </>
 )
 

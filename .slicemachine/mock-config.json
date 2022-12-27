@@ -32,7 +32,6 @@
     "industries_pages": {}
   },
   "slices": {
-    "CallToAction": {},
     "Header": {
       "default": {
         "primary": {}
@@ -84,12 +83,6 @@
     "TeamDropdown": {
       "default": {
         "primary": {}
-      }
-    },
-    "TopNav": {
-      "default": {
-        "primary": {},
-        "items": {}
       }
     },
     "News": {
@@ -147,7 +140,14 @@
     "BannerSectionWithSideContent": {},
     "CardSection": {
       "default": {
-        "items": {},
+        "items": {
+          "text_content": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        },
         "primary": {
           "title": {
             "config": {
@@ -160,7 +160,15 @@
     },
     "GridSections": {
       "default": {
-        "primary": {}
+        "primary": {},
+        "items": {
+          "text_content": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
       }
     },
     "SideDropdownWithContent": {
@@ -247,19 +255,6 @@
     "ProductSlider": {
       "default": {
         "items": {}
-      }
-    },
-    "Uptime": {},
-    "UptimeHeaderAndFooter": {
-      "default": {
-        "primary": {
-          "title": {
-            "config": {
-              "patternType": "HEADING",
-              "blocks": 1
-            }
-          }
-        }
       }
     },
     "UptimeContent": {
