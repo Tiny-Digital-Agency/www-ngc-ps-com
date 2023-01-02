@@ -54,13 +54,13 @@ const TeamProfile = ({ slice }) => (
               color={'white'}
               lineHeight={1.2}
               textAlign={"center"}>
-              <Box fontSize={"30px"}>
+              <Box fontSize={{base:"20px", md:"30px"}}>
                 <PrismicRichText field={slice.primary.heading_1} />
               </Box>
-              <Box fontSize={"28px"} fontWeight={"600"}>
+              <Box fontSize={{base:"18px", md:"28px"}} fontWeight={"400"}>
                 <PrismicRichText field={slice.primary.heading_2} />
               </Box>
-              <Box fontSize={"24px"} fontWeight={"400"}>
+              <Box fontSize={{base:"20px", md:"24px"}} fontWeight={"400"} pt="2">
                 <PrismicRichText field={slice.primary.description} />
               </Box>
             </Box>
@@ -79,7 +79,7 @@ const TeamProfile = ({ slice }) => (
           <AccordionPanel pb={4}>
             <Flex justifyContent={"center"}>
               <Flex justifyContent="center">
-                <Grid templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)", xl: "repeat(3, 1fr)" }} justifyItems="center" py={6} margin="0">
+                <Grid templateColumns={{ base: "repeat(1, 1fr)", xl: "repeat(2, 1fr)", "2xl":"repeat(3, 1fr)" }} justifyItems="center" py={6} margin="0">
                   {
                     slice.items.map((item, i) =>
                       <GridItem
@@ -92,11 +92,11 @@ const TeamProfile = ({ slice }) => (
                         rounded={'sm'}
                         pt={5} mt={5}
                         pb={5}
-                        m={5} p={5}
+                        m={{base:"0", sm:"5"}} p={{base:"none", md:"5"}}
                         overflow={'hidden'}
                         bg="white"
                       >
-                        <Box h={'300px'}>
+                        <Box h={{base:'270px', sm:"300px"}}>
                           <Box className='image-profile'
                             borderRadius="50%"
                             alt={'Blog Image'}>
@@ -104,7 +104,7 @@ const TeamProfile = ({ slice }) => (
                           </Box>
                         </Box>
                         <Box p={4}>
-                          <Flex justifyContent="center" alignItems="baseline">
+                          <Flex justifyContent="center" alignItems="center" flexDirection="column">
                             <Box color="#4d8b3f" fontWeight={600} fontSize={{ base: "18px", md: "22px" }}>
                               <PrismicRichText field={item.name} />
                             </Box>
