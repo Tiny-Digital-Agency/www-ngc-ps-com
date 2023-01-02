@@ -130,7 +130,7 @@ export function Navigation({ navigation, settings }) {
         {isOpen ? (
           <Box
             bg={{ md: "#fff" }}
-            h={{ md: "622px" }}
+            h={{ md: "667px" }}
             w={{ md: "260px" }}
             color={{ base: "#6c6f70", md: "#000" }}
             mr={{ base: "-24px", md: "unset" }} ml={{ base: "-24px", md: "unset" }}
