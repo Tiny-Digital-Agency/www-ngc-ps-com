@@ -54,10 +54,10 @@ const News = ({ slice }) => (
               color={'white'}
               lineHeight={1.5}
               textAlign={"center"}>
-              <Box fontSize={{base:"20px", md:"30px"}}>
+              <Box fontSize={{base:"20px", sm:"25px", md:"30px"}}>
                 <PrismicRichText field={slice.primary.heading} />
               </Box>
-              <Box fontSize={{base:"18px", md:"28px"}} fontWeight={"400"}>
+              <Box fontSize={{base:"18px", sm:"24px", md:"28px"}} fontWeight={"400"}>
                 <PrismicRichText field={slice.primary.description} />
               </Box>
               <Box fontSize={{base:"20px", md:"24px"}} pt="2" fontWeight={"600"}>
