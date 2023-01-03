@@ -28,6 +28,9 @@
           "choices": {
             "side_dropdown_with_content": {
               "type": "SharedSlice"
+            },
+            "banner_section_with_middle_content": {
+              "type": "SharedSlice"
             }
           }
         }

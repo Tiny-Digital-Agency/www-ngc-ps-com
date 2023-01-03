@@ -184,7 +184,7 @@ interface IndustriesPagesDocumentData {
  * Slice for *Industries Pages → Slice Zone*
  *
  */
-type IndustriesPagesDocumentDataSlicesSlice = SideDropdownWithContentSlice;
+type IndustriesPagesDocumentDataSlicesSlice = SideDropdownWithContentSlice | BannerSectionWithMiddleContentSlice;
 /**
  * Industries Pages document from Prismic
  *
@@ -726,6 +726,17 @@ interface BannerSectionWithMiddleContentSliceDefaultPrimary {
      *
      */
     background_image: prismicT.ImageField<never>;
+    /**
+     * Smaller height? field in *BannerSectionWithMiddleContent → Primary*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: banner_section_with_middle_content.primary.smaller_height
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    smaller_height: prismicT.BooleanField;
 }
 /**
  * Default variation for BannerSectionWithMiddleContent Slice
