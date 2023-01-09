@@ -36,6 +36,37 @@ svg.chakra-icon.css-onkibi {
   color: #fff;
 }
 
+body .nav-bar-container {
+  padding: 16px 8% 19px 0;
+}
+
+body .nav-bar-container .chakra-breadcrumb__list-item.css-ws2xno {
+  font-size: 26px;
+  padding-right: 15px;
+}
+
+body .nav-bar-container .chakra-breadcrumb__list-item .chakra-button {
+  padding: 9px 37px;
+}
+
+li.chakra-breadcrumb__list-item button {
+  height: auto;
+  padding: 14px 37px;
+  font-weight: 400;
+  font-size: 26px;
+}
+
+body .logo-burger-container {
+  width: 86%;
+  margin: auto;
+  padding: 17px;
+  padding-left: 0;
+}
+
+body .logo-burger-container img {
+  width: 291px;
+}
+
 @media only screen and (max-width: 600px) {
   li.chakra-breadcrumb__list-item.css-18biwo {
     display: flex;
