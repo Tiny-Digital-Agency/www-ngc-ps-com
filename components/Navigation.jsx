@@ -139,27 +139,27 @@ export function Navigation({ navigation, settings }) {
             <Stack as={"nav"} spacing={4} pb="25px" bg="#fff" pl={{ base: "0", md: "20px" }} textAlign={{base:"center", md:"left"}}>
               {navigation?.data.slices.map((slice, i) => {
                 return (
-                  <Menu key={slice.id}>
+                  <Box key={slice.id} className="dropdown">
                     <PrismicLink field={slice.primary.link}>
-                      <MenuButton>
+                      <Box className="dropbtn">
                           <PrismicText field={slice.primary.name} />
-                      </MenuButton>
+                      </Box>
                     </PrismicLink>
                     {slice.items.length > 0 && (
-                      <MenuList color="#000">
+                      <Box color="#000" className="dropdown-content">
                         {slice.items.map((item, i) => {
                           return (
-                            <MenuItem key={i}>
+                            <Box key={i} >
                               <PrismicLink field={item.link}>
                                 <PrismicText field={item.name} />
                               </PrismicLink>
-                            </MenuItem>
+                            </Box>
                           );
                         })}
-                      </MenuList>
+                      </Box>
                     )}
 
-                  </Menu>
+                  </Box>
                 );
               })}
             </Stack>
