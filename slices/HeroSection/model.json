@@ -27,6 +27,30 @@
             "allowTargetBlank": true,
             "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
+        },
+        "pfdlink": {
+          "type": "Link",
+          "config": {
+            "label": "pfdlink",
+            "placeholder": "",
+            "select": "media"
+          }
+        },
+        "pdflink2": {
+          "type": "Embed",
+          "config": {
+            "label": "pdflink2",
+            "placeholder": ""
+          }
+        },
+        "pdflink3": {
+          "type": "StructuredText",
+          "config": {
+            "label": "pdflink3",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
         }
       },
       "items": {

@@ -9,6 +9,7 @@ import {
 } from "@chakra-ui/react";
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import { PrismicRichText } from "@prismicio/react";
+import { PrismicLink } from '@prismicio/react'
 
 const HeroSection = ({ slice }) => (
   <section>
@@ -25,11 +26,11 @@ const HeroSection = ({ slice }) => (
           spacing={6}
         >
           <Box
-            pt={{ base: "12%", md: "10%", xl: "10%" }}
-            pb={{ base: "5%", md: "60px" }}
-            w={{ base: "90%", md: "85%" }}
+            pt={{ base: "12%", md: "9%" }}
+            pb={{ base: "5%", md: "45px" }}
+            w={{ base: "90%", md: "72%" }}
             color="#fff"
-            fontSize={{ base: "9vw", md: "7xl" }}
+            fontSize={{ base: "9vw", md: "84px" }}
             fontWeight="700"
             lineHeight={1.2}
             textAlign="center"
@@ -43,9 +44,12 @@ const HeroSection = ({ slice }) => (
             justifyContent={{ base: "center", md: "space-between" }}
             w={{ base: "67%", md: "full" }}
             pt="45px"
-            pb={{ base: "5%", md: "70px" }}
+            pb={{ base: "5%", md: "262px" }}
             m="auto"
           >
+
+            {/* <iframe src={slice.primary.pfdlink.url} width="100%" height="500px"></iframe> */}
+
             {
               slice?.items?.map((item, i) =>
                 <Flex key={i}

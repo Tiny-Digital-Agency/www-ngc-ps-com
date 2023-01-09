@@ -30,6 +30,7 @@ export function Navigation({ navigation, settings }) {
         alignItems={"center"}
         justifyContent={"end"}
         flexDirection={{ base: "column", md: "row" }}
+        className="nav-bar-container"
       >
         <Box display={{ base: "none", md: "unset" }}>
           {navigation?.data?.slices.map((slice) => {
@@ -94,8 +95,12 @@ export function Navigation({ navigation, settings }) {
           })}
         </Box>
       </Flex>
-      <Box bg={{ base: "#000", md: "#2c2e35" }} px={6} pos="relative" >
-        <Flex justifyContent="space-between" alignItems="center">
+      <Box bg={{ base: "#000", md: "#2c2e35" }} px={6} pos="relative">
+        <Flex
+          justifyContent="space-between"
+          alignItems="center"
+          className="logo-burger-container"
+        >
           <HStack spacing={8} alignItems={"center"}>
             <Flex
               justifyContent={{ base: "center", md: "flex-start", lg: "end" }}
@@ -115,14 +120,20 @@ export function Navigation({ navigation, settings }) {
           <IconButton
             bg={{ base: "#000", md: "#2c2e35" }}
             size={"md"}
-            icon={isOpen ? <CloseIcon color="#ff3e34" fontSize="25px" /> : <HamburgerIcon color="#ff3e34" fontSize="50px" />}
+            icon={
+              isOpen ? (
+                <CloseIcon color="#ff3e34" fontSize="25px" />
+              ) : (
+                <HamburgerIcon color="#ff3e34" fontSize="50px" />
+              )
+            }
             aria-label={"Open Menu"}
             onClick={isOpen ? onClose : onOpen}
             _hover={{
-              background: "unset"
+              background: "unset",
             }}
             _focus={{
-              background: "unset"
+              background: "unset",
             }}
           />
         </Flex>
@@ -130,19 +141,31 @@ export function Navigation({ navigation, settings }) {
         {isOpen ? (
           <Box
             bg={{ md: "#fff" }}
-            h={{ md: "667px" }}
+            // h={{ md: "667px" }}
+            h={{ md: "100vh" }}
             w={{ md: "260px" }}
             color={{ base: "#6c6f70", md: "#000" }}
-            mr={{ base: "-24px", md: "unset" }} ml={{ base: "-24px", md: "unset" }}
+            mr={{ base: "-24px", md: "unset" }}
+            ml={{ base: "-24px", md: "unset" }}
             right={{ md: "0" }}
-            pos={{ md: "absolute" }}>
-            <Stack as={"nav"} spacing={4} pb="25px" bg="#fff" pl={{ base: "0", md: "20px" }} textAlign={{base:"center", md:"left"}}>
+            top={"84px"}
+            // pos={{ md: "absolute" }}
+            pos={{ md: "fixed" }}
+          >
+            <Stack
+              as={"nav"}
+              spacing={4}
+              pb="25px"
+              bg="#fff"
+              pl={{ base: "0", md: "20px" }}
+              textAlign={{ base: "center", md: "left" }}
+            >
               {navigation?.data.slices.map((slice, i) => {
                 return (
                   <Menu key={slice.id}>
                     <PrismicLink field={slice.primary.link}>
                       <MenuButton>
-                          <PrismicText field={slice.primary.name} />
+                        <PrismicText field={slice.primary.name} />
                       </MenuButton>
                     </PrismicLink>
                     {slice.items.length > 0 && (
@@ -158,20 +181,21 @@ export function Navigation({ navigation, settings }) {
                         })}
                       </MenuList>
                     )}
-
                   </Menu>
                 );
               })}
             </Stack>
-            <Box bg="#4c4f51"
+            <Box
+              bg="#4c4f51"
               padding="10px"
               mb="-20px"
-              display={{ md: "none" }}>
+              display={{ md: "none" }}
+            >
               <Box>
                 {navigation?.data?.slices.map((slice, i) => {
                   return (
                     <Flex key={slice.id} justifyContent="center">
-                      <Breadcrumb fontSize={"16px"} color={"#fff"} as={"nav"} >
+                      <Breadcrumb fontSize={"16px"} color={"#fff"} as={"nav"}>
                         {slice.items.length > 0 && (
                           <BreadcrumbItem
                             flexDirection="column"
@@ -209,7 +233,9 @@ export function Navigation({ navigation, settings }) {
                               _hover={{}}
                             >
                               <PrismicLink document={slice.primary.button_link}>
-                                <PrismicText field={slice.primary.button_text} />
+                                <PrismicText
+                                  field={slice.primary.button_text}
+                                />
                               </PrismicLink>
                             </Button>
                           </BreadcrumbItem>
