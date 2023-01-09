@@ -48,8 +48,6 @@ const HeroSection = ({ slice }) => (
             m="auto"
           >
 
-            {/* <iframe src={slice.primary.pfdlink.url} width="100%" height="500px"></iframe> */}
-
             {
               slice?.items?.map((item, i) =>
                 <Flex key={i}

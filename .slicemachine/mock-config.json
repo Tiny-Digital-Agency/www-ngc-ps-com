@@ -44,14 +44,7 @@
     },
     "HeroSection": {
       "default": {
-        "primary": {
-          "pdflink3": {
-            "config": {
-              "patternType": "PARAGRAPH",
-              "blocks": 1
-            }
-          }
-        },
+        "primary": {},
         "items": {}
       }
     },

@@ -1244,26 +1244,6 @@ interface HeroSectionSliceDefaultPrimary {
      *
      */
     pfdlink: prismicT.LinkToMediaField;
-    /**
-     * pdflink2 field in *HeroSection → Primary*
-     *
-     * - **Field Type**: Embed
-     * - **Placeholder**: *None*
-     * - **API ID Path**: hero_section.primary.pdflink2
-     * - **Documentation**: https://prismic.io/docs/core-concepts/embed
-     *
-     */
-    pdflink2: prismicT.EmbedField;
-    /**
-     * pdflink3 field in *HeroSection → Primary*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: hero_section.primary.pdflink3
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    pdflink3: prismicT.RichTextField;
 }
 /**
  * Item in HeroSection → Items
